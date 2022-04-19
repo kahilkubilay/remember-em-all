@@ -1370,7 +1370,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*userSelectAvatar*/ ctx[0])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "avatar");
-    			attr_dev(img, "class", "avatar unpicked svelte-b8bqa6");
+    			attr_dev(img, "class", "avatar unpicked svelte-33qba");
     			add_location(img, file$e, 16, 0, 537);
     		},
     		l: function claim(nodes) {
@@ -1547,8 +1547,11 @@ var app = (function () {
 
     function create_fragment$e(ctx) {
     	let div;
+    	let t;
+    	let img;
+    	let img_src_value;
     	let current;
-    	let each_value = /*avatars*/ ctx[0];
+    	let each_value = /*avatars*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1568,8 +1571,14 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "avatars svelte-ijkunx");
-    			add_location(div, file$d, 10, 0, 320);
+    			t = space();
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = /*sabuha*/ ctx[0])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "bla bla");
+    			attr_dev(img, "class", "only svelte-6r0wmy");
+    			add_location(img, file$d, 15, 2, 432);
+    			attr_dev(div, "class", "avatars svelte-6r0wmy");
+    			add_location(div, file$d, 10, 0, 315);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1581,11 +1590,13 @@ var app = (function () {
     				each_blocks[i].m(div, null);
     			}
 
+    			append_dev(div, t);
+    			append_dev(div, img);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*avatars*/ 1) {
-    				each_value = /*avatars*/ ctx[0];
+    			if (dirty & /*avatars*/ 2) {
+    				each_value = /*avatars*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -1599,7 +1610,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div, null);
+    						each_blocks[i].m(div, t);
     					}
     				}
 
@@ -1650,11 +1661,11 @@ var app = (function () {
     function instance$e($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Avatars', slots, []);
-    	let sabuha = "/images/sabuha.jpg";
-    	let mohito = "/images/mohito.jpg";
-    	let pasa = "/images/pasa.jpg";
-    	let susi = "/images/susi.jpg";
-    	let limon = "/images/limon.jpg";
+    	let sabuha = "images/sabuha.jpg";
+    	let mohito = "images/mohito.jpg";
+    	let pasa = "images/pasa.jpg";
+    	let susi = "images/susi.jpg";
+    	let limon = "images/limon.jpg";
     	const avatars = [pasa, mohito, sabuha, limon, susi];
     	const writable_props = [];
 
@@ -1673,7 +1684,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('sabuha' in $$props) sabuha = $$props.sabuha;
+    		if ('sabuha' in $$props) $$invalidate(0, sabuha = $$props.sabuha);
     		if ('mohito' in $$props) mohito = $$props.mohito;
     		if ('pasa' in $$props) pasa = $$props.pasa;
     		if ('susi' in $$props) susi = $$props.susi;
@@ -1684,7 +1695,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [avatars];
+    	return [sabuha, avatars];
     }
 
     class Avatars extends SvelteComponentDev {
@@ -1876,7 +1887,7 @@ var app = (function () {
     			t2 = space();
     			create_component(start.$$.fragment);
     			attr_dev(main, "class", "svelte-15vmz98");
-    			add_location(main, file$b, 8, 0, 254);
+    			add_location(main, file$b, 6, 0, 203);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1931,23 +1942,13 @@ var app = (function () {
     function instance$c($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('UserGround', slots, []);
-    	let sabuha = "/images/sabuha.jpg";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<UserGround> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ UserName, Header, Avatars, Start, sabuha });
-
-    	$$self.$inject_state = $$props => {
-    		if ('sabuha' in $$props) sabuha = $$props.sabuha;
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
+    	$$self.$capture_state = () => ({ UserName, Header, Avatars, Start });
     	return [];
     }
 
@@ -2189,7 +2190,7 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*setAvatar*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user selected avatar");
     			attr_dev(img, "class", "svelte-1eg4g");
-    			add_location(img, file$9, 5, 0, 155);
+    			add_location(img, file$9, 5, 0, 154);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2223,7 +2224,7 @@ var app = (function () {
     	const { avatar } = userInfo;
     	validate_store(avatar, 'avatar');
     	component_subscribe($$self, avatar, value => $$invalidate(2, $avatar = value));
-    	const setAvatar = `/images/${$avatar}.jpg`;
+    	const setAvatar = `images/${$avatar}.jpg`;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -2272,7 +2273,7 @@ var app = (function () {
     			t1 = space();
     			create_component(score.$$.fragment);
     			attr_dev(main, "class", "svelte-1au4l5f");
-    			add_location(main, file$8, 6, 0, 242);
+    			add_location(main, file$8, 5, 0, 198);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

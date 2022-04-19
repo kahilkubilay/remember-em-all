@@ -1,7 +1,6 @@
 <script lang="ts">
   import Score from "../GameElements/Score.svelte";
   import Name from "./name/UserSelectName.svelte";
-  import userSelectAvatar from "./Avatar/UserSelectAvatar.svelte";
   import UserSelectAvatar from "./Avatar/UserSelectAvatar.svelte";
 </script>
 

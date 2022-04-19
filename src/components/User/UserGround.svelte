@@ -1,11 +1,8 @@
 <script lang="ts">
-  // components
   import UserName from "./name/UserName.svelte";
   import Header from "./Header.svelte";
   import Avatars from "./Avatar/Avatars.svelte";
   import Start from "./Start.svelte";
-
-  let sabuha = "/images/sabuha.jpg";
 </script>
 
 <main>

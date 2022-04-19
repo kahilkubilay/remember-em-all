@@ -37,6 +37,7 @@
     margin: 0 25px 15px 0;
     border: 2px solid #fff;
     box-shadow: 0px 0px 3px black;
+    border: 2px solid whitesmoke;
   }
 
   .avatar:hover {

@@ -2,7 +2,7 @@
   import { userInfo } from "../../../store/User";
 
   const { avatar } = userInfo;
-  const setAvatar = `/images/${$avatar}.jpg`;
+  const setAvatar = `images/${$avatar}.jpg`;
 </script>
 
 <img src={setAvatar} alt="user selected avatar" />
