@@ -8,7 +8,7 @@
   <input
     type="text"
     name="name"
-    placeholder="username"
+    placeholder="pika pika"
     class="name"
     bind:value={$name}
   />
@@ -22,5 +22,4 @@
     padding: 8px 0;
     width: 40%;
   }
-  
 </style>

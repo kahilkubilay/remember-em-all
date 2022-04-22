@@ -633,7 +633,7 @@ var app = (function () {
     			attr_dev(img, "class", "single-poke");
     			attr_dev(img, "alt", /*pokemonNumber*/ ctx[0]);
     			add_location(img, file$k, 5, 2, 74);
-    			attr_dev(div, "class", "back svelte-qdigjs");
+    			attr_dev(div, "class", "back svelte-awkf73");
     			add_location(div, file$k, 4, 0, 52);
     		},
     		l: function claim(nodes) {
@@ -1207,8 +1207,8 @@ var app = (function () {
     			input = element("input");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "name", "name");
-    			attr_dev(input, "placeholder", "username");
-    			attr_dev(input, "class", "name svelte-yw4p87");
+    			attr_dev(input, "placeholder", "pika pika");
+    			attr_dev(input, "class", "name svelte-fbtkw3");
     			add_location(input, file$g, 5, 2, 130);
     			attr_dev(div, "class", "user");
     			add_location(div, file$g, 4, 0, 108);
@@ -1547,11 +1547,8 @@ var app = (function () {
 
     function create_fragment$e(ctx) {
     	let div;
-    	let t;
-    	let img;
-    	let img_src_value;
     	let current;
-    	let each_value = /*avatars*/ ctx[1];
+    	let each_value = /*avatars*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -1571,14 +1568,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t = space();
-    			img = element("img");
-    			if (!src_url_equal(img.src, img_src_value = /*sabuha*/ ctx[0])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "bla bla");
-    			attr_dev(img, "class", "only svelte-6r0wmy");
-    			add_location(img, file$d, 15, 2, 432);
     			attr_dev(div, "class", "avatars svelte-6r0wmy");
-    			add_location(div, file$d, 10, 0, 315);
+    			add_location(div, file$d, 10, 0, 320);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1590,13 +1581,11 @@ var app = (function () {
     				each_blocks[i].m(div, null);
     			}
 
-    			append_dev(div, t);
-    			append_dev(div, img);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*avatars*/ 2) {
-    				each_value = /*avatars*/ ctx[1];
+    			if (dirty & /*avatars*/ 1) {
+    				each_value = /*avatars*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -1610,7 +1599,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div, t);
+    						each_blocks[i].m(div, null);
     					}
     				}
 
@@ -1661,11 +1650,11 @@ var app = (function () {
     function instance$e($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Avatars', slots, []);
-    	let sabuha = "images/sabuha.jpg";
-    	let mohito = "images/mohito.jpg";
-    	let pasa = "images/pasa.jpg";
-    	let susi = "images/susi.jpg";
-    	let limon = "images/limon.jpg";
+    	let sabuha = "/images/sabuha.jpg";
+    	let mohito = "/images/mohito.jpg";
+    	let pasa = "/images/pasa.jpg";
+    	let susi = "/images/susi.jpg";
+    	let limon = "/images/limon.jpg";
     	const avatars = [pasa, mohito, sabuha, limon, susi];
     	const writable_props = [];
 
@@ -1684,7 +1673,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('sabuha' in $$props) $$invalidate(0, sabuha = $$props.sabuha);
+    		if ('sabuha' in $$props) sabuha = $$props.sabuha;
     		if ('mohito' in $$props) mohito = $$props.mohito;
     		if ('pasa' in $$props) pasa = $$props.pasa;
     		if ('susi' in $$props) susi = $$props.susi;
@@ -1695,7 +1684,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [sabuha, avatars];
+    	return [avatars];
     }
 
     class Avatars extends SvelteComponentDev {
@@ -2189,7 +2178,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*setAvatar*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "user selected avatar");
-    			attr_dev(img, "class", "svelte-1eg4g");
+    			attr_dev(img, "class", "svelte-ymsqqk");
     			add_location(img, file$9, 5, 0, 154);
     		},
     		l: function claim(nodes) {

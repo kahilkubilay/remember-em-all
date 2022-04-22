@@ -22,5 +22,10 @@
     left: 0;
     z-index: 2;
     transform: rotateY(0deg);
+    border-radius: 11px;
+  }
+
+  .back:hover {
+    cursor: pointer;
   }
 </style>
