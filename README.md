@@ -1,4 +1,8 @@
-Selam, son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
+<span id="hi-to-you"></span>
+
+## Selam sana :wave:
+
+Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
 yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu
 dökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında
 görebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı
@@ -10,10 +14,12 @@ olabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile tak
 edebilirsiniz.
 
 <p align="center">
-  <img src="./assets/svelte-logo.png" alt="Svelte logo" style="width:400px"/>
+  <img src="./assets/svelte-logo.PNG" alt="Svelte logo" style="width:400px"/>
 </p>
 
-## Proje hakkında
+<span id="about-the-project"></span>
+
+## Proje Hakkında
 
 Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre
 arayüz üzerinde kartlar bulunacak. Kartların üzerlerine click yapıldığında
@@ -24,7 +30,7 @@ yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki
 seviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.
 
 <p align="center">
-  <img src="./assets/cards.png" alt="view of cards on the playground" style=""/>
+  <img src="./assets/cards.PNG" alt="view of cards on the playground" style=""/>
 </p>
 
 Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde
@@ -35,6 +41,8 @@ kalacaktır, score değeri dinamik olarak kullanıcı davranışına göre
 güncellenecektir.
 
 image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan
+
+<span id="#what-is-svelte"></span>
 
 ## Svelte nedir?
 
@@ -48,33 +56,24 @@ süre sonrasında bir bezginlik halinin doğmasına sebep oluyor.
 Svelte'in bu döngünün dışına çıkarak modern framework bağımlılıklarını
 azalttı.
 
+<span id="how-does-svelte-work"></span>
+
 ## Svelte nasıl çalışır?
 
-Svelte bileşenleri `.svelte` uzantılı dosyalar ile oluşturulur. HTML'de benzer olarak
-`script, style, html` kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
+Svelte bileşenleri `.svelte` uzantılı dosyalar ile oluşturulur. HTML'de benzer
+olarak `script, style, html` kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
 bulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure
 Javascript kodlarına dönüştürülür.
 
 <p align="center">
-  <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px"/>
+  <img src="./assets/build-map.PNG" alt="Svelte Build map" style="width: 800px"/>
 </p>
 
 Svelte'in derleme işlemini runtime üzerinde sağlayarak benzer framework/library
 daha hızlı çalışıyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığı
 ortadan kalkıyor.
 
-## ? Rollup nedir
-
-## [.] Proje bağımlılıkları
-
-- #### Svelte
-  lduğu son kartın büyük bir görünümü yer alacak.
-- #### Typescript
-  lduğu son kartın büyük bir görünümü yer alacak.
-- #### SCSS
-  lduğu son kartın büyük bir görünümü yer alacak.
-- #### Lerna
-  lduğu son kartın büyük bir görünümü yer alacak.
+<span id="create-a-svelte-project"></span>
 
 ## Svelte projesi oluşturma
 
@@ -91,13 +90,27 @@ cd svelte-typescript-app
 node scripts/setupTypeScript.js
 ```
 
-## Dizin Yapısı
+<span id="dependencies"></span>
 
-## Router oluşturma
+## Proje bağımlılıkları
 
-## GitHub Pages üzerinde Deploy Etme
+- #### Typescript
+  Typescript, Javascript kodunuzu daha verimli kılmanızı ve kod kaynaklı
+  hataların önüne geçilmesini sağlayan bir Javascript uzantısıdır. Svelte
+  `.svelte` uzantılı dosyaların yanısıra `.ts` dosyaları da destekler.
+- #### Rollup
+  Svelte kurulumunuzla birlikte root folder üzerinde rollup.config.js dosyası
+  oluşturulacaktır. Rollup javascript uygulamalar için kullanılan bir modül
+  paketleyicidir. Rollup uygulamamızda yer alan kodları tarayıcının
+  anlayabileceği şekilde ayrıştırır.
 
-## GitLab Pages üzerinde Deploy Etme
+<span id="directory-and-component-structure"></span>
+
+## Dizin ve Component Yapısı
+
+<span id="deploy-with-github-pages"></span>
+
+## GitHub Pages ile Deploy
 
 ## Kaynak
 
@@ -117,10 +130,13 @@ node scripts/setupTypeScript.js
 
   - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 
-* ## Deploy:
+- Bağımlılıklar
+  - https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/
+
+* Deploy:
 
   - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
 
-* ## md files importing
+* md files importing
 
-  - https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project
+- https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project

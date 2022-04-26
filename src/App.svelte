@@ -1,6 +1,6 @@
 <script lang="ts">
   import Playground from "./components/Playground/Wrapper/Playground.svelte";
-  import About from "./components/Info/about.svelte";
+  import About from "./components/Info/About.svelte";
   import { Router, Route, Link } from "svelte-navigator";
 </script>
 

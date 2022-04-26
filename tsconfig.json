@@ -4,5 +4,6 @@
   "exclude": ["node_modules/*", "public/*"],
   "compilerOptions": {
     "typeRoots": [ "./src/index.d.ts", "./node_modules/@types"],
+    "resolveJsonModule": true,
   }
 }

@@ -1,10 +1,10 @@
 <script lang="ts">
   // avatar list
-  let sabuha = "./images/sabuha.jpg";
-  let mohito = "./images/mohito.jpg";
-  let pasa = "./images/pasa.jpg";
-  let susi = "./images/susi.jpg";
-  let limon = "./images/limon.jpg";
+  let sabuha = "./images/sabuha.JPG";
+  let mohito = "./images/mohito.JPG";
+  let pasa = "./images/pasa.JPG";
+  let susi = "./images/susi.JPG";
+  let limon = "./images/limon.JPG";
 
   import ImageAvatar from "./ImageAvatar.svelte";
   const avatars = [pasa, mohito, sabuha, limon, susi];

@@ -10,8 +10,8 @@ import autoPreprocess from 'svelte-preprocess';
 import { scss } from 'svelte-preprocess';
 // md files
 import {markdown} from 'svelte-preprocess-markdown';
-
-
+// json files
+import json from '@rollup/plugin-json'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -64,7 +64,6 @@ export default {
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
-
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
@@ -75,11 +74,12 @@ export default {
 			dedupe: ['svelte'],
 			extensions: ['.ts', '.mjs', '.js', '.json', '.node', '.md']
 		}),
+		json({compact: true}),
 		commonjs(),
 		typescript({
 			sourceMap: !production,
 			inlineSources: !production,
-			rootDir: './src'
+			rootDir: './src',
 		}),
 
 		// In dev mode, call `npm run start` once

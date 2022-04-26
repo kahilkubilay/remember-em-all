@@ -1,0 +1,75 @@
+{
+    "Title": "Content",
+    "Description": "content headers of description files",
+    "SupportedLanguages": ["TR", "ENG"],
+    "Headers": {
+      "Turkish": [
+        {
+          "title": "selam sana",
+          "target": "#selam-sana"
+        },
+        {
+          "title": "proje hakkında",
+          "target": "#proje-hakkinda"
+        },
+        {
+          "title": "svelte nedir?",
+          "target": "#svelte-nedir"
+        },
+        {
+          "title": "svelte nasıl çalışır?",
+          "target": "#svelte-nasil-calisir"
+        },
+        {
+          "title": "Svelte projesi oluşturma",
+          "target": "#svelte-projesi-olusturma"
+        },
+        {
+          "title": "bağımlılıklar",
+          "target": "#bagimliliklar"
+        },
+        {
+          "title": "dizin ve component yapısı",
+          "target": "#dizin-ve-component-yapisi"
+        },
+        {
+          "title": "github page ile deploy",
+          "target": "#github-page-ile-deploy"
+        }
+      ],
+      "English": [
+        {
+          "title": "hi to you",
+          "target": "#hi-to-you"
+        },
+        {
+          "title": "about the project",
+          "target": "#about-the-project"
+        },
+        {
+          "title": "what is svelte?",
+          "target": "#what-is-svelte"
+        },
+        {
+          "title": "how does Svelte work?",
+          "target": "#how-does-svelte-work"
+        },
+        {
+          "title": "create a Svelte project",
+          "target": "#create-a-svelte-project"
+        },
+        {
+          "title": "dependencies",
+          "target": "#dependencies"
+        },
+        {
+          "title": "directory and component structure",
+          "target": "directory-and-component-structure"
+        },
+        {
+          "title": "deploy with github page",
+          "target": "deploy-with-github-pages"
+        }
+      ]
+    }
+  }
