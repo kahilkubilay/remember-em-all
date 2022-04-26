@@ -1,6 +1,6 @@
 <script lang="ts">
-  import DetailEN from "../../Content/ReadMe.md";
-  import DetailTR from "../../Content/ReadMETR.md";
+  import DetailEN from "../../../README.md";
+  import DetailTR from "../../../READMETR.md";
   import { lang } from "../../store/Lang";
 
   export const changeLang = () => {
@@ -18,14 +18,14 @@
   <div class="switchLang">
     <img
       hidden={$lang === "TR"}
-      src="/images/tr.svg"
+      src="./assets/tr.svg"
       alt="TR Flag"
       class="flag"
       on:click={changeLang}
     />
     <img
       hidden={$lang === "EN"}
-      src="/images/gb.svg"
+      src="./assets/gb.svg"
       alt="EN Flag"
       class="flag"
       on:click={changeLang}

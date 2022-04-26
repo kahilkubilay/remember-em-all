@@ -1,25 +1,40 @@
-Selam, son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu dökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında görebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı adımları takip ederek ortaya bir uygulama oluşturabilirsiniz. Svelte içeriği iyi ayrıntılanmış [dökümantasyona](https://svelte.dev/docs "Svelte Documentation") sahip, dökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı olabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip edebilirsiniz.
+Selam, son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
+yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu
+dökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında
+görebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı
+adımları takip ederek benzer veya farklı bir uygulama oluşturabilirsiniz.
+Svelte içeriği iyi ayrıntılanmış
+[dökümantasyona](https://svelte.dev/docs "Svelte Documentation") sahip,
+dökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı
+olabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip
+edebilirsiniz.
 
 <p align="center">
-  <img src="./assets/svelte-logo.png" alt="Svelte logo"/>
+  <img src="./assets/svelte-logo.png" alt="Svelte logo" style="width:400px"/>
 </p>
 
 ## Proje hakkında
 
-Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre arayüz üzerinde kartlar bulunacak. Üzerlerine tıklandıklarında kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar. Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken bu başarılı eşleşme kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, 11. seviyeye kadar yeni kartlar dağıtılacak ve arayüzde bulunan kart sayısı arttılacak. 11. seviyeden sonra arayüzde bulunan kart sayısının bezdirici ve sıkıcı bir özelliği olabileceğinden dolayı kart sayısını arttırmadım.
+Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre
+arayüz üzerinde kartlar bulunacak. Kartların üzerlerine click yapıldığında
+kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar.
+Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken bu başarılı eşleşme
+kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları
+yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki
+seviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.
 
-image 1.1 ---> kartların genel görünümü
+<p align="center">
+  <img src="./assets/cards.png" alt="view of cards on the playground" style=""/>
+</p>
 
-Arayüz üzerinde kart alanından farklı olarak score ve preview alanları bulunuyor.
+Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde
+yer alan görsellerden birini seçmesi beklenecektir. Bu seçilen değerler oyunun
+arayüzünde kartların yer aldığı bölümün altında score ile birlikte
+gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak
+kalacaktır, score değeri dinamik olarak kullanıcı davranışına göre
+güncellenecektir.
 
-Score'da tahmin edebileceğiniz gibi, kullanıcının yapmış olduğu toplam puan tutulacak.
-
-image 1.2 ---> puan alanı
-
-Preview alanında kullanıcın açmış olduğu son kartın büyük bir görünümü yer alacak.
-Henüz herhangi bir kart açılmamışsa kartların arkasını temsil eden resim yer alacak.
-
-image 1.3 ---> preview önü | image 1.4 ---> preview arkası
+image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan
 
 ## Svelte nedir?
 
@@ -35,14 +50,18 @@ azalttı.
 
 ## Svelte nasıl çalışır?
 
-Svelte bileşenleri `.svelte` uzantılı dosyalar ile oluşturulur. HTML'de olduğu
-gibi `script, style, html` kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
+Svelte bileşenleri `.svelte` uzantılı dosyalar ile oluşturulur. HTML'de benzer olarak
+`script, style, html` kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
 bulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure
 Javascript kodlarına dönüştürülür.
 
 <p align="center">
   <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px"/>
 </p>
+
+Svelte'in derleme işlemini runtime üzerinde sağlayarak benzer framework/library
+daha hızlı çalışıyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığı
+ortadan kalkıyor.
 
 ## ? Rollup nedir
 

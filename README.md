@@ -1,109 +1,126 @@
-*Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
+Selam, son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
+yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu
+dökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında
+görebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı
+adımları takip ederek benzer veya farklı bir uygulama oluşturabilirsiniz.
+Svelte içeriği iyi ayrıntılanmış
+[dökümantasyona](https://svelte.dev/docs "Svelte Documentation") sahip,
+dökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı
+olabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip
+edebilirsiniz.
 
-*Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+<p align="center">
+  <img src="./assets/svelte-logo.png" alt="Svelte logo" style="width:400px"/>
+</p>
 
----
+## Proje hakkında
 
-# svelte app
+Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre
+arayüz üzerinde kartlar bulunacak. Kartların üzerlerine click yapıldığında
+kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar.
+Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken bu başarılı eşleşme
+kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları
+yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki
+seviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+<p align="center">
+  <img src="./assets/cards.png" alt="view of cards on the playground" style=""/>
+</p>
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde
+yer alan görsellerden birini seçmesi beklenecektir. Bu seçilen değerler oyunun
+arayüzünde kartların yer aldığı bölümün altında score ile birlikte
+gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak
+kalacaktır, score değeri dinamik olarak kullanıcı davranışına göre
+güncellenecektir.
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan
+
+## Svelte nedir?
+
+Svelte günümüz modern library ve framework habitatının komplex yapılarını azaltarak
+daha basit şekilde yüksek verimliliğe sahip uygulamalar geliştirilmesini sağlamayı
+amaçlayan bir araçtır. Svelte Javascript dünyasında fikir olarak benzer
+framework/library önlerine geçiyor. Modern framework/library ile birlikte geride
+bıraktığımız her süreçte farklı ihtiyaçlar için yeni bir öğrenme süreci ortaya
+çıktı. Öğrenme döngüsünün sürekli olarak geliştiricilerin karşısına çıkması bir
+süre sonrasında bir bezginlik halinin doğmasına sebep oluyor.
+Svelte'in bu döngünün dışına çıkarak modern framework bağımlılıklarını
+azalttı.
+
+## Svelte nasıl çalışır?
+
+Svelte bileşenleri `.svelte` uzantılı dosyalar ile oluşturulur. HTML'de benzer olarak
+`script, style, html` kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
+bulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure
+Javascript kodlarına dönüştürülür.
+
+<p align="center">
+  <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px"/>
+</p>
+
+Svelte'in derleme işlemini runtime üzerinde sağlayarak benzer framework/library
+daha hızlı çalışıyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığı
+ortadan kalkıyor.
+
+## ? Rollup nedir
+
+## [.] Proje bağımlılıkları
+
+- #### Svelte
+  lduğu son kartın büyük bir görünümü yer alacak.
+- #### Typescript
+  lduğu son kartın büyük bir görünümü yer alacak.
+- #### SCSS
+  lduğu son kartın büyük bir görünümü yer alacak.
+- #### Lerna
+  lduğu son kartın büyük bir görünümü yer alacak.
+
+## Svelte projesi oluşturma
+
+Npx ile yeni bir proje oluşturma:
+
+```
+npx degit sveltejs/template svelte-typescript-app
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+Yazdığımız kodun tiplemesini TypeScript ile kontrol edeceğiz.
 
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
 ```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
+cd svelte-typescript-app
 node scripts/setupTypeScript.js
 ```
 
-Or remove the script via:
+## Dizin Yapısı
 
-```bash
-rm scripts/setupTypeScript.js
-```
+## Router oluşturma
 
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
+## GitHub Pages üzerinde Deploy Etme
 
-## Deploying to the web
+## GitLab Pages üzerinde Deploy Etme
 
-### With [Vercel](https://vercel.com)
+## Kaynak
 
-Install `vercel` if you haven't already:
+- Svelte nedir?
 
-```bash
-npm install -g vercel
-```
+  - https://svelte.dev/blog/svelte-3-rethinking-reactivity
 
-Then, from within your project folder:
+- Svelte Documentation:
 
-```bash
-cd public
-vercel deploy --name my-project
-```
+  - https://svelte.dev/examples/hello-world
+  - https://svelte.dev/tutorial/basics
+  - https://svelte.dev/docs
+  - https://svelte.dev/blog
+  - https://svelte.dev/blog/svelte-3-rethinking-reactivity
 
-### With [surge](https://surge.sh/)
+* Svelte Projesi Oluşturma
 
-Install `surge` if you haven't already:
+  - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 
-```bash
-npm install -g surge
-```
+* ## Deploy:
 
-Then, from within your project folder:
+  - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
 
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+* ## md files importing
+
+  - https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project
