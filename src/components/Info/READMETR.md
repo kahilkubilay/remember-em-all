@@ -1,6 +1,6 @@
 <span id="selam-sana"></span>
 
-## Selam sana :wave:
+## Selam :wave:
 
 Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
 yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu

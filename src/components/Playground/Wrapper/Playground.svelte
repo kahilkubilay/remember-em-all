@@ -1,6 +1,5 @@
 <script lang="ts">
   import Card from "../Cards/Card.svelte";
-  import Score from "../../GameElements/Score.svelte";
   import { Pokemons } from "../../Pokemons/Pokemons";
   import UserGround from "../../User/UserGround.svelte";
   import { userInfo } from "../../../store/User";
@@ -29,7 +28,6 @@
       </div>
     {/each}
 
-    <!-- <Score /> -->
     <UserDetail />
   {:else}
     <UserGround />

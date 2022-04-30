@@ -1,6 +1,6 @@
 <script lang="ts">
   import DetailEN from "../../../README.md";
-  import DetailTR from "../../../READMETR.md";
+  import DetailTR from "./READMETR.md";
   import { lang } from "../../store/Lang";
   import * as content from "./content.json";
 
@@ -61,6 +61,7 @@
     right: 200px;
     top: 200px;
   }
+
   .flag {
     width: 40px;
     border: 1px solid black;

@@ -5,7 +5,7 @@
     "Headers": {
       "Turkish": [
         {
-          "title": "selam sana",
+          "title": "selam",
           "target": "#selam-sana"
         },
         {
@@ -39,7 +39,7 @@
       ],
       "English": [
         {
-          "title": "hi to you",
+          "title": "hi",
           "target": "#hi-to-you"
         },
         {

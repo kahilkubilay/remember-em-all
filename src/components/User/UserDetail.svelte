@@ -12,7 +12,9 @@
 
 <style>
   main {
+    width: 300px;
     margin-top: 20px;
+    margin: 20px auto;
     padding: 20px 10px;
     background-color: #f5f5f5;
     border-radius: 6px;
