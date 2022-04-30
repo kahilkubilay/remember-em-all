@@ -28,14 +28,14 @@
       <div class="switch-lang">
         <img
           hidden={$lang === "TR"}
-          src="./assets/tr.SVG"
+          src="./assets/tr.svg"
           alt="TR Flag"
           class="flag"
           on:click={switchLanguages}
         />
         <img
           hidden={$lang === "EN"}
-          src="./assets/gb.SVG"
+          src="./assets/gb.svg"
           alt="EN Flag"
           class="flag"
           on:click={switchLanguages}

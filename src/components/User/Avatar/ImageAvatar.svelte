@@ -49,7 +49,7 @@
     opacity: 0.8;
   }
 
-  .picked {
+  /* .picked {
     opacity: 1;
-  }
+  } */
 </style>

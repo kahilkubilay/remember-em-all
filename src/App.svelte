@@ -1,6 +1,7 @@
 <script lang="ts">
   import Playground from "./components/Playground/Wrapper/Playground.svelte";
-  import About from "./components/Info/About.svelte";
+  // import About from "./components/Info/About.svelte";
+  import About from "./components/Info/about.svelte";
   import { Router, Route, Link } from "svelte-navigator";
 </script>
 
@@ -10,7 +11,7 @@
       <nav>
         <Link to="/">about</Link>
         <span class="pipe"> | </span>
-        <Link to="game">game</Link>
+        <Link to="game">gamee</Link>
       </nav>
     </header>
     <div>
