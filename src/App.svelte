@@ -1,49 +1,25 @@
 <script lang="ts">
   import Playground from "./components/Playground/Wrapper/Playground.svelte";
-  // import About from "./components/Info/About.svelte";
   import About from "./components/Info/about.svelte";
-  import { Router, Route, Link } from "svelte-navigator";
+  import Pages from "./components/shared/Pages.svelte";
+
+  let pages = ["about", "game"];
+  let activePage = "about";
+
+  const switchPage = (event) => {
+    activePage = event.detail;
+  };
 </script>
 
 <main>
-  <Router>
-    <header>
-      <nav>
-        <Link to="/">about</Link>
-        <span class="pipe"> | </span>
-        <Link to="game">gamee</Link>
-      </nav>
-    </header>
-    <div>
-      <Route path="/" component={About} />
-      <Route path="game">
-        <Playground />
-      </Route>
-    </div>
-  </Router>
+  <Pages {pages} {activePage} on:switchPage={switchPage} />
+
+  {#if activePage === "about"}
+    <About />
+  {:else if activePage === "game"}
+    <Playground />
+  {/if}
 </main>
 
 <style>
-  nav {
-    text-align: center;
-    width: 900px;
-    padding: 25px 50px;
-    margin: 10px auto;
-    border-radius: 5px;
-  }
-
-  :global(a) {
-    color: black !important;
-    font-size: 22px;
-  }
-
-  .pipe {
-    font-size: 24px;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
 </style>
