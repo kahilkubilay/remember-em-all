@@ -1,13 +1,16 @@
 <script>
-  export let pokemonNumber;
+  export let pokemon;
+
+  const pokemonNo = pokemon.no;
+  const pokemonId = pokemon.id;
 </script>
 
 <div class="front">
   <img
-    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemonNumber}.png"
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemonId}.png"
     alt="card on the playing field"
     class="single-poke"
-    pokemonDetail={pokemonNumber}
+    pokemonDetail={pokemonId}
   />
 </div>
 

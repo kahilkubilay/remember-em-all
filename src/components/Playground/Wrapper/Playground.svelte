@@ -10,28 +10,36 @@
 
   const { isStart, level } = userInfo;
 
-  $: pokemons = new Pokemons($level);
-  $: mixedListOfPokemon = pokemons.shakeList(pokemons.list());
+  // $: pokemons = new Pokemons($level);
+
+  const pokemons = new Pokemons($level);
+  const mixedListOfPokemon = pokemons.shakeList(pokemons.list());
+
+  // $: mixedListOfPokemon = pokemons.shakeList(pokemons.list());
+  // $: mixedListOfPokemon = pokemons.shakeList(pokemons.list());
+
+  // console.log("pokemons=> ", $mixedListOfPokemon);
 </script>
 
 <main class="pokemon-cards">
-  {#if $isStart}
-    {#each mixedListOfPokemon as pokemonNumber}
-      <OpenCard bind:this={handler} />
-      <div
-        class="flip-container {($catchEmAll || []).some(
-          (catchedPokemon) => catchedPokemon === pokemonNumber
-        ) && 'hover'}"
-        on:click={(cardEvent) => handler.openCard(cardEvent)}
-      >
-        <Card {pokemonNumber} />
-      </div>
-    {/each}
+  <!-- {#if $isStart} -->
+  {#each mixedListOfPokemon as pokemon}
+    <!-- <OpenCard bind:this={handler} /> -->
+    <div class="flip-container">
+      <!-- <div
+      class="flip-container {($catchEmAll || []).some(
+        (catchedPokemon) => catchedPokemon === pokemonNumber
+      ) && 'hover'}"
+      on:click={(cardEvent) => handler.openCard(cardEvent)}
+    > -->
+      <Card {pokemon} />
+    </div>
+  {/each}
 
-    <UserDetail />
-  {:else}
-    <UserGround />
-  {/if}
+  <!-- <UserDetail /> -->
+  <!-- {:else} -->
+  <!-- <UserGround /> -->
+  <!-- {/if}   -->
 </main>
 
 <style type="text/scss">
@@ -63,9 +71,6 @@
       transform-style: preserve-3d;
       display: inline-block;
       margin: 5px;
-    }
-
-    .flip-container {
       width: 100px;
       height: 100px;
     }

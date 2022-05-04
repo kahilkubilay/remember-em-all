@@ -28,16 +28,18 @@ export class Pokemons {
   }
 
   shakeList(list:number[]):any {
-     const shakeList:number[] = [];
+     let shakeList = [];
      const duplicateList:number[] = list.concat(list);
      const levelLength:number = duplicateList.length - 1;
+     let pokemonNo:any;
 
      for(let counter=0; counter < levelLength + 1; counter++) {
+      pokemonNo = counter;
       const randomNumberForList:number = Math.trunc(Math.random() * 
-         duplicateList.length);
+         duplicateList.length)
 
-      shakeList.push(duplicateList[randomNumberForList]);
-
+      shakeList = [{no: pokemonNo, id: duplicateList[randomNumberForList]}, 
+         ...shakeList]
       duplicateList.splice(duplicateList
             .indexOf(duplicateList[randomNumberForList]), 1)
      }
