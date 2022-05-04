@@ -1,53 +1,51 @@
-<script lang="ts">
+<script>
   import DetailEN from "../../../README.md";
   import DetailTR from "./READMETR.md";
-  import { lang } from "../../store/Lang";
-  import * as content from "./content.json";
+  import * as ContentMap from "./content.json";
 
-  export const switchLanguages = () => {
-    $lang = $lang === "EN" ? "TR" : "EN";
+  let languages = ["Turkish", "English"];
+  let activeLanguage = "Turkish";
+
+  let { Turkish, English } = ContentMap.Headers;
+
+  const switchLanguages = (language) => {
+    activeLanguage = language;
   };
-
-  let { Turkish, English } = content.Headers;
 </script>
 
 <main class="container">
-  {#if $lang === "EN"}
-    <DetailEN />
-  {:else}
+  {#if activeLanguage === "Turkish"}
     <DetailTR />
+  {:else}
+    <DetailEN />
   {/if}
 
-  <ul class="content-map">
-    {#each $lang === "EN" ? English : Turkish as content}
-      <li>
-        <a href={content.target}>{content.title}</a>
-      </li>
-    {/each}
-    <li>
-      <div class="switch-lang">
-        <img
-          hidden={$lang === "TR"}
-          src="./assets/tr.svg"
-          alt="TR Flag"
-          class="flag"
-          on:click={switchLanguages}
-        />
-        <img
-          hidden={$lang === "EN"}
-          src="./assets/gb.svg"
-          alt="EN Flag"
-          class="flag"
-          on:click={switchLanguages}
-        />
-      </div>
-    </li>
-  </ul>
+  <div class="content-map">
+    <ul>
+      {#each activeLanguage === "Turkish" ? Turkish : English as ContentMap}
+        <li>
+          <a href={ContentMap.target}
+            >{ContentMap.title[0].toUpperCase() + ContentMap.title.slice(1)}</a
+          >
+        </li>
+      {/each}
+    </ul>
+
+    <div class="flag-capsule">
+      {#each languages as language}
+        <div on:click={() => switchLanguages(language)}>
+          <img
+            src="/assets/{language}.svg"
+            alt="{language} flag"
+            class="flag"
+          />
+        </div>
+      {/each}
+    </div>
+  </div>
 </main>
 
 <style>
-  @import "flag-icon-css/css/flag-icon.min.css";
-
   main {
     width: 900px;
     margin: auto;
@@ -56,39 +54,51 @@
     border-radius: 5px;
   }
 
-  .switch-lang {
-    width: 100px;
-    right: 200px;
-    top: 200px;
-  }
-
-  .flag {
-    width: 40px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
   .content-map {
     position: fixed;
     width: 250px;
     top: 50%;
     left: 110px;
-    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    background-color: #f5f5f5;
+  }
+
+  .content-map ul {
     padding: 0;
+    margin: 0 0 15px 0;
   }
 
   .content-map li {
-    padding-bottom: 5px;
+    list-style-type: none;
+    padding: 3px 20px;
   }
 
-  .content-map li:last-child {
-    justify-content: center;
+  a {
+    font-size: 20px;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .flag-capsule {
     display: flex;
-    padding-top: 18px;
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .content-map li a {
-    font-size: 18px;
+  .flag {
+    width: 35px;
+    margin-right: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
   }
 </style>

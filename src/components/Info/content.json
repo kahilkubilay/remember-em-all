@@ -1,5 +1,5 @@
 {
-    "Title": "Content",
+    "Title": "ContentMap",
     "Description": "content headers of description files",
     "SupportedLanguages": ["TR", "ENG"],
     "Headers": {

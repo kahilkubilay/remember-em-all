@@ -19,15 +19,12 @@
 </div>
 
 <style>
-  @import "https://fonts.googleapis.com/css?family=Average+Sans|Goudy+Bookletter+1911";
-
   .contents {
     text-align: center;
     width: 900px;
     padding: 25px 50px;
     margin: 10px auto;
     border-radius: 5px;
-    background-color: #f5f5f5;
   }
 
   ul {
@@ -40,13 +37,13 @@
     font-family: "Segoe UI", "Helvetica Neue", sans-serif;
     font-size: 23px;
     list-style-type: none;
-    margin-right: 8px;
     color: #000;
     cursor: pointer;
+    margin-right: 6px;
   }
 
   li:first-child {
     border-right: 2px solid black;
-    padding-right: 8px;
+    padding-right: 6px;
   }
 </style>

@@ -2,6 +2,8 @@
 
 ## Hi :wave:
 
+EN
+
 Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
 yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu
 dökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında

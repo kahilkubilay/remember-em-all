@@ -5,6 +5,8 @@
 
   let pages = ["about", "game"];
   let activePage = "about";
+  // let languages = ["tr", "en"];
+  // let activeLanguage = "tr";
 
   const switchPage = (event) => {
     activePage = event.detail;

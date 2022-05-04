@@ -429,10 +429,6 @@ var app = (function () {
         else
             dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
     }
-    function prop_dev(node, property, value) {
-        node[property] = value;
-        dispatch_dev('SvelteDOMSetProperty', { node, property, value });
-    }
     function set_data_dev(text, data) {
         data = '' + data;
         if (text.wholeText === data)
@@ -2659,145 +2655,147 @@ var app = (function () {
     	let h20;
     	let t2;
     	let p0;
-    	let t3;
-    	let a0;
-    	let t5;
-    	let t6;
+    	let t4;
     	let p1;
+    	let t5;
+    	let a0;
+    	let t7;
+    	let t8;
+    	let p2;
     	let img0;
     	let img0_src_value;
-    	let t7;
+    	let t9;
     	let span1;
-    	let t8;
-    	let h21;
     	let t10;
-    	let p2;
+    	let h21;
     	let t12;
     	let p3;
+    	let t14;
+    	let p4;
     	let img1;
     	let img1_src_value;
-    	let t13;
-    	let p4;
     	let t15;
     	let p5;
     	let t17;
-    	let span2;
-    	let t18;
-    	let h22;
-    	let t20;
     	let p6;
+    	let t19;
+    	let span2;
+    	let t20;
+    	let h22;
     	let t22;
-    	let span3;
-    	let t23;
-    	let h23;
-    	let t25;
     	let p7;
-    	let t26;
-    	let code0;
-    	let t28;
-    	let code1;
-    	let t30;
-    	let t31;
+    	let t24;
+    	let span3;
+    	let t25;
+    	let h23;
+    	let t27;
     	let p8;
+    	let t28;
+    	let code0;
+    	let t30;
+    	let code1;
+    	let t32;
+    	let t33;
+    	let p9;
     	let img2;
     	let img2_src_value;
-    	let t32;
-    	let p9;
     	let t34;
-    	let span4;
-    	let t35;
-    	let h24;
-    	let t37;
     	let p10;
+    	let t36;
+    	let span4;
+    	let t37;
+    	let h24;
     	let t39;
+    	let p11;
+    	let t41;
     	let pre0;
     	let code2;
-    	let t41;
-    	let p11;
     	let t43;
+    	let p12;
+    	let t45;
     	let pre1;
     	let code3;
-    	let t45;
+    	let t47;
     	let span5;
-    	let t46;
-    	let h25;
     	let t48;
+    	let h25;
+    	let t50;
     	let ul0;
     	let li0;
     	let h40;
-    	let t50;
-    	let code4;
     	let t52;
-    	let code5;
+    	let code4;
     	let t54;
-    	let t55;
+    	let code5;
+    	let t56;
+    	let t57;
     	let li1;
     	let h41;
-    	let t57;
-    	let t58;
-    	let span6;
     	let t59;
-    	let h26;
+    	let t60;
+    	let span6;
     	let t61;
+    	let h26;
+    	let t63;
     	let span7;
-    	let t62;
-    	let h27;
     	let t64;
-    	let h28;
+    	let h27;
     	let t66;
+    	let h28;
+    	let t68;
     	let ul3;
     	let li3;
-    	let p12;
-    	let t68;
+    	let p13;
+    	let t70;
     	let ul1;
     	let li2;
     	let a1;
-    	let t70;
-    	let li9;
-    	let p13;
     	let t72;
+    	let li9;
+    	let p14;
+    	let t74;
     	let ul2;
     	let li4;
     	let a2;
-    	let t74;
+    	let t76;
     	let li5;
     	let a3;
-    	let t76;
+    	let t78;
     	let li6;
     	let a4;
-    	let t78;
+    	let t80;
     	let li7;
     	let a5;
-    	let t80;
+    	let t82;
     	let li8;
     	let a6;
-    	let t82;
+    	let t84;
     	let ul5;
     	let li11;
-    	let p14;
-    	let t84;
+    	let p15;
+    	let t86;
     	let ul4;
     	let li10;
     	let a7;
-    	let t86;
+    	let t88;
     	let ul7;
     	let li13;
-    	let t87;
+    	let t89;
     	let ul6;
     	let li12;
     	let a8;
-    	let t89;
+    	let t91;
     	let ul9;
     	let li15;
-    	let p15;
-    	let t91;
+    	let p16;
+    	let t93;
     	let ul8;
     	let li14;
     	let a9;
-    	let t93;
-    	let li16;
-    	let p16;
     	let t95;
+    	let li16;
+    	let p17;
+    	let t97;
     	let ul10;
     	let li17;
     	let a10;
@@ -2810,180 +2808,183 @@ var app = (function () {
     			h20.textContent = "Hi :wave:";
     			t2 = space();
     			p0 = element("p");
-    			t3 = text("Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in\nyapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu\ndökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında\ngörebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı\nadımları takip ederek benzer veya farklı bir uygulama oluşturabilirsiniz.\nSvelte içeriği iyi ayrıntılanmış\n");
+    			p0.textContent = "EN";
+    			t4 = space();
+    			p1 = element("p");
+    			t5 = text("Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in\nyapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu\ndökümanı oluşturdum. Döküman içerisinde adım adım 'Game' bağlantısında\ngörebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı\nadımları takip ederek benzer veya farklı bir uygulama oluşturabilirsiniz.\nSvelte içeriği iyi ayrıntılanmış\n");
     			a0 = element("a");
     			a0.textContent = "dökümantasyona";
-    			t5 = text(" sahip,\ndökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı\nolabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip\nedebilirsiniz.");
-    			t6 = space();
-    			p1 = element("p");
-    			img0 = element("img");
-    			t7 = space();
-    			span1 = element("span");
+    			t7 = text(" sahip,\ndökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı\nolabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip\nedebilirsiniz.");
     			t8 = space();
+    			p2 = element("p");
+    			img0 = element("img");
+    			t9 = space();
+    			span1 = element("span");
+    			t10 = space();
     			h21 = element("h2");
     			h21.textContent = "Proje Hakkında";
-    			t10 = space();
-    			p2 = element("p");
-    			p2.textContent = "Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre\narayüz üzerinde kartlar bulunacak. Kartların üzerlerine click yapıldığında\nkartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar.\nEşleşen kartlar açık bir şekilde arayüz üzerinde dururken bu başarılı eşleşme\nkullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları\nyerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki\nseviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.";
     			t12 = space();
     			p3 = element("p");
-    			img1 = element("img");
-    			t13 = space();
+    			p3.textContent = "Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre\narayüz üzerinde kartlar bulunacak. Kartların üzerlerine click yapıldığında\nkartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar.\nEşleşen kartlar açık bir şekilde arayüz üzerinde dururken bu başarılı eşleşme\nkullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları\nyerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki\nseviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.";
+    			t14 = space();
     			p4 = element("p");
-    			p4.textContent = "Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde\nyer alan görsellerden birini seçmesi beklenecektir. Bu seçilen değerler oyunun\narayüzünde kartların yer aldığı bölümün altında score ile birlikte\ngösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak\nkalacaktır, score değeri dinamik olarak kullanıcı davranışına göre\ngüncellenecektir.";
+    			img1 = element("img");
     			t15 = space();
     			p5 = element("p");
-    			p5.textContent = "image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan";
+    			p5.textContent = "Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde\nyer alan görsellerden birini seçmesi beklenecektir. Bu seçilen değerler oyunun\narayüzünde kartların yer aldığı bölümün altında score ile birlikte\ngösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak\nkalacaktır, score değeri dinamik olarak kullanıcı davranışına göre\ngüncellenecektir.";
     			t17 = space();
+    			p6 = element("p");
+    			p6.textContent = "image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan";
+    			t19 = space();
     			span2 = element("span");
-    			t18 = space();
+    			t20 = space();
     			h22 = element("h2");
     			h22.textContent = "Svelte nedir?";
-    			t20 = space();
-    			p6 = element("p");
-    			p6.textContent = "Svelte günümüz modern library ve framework habitatının komplex yapılarını azaltarak\ndaha basit şekilde yüksek verimliliğe sahip uygulamalar geliştirilmesini sağlamayı\namaçlayan bir araçtır. Svelte Javascript dünyasında fikir olarak benzer\nframework/library önlerine geçiyor. Modern framework/library ile birlikte geride\nbıraktığımız her süreçte farklı ihtiyaçlar için yeni bir öğrenme süreci ortaya\nçıktı. Öğrenme döngüsünün sürekli olarak geliştiricilerin karşısına çıkması bir\nsüre sonrasında bir bezginlik halinin doğmasına sebep oluyor.\nSvelte'in bu döngünün dışına çıkarak modern framework bağımlılıklarını\nazalttı.";
     			t22 = space();
+    			p7 = element("p");
+    			p7.textContent = "Svelte günümüz modern library ve framework habitatının komplex yapılarını azaltarak\ndaha basit şekilde yüksek verimliliğe sahip uygulamalar geliştirilmesini sağlamayı\namaçlayan bir araçtır. Svelte Javascript dünyasında fikir olarak benzer\nframework/library önlerine geçiyor. Modern framework/library ile birlikte geride\nbıraktığımız her süreçte farklı ihtiyaçlar için yeni bir öğrenme süreci ortaya\nçıktı. Öğrenme döngüsünün sürekli olarak geliştiricilerin karşısına çıkması bir\nsüre sonrasında bir bezginlik halinin doğmasına sebep oluyor.\nSvelte'in bu döngünün dışına çıkarak modern framework bağımlılıklarını\nazalttı.";
+    			t24 = space();
     			span3 = element("span");
-    			t23 = space();
+    			t25 = space();
     			h23 = element("h2");
     			h23.textContent = "Svelte nasıl çalışır?";
-    			t25 = space();
-    			p7 = element("p");
-    			t26 = text("Svelte bileşenleri ");
+    			t27 = space();
+    			p8 = element("p");
+    			t28 = text("Svelte bileşenleri ");
     			code0 = element("code");
     			code0.textContent = ".svelte";
-    			t28 = text(" uzantılı dosyalar ile oluşturulur. HTML'de benzer\nolarak ");
+    			t30 = text(" uzantılı dosyalar ile oluşturulur. HTML'de benzer\nolarak ");
     			code1 = element("code");
     			code1.textContent = "script, style, html";
-    			t30 = text(" kod yapılarını oluşturabilirdiğiniz üç farklı bölüm\nbulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure\nJavascript kodlarına dönüştürülür.");
-    			t31 = space();
-    			p8 = element("p");
-    			img2 = element("img");
-    			t32 = space();
+    			t32 = text(" kod yapılarını oluşturabilirdiğiniz üç farklı bölüm\nbulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure\nJavascript kodlarına dönüştürülür.");
+    			t33 = space();
     			p9 = element("p");
-    			p9.textContent = "Svelte'in derleme işlemini runtime üzerinde sağlayarak benzer framework/library\ndaha hızlı çalışıyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığı\nortadan kalkıyor.";
+    			img2 = element("img");
     			t34 = space();
+    			p10 = element("p");
+    			p10.textContent = "Svelte'in derleme işlemini runtime üzerinde sağlayarak benzer framework/library\ndaha hızlı çalışıyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığı\nortadan kalkıyor.";
+    			t36 = space();
     			span4 = element("span");
-    			t35 = space();
+    			t37 = space();
     			h24 = element("h2");
     			h24.textContent = "Svelte projesi oluşturma";
-    			t37 = space();
-    			p10 = element("p");
-    			p10.textContent = "Npx ile yeni bir proje oluşturma:";
     			t39 = space();
+    			p11 = element("p");
+    			p11.textContent = "Npx ile yeni bir proje oluşturma:";
+    			t41 = space();
     			pre0 = element("pre");
     			code2 = element("code");
     			code2.textContent = "npx degit sveltejs/template svelte-typescript-app\n";
-    			t41 = space();
-    			p11 = element("p");
-    			p11.textContent = "Yazdığımız kodun tiplemesini TypeScript ile kontrol edeceğiz.";
     			t43 = space();
+    			p12 = element("p");
+    			p12.textContent = "Yazdığımız kodun tiplemesini TypeScript ile kontrol edeceğiz.";
+    			t45 = space();
     			pre1 = element("pre");
     			code3 = element("code");
     			code3.textContent = "cd svelte-typescript-app\nnode scripts/setupTypeScript.js\n";
-    			t45 = space();
+    			t47 = space();
     			span5 = element("span");
-    			t46 = space();
+    			t48 = space();
     			h25 = element("h2");
     			h25.textContent = "Proje bağımlılıkları";
-    			t48 = space();
+    			t50 = space();
     			ul0 = element("ul");
     			li0 = element("li");
     			h40 = element("h4");
     			h40.textContent = "Typescript";
-    			t50 = text("\nTypescript, Javascript kodunuzu daha verimli kılmanızı ve kod kaynaklı\nhataların önüne geçilmesini sağlayan bir Javascript uzantısıdır. Svelte\n");
+    			t52 = text("\nTypescript, Javascript kodunuzu daha verimli kılmanızı ve kod kaynaklı\nhataların önüne geçilmesini sağlayan bir Javascript uzantısıdır. Svelte\n");
     			code4 = element("code");
     			code4.textContent = ".svelte";
-    			t52 = text(" uzantılı dosyaların yanısıra ");
+    			t54 = text(" uzantılı dosyaların yanısıra ");
     			code5 = element("code");
     			code5.textContent = ".ts";
-    			t54 = text(" dosyaları da destekler.");
-    			t55 = space();
+    			t56 = text(" dosyaları da destekler.");
+    			t57 = space();
     			li1 = element("li");
     			h41 = element("h4");
     			h41.textContent = "Rollup";
-    			t57 = text("\nSvelte kurulumunuzla birlikte root folder üzerinde rollup.config.js dosyası\noluşturulacaktır. Rollup javascript uygulamalar için kullanılan bir modül\npaketleyicidir. Rollup uygulamamızda yer alan kodları tarayıcının\nanlayabileceği şekilde ayrıştırır.");
-    			t58 = space();
+    			t59 = text("\nSvelte kurulumunuzla birlikte root folder üzerinde rollup.config.js dosyası\noluşturulacaktır. Rollup javascript uygulamalar için kullanılan bir modül\npaketleyicidir. Rollup uygulamamızda yer alan kodları tarayıcının\nanlayabileceği şekilde ayrıştırır.");
+    			t60 = space();
     			span6 = element("span");
-    			t59 = space();
+    			t61 = space();
     			h26 = element("h2");
     			h26.textContent = "Dizin ve Component Yapısı";
-    			t61 = space();
+    			t63 = space();
     			span7 = element("span");
-    			t62 = space();
+    			t64 = space();
     			h27 = element("h2");
     			h27.textContent = "GitHub Pages ile Deploy";
-    			t64 = space();
+    			t66 = space();
     			h28 = element("h2");
     			h28.textContent = "Kaynak";
-    			t66 = space();
+    			t68 = space();
     			ul3 = element("ul");
     			li3 = element("li");
-    			p12 = element("p");
-    			p12.textContent = "Svelte nedir?";
-    			t68 = space();
+    			p13 = element("p");
+    			p13.textContent = "Svelte nedir?";
+    			t70 = space();
     			ul1 = element("ul");
     			li2 = element("li");
     			a1 = element("a");
     			a1.textContent = "https://svelte.dev/blog/svelte-3-rethinking-reactivity";
-    			t70 = space();
-    			li9 = element("li");
-    			p13 = element("p");
-    			p13.textContent = "Svelte Documentation:";
     			t72 = space();
+    			li9 = element("li");
+    			p14 = element("p");
+    			p14.textContent = "Svelte Documentation:";
+    			t74 = space();
     			ul2 = element("ul");
     			li4 = element("li");
     			a2 = element("a");
     			a2.textContent = "https://svelte.dev/examples/hello-world";
-    			t74 = space();
+    			t76 = space();
     			li5 = element("li");
     			a3 = element("a");
     			a3.textContent = "https://svelte.dev/tutorial/basics";
-    			t76 = space();
+    			t78 = space();
     			li6 = element("li");
     			a4 = element("a");
     			a4.textContent = "https://svelte.dev/docs";
-    			t78 = space();
+    			t80 = space();
     			li7 = element("li");
     			a5 = element("a");
     			a5.textContent = "https://svelte.dev/blog";
-    			t80 = space();
+    			t82 = space();
     			li8 = element("li");
     			a6 = element("a");
     			a6.textContent = "https://svelte.dev/blog/svelte-3-rethinking-reactivity";
-    			t82 = space();
+    			t84 = space();
     			ul5 = element("ul");
     			li11 = element("li");
-    			p14 = element("p");
-    			p14.textContent = "Svelte Projesi Oluşturma";
-    			t84 = space();
+    			p15 = element("p");
+    			p15.textContent = "Svelte Projesi Oluşturma";
+    			t86 = space();
     			ul4 = element("ul");
     			li10 = element("li");
     			a7 = element("a");
     			a7.textContent = "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript";
-    			t86 = space();
+    			t88 = space();
     			ul7 = element("ul");
     			li13 = element("li");
-    			t87 = text("Bağımlılıklar");
+    			t89 = text("Bağımlılıklar");
     			ul6 = element("ul");
     			li12 = element("li");
     			a8 = element("a");
     			a8.textContent = "https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/";
-    			t89 = space();
+    			t91 = space();
     			ul9 = element("ul");
     			li15 = element("li");
-    			p15 = element("p");
-    			p15.textContent = "Deploy:";
-    			t91 = space();
+    			p16 = element("p");
+    			p16.textContent = "Deploy:";
+    			t93 = space();
     			ul8 = element("ul");
     			li14 = element("li");
     			a9 = element("a");
     			a9.textContent = "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next";
-    			t93 = space();
-    			li16 = element("li");
-    			p16 = element("p");
-    			p16.textContent = "md files importing";
     			t95 = space();
+    			li16 = element("li");
+    			p17 = element("p");
+    			p17.textContent = "md files importing";
+    			t97 = space();
     			ul10 = element("ul");
     			li17 = element("li");
     			a10 = element("a");
@@ -2991,122 +2992,123 @@ var app = (function () {
     			attr_dev(span0, "id", "hi-to-you");
     			add_location(span0, file$4, 0, 0, 0);
     			add_location(h20, file$4, 1, 0, 29);
+    			add_location(p0, file$4, 2, 0, 48);
     			attr_dev(a0, "href", "https://svelte.dev/docs");
     			attr_dev(a0, "title", "Svelte Documentation");
-    			add_location(a0, file$4, 8, 0, 457);
-    			add_location(p0, file$4, 2, 0, 48);
+    			add_location(a0, file$4, 9, 0, 467);
+    			add_location(p1, file$4, 3, 0, 58);
     			if (!src_url_equal(img0.src, img0_src_value = "./assets/svelte-logo.PNG")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Svelte logo");
     			set_style(img0, "width", "400px");
-    			add_location(img0, file$4, 12, 18, 736);
-    			attr_dev(p1, "align", "center");
-    			add_location(p1, file$4, 12, 0, 718);
+    			add_location(img0, file$4, 13, 18, 746);
+    			attr_dev(p2, "align", "center");
+    			add_location(p2, file$4, 13, 0, 728);
     			attr_dev(span1, "id", "about-the-project");
-    			add_location(span1, file$4, 13, 0, 816);
-    			add_location(h21, file$4, 14, 0, 853);
-    			add_location(p2, file$4, 15, 0, 877);
+    			add_location(span1, file$4, 14, 0, 826);
+    			add_location(h21, file$4, 15, 0, 863);
+    			add_location(p3, file$4, 16, 0, 887);
     			if (!src_url_equal(img1.src, img1_src_value = "./assets/cards.PNG")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "view of cards on the playground");
     			attr_dev(img1, "style", "");
-    			add_location(img1, file$4, 22, 18, 1422);
-    			attr_dev(p3, "align", "center");
-    			add_location(p3, file$4, 22, 0, 1404);
-    			add_location(p4, file$4, 23, 0, 1505);
-    			add_location(p5, file$4, 29, 0, 1892);
+    			add_location(img1, file$4, 23, 18, 1432);
+    			attr_dev(p4, "align", "center");
+    			add_location(p4, file$4, 23, 0, 1414);
+    			add_location(p5, file$4, 24, 0, 1515);
+    			add_location(p6, file$4, 30, 0, 1902);
     			attr_dev(span2, "id", "#what-is-svelte");
-    			add_location(span2, file$4, 30, 0, 1961);
-    			add_location(h22, file$4, 31, 0, 1996);
-    			add_location(p6, file$4, 32, 0, 2019);
+    			add_location(span2, file$4, 31, 0, 1971);
+    			add_location(h22, file$4, 32, 0, 2006);
+    			add_location(p7, file$4, 33, 0, 2029);
     			attr_dev(span3, "id", "how-does-svelte-work");
-    			add_location(span3, file$4, 41, 0, 2651);
-    			add_location(h23, file$4, 42, 0, 2691);
-    			add_location(code0, file$4, 43, 22, 2744);
-    			add_location(code1, file$4, 44, 7, 2826);
-    			add_location(p7, file$4, 43, 0, 2722);
+    			add_location(span3, file$4, 42, 0, 2661);
+    			add_location(h23, file$4, 43, 0, 2701);
+    			add_location(code0, file$4, 44, 22, 2754);
+    			add_location(code1, file$4, 45, 7, 2836);
+    			add_location(p8, file$4, 44, 0, 2732);
     			if (!src_url_equal(img2.src, img2_src_value = "./assets/build-map.PNG")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "Svelte Build map");
     			set_style(img2, "width", "800px");
-    			add_location(img2, file$4, 47, 18, 3040);
-    			attr_dev(p8, "align", "center");
-    			add_location(p8, file$4, 47, 0, 3022);
-    			add_location(p9, file$4, 48, 0, 3124);
+    			add_location(img2, file$4, 48, 18, 3050);
+    			attr_dev(p9, "align", "center");
+    			add_location(p9, file$4, 48, 0, 3032);
+    			add_location(p10, file$4, 49, 0, 3134);
     			attr_dev(span4, "id", "create-a-svelte-project");
-    			add_location(span4, file$4, 51, 0, 3309);
-    			add_location(h24, file$4, 52, 0, 3352);
-    			add_location(p10, file$4, 53, 0, 3386);
-    			add_location(code2, file$4, 54, 5, 3432);
-    			add_location(pre0, file$4, 54, 0, 3427);
-    			add_location(p11, file$4, 56, 0, 3502);
-    			add_location(code3, file$4, 57, 5, 3576);
-    			add_location(pre1, file$4, 57, 0, 3571);
+    			add_location(span4, file$4, 52, 0, 3319);
+    			add_location(h24, file$4, 53, 0, 3362);
+    			add_location(p11, file$4, 54, 0, 3396);
+    			add_location(code2, file$4, 55, 5, 3442);
+    			add_location(pre0, file$4, 55, 0, 3437);
+    			add_location(p12, file$4, 57, 0, 3512);
+    			add_location(code3, file$4, 58, 5, 3586);
+    			add_location(pre1, file$4, 58, 0, 3581);
     			attr_dev(span5, "id", "dependencies");
-    			add_location(span5, file$4, 60, 0, 3653);
-    			add_location(h25, file$4, 61, 0, 3685);
-    			add_location(h40, file$4, 63, 4, 3724);
-    			add_location(code4, file$4, 66, 0, 3887);
-    			add_location(code5, file$4, 66, 50, 3937);
-    			add_location(li0, file$4, 63, 0, 3720);
-    			add_location(h41, file$4, 67, 4, 3987);
-    			add_location(li1, file$4, 67, 0, 3983);
-    			add_location(ul0, file$4, 62, 0, 3715);
+    			add_location(span5, file$4, 61, 0, 3663);
+    			add_location(h25, file$4, 62, 0, 3695);
+    			add_location(h40, file$4, 64, 4, 3734);
+    			add_location(code4, file$4, 67, 0, 3897);
+    			add_location(code5, file$4, 67, 50, 3947);
+    			add_location(li0, file$4, 64, 0, 3730);
+    			add_location(h41, file$4, 68, 4, 3997);
+    			add_location(li1, file$4, 68, 0, 3993);
+    			add_location(ul0, file$4, 63, 0, 3725);
     			attr_dev(span6, "id", "directory-and-component-structure");
-    			add_location(span6, file$4, 73, 0, 4265);
-    			add_location(h26, file$4, 74, 0, 4318);
+    			add_location(span6, file$4, 74, 0, 4275);
+    			add_location(h26, file$4, 75, 0, 4328);
     			attr_dev(span7, "id", "deploy-with-github-pages");
-    			add_location(span7, file$4, 75, 0, 4353);
-    			add_location(h27, file$4, 76, 0, 4397);
-    			add_location(h28, file$4, 77, 0, 4430);
-    			add_location(p12, file$4, 79, 4, 4455);
+    			add_location(span7, file$4, 76, 0, 4363);
+    			add_location(h27, file$4, 77, 0, 4407);
+    			add_location(h28, file$4, 78, 0, 4440);
+    			add_location(p13, file$4, 80, 4, 4465);
     			attr_dev(a1, "href", "https://svelte.dev/blog/svelte-3-rethinking-reactivity");
-    			add_location(a1, file$4, 81, 4, 4485);
-    			add_location(li2, file$4, 81, 0, 4481);
-    			add_location(ul1, file$4, 80, 0, 4476);
-    			add_location(li3, file$4, 79, 0, 4451);
-    			add_location(p13, file$4, 84, 4, 4630);
+    			add_location(a1, file$4, 82, 4, 4495);
+    			add_location(li2, file$4, 82, 0, 4491);
+    			add_location(ul1, file$4, 81, 0, 4486);
+    			add_location(li3, file$4, 80, 0, 4461);
+    			add_location(p14, file$4, 85, 4, 4640);
     			attr_dev(a2, "href", "https://svelte.dev/examples/hello-world");
-    			add_location(a2, file$4, 86, 4, 4668);
-    			add_location(li4, file$4, 86, 0, 4664);
+    			add_location(a2, file$4, 87, 4, 4678);
+    			add_location(li4, file$4, 87, 0, 4674);
     			attr_dev(a3, "href", "https://svelte.dev/tutorial/basics");
-    			add_location(a3, file$4, 87, 4, 4771);
-    			add_location(li5, file$4, 87, 0, 4767);
+    			add_location(a3, file$4, 88, 4, 4781);
+    			add_location(li5, file$4, 88, 0, 4777);
     			attr_dev(a4, "href", "https://svelte.dev/docs");
-    			add_location(a4, file$4, 88, 4, 4864);
-    			add_location(li6, file$4, 88, 0, 4860);
+    			add_location(a4, file$4, 89, 4, 4874);
+    			add_location(li6, file$4, 89, 0, 4870);
     			attr_dev(a5, "href", "https://svelte.dev/blog");
-    			add_location(a5, file$4, 89, 4, 4935);
-    			add_location(li7, file$4, 89, 0, 4931);
+    			add_location(a5, file$4, 90, 4, 4945);
+    			add_location(li7, file$4, 90, 0, 4941);
     			attr_dev(a6, "href", "https://svelte.dev/blog/svelte-3-rethinking-reactivity");
-    			add_location(a6, file$4, 90, 4, 5006);
-    			add_location(li8, file$4, 90, 0, 5002);
-    			add_location(ul2, file$4, 85, 0, 4659);
-    			add_location(li9, file$4, 84, 0, 4626);
-    			add_location(ul3, file$4, 78, 0, 4446);
-    			add_location(p14, file$4, 95, 4, 5162);
+    			add_location(a6, file$4, 91, 4, 5016);
+    			add_location(li8, file$4, 91, 0, 5012);
+    			add_location(ul2, file$4, 86, 0, 4669);
+    			add_location(li9, file$4, 85, 0, 4636);
+    			add_location(ul3, file$4, 79, 0, 4456);
+    			add_location(p15, file$4, 96, 4, 5172);
     			attr_dev(a7, "href", "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript");
-    			add_location(a7, file$4, 97, 4, 5203);
-    			add_location(li10, file$4, 97, 0, 5199);
-    			add_location(ul4, file$4, 96, 0, 5194);
-    			add_location(li11, file$4, 95, 0, 5158);
-    			add_location(ul5, file$4, 94, 0, 5153);
+    			add_location(a7, file$4, 98, 4, 5213);
+    			add_location(li10, file$4, 98, 0, 5209);
+    			add_location(ul4, file$4, 97, 0, 5204);
+    			add_location(li11, file$4, 96, 0, 5168);
+    			add_location(ul5, file$4, 95, 0, 5163);
     			attr_dev(a8, "href", "https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/");
-    			add_location(a8, file$4, 103, 4, 5505);
-    			add_location(li12, file$4, 103, 0, 5501);
-    			add_location(ul6, file$4, 102, 17, 5496);
-    			add_location(li13, file$4, 102, 0, 5479);
-    			add_location(ul7, file$4, 101, 0, 5474);
-    			add_location(p15, file$4, 108, 4, 5675);
+    			add_location(a8, file$4, 104, 4, 5515);
+    			add_location(li12, file$4, 104, 0, 5511);
+    			add_location(ul6, file$4, 103, 17, 5506);
+    			add_location(li13, file$4, 103, 0, 5489);
+    			add_location(ul7, file$4, 102, 0, 5484);
+    			add_location(p16, file$4, 109, 4, 5685);
     			attr_dev(a9, "href", "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next");
-    			add_location(a9, file$4, 110, 4, 5699);
-    			add_location(li14, file$4, 110, 0, 5695);
-    			add_location(ul8, file$4, 109, 0, 5690);
-    			add_location(li15, file$4, 108, 0, 5671);
-    			add_location(p16, file$4, 113, 4, 5978);
-    			add_location(li16, file$4, 113, 0, 5974);
-    			add_location(ul9, file$4, 107, 0, 5666);
+    			add_location(a9, file$4, 111, 4, 5709);
+    			add_location(li14, file$4, 111, 0, 5705);
+    			add_location(ul8, file$4, 110, 0, 5700);
+    			add_location(li15, file$4, 109, 0, 5681);
+    			add_location(p17, file$4, 114, 4, 5988);
+    			add_location(li16, file$4, 114, 0, 5984);
+    			add_location(ul9, file$4, 108, 0, 5676);
     			attr_dev(a10, "href", "https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project");
-    			add_location(a10, file$4, 117, 4, 6025);
-    			add_location(li17, file$4, 117, 0, 6021);
-    			add_location(ul10, file$4, 116, 0, 6016);
+    			add_location(a10, file$4, 118, 4, 6035);
+    			add_location(li17, file$4, 118, 0, 6031);
+    			add_location(ul10, file$4, 117, 0, 6026);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3117,142 +3119,144 @@ var app = (function () {
     			insert_dev(target, h20, anchor);
     			insert_dev(target, t2, anchor);
     			insert_dev(target, p0, anchor);
-    			append_dev(p0, t3);
-    			append_dev(p0, a0);
-    			append_dev(p0, t5);
-    			insert_dev(target, t6, anchor);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, p1, anchor);
-    			append_dev(p1, img0);
-    			insert_dev(target, t7, anchor);
-    			insert_dev(target, span1, anchor);
+    			append_dev(p1, t5);
+    			append_dev(p1, a0);
+    			append_dev(p1, t7);
     			insert_dev(target, t8, anchor);
-    			insert_dev(target, h21, anchor);
-    			insert_dev(target, t10, anchor);
     			insert_dev(target, p2, anchor);
+    			append_dev(p2, img0);
+    			insert_dev(target, t9, anchor);
+    			insert_dev(target, span1, anchor);
+    			insert_dev(target, t10, anchor);
+    			insert_dev(target, h21, anchor);
     			insert_dev(target, t12, anchor);
     			insert_dev(target, p3, anchor);
-    			append_dev(p3, img1);
-    			insert_dev(target, t13, anchor);
+    			insert_dev(target, t14, anchor);
     			insert_dev(target, p4, anchor);
+    			append_dev(p4, img1);
     			insert_dev(target, t15, anchor);
     			insert_dev(target, p5, anchor);
     			insert_dev(target, t17, anchor);
-    			insert_dev(target, span2, anchor);
-    			insert_dev(target, t18, anchor);
-    			insert_dev(target, h22, anchor);
-    			insert_dev(target, t20, anchor);
     			insert_dev(target, p6, anchor);
+    			insert_dev(target, t19, anchor);
+    			insert_dev(target, span2, anchor);
+    			insert_dev(target, t20, anchor);
+    			insert_dev(target, h22, anchor);
     			insert_dev(target, t22, anchor);
-    			insert_dev(target, span3, anchor);
-    			insert_dev(target, t23, anchor);
-    			insert_dev(target, h23, anchor);
-    			insert_dev(target, t25, anchor);
     			insert_dev(target, p7, anchor);
-    			append_dev(p7, t26);
-    			append_dev(p7, code0);
-    			append_dev(p7, t28);
-    			append_dev(p7, code1);
-    			append_dev(p7, t30);
-    			insert_dev(target, t31, anchor);
+    			insert_dev(target, t24, anchor);
+    			insert_dev(target, span3, anchor);
+    			insert_dev(target, t25, anchor);
+    			insert_dev(target, h23, anchor);
+    			insert_dev(target, t27, anchor);
     			insert_dev(target, p8, anchor);
-    			append_dev(p8, img2);
-    			insert_dev(target, t32, anchor);
+    			append_dev(p8, t28);
+    			append_dev(p8, code0);
+    			append_dev(p8, t30);
+    			append_dev(p8, code1);
+    			append_dev(p8, t32);
+    			insert_dev(target, t33, anchor);
     			insert_dev(target, p9, anchor);
+    			append_dev(p9, img2);
     			insert_dev(target, t34, anchor);
-    			insert_dev(target, span4, anchor);
-    			insert_dev(target, t35, anchor);
-    			insert_dev(target, h24, anchor);
-    			insert_dev(target, t37, anchor);
     			insert_dev(target, p10, anchor);
+    			insert_dev(target, t36, anchor);
+    			insert_dev(target, span4, anchor);
+    			insert_dev(target, t37, anchor);
+    			insert_dev(target, h24, anchor);
     			insert_dev(target, t39, anchor);
+    			insert_dev(target, p11, anchor);
+    			insert_dev(target, t41, anchor);
     			insert_dev(target, pre0, anchor);
     			append_dev(pre0, code2);
-    			insert_dev(target, t41, anchor);
-    			insert_dev(target, p11, anchor);
     			insert_dev(target, t43, anchor);
+    			insert_dev(target, p12, anchor);
+    			insert_dev(target, t45, anchor);
     			insert_dev(target, pre1, anchor);
     			append_dev(pre1, code3);
-    			insert_dev(target, t45, anchor);
+    			insert_dev(target, t47, anchor);
     			insert_dev(target, span5, anchor);
-    			insert_dev(target, t46, anchor);
-    			insert_dev(target, h25, anchor);
     			insert_dev(target, t48, anchor);
+    			insert_dev(target, h25, anchor);
+    			insert_dev(target, t50, anchor);
     			insert_dev(target, ul0, anchor);
     			append_dev(ul0, li0);
     			append_dev(li0, h40);
-    			append_dev(li0, t50);
-    			append_dev(li0, code4);
     			append_dev(li0, t52);
-    			append_dev(li0, code5);
+    			append_dev(li0, code4);
     			append_dev(li0, t54);
-    			append_dev(ul0, t55);
+    			append_dev(li0, code5);
+    			append_dev(li0, t56);
+    			append_dev(ul0, t57);
     			append_dev(ul0, li1);
     			append_dev(li1, h41);
-    			append_dev(li1, t57);
-    			insert_dev(target, t58, anchor);
+    			append_dev(li1, t59);
+    			insert_dev(target, t60, anchor);
     			insert_dev(target, span6, anchor);
-    			insert_dev(target, t59, anchor);
-    			insert_dev(target, h26, anchor);
     			insert_dev(target, t61, anchor);
+    			insert_dev(target, h26, anchor);
+    			insert_dev(target, t63, anchor);
     			insert_dev(target, span7, anchor);
-    			insert_dev(target, t62, anchor);
-    			insert_dev(target, h27, anchor);
     			insert_dev(target, t64, anchor);
-    			insert_dev(target, h28, anchor);
+    			insert_dev(target, h27, anchor);
     			insert_dev(target, t66, anchor);
+    			insert_dev(target, h28, anchor);
+    			insert_dev(target, t68, anchor);
     			insert_dev(target, ul3, anchor);
     			append_dev(ul3, li3);
-    			append_dev(li3, p12);
-    			append_dev(li3, t68);
+    			append_dev(li3, p13);
+    			append_dev(li3, t70);
     			append_dev(li3, ul1);
     			append_dev(ul1, li2);
     			append_dev(li2, a1);
-    			append_dev(ul3, t70);
+    			append_dev(ul3, t72);
     			append_dev(ul3, li9);
-    			append_dev(li9, p13);
-    			append_dev(li9, t72);
+    			append_dev(li9, p14);
+    			append_dev(li9, t74);
     			append_dev(li9, ul2);
     			append_dev(ul2, li4);
     			append_dev(li4, a2);
-    			append_dev(ul2, t74);
+    			append_dev(ul2, t76);
     			append_dev(ul2, li5);
     			append_dev(li5, a3);
-    			append_dev(ul2, t76);
+    			append_dev(ul2, t78);
     			append_dev(ul2, li6);
     			append_dev(li6, a4);
-    			append_dev(ul2, t78);
+    			append_dev(ul2, t80);
     			append_dev(ul2, li7);
     			append_dev(li7, a5);
-    			append_dev(ul2, t80);
+    			append_dev(ul2, t82);
     			append_dev(ul2, li8);
     			append_dev(li8, a6);
-    			insert_dev(target, t82, anchor);
+    			insert_dev(target, t84, anchor);
     			insert_dev(target, ul5, anchor);
     			append_dev(ul5, li11);
-    			append_dev(li11, p14);
-    			append_dev(li11, t84);
+    			append_dev(li11, p15);
+    			append_dev(li11, t86);
     			append_dev(li11, ul4);
     			append_dev(ul4, li10);
     			append_dev(li10, a7);
-    			insert_dev(target, t86, anchor);
+    			insert_dev(target, t88, anchor);
     			insert_dev(target, ul7, anchor);
     			append_dev(ul7, li13);
-    			append_dev(li13, t87);
+    			append_dev(li13, t89);
     			append_dev(li13, ul6);
     			append_dev(ul6, li12);
     			append_dev(li12, a8);
-    			insert_dev(target, t89, anchor);
+    			insert_dev(target, t91, anchor);
     			insert_dev(target, ul9, anchor);
     			append_dev(ul9, li15);
-    			append_dev(li15, p15);
-    			append_dev(li15, t91);
+    			append_dev(li15, p16);
+    			append_dev(li15, t93);
     			append_dev(li15, ul8);
     			append_dev(ul8, li14);
     			append_dev(li14, a9);
-    			append_dev(ul9, t93);
+    			append_dev(ul9, t95);
     			append_dev(ul9, li16);
-    			append_dev(li16, p16);
-    			insert_dev(target, t95, anchor);
+    			append_dev(li16, p17);
+    			insert_dev(target, t97, anchor);
     			insert_dev(target, ul10, anchor);
     			append_dev(ul10, li17);
     			append_dev(li17, a10);
@@ -3266,73 +3270,75 @@ var app = (function () {
     			if (detaching) detach_dev(h20);
     			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(p0);
-    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(p1);
-    			if (detaching) detach_dev(t7);
-    			if (detaching) detach_dev(span1);
     			if (detaching) detach_dev(t8);
-    			if (detaching) detach_dev(h21);
-    			if (detaching) detach_dev(t10);
     			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(span1);
+    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(h21);
     			if (detaching) detach_dev(t12);
     			if (detaching) detach_dev(p3);
-    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(t14);
     			if (detaching) detach_dev(p4);
     			if (detaching) detach_dev(t15);
     			if (detaching) detach_dev(p5);
     			if (detaching) detach_dev(t17);
-    			if (detaching) detach_dev(span2);
-    			if (detaching) detach_dev(t18);
-    			if (detaching) detach_dev(h22);
-    			if (detaching) detach_dev(t20);
     			if (detaching) detach_dev(p6);
+    			if (detaching) detach_dev(t19);
+    			if (detaching) detach_dev(span2);
+    			if (detaching) detach_dev(t20);
+    			if (detaching) detach_dev(h22);
     			if (detaching) detach_dev(t22);
-    			if (detaching) detach_dev(span3);
-    			if (detaching) detach_dev(t23);
-    			if (detaching) detach_dev(h23);
-    			if (detaching) detach_dev(t25);
     			if (detaching) detach_dev(p7);
-    			if (detaching) detach_dev(t31);
+    			if (detaching) detach_dev(t24);
+    			if (detaching) detach_dev(span3);
+    			if (detaching) detach_dev(t25);
+    			if (detaching) detach_dev(h23);
+    			if (detaching) detach_dev(t27);
     			if (detaching) detach_dev(p8);
-    			if (detaching) detach_dev(t32);
+    			if (detaching) detach_dev(t33);
     			if (detaching) detach_dev(p9);
     			if (detaching) detach_dev(t34);
-    			if (detaching) detach_dev(span4);
-    			if (detaching) detach_dev(t35);
-    			if (detaching) detach_dev(h24);
-    			if (detaching) detach_dev(t37);
     			if (detaching) detach_dev(p10);
+    			if (detaching) detach_dev(t36);
+    			if (detaching) detach_dev(span4);
+    			if (detaching) detach_dev(t37);
+    			if (detaching) detach_dev(h24);
     			if (detaching) detach_dev(t39);
-    			if (detaching) detach_dev(pre0);
-    			if (detaching) detach_dev(t41);
     			if (detaching) detach_dev(p11);
+    			if (detaching) detach_dev(t41);
+    			if (detaching) detach_dev(pre0);
     			if (detaching) detach_dev(t43);
-    			if (detaching) detach_dev(pre1);
+    			if (detaching) detach_dev(p12);
     			if (detaching) detach_dev(t45);
+    			if (detaching) detach_dev(pre1);
+    			if (detaching) detach_dev(t47);
     			if (detaching) detach_dev(span5);
-    			if (detaching) detach_dev(t46);
-    			if (detaching) detach_dev(h25);
     			if (detaching) detach_dev(t48);
+    			if (detaching) detach_dev(h25);
+    			if (detaching) detach_dev(t50);
     			if (detaching) detach_dev(ul0);
-    			if (detaching) detach_dev(t58);
+    			if (detaching) detach_dev(t60);
     			if (detaching) detach_dev(span6);
-    			if (detaching) detach_dev(t59);
-    			if (detaching) detach_dev(h26);
     			if (detaching) detach_dev(t61);
+    			if (detaching) detach_dev(h26);
+    			if (detaching) detach_dev(t63);
     			if (detaching) detach_dev(span7);
-    			if (detaching) detach_dev(t62);
-    			if (detaching) detach_dev(h27);
     			if (detaching) detach_dev(t64);
-    			if (detaching) detach_dev(h28);
+    			if (detaching) detach_dev(h27);
     			if (detaching) detach_dev(t66);
+    			if (detaching) detach_dev(h28);
+    			if (detaching) detach_dev(t68);
     			if (detaching) detach_dev(ul3);
-    			if (detaching) detach_dev(t82);
+    			if (detaching) detach_dev(t84);
     			if (detaching) detach_dev(ul5);
-    			if (detaching) detach_dev(t86);
+    			if (detaching) detach_dev(t88);
     			if (detaching) detach_dev(ul7);
-    			if (detaching) detach_dev(t89);
+    			if (detaching) detach_dev(t91);
     			if (detaching) detach_dev(ul9);
-    			if (detaching) detach_dev(t95);
+    			if (detaching) detach_dev(t97);
     			if (detaching) detach_dev(ul10);
     		}
     	};
@@ -4105,15 +4111,9 @@ var app = (function () {
     	}
     }
 
-    /**
-     * language of the About Page
-     *
-     */
-    const lang = writable('TR');
+    var Title="ContentMap";var Description="content headers of description files";var SupportedLanguages=["TR","ENG"];var Headers={Turkish:[{title:"selam",target:"#selam-sana"},{title:"proje hakkında",target:"#proje-hakkinda"},{title:"svelte nedir?",target:"#svelte-nedir"},{title:"svelte nasıl çalışır?",target:"#svelte-nasil-calisir"},{title:"Svelte projesi oluşturma",target:"#svelte-projesi-olusturma"},{title:"bağımlılıklar",target:"#bagimliliklar"},{title:"dizin ve component yapısı",target:"#dizin-ve-component-yapisi"},{title:"github page ile deploy",target:"#github-page-ile-deploy"}],English:[{title:"hi",target:"#hi-to-you"},{title:"about the project",target:"#about-the-project"},{title:"what is svelte?",target:"#what-is-svelte"},{title:"how does Svelte work?",target:"#how-does-svelte-work"},{title:"create a Svelte project",target:"#create-a-svelte-project"},{title:"dependencies",target:"#dependencies"},{title:"directory and component structure",target:"directory-and-component-structure"},{title:"deploy with github page",target:"deploy-with-github-pages"}]};var content = {Title:Title,Description:Description,SupportedLanguages:SupportedLanguages,Headers:Headers};
 
-    var Title="Content";var Description="content headers of description files";var SupportedLanguages=["TR","ENG"];var Headers={Turkish:[{title:"selam",target:"#selam-sana"},{title:"proje hakkında",target:"#proje-hakkinda"},{title:"svelte nedir?",target:"#svelte-nedir"},{title:"svelte nasıl çalışır?",target:"#svelte-nasil-calisir"},{title:"Svelte projesi oluşturma",target:"#svelte-projesi-olusturma"},{title:"bağımlılıklar",target:"#bagimliliklar"},{title:"dizin ve component yapısı",target:"#dizin-ve-component-yapisi"},{title:"github page ile deploy",target:"#github-page-ile-deploy"}],English:[{title:"hi",target:"#hi-to-you"},{title:"about the project",target:"#about-the-project"},{title:"what is svelte?",target:"#what-is-svelte"},{title:"how does Svelte work?",target:"#how-does-svelte-work"},{title:"create a Svelte project",target:"#create-a-svelte-project"},{title:"dependencies",target:"#dependencies"},{title:"directory and component structure",target:"directory-and-component-structure"},{title:"deploy with github page",target:"deploy-with-github-pages"}]};var content = {Title:Title,Description:Description,SupportedLanguages:SupportedLanguages,Headers:Headers};
-
-    var content$1 = /*#__PURE__*/Object.freeze({
+    var ContentMap = /*#__PURE__*/Object.freeze({
         __proto__: null,
         Title: Title,
         Description: Description,
@@ -4127,51 +4127,18 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[4] = list[i];
+    	child_ctx[6] = list[i];
     	return child_ctx;
     }
 
-    // (14:2) {:else}
-    function create_else_block(ctx) {
-    	let detailtr;
-    	let current;
-    	detailtr = new READMETR({ $$inline: true });
-
-    	const block = {
-    		c: function create() {
-    			create_component(detailtr.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(detailtr, target, anchor);
-    			current = true;
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(detailtr.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(detailtr.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(detailtr, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_else_block.name,
-    		type: "else",
-    		source: "(14:2) {:else}",
-    		ctx
-    	});
-
-    	return block;
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[9] = list[i];
+    	return child_ctx;
     }
 
-    // (12:2) {#if $lang === "EN"}
-    function create_if_block$1(ctx) {
+    // (19:2) {:else}
+    function create_else_block(ctx) {
     	let detailen;
     	let current;
     	detailen = new README({ $$inline: true });
@@ -4200,43 +4167,85 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
-    		type: "if",
-    		source: "(12:2) {#if $lang === \\\"EN\\\"}",
+    		id: create_else_block.name,
+    		type: "else",
+    		source: "(19:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (19:4) {#each $lang === "EN" ? English : Turkish as content}
-    function create_each_block$1(ctx) {
+    // (17:2) {#if activeLanguage === "Turkish"}
+    function create_if_block$1(ctx) {
+    	let detailtr;
+    	let current;
+    	detailtr = new READMETR({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(detailtr.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(detailtr, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(detailtr.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(detailtr.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(detailtr, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(17:2) {#if activeLanguage === \\\"Turkish\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (25:6) {#each activeLanguage === "Turkish" ? Turkish : English as ContentMap}
+    function create_each_block_1(ctx) {
     	let li;
     	let a;
-    	let t_value = /*content*/ ctx[4].title + "";
-    	let t;
+    	let t0_value = /*ContentMap*/ ctx[9].title[0].toUpperCase() + /*ContentMap*/ ctx[9].title.slice(1) + "";
+    	let t0;
     	let a_href_value;
+    	let t1;
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			a = element("a");
-    			t = text(t_value);
-    			attr_dev(a, "href", a_href_value = /*content*/ ctx[4].target);
-    			attr_dev(a, "class", "svelte-1gtod6n");
-    			add_location(a, file$2, 20, 8, 547);
-    			attr_dev(li, "class", "svelte-1gtod6n");
-    			add_location(li, file$2, 19, 6, 533);
+    			t0 = text(t0_value);
+    			t1 = space();
+    			attr_dev(a, "href", a_href_value = /*ContentMap*/ ctx[9].target);
+    			attr_dev(a, "class", "svelte-4bag9x");
+    			add_location(a, file$2, 26, 10, 637);
+    			attr_dev(li, "class", "svelte-4bag9x");
+    			add_location(li, file$2, 25, 8, 621);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
     			append_dev(li, a);
-    			append_dev(a, t);
+    			append_dev(a, t0);
+    			append_dev(li, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$lang*/ 2 && t_value !== (t_value = /*content*/ ctx[4].title + "")) set_data_dev(t, t_value);
+    			if (dirty & /*activeLanguage*/ 1 && t0_value !== (t0_value = /*ContentMap*/ ctx[9].title[0].toUpperCase() + /*ContentMap*/ ctx[9].title.slice(1) + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*$lang*/ 2 && a_href_value !== (a_href_value = /*content*/ ctx[4].target)) {
+    			if (dirty & /*activeLanguage*/ 1 && a_href_value !== (a_href_value = /*ContentMap*/ ctx[9].target)) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},
@@ -4247,9 +4256,64 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_each_block_1.name,
+    		type: "each",
+    		source: "(25:6) {#each activeLanguage === \\\"Turkish\\\" ? Turkish : English as ContentMap}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (35:6) {#each languages as language}
+    function create_each_block$1(ctx) {
+    	let div;
+    	let img;
+    	let img_src_value;
+    	let t;
+    	let mounted;
+    	let dispose;
+
+    	function click_handler() {
+    		return /*click_handler*/ ctx[5](/*language*/ ctx[6]);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			img = element("img");
+    			t = space();
+    			if (!src_url_equal(img.src, img_src_value = "/assets/" + /*language*/ ctx[6] + ".svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "" + (/*language*/ ctx[6] + " flag"));
+    			attr_dev(img, "class", "flag svelte-4bag9x");
+    			add_location(img, file$2, 36, 10, 940);
+    			add_location(div, file$2, 35, 8, 880);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, img);
+    			append_dev(div, t);
+
+    			if (!mounted) {
+    				dispose = listen_dev(div, "click", click_handler, false, false, false);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			mounted = false;
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(19:4) {#each $lang === \\\"EN\\\" ? English : Turkish as content}",
+    		source: "(35:6) {#each languages as language}",
     		ctx
     	});
 
@@ -4261,35 +4325,34 @@ var app = (function () {
     	let current_block_type_index;
     	let if_block;
     	let t0;
+    	let div1;
     	let ul;
     	let t1;
-    	let li;
-    	let div;
-    	let img0;
-    	let img0_hidden_value;
-    	let img0_src_value;
-    	let t2;
-    	let img1;
-    	let img1_hidden_value;
-    	let img1_src_value;
+    	let div0;
     	let current;
-    	let mounted;
-    	let dispose;
     	const if_block_creators = [create_if_block$1, create_else_block];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$lang*/ ctx[1] === "EN") return 0;
+    		if (/*activeLanguage*/ ctx[0] === "Turkish") return 0;
     		return 1;
     	}
 
     	current_block_type_index = select_block_type(ctx);
     	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 
-    	let each_value = /*$lang*/ ctx[1] === "EN"
-    	? /*English*/ ctx[3]
-    	: /*Turkish*/ ctx[2];
+    	let each_value_1 = /*activeLanguage*/ ctx[0] === "Turkish"
+    	? /*Turkish*/ ctx[2]
+    	: /*English*/ ctx[3];
 
+    	validate_each_argument(each_value_1);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = /*languages*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -4302,36 +4365,28 @@ var app = (function () {
     			main = element("main");
     			if_block.c();
     			t0 = space();
+    			div1 = element("div");
     			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t1 = space();
+    			div0 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t1 = space();
-    			li = element("li");
-    			div = element("div");
-    			img0 = element("img");
-    			t2 = space();
-    			img1 = element("img");
-    			img0.hidden = img0_hidden_value = /*$lang*/ ctx[1] === "TR";
-    			if (!src_url_equal(img0.src, img0_src_value = "./assets/tr.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "alt", "TR Flag");
-    			attr_dev(img0, "class", "flag svelte-1gtod6n");
-    			add_location(img0, file$2, 25, 8, 670);
-    			img1.hidden = img1_hidden_value = /*$lang*/ ctx[1] === "EN";
-    			if (!src_url_equal(img1.src, img1_src_value = "./assets/gb.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "alt", "EN Flag");
-    			attr_dev(img1, "class", "flag svelte-1gtod6n");
-    			add_location(img1, file$2, 32, 8, 851);
-    			attr_dev(div, "class", "switch-lang svelte-1gtod6n");
-    			add_location(div, file$2, 24, 6, 635);
-    			attr_dev(li, "class", "svelte-1gtod6n");
-    			add_location(li, file$2, 23, 4, 623);
-    			attr_dev(ul, "class", "content-map svelte-1gtod6n");
-    			add_location(ul, file$2, 17, 2, 442);
-    			attr_dev(main, "class", "container svelte-1gtod6n");
-    			add_location(main, file$2, 10, 0, 332);
+    			attr_dev(ul, "class", "svelte-4bag9x");
+    			add_location(ul, file$2, 23, 4, 529);
+    			attr_dev(div0, "class", "flag-capsule svelte-4bag9x");
+    			add_location(div0, file$2, 33, 4, 807);
+    			attr_dev(div1, "class", "content-map svelte-4bag9x");
+    			add_location(div1, file$2, 22, 2, 498);
+    			attr_dev(main, "class", "container svelte-4bag9x");
+    			add_location(main, file$2, 15, 0, 374);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4340,28 +4395,21 @@ var app = (function () {
     			insert_dev(target, main, anchor);
     			if_blocks[current_block_type_index].m(main, null);
     			append_dev(main, t0);
-    			append_dev(main, ul);
+    			append_dev(main, div1);
+    			append_dev(div1, ul);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(ul, null);
+    			}
+
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(ul, null);
+    				each_blocks[i].m(div0, null);
     			}
 
-    			append_dev(ul, t1);
-    			append_dev(ul, li);
-    			append_dev(li, div);
-    			append_dev(div, img0);
-    			append_dev(div, t2);
-    			append_dev(div, img1);
     			current = true;
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(img0, "click", /*switchLanguages*/ ctx[0], false, false, false),
-    					listen_dev(img1, "click", /*switchLanguages*/ ctx[0], false, false, false)
-    				];
-
-    				mounted = true;
-    			}
     		},
     		p: function update(ctx, [dirty]) {
     			let previous_block_index = current_block_type_index;
@@ -4386,11 +4434,35 @@ var app = (function () {
     				if_block.m(main, t0);
     			}
 
-    			if (dirty & /*$lang, English, Turkish*/ 14) {
-    				each_value = /*$lang*/ ctx[1] === "EN"
-    				? /*English*/ ctx[3]
-    				: /*Turkish*/ ctx[2];
+    			if (dirty & /*activeLanguage, Turkish, English*/ 13) {
+    				each_value_1 = /*activeLanguage*/ ctx[0] === "Turkish"
+    				? /*Turkish*/ ctx[2]
+    				: /*English*/ ctx[3];
 
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (dirty & /*switchLanguages, languages*/ 18) {
+    				each_value = /*languages*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -4402,7 +4474,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(ul, t1);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -4411,14 +4483,6 @@ var app = (function () {
     				}
 
     				each_blocks.length = each_value.length;
-    			}
-
-    			if (!current || dirty & /*$lang*/ 2 && img0_hidden_value !== (img0_hidden_value = /*$lang*/ ctx[1] === "TR")) {
-    				prop_dev(img0, "hidden", img0_hidden_value);
-    			}
-
-    			if (!current || dirty & /*$lang*/ 2 && img1_hidden_value !== (img1_hidden_value = /*$lang*/ ctx[1] === "EN")) {
-    				prop_dev(img1, "hidden", img1_hidden_value);
     			}
     		},
     		i: function intro(local) {
@@ -4433,9 +4497,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main);
     			if_blocks[current_block_type_index].d();
+    			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
-    			mounted = false;
-    			run_all(dispose);
     		}
     	};
 
@@ -4451,35 +4514,38 @@ var app = (function () {
     }
 
     function instance$2($$self, $$props, $$invalidate) {
-    	let $lang;
-    	validate_store(lang, 'lang');
-    	component_subscribe($$self, lang, $$value => $$invalidate(1, $lang = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('About', slots, []);
+    	let languages = ["Turkish", "English"];
+    	let activeLanguage = "Turkish";
+    	let { Turkish, English } = Headers;
 
-    	const switchLanguages = () => {
-    		set_store_value(lang, $lang = $lang === "EN" ? "TR" : "EN", $lang);
+    	const switchLanguages = language => {
+    		$$invalidate(0, activeLanguage = language);
     	};
 
-    	let { Turkish, English } = Headers;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<About> was created with unknown prop '${key}'`);
     	});
 
+    	const click_handler = language => switchLanguages(language);
+
     	$$self.$capture_state = () => ({
     		DetailEN: README,
     		DetailTR: READMETR,
-    		lang,
-    		content: content$1,
-    		switchLanguages,
+    		ContentMap,
+    		languages,
+    		activeLanguage,
     		Turkish,
     		English,
-    		$lang
+    		switchLanguages
     	});
 
     	$$self.$inject_state = $$props => {
+    		if ('languages' in $$props) $$invalidate(1, languages = $$props.languages);
+    		if ('activeLanguage' in $$props) $$invalidate(0, activeLanguage = $$props.activeLanguage);
     		if ('Turkish' in $$props) $$invalidate(2, Turkish = $$props.Turkish);
     		if ('English' in $$props) $$invalidate(3, English = $$props.English);
     	};
@@ -4488,13 +4554,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [switchLanguages, $lang, Turkish, English];
+    	return [activeLanguage, languages, Turkish, English, switchLanguages, click_handler];
     }
 
     class About extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { switchLanguages: 0 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -4502,14 +4568,6 @@ var app = (function () {
     			options,
     			id: create_fragment$2.name
     		});
-    	}
-
-    	get switchLanguages() {
-    		return this.$$.ctx[0];
-    	}
-
-    	set switchLanguages(value) {
-    		throw new Error("<About>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -4544,7 +4602,7 @@ var app = (function () {
     			t1 = space();
     			toggle_class(div, "active", /*page*/ ctx[4] === /*activePage*/ ctx[1]);
     			add_location(div, file$1, 12, 8, 281);
-    			attr_dev(li, "class", "svelte-135x94x");
+    			attr_dev(li, "class", "svelte-ibmays");
     			add_location(li, file$1, 11, 6, 221);
     		},
     		m: function mount(target, anchor) {
@@ -4604,9 +4662,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-135x94x");
+    			attr_dev(ul, "class", "svelte-ibmays");
     			add_location(ul, file$1, 9, 2, 182);
-    			attr_dev(div, "class", "contents svelte-135x94x");
+    			attr_dev(div, "class", "contents svelte-ibmays");
     			add_location(div, file$1, 8, 0, 156);
     		},
     		l: function claim(nodes) {
@@ -4745,7 +4803,7 @@ var app = (function () {
     /* src\App.svelte generated by Svelte v3.46.4 */
     const file = "src\\App.svelte";
 
-    // (16:34) 
+    // (18:34) 
     function create_if_block_1(ctx) {
     	let playground;
     	let current;
@@ -4777,14 +4835,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(16:34) ",
+    		source: "(18:34) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:2) {#if activePage === "about"}
+    // (16:2) {#if activePage === "about"}
     function create_if_block(ctx) {
     	let about;
     	let current;
@@ -4816,7 +4874,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(14:2) {#if activePage === \\\"about\\\"}",
+    		source: "(16:2) {#if activePage === \\\"about\\\"}",
     		ctx
     	});
 
@@ -4859,7 +4917,7 @@ var app = (function () {
     			create_component(pages_1.$$.fragment);
     			t = space();
     			if (if_block) if_block.c();
-    			add_location(main, file, 10, 0, 344);
+    			add_location(main, file, 12, 0, 409);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4946,6 +5004,8 @@ var app = (function () {
     	let pages = ["about", "game"];
     	let activePage = "about";
 
+    	// let languages = ["tr", "en"];
+    	// let activeLanguage = "tr";
     	const switchPage = event => {
     		$$invalidate(0, activePage = event.detail);
     	};
