@@ -1,41 +1,66 @@
 <script>
   import BackCardFace from "./CardBack.svelte";
   import FrontCardFace from "./CardFront.svelte";
-  import { openCardsCapsule, catchEmAll } from "../../../store/OpenedCards";
+  import {
+    openCardsCapsule,
+    cardFlipperCapsule,
+    catchEmAll,
+  } from "../../../store/OpenedCards";
+  import { scoreUp } from "../../GameAction/ScoreUpdate.svelte";
 
   export let pokemon;
 
   let pokemonId = pokemon.id;
   let pokemonNo = pokemon.no;
 
-  // console.log($openCardsCapsule);
-
   const openCard = (card) => {
-    console.log("check=>", $openCardsCapsule);
-    console.log("clicked=> ", card.detail);
-
     let getPokemonNo = card.detail.no;
     let getPokemonId = card.detail.id;
 
-    $openCardsCapsule = [getPokemonNo, ...$openCardsCapsule];
+    $openCardsCapsule = [getPokemonId, ...$openCardsCapsule];
+    $cardFlipperCapsule = [getPokemonNo, ...$cardFlipperCapsule];
 
     if ($openCardsCapsule.length >= 2) {
+      const firstOpenCard = $openCardsCapsule[0];
+      const secondOpenCard = $openCardsCapsule[1];
+
+      if (firstOpenCard === secondOpenCard) {
+        $catchEmAll = [firstOpenCard, ...$catchEmAll];
+
+        scoreUp();
+      } else {
+        console.log(":: none ::");
+      }
+
       setTimeout(() => {
         $openCardsCapsule = [];
-      }, 1000);
+        $cardFlipperCapsule = [];
+      }, 500);
     }
   };
-
-  // let check = pokemonNumber === 2;
-  // console.log("here=> ", check);
 </script>
 
-<div class="flipper" class:hover={$openCardsCapsule.includes(pokemonNo)}>
-  <BackCardFace {pokemon} on:openCard={openCard} />
-  <FrontCardFace {pokemon} />
-</div>
+<main class="flip-container">
+  <div
+    class="flipper"
+    class:hover={$cardFlipperCapsule.includes(pokemonNo) ||
+      $catchEmAll.includes(pokemonId)}
+  >
+    <BackCardFace {pokemon} on:openCard={openCard} />
+    <FrontCardFace {pokemon} />
+  </div>
+</main>
 
 <style>
+  .flip-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    display: inline-block;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+  }
+
   .flipper {
     position: relative;
     transition: 0.8s;

@@ -4,13 +4,9 @@
   const dispatch = createEventDispatcher();
 
   export let pokemon;
-
-  const pokemonNo = pokemon.no;
-  const pokemonId = pokemon.id;
 </script>
 
-<!-- <div class="back" on:click={() => dispatch("openCard", pokemonNo)}> -->
-  <div class="back" on:click={() => dispatch("openCard", pokemon)}>
+<div class="back" on:click={() => dispatch("openCard", pokemon)}>
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png"
     class="single-poke"
@@ -35,5 +31,11 @@
 
   .back:hover {
     cursor: pointer;
+  }
+
+  .single-poke {
+    border-radius: 11px;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #ffffff;
   }
 </style>

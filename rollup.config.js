@@ -7,7 +7,6 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import autoPreprocess from 'svelte-preprocess';
-import { scss } from 'svelte-preprocess';
 // md files
 import {markdown} from 'svelte-preprocess-markdown';
 // json files
@@ -53,7 +52,6 @@ export default {
 			//  preprocess: markdown()
 			preprocess: [
 				autoPreprocess(),
-				scss({  /** options */ }),
 				markdown(),
 			],
 			compilerOptions: {

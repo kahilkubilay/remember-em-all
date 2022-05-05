@@ -28,14 +28,9 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
-    "flag-icons": "^6.1.1",
     "marked": "^4.0.12",
-    "pokemon-images": "^2.0.1",
-    "pokesprite-images": "^2.5.6",
     "remove": "^0.1.5",
-    "sass": "^1.49.10",
     "sirv-cli": "^2.0.0",
-    "svelte-markdown": "^0.2.2",
-    "svelte-navigator": "^3.1.5"
+    "svelte-markdown": "^0.2.2"
   }
 }

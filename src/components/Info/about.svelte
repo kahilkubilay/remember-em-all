@@ -78,7 +78,7 @@
   }
 
   a {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Segoe UI", "Helvetica Neue", sans-serif;
     text-decoration: none;
     color: #000;

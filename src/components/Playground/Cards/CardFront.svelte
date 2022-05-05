@@ -1,7 +1,6 @@
 <script>
   export let pokemon;
 
-  const pokemonNo = pokemon.no;
   const pokemonId = pokemon.id;
 </script>
 
@@ -25,5 +24,11 @@
     top: 0;
     left: 0;
     transform: rotateY(-180deg);
+  }
+
+  .single-poke {
+    border-radius: 11px;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #ffffff;
   }
 </style>
