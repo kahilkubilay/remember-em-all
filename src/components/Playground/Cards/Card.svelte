@@ -7,11 +7,16 @@
     catchEmAll,
   } from "../../../store/OpenedCards";
   import { scoreUp } from "../../GameAction/ScoreUpdate.svelte";
+  import { levelUp } from "../../GameAction/LevelUpdate.svelte";
+  import {
+    closeAllCards,
+    mismatchedCards,
+  } from "../../GameAction/CloseOpenCards.svelte";
 
   export let pokemon;
 
-  let pokemonId = pokemon.id;
-  let pokemonNo = pokemon.no;
+  $: pokemonId = pokemon.id;
+  $: pokemonNo = pokemon.no;
 
   const openCard = (card) => {
     let getPokemonNo = card.detail.no;
@@ -28,14 +33,13 @@
         $catchEmAll = [firstOpenCard, ...$catchEmAll];
 
         scoreUp();
-      } else {
-        console.log(":: none ::");
+
+        if ($catchEmAll.length === 5) {
+          closeAllCards(1000, levelUp);
+        }
       }
 
-      setTimeout(() => {
-        $openCardsCapsule = [];
-        $cardFlipperCapsule = [];
-      }, 500);
+      mismatchedCards(500);
     }
   };
 </script>

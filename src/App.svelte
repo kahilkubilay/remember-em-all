@@ -1,11 +1,10 @@
-<script lang="ts">
+<script>
   import Playground from "./components/Playground/Wrapper/Playground.svelte";
   import About from "./components/Info/about.svelte";
   import Pages from "./components/shared/Pages.svelte";
 
   let pages = ["about", "game"];
-  // let activePage = "about";
-  let activePage = "game";
+  let activePage = "about";
 
   const switchPage = (event) => {
     activePage = event.detail;

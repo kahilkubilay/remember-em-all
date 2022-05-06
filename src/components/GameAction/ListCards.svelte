@@ -1,13 +1,6 @@
 <script context="module">
-  import { level } from "../../store/Level";
-
-  export const list = () => {
-    console.log(":: work here ::");
-    let getLevel;
-
-    level.subscribe((callLevel) => {
-      getLevel = callLevel;
-    });
+  export const list = (level) => {
+    let getLevel = level;
 
     const list = [];
     const range = 5;

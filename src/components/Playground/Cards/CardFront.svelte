@@ -1,7 +1,7 @@
 <script>
   export let pokemon;
 
-  const pokemonId = pokemon.id;
+  $: pokemonId = pokemon.id;
 </script>
 
 <div class="front">

@@ -5,15 +5,11 @@
   import UserDetail from "../../User/UserDetail.svelte";
   import { shuffle } from "../../GameAction/MixCards.svelte";
   import { list } from "../../GameAction/ListCards.svelte";
+  import { level } from "../../../store/Level";
 
   const { isStart } = userInfo;
-  let pokemonList = [];
-  let mixedListOfPokemon = [];
-
-  if (isStart) {
-    pokemonList = list();
-    mixedListOfPokemon = shuffle(pokemonList);
-  }
+  $: pokemonList = list($level);
+  $: mixedListOfPokemon = shuffle(pokemonList);
 </script>
 
 <main class="pokemon-cards">
