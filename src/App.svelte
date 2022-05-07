@@ -4,8 +4,7 @@
   import Pages from "./components/shared/Pages.svelte";
 
   let pages = ["about", "game"];
-  // let activePage = "about";
-  let activePage = "game";
+  let activePage = "about";
 
   const switchPage = (event) => {
     activePage = event.detail;
