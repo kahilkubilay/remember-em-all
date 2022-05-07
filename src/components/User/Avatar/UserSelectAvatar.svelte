@@ -33,7 +33,7 @@
     cy="60"
     r="50"
     fill="url(#image)"
-    stroke="#112B3C"
+    stroke="#6a0dad"
     stroke-width="8"
   />
 </svg>

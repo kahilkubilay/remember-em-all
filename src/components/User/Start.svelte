@@ -33,12 +33,13 @@
 <style>
   .start button {
     width: 70%;
-    background-color: white;
-    color: black;
     cursor: pointer;
     border-radius: 10px;
     padding: 10px 0;
-    font-size: 24px;
+    font-size: 18px;
+    border: 2px solid black;
+    background-color: purple;
+    color: white;
     font-weight: bold;
   }
 

@@ -1,5 +1,5 @@
 <div class="header">
-  <h2>select your pokemon and start the battle!</h2>
+  <h2>select your best pokemon and start catching!</h2>
 </div>
 
 <style>

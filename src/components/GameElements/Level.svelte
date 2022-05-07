@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { score } from "../../store/Score";
+  import { level } from "../../store/Level";
 </script>
 
-<p>score: {$score}</p>
+<p>level: {$level}</p>
 
 <style>
   p {

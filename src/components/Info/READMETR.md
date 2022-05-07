@@ -30,7 +30,7 @@ yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki
 seviyede yer alan kartar arayüze kapalı olarak yeniden gelecektir.
 
 <p align="center">
-  <img src="./assets/cards.png" alt="view of cards on the playground" style=""/>
+  <img src="./assets/cards.png" alt="view of cards on the playground"/>
 </p>
 
 Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde
@@ -40,7 +40,9 @@ gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak
 kalacaktır, score değeri dinamik olarak kullanıcı davranışına göre
 güncellenecektir.
 
-image 1.2 ---> kullanıcı bilgileri ve score tutulduğu alan
+<p align="center">
+  <img src="./assets/user-detail.png" alt="user information on the playground" />
+</p>
 
 <span id="svelte-nedir"></span>
 

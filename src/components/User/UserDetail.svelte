@@ -1,5 +1,6 @@
 <script lang="ts">
   import Score from "../GameElements/Score.svelte";
+  import Level from "../GameElements/Level.svelte";
   import Name from "./name/UserSelectName.svelte";
   import UserSelectAvatar from "./Avatar/UserSelectAvatar.svelte";
 </script>
@@ -8,6 +9,7 @@
   <UserSelectAvatar />
   <Name />
   <Score />
+  <Level />
 </main>
 
 <style>
