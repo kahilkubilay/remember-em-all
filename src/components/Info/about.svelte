@@ -2,9 +2,10 @@
   import DetailEN from "../../../README.md";
   import DetailTR from "./READMETR.md";
   import * as ContentMap from "./content.json";
+  
 
   let languages = ["Turkish", "English"];
-  let activeLanguage = "Turkish";
+  let activeLanguage = "English";
 
   let { Turkish, English } = ContentMap.Headers;
 
