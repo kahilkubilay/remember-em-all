@@ -11,6 +11,8 @@
   const switchLanguages = (language) => {
     activeLanguage = language;
   };
+
+  let svelteLogo = "/assets/svelte-logo.png";
 </script>
 
 <main class="container">
@@ -21,6 +23,7 @@
   {/if}
 
   <div class="content-map">
+    <img src={svelteLogo} alt="Svelte logo" class="logo" />
     <ul>
       {#each activeLanguage === "Turkish" ? Turkish : English as ContentMap}
         <li>
@@ -100,5 +103,10 @@
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .logo {
+    width: 50px;
+    margin: 10px auto;
   }
 </style>

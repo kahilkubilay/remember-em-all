@@ -14,15 +14,6 @@ dökümantasyonları inceledikten sonra uygulamayı takip etmeniz daha faydalı
 olabilir. İçeriğin özelliklerini sol tarafta bulunan haritalandırma ile takip
 edebilirsiniz.
 
-::::: buradaki logoyu content-map alanına taşı ::::
-
-<p align="center">
-  <img src="./assets/svelte-logo.png" alt="Svelte logo" title="Svelte logo" 
-  style="width:400px"/>
-</p>
-
-::::: buradaki logoyu content-map alanına taşı ::::
-
 <span id="proje-hakkinda"></span>
 
 ## Oyun Hakkında
@@ -80,21 +71,21 @@ framework Svelte olarak seçildi.
 
 Npx ile yeni bir proje oluşturma:
 
-```
+```js
 npx degit sveltejs/template remember-em-all
 ```
 
 Svelte Typescript notasyonunu desteklemektedir. Typescript üzerinde
 yapabileceğiniz bütün işlemleri Svelte projenizde kullanabilirsiniz.
 
-```
+```js
 cd remember-em-all
 node scripts/setupTypeScript.js
 ```
 
 Gerekli olan bağımlılıkları projemize ekleyerek ayağa kaldırabiliriz.
 
-```
+```js
 npm install
 npm run dev
 ```
@@ -166,6 +157,142 @@ Proje içerisinde compile edilen bütün yapılar `/public/build/bundle.js`
 dosyasında yer almaktadir. index.html dosyası buradaki yapıyı referans alarak
 svelte projesini kullanıcı karşısına getirmektedir.
 
+Burada birkaç örnek yaparak Svelte'i anlamaya, yorumlayamaya çalışalım.
+
+App.svelte dosyasında name isminde bir değişken tanımlanmış. Typescript
+notasyonu baz alındığı için değer tipi olarak `string` verilmiş. Bu notasyon ile
+anlatım biraz daha uzun olabileceği için kullanmayı tercih etmicem.
+
+#### Variable erişimi
+
+Script üzerinde tanımlanan değerleri html içerisinde çağırabilmek için
+&lcub; &rcub; kullanılmalıdır. Bu template ile değer tipi farketmeksizin
+değişkenleri çağırarak işlemler gerçekleştirilebilir.
+
+<div class="custom-code-block">
+<pre style="background: #ff3e00; color: white; font-weight: bold; padding: 
+  10px 15px 0 15px; margin: 15px; border-left: 5px solid black;">
+  // app.svelte
+  <code class="language-svelte">
+{`
+\<script>
+  const user = "sabuha";
+</script>
+
+\<span>{ user } seni izliyor!</span>
+
+\<style>
+h1 {
+color: rebeccapurple;
+}
+</style>
+`}
+</code>
+
+</pre>
+</div>
+
+Bu tanımlama ile birlikte `user` değerine tanımalanan her değer dinamik olarak
+özellik kazanacaktır. biraz biraz karıştıralım.. `user` değeri sabuha'ya eşit
+olduğu durumlarda 'seni izliyor!' yerine 'bir kedi gördüm sanki!' değeri ekrana
+yazılsın.
+
+<div class="custom-code-block">
+<pre style="background: #ff3e00; color: white; font-weight: bold; padding: 
+  10px 15px 0 15px; margin: 15px; border-left: 5px solid black;">
+  // app.svelte
+  <code class="language-svelte">
+{`
+\<script>
+  const user = "sabuha";
+  let cat = "bir kedi gördüm sanki!";
+  let dictator = "is watch you!";
+</script>
+
+\<span>{ user === "sabuha" ? cat : dictator }</span>
+`}
+</code>
+
+</pre>
+</div>
+
+<pre>
+  <code class="language-js">
+{`
+const user = "sabuha";
+let cat = "bir kedi gördüm sanki!";
+let dictator = "is watch you!";
+`}
+  </code>
+</pre>
+
+<pre>
+  <code class="language-html">
+{`
+<span>&lcub;user === "sabuha" ? cat : dictator&rcub;</span>
+`}
+  </code>
+</pre>
+
+html içerisinde kullandığımız &lcub; &rcub; tagları arasında condition yapıları
+gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebiliyoruz. Sırasıyla
+hepsini gerçekleştireceğiz.
+
+#### Reactive Variable
+
+Duruma bağlı değişkenlik gösterebilecek dinamik verileriniz güncellendiğinde
+DOM üzerinde güncelleme gerçekleştirilir.
+
+<pre>
+  <code class="language-js">
+{`
+let count = 0;
+
+function handleClick() &rcub;
+  count += 1;
+&lcub;
+`}
+  </code>
+</pre>
+
+<pre>
+  <code class="language-html">
+{`
+<main>
+  <button on:click="{handleClick}">Click</button>
+
+  <h2>&lcub;count&rcub;</h2>
+</main>
+`}
+  </code>
+</pre>
+
+<pre>
+  <code class="language-html">
+{`
+h2,
+button &rcub;
+  display: block;
+  border: 3px dashed purple;
+  background-color: yellowgreen;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  margin-bottom: 40px;
+&lcub;
+`}
+  </code>
+</pre>
+
+Button üzerine her tıklama ile birlikte `count` değerimiz +1 artacak ve DOM
+üzerinde bu değer render edilecektir.
+
+<p align="center">
+  <img src="./assets/gif/reactive.gif" alt="Svelte definition variable" 
+  style="width: 800px"/>
+</p>
+
 <span id="component-ve-dizin-yapisi"></span>
 
 ## Arayüzü oluşturma
@@ -173,11 +300,11 @@ svelte projesini kullanıcı karşısına getirmektedir.
 ### Component Yapısı
 
 <p align="center">
-  <img src="./assets/components/playground-component-structure.png" 
-  alt="Svelte Build map" style="width: 750px"/>
-  <label><i>[JSONVisio](https://jsonvisio.com/ "JSONVisio web link") ile JSON 
-  verilerinizi görselleştirebilir, bu yapıdaki dosyalarınızı daha okunabilir 
-  formata çevirebilirsiniz.</i></label>
+<img src="./assets/components/playground-component-structure.png"
+alt="Svelte Build map" style="width: 750px"/>
+<label><i>[JSONVisio](https://jsonvisio.com/ "JSONVisio web link") ile JSON
+verilerinizi görselleştirebilir, bu yapıdaki dosyalarınızı daha okunabilir
+formata çevirebilirsiniz.</i></label>
 </p>
 
 Playground Componenti altında oyunda yer alan bütün yapıları tutacağız. Bununla
@@ -186,14 +313,46 @@ olduğu eventleri burada takip edeceğiz. `src` klasörünün altında Playgroun
 tanımlayacağımız dizin yapısını aşağıdaki görseldeki gibi oluşturalım.
 
 <p align="center">
-  <img src="./assets/components/playground-component-directories.png" 
-  alt="playground component directories" 
-  title="playground component directories" style="width: 750px"/>
+<img src="./assets/components/playground-component-directories.png"
+alt="playground component directories"
+title="playground component directories" style="width: 750px"/>
 </p>
 
 #### Playground Componenti
 
+Playground componentinde bazı güncellemeler gerçekleştirerek, app.svelte
+dosyamızda import edelim. Import edilen componentler html içerisinde atanan
+isimle birlikte taglar içerisinde tanımlanabilir.
 
+`Playground.svelte`
+
+<pre>
+  <code class="language-js">
+{`
+some code
+`}
+  </code>
+</pre>
+
+`App.svelte`
+
+<pre>
+  <code class="language-js">
+{`
+some code
+`}
+  </code>
+</pre>
+
+<p align="center">
+<img src="./assets/components/call-playground-component.png"
+alt="playground component directories"
+title="playground component directories" style="width: 750px"/>
+</p>
+
+Playground componentimizde kartları oluşturabiliriz. Card.svelte componentinde
+kart yapısına uygun tanımlamaları gerçekleştiriyoruz. App.svelte dosyasında
+yaptığımız gibi, Card.svelte componentini Playground componentinde tanımlayalım.
 
 <span id="github-page-ile-deploy"></span>
 
@@ -203,27 +362,31 @@ tanımlayacağımız dizin yapısını aşağıdaki görseldeki gibi oluştural�
 
 - Svelte nedir?
 
-  - https://svelte.dev/blog/svelte-3-rethinking-reactivity
+- https://svelte.dev/blog/svelte-3-rethinking-reactivity
 
 - Svelte Documentation:
 
-  - https://svelte.dev/examples/hello-world
-  - https://svelte.dev/tutorial/basics
-  - https://svelte.dev/docs
-  - https://svelte.dev/blog
-  - https://svelte.dev/blog/svelte-3-rethinking-reactivity
+- https://svelte.dev/examples/hello-world
+- https://svelte.dev/tutorial/basics
+- https://svelte.dev/docs
+- https://svelte.dev/blog
+- https://svelte.dev/blog/svelte-3-rethinking-reactivity
 
 * Svelte Projesi Oluşturma
 
-  - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+- https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
 
 - Bağımlılıklar
-  - https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/
+- https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/
 
 * Deploy:
 
-  - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
+- https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
 
 * md files importing
 
 - https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project
+
+```
+
+```

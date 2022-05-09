@@ -24,7 +24,7 @@
   {/if}
 </main>
 
-<style type="text/scss">
+<style>
   .pokemon-cards {
     width: 900px;
     margin: 0 auto;

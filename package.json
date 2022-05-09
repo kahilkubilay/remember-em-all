@@ -15,6 +15,7 @@
     "@rollup/plugin-typescript": "^8.3.1",
     "@tsconfig/svelte": "^2.0.0",
     "@types/marked": "^4.0.3",
+    "@vitebook/markdown-svelte": "^0.23.6",
     "rollup": "^2.70.1",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -30,7 +31,6 @@
   "dependencies": {
     "marked": "^4.0.12",
     "remove": "^0.1.5",
-    "sirv-cli": "^2.0.0",
-    "svelte-markdown": "^0.2.2"
+    "sirv-cli": "^2.0.0"
   }
 }

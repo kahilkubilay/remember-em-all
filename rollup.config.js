@@ -51,8 +51,8 @@ export default {
 			// 3. add markdown preprocessor
 			//  preprocess: markdown()
 			preprocess: [
-				autoPreprocess(),
 				markdown(),
+				autoPreprocess(),
 			],
 			compilerOptions: {
 				// enable run-time checks when not in production
