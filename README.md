@@ -6,9 +6,9 @@ Herşeyden önce umuyorum ki bu basit döküman Svelte yolculuğunda rehber
 olabilir. Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in
 yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu
 dökümanı oluşturdum. Döküman içerisinde adım adım _Game_ bağlantısında
-görebileğiniz oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsanız aynı
+görebileğin oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsan aynı
 adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir kaynak
-modelinde kullanabilirsiniz. Svelte içeriği iyi ayrıntılanmış dökümantasyonlara
+modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış dökümantasyonlara
 ([docs](https://svelte.dev/docs "Svelte Documentation"),
 [examples](https://svelte.dev/examples/hello-world "Svelte Examples")) sahip,
 dökümantasyonları inceledikten sonra uygulamayı takip etmen daha faydalı
@@ -51,7 +51,7 @@ ile birlikte geride bıraktığımız her süreçte farklı ihtiyaçlar için ye
 öğrenme süreci ortaya çıktı. Öğrenme döngüsünün sürekli olarak geliştiricilerin
 karşısına çıkması bir süre sonrasında illallah dedirtmeye başladığı gayet
 aşikar. Svelte'in alışık olduğumuz _html & css & js_ kod yapılarına benzer bir
-sözdiziminin kullanılması, props ve state güncellemeleri için 40 takla
+sözdiziminin kullanılması, props ve state/stores güncellemeleri için 40 takla
 atılmasına gerek kalınmaması gibi özellikleri ile bu döngünün dışına çıkmayı
 başarabilmiş.. ve umuyorum ki bu şekilde sadeliğini korumaya devam edebilir.
 
@@ -69,7 +69,7 @@ npx degit sveltejs/template remember-em-all
 ```
 
 Svelte Typescript notasyonunu desteklemektedir. Typescript üzerinde
-yapabileceğiniz bütün işlemleri Svelte projenizde kullanabilirsiniz.
+yapabileceğiniz bütün işlemleri Svelte projenizde kullanabilirsin.
 
 ```js
 cd remember-em-all
@@ -84,9 +84,9 @@ npm run dev
 ```
 
 Bu komutlar sonrasında konsol üzerinde projenin hangi port üzerinde çalıştığını
-kontrol edebilirsiniz. Windows işletim sistemlerinde varsayılan 8080 portu
-işaretli iken, bu port üzerinde çalışan proje bulunuyorsa veya farklı işletim
-sistemi kullanıyorsan port adresi değişkenlik gösterebilir.
+kontrol edebiliriz. Windows işletim sistemlerinde varsayılan 8080 portu işaretli
+iken, bu port üzerinde çalışan proje bulunuyorsa veya farklı işletim sistemi
+kullanıyorsan port adresi değişkenlik gösterebilir.
 
 <p align="center">
   <img src="./assets/console-logs.png" 
@@ -100,8 +100,8 @@ sistemi kullanıyorsan port adresi değişkenlik gösterebilir.
 
 Svelte bileşenleri _.svelte_ uzantılı dosyalar ile oluşturulur. HTML'de benzer
 olarak _script, style, html_ kod yapılarını oluşturabilirdiğiniz üç farklı bölüm
-bulunuyor. Uygulamanızı oluşturduğunuzda bu bileşenler derlenerek, pure
-Javascript kodlarına dönüştürülür.
+bulunuyor. Uygulama oluşturduğumuzda bu bileşenler derlenerek, pure Javascript
+kodlarına dönüştürülür.
 
 <p align="center">
   <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px"/>
@@ -130,22 +130,23 @@ birlikte Virtual DOM bağımlılığını ortadan kalkıyor.
 ## Svelte yapısını inceleme
 
 Varsayılan _src/App.svelte_ dosyasını kontrol ettiğimizde daha önce
-bahsettiğimiz Javascript kodları için script, html kodları için main ve
-stillendirme için style tagları bulunuyor.
+bahsettiğimiz _Javascript_ kodları için _script_, _html_ kodları için _main_ ve
+stillendirme için _style_ tagları bulunuyor.
 
 🎈 _script_ etiketinde lang özelliği Typescript bağımlılığını eklediğimiz
 için _ts_ değerinde bulunmaktadır. Typescript kullanmak istediğiniz _.svelte_
-dosyalarında lang attribute'ine ts değerini vermeniz yeterli olacaktır.
+dosyalarında _lang attribute_ özelliğine _ts_ değerini vermeniz yeterli
+olacaktır.
 
 🎈 _main_ etiketinde _html_ kodlarını tanımlayabileceğin gibi, bu etiketin
-dışında da dilediğin gibi html kodlarını tanımlayabilirsin. Svelte
+dışında da dilediğin gibi _html_ kodlarını tanımlayabilirsin. Svelte
 tanımladığın kodları _html_ kodu olarak derlemesine rağmen, proje yapısının
 daha okunabilir olabilmesi için kapsayıcı bir etiketin altında toplanması daha
 iyi olabilir.
 
 🎈 _style_ etiketi altında tanımladığın stil özelliklerinden, aynı dosyada
 bulunan _html_ alanında seçiciler etkilenir. Global seçicileri
-kullanabileceğiniz gibi, global olarak tanımlamak istediğiniz seçicileri
+kullanabileceğin gibi, global olarak tanımlamak istediğiniz seçicileri
 `public/global.css` dosyasında düzenleyebilirsin.
 
 🎈 Proje içerisinde compile edilen bütün yapılar `/public/build/bundle.js`
@@ -157,15 +158,14 @@ Svelte projesini kullanıcı karşısına getirmektedir.
 Burada birkaç örnek yaparak Svelte'i anlamaya, yorumlamaya çalışalım. Kod
 örnekleri oyun üzerinde sıkça kullanacağımız yapılar için bir temel oluşturacak.
 
-App.svelte dosyasında _name_ isminde bir değişken tanımlanmış. Typescript
+_App.svelte_ dosyasında _name_ isminde bir değişken tanımlanmış. Typescript
 notasyonu baz alındığı için değer tipi olarak _string_ verilmiş. Bu notasyon ile
-anlatım biraz daha uzun olabileceği için kullanmamayı tercih edicem. Github
-üzerinde bulunan kodlar ile, burada birlikte oluşturacaklarımız farklılık
-gösterebilir.. panik yok, Typescript'e
-[hakim olabileceğine](https://youtube.com/shorts/oyIO1_8uNPc "senin kocaman kalbin <33")
+anlatım biraz daha uzun olabileceği için kullanmayacam. Github üzerinde bulunan
+kodlar ile, burada birlikte oluşturacaklarımız farklılık gösterebilir.. panik
+yok, Typescript'e [hakim olabileceğine](https://youtube.com/shorts/oyIO1_8uNPc "senin kocaman kalbin <33")
 eminim.
 
-#### Variable erişimi
+#### 🎈 Variable erişimi
 
 Script üzerinde tanımlanan değerleri html içerisinde çağırabilmek için
 &lcub; &rcub; kullanılmalıdır. Bu template ile değer tipi farketmeksizin
@@ -189,9 +189,9 @@ _app.svelte_
 </style>`}</pre>
 </div>
 
-Bu tanımlama ile birlikte `user` değerine tanımlanan her değeri dinamik olarak
-`html` içerisinde çağırabilirsin. biraz daha biraz daha karıştıralım..
-_user_ değeri sabuha değerine eşit olduğu durumlarda 'seni izliyor!' yerine
+Bu tanımlama ile birlikte _user_ değerine tanımlanan her değeri dinamik olarak
+_html_ içerisinde çağırabilirsin. biraz daha biraz daha karıştıralım..
+_user_ değeri _sabuha_ değerine eşit olduğu durumlarda 'seni izliyor!' yerine
 'bir kedi gördüm sanki!' değerini birlikte ekrana getirelim.
 
 _app.svelte_
@@ -210,13 +210,13 @@ _app.svelte_
 </div>
 
 _html_ içerisinde kullandığımız &lcub; &rcub; tagları arasında condition
-yapıları gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebilirsin.
-Sırasıyla hepsini gerçekleştireceğiz.
+yapıları gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu
+yapılara sahip birçok işlemi birlikte gerçekleştireceğiz.
 
-#### Reaktif Değişkenler
+#### 🎈 Reaktif Değişkenler
 
 Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde, DOM üzerinde
-yer alan referansı benzer olarak güncellenecektir.
+yer alan referansı benzer olarak güncellenir.
 
 _app.svelte_
 
@@ -275,68 +275,23 @@ yeniden ve sıkılmadan güncellenmeye devam edecektir.
   style="width: 800px"/>
 </p>
 
-#### Component/Child Component kullanımları
+#### 🎈 Component/Child Component kullanımları
+
+Uygulamalarımızda yer alan bileşenleri parçalayarak istediğimiz gibi bir bütün
+haline getirebilmek üzerinde çalışırken kolaylık sağlar, tekrar eden bileşen
+parçalarında yeniden çağırabilmek daha az efor sarfettirir.
+
+<p align="center">
+<img src="./assets/components/component-with-sabuha.png"
+alt="Svelte Build map" style="width: 900px;"/>
+</p>
+
+Bir önceki örnekte yaptığımız random sayı üreten basit yapıyı bir component
+oluşturarak, yılbaşı çekilişine benzer bir uygulama haline getirelim.
 
 <span id="component-ve-dizin-yapisi"></span>
 
 ## Arayüzü oluşturma
-
-### Component Yapısı
-
-<p align="center">
-<img src="./assets/components/playground-component-structure.png"
-alt="Svelte Build map" style="width: 750px"/>
-<label><i>[JSONVisio](https://jsonvisio.com/ "JSONVisio web link") ile JSON
-verilerinizi görselleştirebilir, bu yapıdaki dosyalarınızı daha okunabilir
-formata çevirebilirsiniz.</i></label>
-</p>
-
-Playground Componenti altında oyunda yer alan bütün yapıları tutacağız. Bununla
-birlikte arayüz üzerinde yer alan kartları ve kullanıcının gerçekleştirmiş
-olduğu eventleri burada takip edeceğiz. `src` klasörünün altında Playground için
-tanımlayacağımız dizin yapısını aşağıdaki görseldeki gibi oluşturalım.
-
-<p align="center">
-<img src="./assets/components/playground-component-directories.png"
-alt="playground component directories"
-title="playground component directories" style="width: 750px"/>
-</p>
-
-#### Playground Componenti
-
-Playground componentinde bazı güncellemeler gerçekleştirerek, app.svelte
-dosyamızda import edelim. Import edilen componentler html içerisinde atanan
-isimle birlikte taglar içerisinde tanımlanabilir.
-
-`Playground.svelte`
-
-<pre>
-  <code class="language-js">
-{`
-some code
-`}
-  </code>
-</pre>
-
-`App.svelte`
-
-<pre>
-  <code class="language-js">
-{`
-some code
-`}
-  </code>
-</pre>
-
-<p align="center">
-<img src="./assets/components/call-playground-component.png"
-alt="playground component directories"
-title="playground component directories" style="width: 750px"/>
-</p>
-
-Playground componentimizde kartları oluşturabiliriz. Card.svelte componentinde
-kart yapısına uygun tanımlamaları gerçekleştiriyoruz. App.svelte dosyasında
-yaptığımız gibi, Card.svelte componentini Playground componentinde tanımlayalım.
 
 <span id="github-page-ile-deploy"></span>
 
