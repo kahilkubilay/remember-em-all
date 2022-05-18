@@ -1,32 +1,39 @@
-<script lang="ts">
+<script>
   import { userInfo } from "../../store/User";
   const { name, avatar, isStart } = userInfo;
 
+  let isAvatarEmpty = false;
+  let isNameEmpty = false;
+
   const startGame = () => {
     if ($avatar === "") {
-      document.querySelector(".avatarError span").classList.remove("unvisible");
+      isAvatarEmpty = true;
       return;
     }
 
     if ($name === "") {
-      document.querySelector(".nameError span").classList.remove("unvisible");
+      isNameEmpty = true;
       return;
     }
 
     $isStart = true;
 
-    console.log("::: start game :::");
-    console.log("enjoy");
+    console.log(":::: start game ::::");
+    console.log(`:: enjoy ${$name} ::`);
   };
 </script>
 
 <div class="start">
   <button on:click={startGame}>Start</button>
   <div class="avatarError visible">
-    <span class="unvisible">please, select a avatar..</span>
+    <span class="unvisible" class:visible={$avatar === "" && isAvatarEmpty}
+      >please, select a avatar..</span
+    >
   </div>
   <div class="nameError visible">
-    <span class="unvisible">enter a name..</span>
+    <span class="unvisible" class:visible={$name === "" && isNameEmpty}
+      >please, enter a name..</span
+    >
   </div>
 </div>
 

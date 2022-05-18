@@ -12,7 +12,7 @@
   $: mixedListOfPokemon = shuffle(pokemonList);
 </script>
 
-<main class="pokemon-cards">
+<main class="playground">
   {#if $isStart}
     {#each mixedListOfPokemon as pokemon}
       <Card {pokemon} />
@@ -25,7 +25,7 @@
 </main>
 
 <style>
-  .pokemon-cards {
+  .playground {
     width: 900px;
     margin: 0 auto;
     text-align: center;

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { userInfo } from "../../../store/User";
 
   const { name } = userInfo;

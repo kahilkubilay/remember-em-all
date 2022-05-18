@@ -1,32 +1,19 @@
-<script lang="ts">
+<script>
   import { userInfo } from "../../../store/User";
 
   const { avatar } = userInfo;
 
-  export let userSelectAvatar: string;
+  export let userSelectAvatar;
 
-  const selectAvatar = (e) => {
-    const isPicked = document.querySelector(".picked");
-
-    if (isPicked !== null) {
-      isPicked.classList.add("unpicked");
-      isPicked.classList.remove("picked");
-    }
-
-    e.target.classList.add("picked");
-    e.target.classList.remove("unpicked");
-
-    const avatarName = userSelectAvatar.match(/\w*(?=.\w+$)/)[0];
-
-    $avatar = avatarName;
-  };
+  const avatarName = userSelectAvatar.match(/\w*(?=.\w+$)/)[0];
 </script>
 
 <img
   src={userSelectAvatar}
   alt="avatar"
   class="avatar unpicked"
-  on:click={selectAvatar}
+  class:picked={avatarName === $avatar}
+  on:click={() => ($avatar = avatarName)}
 />
 
 <style>
@@ -49,7 +36,7 @@
     opacity: 0.8;
   }
 
-  /* .picked {
+  .picked {
     opacity: 1;
-  } */
+  }
 </style>
