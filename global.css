@@ -61,3 +61,23 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+pre.prettyprint {
+	border: none!important;
+}
+
+.code-wrapper {
+	border: 2px dashed #ff3e00;
+	border-radius: 3px;
+	background-color: #fff;
+	padding: 0 20px;
+	margin: 0 30px;
+}
+
+.flipper.hover .front {
+	transform: rotateY(0deg);
+}
+
+.flipper.hover .back {
+	transform: rotateY(180deg);
+}
