@@ -67,16 +67,5 @@
 
   .flipper {
     position: relative;
-    transition: 0.8s;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-
-  :global(.flipper.hover .front) {
-    transform: rotateY(0deg);
-  }
-
-  :global(.flipper.hover .back) {
-    transform: rotateY(180deg);
   }
 </style>

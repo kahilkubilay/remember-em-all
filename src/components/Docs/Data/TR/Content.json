@@ -1,0 +1,116 @@
+{
+  "name": "memory-game",
+  "component": "Content",
+  "description": "content in the documents section",
+  "detail": {
+    "selamlar": {
+      "id": "selam-sana",
+      "header": "Selamlaaaaar 👋",
+      "text": "Herşeyden önce umuyorum ki bu basit döküman Svelte yolculuğunda rehber olabilir. Son zamanlarda Svelte ile uygulama geliştirmeye başladım. Svelte'in yapısına daha çok hakim olabilmek ve öğrendiklerimi paylaşabilmek için bu dökümanı oluşturdum. Döküman içerisinde adım adım _Game_ bağlantısında görebileğin oyunu nasıl geliştirdiğimi anlattım, ilgi duyuyorsan aynı adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir kaynak modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış dökümantasyonlara ([docs](https://svelte.dev/docs 'Svelte Documentation'), [examples](https://svelte.dev/examples/hello-world 'Svelte Examples')) sahip, dökümantasyonları inceledikten sonra uygulamayı takip etmen daha faydalı olabilir.",
+      "image": "assets/documentation/squirtle-squad.webp",
+      "alternativeText": "Selamlar",
+      "description": "İçeriğin detaylarını sol tarafta yer alan haritalandırma ile takip edebilirsin. İlk bölümlerde Svelte'i nasıl kullanabileceğine dair bilgilendirmeler yer alıyor. Bu kısımlara hakimsen, atlayarak [Start Game](#start-game 'Access Start Game section') bölümünden devam edebilirsin."      
+    },
+    "oyunHakkinda": {
+      "id": "oyun-hakkinda",
+      "header": "Oyun hakkında",
+      "text": "Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre arayüz üzerinde kartlar bulunacak. Kartlara click eventi gerçekleştiğinde kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar. Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken başarılı eşleşme sonucunda kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir sonraki seviyede yer alan kartlar arayüze kapalı olarak yeniden gelecektir.",
+      "image": "assets/documentation/playground.png",
+      "alternativeText": "view of cards on the playground",
+      "description": "Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde yer alan görsellerden birini seçmesi beklenecektir (Avatarlar ne kadar evcil gözükseler de, güç içlerinde gizli 🐱‍👤). Bu seçilen değerler oyunun arayüzünde kartların yer aldığı bölümün altında _score & level_ değerleri ile birlikte gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak tutulurken, _score & level_ değerleri dinamik olarak kullanıcı davranışına göre güncellenecektir."
+    },
+    "svelteNedir": {
+      "id": "svelte-nedir",
+      "header": "Svelte nedir?",
+      "text": "Svelte günümüz modern library ve framework habitatının komplex yapılarını azaltarak daha basit şekilde yüksek verimliliğe sahip uygulamalar geliştirilmesini sağlamayı amaçlayan bir derleyicidir. Modern framework/library ile birlikte geride bıraktığımız her süreçte farklı ihtiyaçlar için yeni bir öğrenme süreci ortaya çıktı. Öğrenme döngüsünün sürekli olarak geliştiricilerin karşısına çıkması bir süre sonrasında illallah dedirtmeye başladığı gayet aşikar. Svelte alışık olduğumuz _html & css & js_ kod yapılarına benzer bir sözdizimine sahip olması, props ve state/stores güncellemeleri için 40 takla atılmasına gerek kalınmaması gibi özellikleri ile bu döngünün dışına çıkmayı başarabilmiş.. ve umuyorum ki bu şekilde sadeliğini korumaya devam edebilir.",
+      "description": "[Stack Overflow Developer Survey 2021](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks 'Stack Overflow Developer Survey 2021') anketinde geliştiriciler tarafından %71.47 oranıyla en çok sevilen web framework Svelte olarak seçildi."
+    },
+    "basitIfadeler": {
+      "id": "basit-ifadeler",
+      "header": "Basit İfadeler",
+      "text": "Bazı bölümlerde aynı kelimeleri tekrar etmemek için, bazı kısayol ifadeleri kullandım(tamamen salladım). Sayısı çok fazla değil, sorun yaşayacağını düşünmüyorum.",
+      "material": [{
+        "command": "_Playground_",
+        "description": "Playground.svelte Component"
+      },
+      {
+        "command": "+ User.svelte",
+        "description": "_User.svelte_ dosyası oluşturuldu."
+      },
+      {
+        "command": "Avatar/",
+        "description": "_Avatar_ klasörü oluşturuldu."
+      },
+      {
+        "command": "+ User.svelte + Header.svelte + Avatars.svelte",
+        "description": "_User.svelte, Header.svelte, Avatars.svelte_ dosyaları oluşturuldu."
+      },
+      {
+        "command": "+ User > Avatar.svelte",
+        "description": "_User_ klasörü içerisinde _Avatar.svelte_ dosyası oluşturuldu."
+      },
+      {
+        "command": "+ public > assets > images > pasa.jpg, sabuha.jpg",
+        "description": "_public > assets > images_ klasörü içerisinde _pasa.jpg_, _sabuha.jpg_ dosyaları oluşturuldu."
+      }]
+    }, 
+    "svelteProjesiOlusturma": {
+      "id": "svelte-projesi-olusturma",
+      "header": "Svelte projesi oluşturma",
+      "child": {
+        "text": "Bu komutlar sonrasında konsol üzerinde projenin hangi port üzerinde çalıştığını görebilirsin. Windows işletim sistemlerinde varsayılan 8080 portu işaretli iken, bu port üzerinde çalışan proje bulunuyorsa veya farklı işletim sistemi kullanıyorsan port numarası değişkenlik gösterebilir.",
+        "image": "assets/documentation/console-logs.png",
+        "alternativeText": "Port where Svelte is running on the console"
+      },
+      "custom": {
+        "list": [{
+            "command": "npx degit sveltejs/template remember-em-all",
+            "description": "Npx ile yeni bir proje oluşturma:"
+          },
+          {
+            "command": "cd remember-em-all, node scripts/setupTypeScript.js",
+            "description": "Svelte Typescript notasyonunu desteklemektedir. Typescript üzerinde yapabileceğiniz bütün işlemleri Svelte projelerinde kullanabilirsin."
+          },
+          {
+            "command": "npm install, npm run dev",
+            "description": "Gerekli olan bağımlılıkları projemize ekleyerek ayağa kaldırabiliriz."
+          }
+        ]
+      }
+    }, 
+    "svelteNasilCalisir": {
+      "id": "svelte-nasil-calisir",
+      "header": "Svelte nasıl çalışır?",
+      "text": "Svelte bileşenleri _.svelte_ uzantılı dosyalar ile oluşturulur. HTML'e benzer olarak _script, style, html_ kod yapılarını oluşturabilirdiğiniz üç farklı bölüm bulunuyor.",
+      "image": "/assets/documentation/build-map.png",
+      "alternativeText": "Svelte Build map",
+      "description": "Uygulama oluşturduğumuzda bu bileşenler derlenerek, pure _Javascript_ kodlarına dönüştürülür. Svelte derleme işlemini runtime üzerinde gerçekleştiriyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığını ortadan kalkıyor."
+    },
+    "bagimliliklar": {
+      "id": "bagimliliklar",
+      "header": "Proje bağımlılıkları",
+      "material": [
+        {
+          "command": "Typescript",
+          "description": "Typescript, Javascript kodunuzu daha verimli kılmanızı ve kod kaynaklı hataların önüne geçilmesini sağlayan bir Javascript uzantısıdır. Projenizde yer alan _.svelte_ uzantılı dosyalarda kullanabileceğiniz gibi, _.ts_ dosyalarını da destekler."
+        },
+        {
+          "command": "Rollup",
+          "description": "Svelte kurulumunuzla birlikte root folder üzerinde rollup.config.js dosyası oluşturulacaktır. Rollup Javascript uygulamalar için kullanılan bir modül paketleyicidir, uygulamamızda yer alan kodları tarayıcının anlayabileceği şekilde ayrıştırır. Svelte kurulumunda default olarak projenize eklenir."
+        }
+      ]
+    },
+    "svelteYapisiniInceleme": {
+      "id": "svelte-yapisini-inceleme",
+      "header": "Svelte yapısını inceleme",
+      "text": "Varsayılan _src/App.svelte_ dosyasını kontrol ettiğimizde daha önce değindiğimiz gibi _Javascript_ kodları için _script_, _html_ kodları için _main_ ve stillendirme için _style_ tagları bulunuyor.",
+      "list": ["_script_ etiketinde _lang_ özelliği Typescript bağımlılığını eklediğimiz için _ts_ değerinde bulunmaktadır. Typescript kullanmak istediğin _svelte_ dosyalarında _lang_ özelliğine _ts_ değerini vermen yeterli olacaktır.", "_main_ etiketinde _html_ kodlarını tanımlayabileceğin gibi, bu etiketin dışında da dilediğin gibi _html_ kodlarını tanımlayabilirsin. Svelte tanımladığın kodları _html_ kodu olarak derlemesine rağmen, proje yapısının daha okunabilir olabilmesi için kapsayıcı bir etiketin altında toplanması daha iyi olabilir.", "_style_ etiketi altında tanımladığın stil özelliklerinden, aynı dosyada bulunan _html_ alanında seçiciler etkilenir. Global seçicileri tanımlayabilir veya global olarak tanımlamak istediğin seçicileri `public/global.css` dosyasında düzenleyebilirsin.", "Proje içerisinde compile edilen bütün yapılar `/public/build/bundle.js` dosyasında yer almaktadir. _index.html_ dosyası buradaki yapıyı referans alarak Svelte projesini kullanıcı karşısına getirmektedir."]
+    }, 
+    "birazPratik": {
+      "id": "biraz-pratik",
+      "header": "Biraz Pratik",
+      "text": "Birkaç örnek yaparak Svelte'i anlamaya, yorumlamaya çalışalım. Kod örnekleri oyun üzerinde sıkça kullanacağımız yapılar için bir temel oluşturacak.",
+      "description": "_App.svelte_ dosyasında _name_ isminde bir değişken tanımlanmış. Typescript notasyonu baz alındığı için değer tipi olarak _string_ verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar ile, burada birlikte oluşturacaklarımız farklılık gösterebilir.. panik yok, Typescript'e [hakim olabileceğine](https://youtube.com/shorts/oyIO1_8uNPc 'senin kocaman kalbin <33') eminim."
+    }
+  }
+}

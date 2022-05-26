@@ -1,5 +1,6 @@
 <script>
   import { userInfo } from "../../store/User";
+
   const { name, avatar, isStart } = userInfo;
 
   let isAvatarEmpty = false;

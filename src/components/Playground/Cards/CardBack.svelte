@@ -10,7 +10,7 @@
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png"
     class="single-poke"
-    alt="tester"
+    alt="card back on the playing field"
   />
 </div>
 
@@ -35,7 +35,7 @@
 
   .single-poke {
     border-radius: 11px;
-    background: #ffffff;
-    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #ffffff;
+    background: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
   }
 </style>

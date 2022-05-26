@@ -23,6 +23,7 @@
     "rollup-plugin-terser": "^7.0.0",
     "svelte": "^3.0.0",
     "svelte-check": "^2.0.0",
+    "svelte-highlight": "^6.0.1",
     "svelte-preprocess": "^4.10.4",
     "svelte-preprocess-markdown": "^2.7.3",
     "tslib": "^2.0.0",
@@ -31,6 +32,7 @@
   "dependencies": {
     "marked": "^4.0.12",
     "remove": "^0.1.5",
-    "sirv-cli": "^2.0.0"
+    "sirv-cli": "^2.0.0",
+    "svelte-prism": "^1.1.5"
   }
 }

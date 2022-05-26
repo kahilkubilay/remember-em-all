@@ -7,7 +7,7 @@
 <div class="front">
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemonId}.png"
-    alt="card on the playing field"
+    alt="card front on the playing field"
     class="single-poke"
     pokemonDetail={pokemonId}
   />
@@ -28,7 +28,7 @@
 
   .single-poke {
     border-radius: 11px;
-    background: #ffffff;
-    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #ffffff;
+    background: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
   }
 </style>
