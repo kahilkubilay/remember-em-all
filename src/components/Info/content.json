@@ -1,42 +1,8 @@
 {
     "Title": "ContentMap",
     "Description": "content headers of description files",
-    "SupportedLanguages": ["TR", "ENG"],
+    "SupportedLanguages": ["ENG"],
     "Headers": {
-      "Turkish": [
-        {
-          "title": "selam",
-          "target": "#selam-sana"
-        },
-        {
-          "title": "proje hakkında",
-          "target": "#proje-hakkinda"
-        },
-        {
-          "title": "svelte nedir?",
-          "target": "#svelte-nedir"
-        },
-        {
-          "title": "svelte nasıl çalışır?",
-          "target": "#svelte-nasil-calisir"
-        },
-        {
-          "title": "Svelte projesi oluşturma",
-          "target": "#svelte-projesi-olusturma"
-        },
-        {
-          "title": "bağımlılıklar",
-          "target": "#bagimliliklar"
-        },
-        {
-          "title": "dizin ve component yapısı",
-          "target": "#dizin-ve-component-yapisi"
-        },
-        {
-          "title": "github page ile deploy",
-          "target": "#github-page-ile-deploy"
-        }
-      ],
       "English": [
         {
           "title": "hi",

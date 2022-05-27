@@ -1,12 +1,9 @@
 <script>
   export let text;
-  export let description;
 
-  const textData = text || description;
+  const textData = text;
 </script>
 
-{#if textData !== "" && typeof textData === "string"}
-  <p>{textData}</p>
-{/if}
+<p>{textData}</p>
 
 <style></style>

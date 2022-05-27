@@ -5,7 +5,10 @@
 {#if material !== "" && material !== undefined}
   <ul>
     {#each material as matter}
-      <li>{matter.command}: {matter.description}</li>
+      <li>{matter.command}</li>
+      <ul>
+        <li>{matter.description}</li>
+      </ul>
     {/each}
   </ul>
 {/if}

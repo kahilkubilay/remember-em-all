@@ -3,12 +3,12 @@
   export let alternativeText;
 </script>
 
-{#if image !== "" && typeof image === "string" && alternativeText !== "" && typeof alternativeText === "string"}
-  <img src={image} alt={alternativeText} title={alternativeText} />
-{/if}
+<img src={image} alt={alternativeText} title={alternativeText} />
 
 <style>
   img {
+    display: flex;
     max-width: 900px;
+    margin: 0 auto;
   }
 </style>

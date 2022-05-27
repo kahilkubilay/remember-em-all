@@ -1,0 +1,23 @@
+{
+  "name": "memory-game",
+  "component": "Code Description",
+  "description": "code description in the documents section",
+  "codeDetail": {
+    "variableErisimi": {
+      "id": "variable-erisimi",
+      "header": "Variable erişimi",
+      "description": "Script üzerinde tanımlanan değerleri html içerisinde çağırabilmek için {} kullanılmalıdır. Bu template ile değer tipi farketmeksizin değişkenleri çağırarak işlemler gerçekleştirilebilir.",
+      "fileName": "app.svelte",
+      "endStory": "_html_ içerisinde kullandığımız &lcub; &rcub; tagları arasında condition yapıları gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu yapılara sahip birçok işlemi birlikte gerçekleştireceğiz."
+    },
+    "reaktifDegiskenler": {
+      "id": "reaktif-degiskenler",
+      "header": "Reaktif değişkenler",
+      "description": "Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde, DOM üzerinde yer alan referansı benzer olarak güncellenir.",
+      "fileName": "app.svelte",
+      "endStory": "Tanımladığımız _numb_ değeri her güncellendiğinde, DOM üzerinde bu değer yeniden ve sıkılmadan güncellenmeye devam edecektir.",
+      "image": "assets/documentation/reactive.gif",
+      "alternativeText": "Svelte definition variable"
+    }
+  }
+}

@@ -2,6 +2,6 @@
   export let head;
 </script>
 
-<h2>🪁 {head}</h2>
+<h3>🪁 {head}</h3>
 
 <style></style>

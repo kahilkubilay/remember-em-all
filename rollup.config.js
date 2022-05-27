@@ -7,8 +7,6 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import autoPreprocess from 'svelte-preprocess';
-// md files
-import {markdown} from 'svelte-preprocess-markdown';
 // json files
 import json from '@rollup/plugin-json'
 
@@ -46,12 +44,8 @@ export default {
 	plugins: [
 		svelte({
 			// preprocess: sveltePreprocess({ sourceMap: !production }),
-			// 2. add '.md', to the extensions  
-			extensions: ['.svelte','.md'],
-			// 3. add markdown preprocessor
-			//  preprocess: markdown()
+			extensions: ['.svelte'],
 			preprocess: [
-				markdown(),
 				autoPreprocess(),
 			],
 			compilerOptions: {
@@ -70,7 +64,7 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			extensions: ['.ts', '.mjs', '.js', '.json', '.node', '.md']
+			extensions: ['.ts', '.mjs', '.js', '.json', '.node']
 		}),
 		json({compact: true}),
 		commonjs(),

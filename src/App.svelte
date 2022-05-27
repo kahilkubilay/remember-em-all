@@ -5,7 +5,6 @@
 
   let pages = ["about", "game"];
   let activePage = "about";
-  // let activePage = "game";
 
   const switchPage = (event) => {
     activePage = event.detail;

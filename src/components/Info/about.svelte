@@ -1,35 +1,19 @@
 <script>
   import Docs from "../Docs/Documentation.svelte";
-
-  import DetailEN from "../../../README.md";
-  import DetailTR from "./READMETR.md";
   import * as ContentMap from "./content.json";
 
-  let languages = ["Turkish", "English"];
-  let activeLanguage = "Turkish";
-
-  let { Turkish, English } = ContentMap.Headers;
-
-  const switchLanguages = (language) => {
-    activeLanguage = language;
-  };
+  let { English } = ContentMap.Headers;
 
   let svelteLogo = "/assets/svelte-logo.png";
 </script>
 
 <main class="container">
-  {#if activeLanguage === "Turkish"}
-    <Docs />
+  <Docs />
 
-    <!-- <DetailTR /> -->
-  {:else}
-    <DetailEN />
-  {/if}
-
-  <!-- <div class="content-map">
+  <div class="content-map">
     <img src={svelteLogo} alt="Svelte logo" class="logo" />
     <ul>
-      {#each activeLanguage === "Turkish" ? Turkish : English as ContentMap}
+      {#each English as ContentMap}
         <li>
           <a href={ContentMap.target}
             >{ContentMap.title[0].toUpperCase() + ContentMap.title.slice(1)}</a
@@ -37,19 +21,7 @@
         </li>
       {/each}
     </ul>
-
-    <div class="flag-capsule">
-      {#each languages as language}
-        <div on:click={() => switchLanguages(language)}>
-          <img
-            src="/assets/{language}.svg"
-            alt="{language} flag"
-            class="flag"
-          />
-        </div>
-      {/each}
-    </div>
-  </div> -->
+  </div>
 </main>
 
 <style>
@@ -93,20 +65,6 @@
 
   a:hover {
     text-decoration: underline;
-  }
-
-  .flag-capsule {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .flag {
-    width: 35px;
-    margin-right: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
   }
 
   .logo {

@@ -1,5 +1,5 @@
 export const Codes = {
-  "1": `
+  "variableErisimi": `
   <script>
     const user = "sabuha";
   <\/script>
@@ -18,7 +18,7 @@ export const Codes = {
 
   <span>{user === "sabuha" ? "bir kedi gördüm sanki!" : "seni izliyor!"}</span>
   `,
-  "3": `
+  "reaktifDegiskenler": `
   <script>
     let number = 0;
   
@@ -59,13 +59,13 @@ export const Codes = {
     }
     </style>
   `,
-  "4": `
+  "useOfComponents": `
     <script>
-      let number = 0;
+    let number = 0;
   
-      const randomNumber = () => {
-        number = Math.round(Math.random() \* 15);
-      };
+    const randomNumber = () => {
+      number = Math.round(Math.random() \* 15);
+    };
   <\/script>
   
   <div class="random-number-capsule">
@@ -101,9 +101,9 @@ export const Codes = {
     }
   </style>
   `,
-  "5": `
+  "useOfComponentsAnother": `
   <script>
-    import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";  
+    import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";
   <\/script>
 
   <main>
@@ -112,6 +112,7 @@ export const Codes = {
     <RandomNumber />
     <RandomNumber />
   </main>
-  `
 
+  <style></style>
+  `
 }

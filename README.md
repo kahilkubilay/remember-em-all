@@ -15,7 +15,7 @@ dökümantasyonları inceledikten sonra uygulamayı takip etmen daha faydalı
 olabilir.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kahilkubilay/remember-em-all/master/public/assets/squirtle-squad.webp" alt="Svelte definition variable" 
+  <img src="https://raw.githubusercontent.com/kahilkubilay/remember-em-all/master/public/assets/squirtle-squad.webp" alt="Hello team" 
   style="width: 900px"/>
 </p>
 
@@ -372,7 +372,7 @@ _App.svelte_
 <div class="code-wrapper">
 <pre class="prettyprint lang-js">
 {`\<script>
-  \import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";  
+  \import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";
 </script>`}
 
 </pre>
@@ -440,8 +440,6 @@ Veri taşımacılık ltd. şti.'nin joker kartı.. Verilerinizi her yerde
 güncellenmesini, çağırılmasını sağlar. Kullanımı için bir hiyerarşi içerisinde
 olmasına gereksinimi bulunmuyor.
 
-## 🪁 Svelte lifecycle
-
 <span id="start-game"></span>
 
 ## 🪁 Start Game
@@ -456,7 +454,7 @@ _src > components > User_ ve _src > components > Playground_ klasörlerini
 oluşturalım.
 
 <p align="center">
-<img src="./assets/start-folder.png" alt="Svelte Build map" 
+<img src="./assets/start-folder.png" alt="Start folder" 
   style="width: 900px;"/>
 </p>
 
@@ -601,7 +599,7 @@ _User > UserGround.svelte_
 
 <p align="center">
   <img src="./assets/components/User/header-component.png" 
-    alt="Call User Component" style="width: 900px"/>
+    alt="Call Header Component" style="width: 900px"/>
 </p>
 
 Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..
@@ -674,10 +672,10 @@ _Avatars_, _Userground_ üzerinde çağırdığımda karşıma bu iki güzellik 
 
 <p align="center"> 
   <img src="./assets/components/User/avatars-component.png" 
-    alt="Call User Component" style="width: 900px"/>
+    alt="call Avatar Component" style="width: 900px"/>
 </p>
 
-_Avatars_ biraz daha işlevli bir yapıya büründürelim.
+_Avatars_ biraz daha işlevli bir yapıya dönüştürelim.
 
 _User > Avatar > Avatars.svelte_
 
@@ -770,9 +768,7 @@ düzenlemeler yapmamız gerekti.
 Pokemon eğitmenimizin bir isim girebilmesi için gerekli olan componenti
 oluşturalım.
 
-`+ /components/User/Avatar/Name`
-
-`+ /components/User/Avatar/Name/UserName.svelte`
+`+ /components/User/Avatar/Name, /components/User/Avatar/Name/UserName.svelte`
 
 _User > Avatar > Name > UserName.svelte_
 
@@ -823,8 +819,7 @@ ardından _start_ butonuna tıkladığında bu değerlerden _level 1_,
 _score 0_ değerlerini oluşturacağız. Kullanıcı seviye atladıkça burada yer alan
 değerler dinamik olarak güncellenecek.
 
-`+ /Store/Level.ts`
-`+ /Store/Score.ts`
+`+ /Store/Level.ts, Score.ts`
 
 _Store > Level.ts_
 
@@ -1025,8 +1020,7 @@ Import ettiğimiz UserInfo class'inda yer alan $name store değerini, `bind:valu
 metodu ile güncelleyebiliriz.
 
 Şimdi en güzel tarafına gelelim.. Son rötüşları yapıp oyunumuza başlayalım.
-
-ilk olarak `components > Playground > Wrapper > Playground.svelte ` componenti
+`components > Playground > Wrapper > Playground.svelte ` componenti
 üzerinde bir if/else yapısı tanımlayalım. `isStart` store değerimiz false ise
 kullanıcıyı _name&avatar_ seçimi yapabildiği Componente yönlendirsin. Bunun aksi
 ise basit bir head etiketini gösterelim.
@@ -1055,8 +1049,9 @@ _componenets > Playground > Wrapper > Playground.svelte_
 `}</pre>
 </div>
 
-Döngüler gibi if/else Logic'leri kullanabilirsiniz. `else if` ihtiyacında
-bir condition `else if isStart === undefined` tanımlaman yeterli olacaktır.
+Döngüler gibi if/else Logic'leri kullanabilirsiniz. `else if` ihtiyacında bir
+şart ifadesi olarak `else if isStart === undefined` tanımlaman yeterli
+olacaktır.
 
 _componenets > Playground > Wrapper > Playground.svelte_
 
@@ -1190,9 +1185,6 @@ oluşturacağız.
 ### 🎈 Card Component
 
 Oyun alanında kullanacağımız kartlar için componentlere ihtiyacımız olacak.
-
-`+ /Components/Playground/Cards/Card.svelte, CardBack.svelte, CardFront.svelte`
-
 `CardFront` componentinde kartın pokemon resmini tutarken, `CardBack`
 componentinde `?` resmini tutacağız. Componentleri `Card` componentinde
 çağıracağız.
@@ -1200,6 +1192,8 @@ componentinde `?` resmini tutacağız. Componentleri `Card` componentinde
 `Card` componentini test ederken, sürekli olarak `User` componenti üzerinde isim
 ve avatar seçimi yapmamak için `Playground` componentinde yer alan _isStart_
 şartını true ifadesine çevirelim.
+
+`+ /Components/Playground/Cards/Card.svelte, CardBack.svelte, CardFront.svelte`
 
 _componenets > Playground > Cards > CardFront.svelte_
 
@@ -1464,7 +1458,7 @@ efekt gerçekleştiğini inceleyebilirsin.
 </p>
 
 <p align="center"> 
-  <img src="./assets/components/Card/card-turn-effect-front.png" 
+  <img src="./assets/components/Card/card-turn-effect-front.png"
     alt="Card turn effect front" style="width: 900px"/>
 </p>
 

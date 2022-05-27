@@ -3,7 +3,7 @@
   import Header from "./Header.svelte";
   import Image from "./Image.svelte";
   import List from "./List.svelte";
-  import ArrayList from "./ArrayList.svelte";
+  import ArrayList from "./ArrayListe.svelte";
 
   export let detail;
 
@@ -25,7 +25,4 @@
   <ArrayList {list} />
 </main>
 
-<style>
-  main {
-  }
-</style>
+<style></style>
