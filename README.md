@@ -14,10 +14,7 @@ modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış dökümantasyo
 dökümantasyonları inceledikten sonra uygulamayı takip etmen daha faydalı
 olabilir.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kahilkubilay/remember-em-all/master/public/assets/squirtle-squad.webp" alt="Hello team" 
-  style="width: 900px"/>
-</p>
+![hello team](public/assets/documentation/squirtle-squad.webp)
 
 İçeriğin detaylarını sol tarafta yer alan haritalandırma ile takip
 edebilirsin. İlk bölümlerde Svelte'i nasıl kullanabileceğine dair
@@ -37,10 +34,7 @@ sonucunda kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar
 bulundukları yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir
 sonraki seviyede yer alan kartlar arayüze kapalı olarak yeniden gelecektir.
 
-<p align="center">
-  <img src="./assets/playground.png" alt="view of cards on the playground" 
-  title="view of cards on the playground" style="width: 900px;"/>
-</p>
+![view of cards on the playground](public/assets/documentation/playground.png)
 
 Oyun başlangıcında kullanıcıdan bir kullanıcı adı girmesi, avatar listesinde
 yer alan görsellerden birini seçmesi beklenecektir (Avatarlar ne kadar evcil
@@ -94,21 +88,21 @@ düşünmüyorum.
 
 Npx ile yeni bir proje oluşturma:
 
-```js
+```
 npx degit sveltejs/template remember-em-all
 ```
 
 Svelte Typescript notasyonunu desteklemektedir. Typescript üzerinde
 yapabileceğiniz bütün işlemleri Svelte projelerinde kullanabilirsin.
 
-```js
+```
 cd remember-em-all
 node scripts/setupTypeScript.js
 ```
 
 Gerekli olan bağımlılıkları projemize ekleyerek ayağa kaldırabiliriz.
 
-```js
+```
 npm install
 npm run dev
 ```
@@ -118,11 +112,7 @@ görebilirsin. Windows işletim sistemlerinde varsayılan 8080 portu işaretli
 iken, bu port üzerinde çalışan proje bulunuyorsa veya farklı işletim sistemi
 kullanıyorsan port numarası değişkenlik gösterebilir.
 
-<p align="center">
-  <img src="./assets/console-logs.png" 
-  alt="Port where Svelte is running on the console" 
-  title="Port where Svelte is running on the console" />
-</p>
+![Port where Svelte is running on the console](public/assets/documentation/console-logs.png)
 
 <span id="svelte-nasil-calisir"></span>
 
@@ -137,9 +127,7 @@ kodlarına dönüştürülür. Svelte derleme işlemini runtime üzerinde
 gerçekleştiriyor. Bu derleme işlemiyle birlikte Virtual DOM bağımlılığını
 ortadan kalkıyor.
 
-<p align="center">
-  <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px"/>
-</p>
+![Svelte build map](public/assets/documentation/build-map.png)
 
 <span id="bagimliliklar"></span>
 
@@ -198,23 +186,24 @@ eminim.
 ### 🎈 Variable erişimi
 
 Script üzerinde tanımlanan değerleri html içerisinde çağırabilmek için
-&lcub; &rcub; kullanılmalıdır. Bu template ile değer tipi farketmeksizin
+{} kullanılmalıdır. Bu template ile değer tipi farketmeksizin
 değişkenleri çağırarak işlemler gerçekleştirilebilir.
 
 _app.svelte_
 
-<div class="code-wrapper" style="">
-<pre class="prettyprint lang-js">
+```js
+<script>
   const user = "sabuha";
-</pre>
-<pre class="prettyprint lang-html">{`\<span>{user} seni izliyor!</span>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+</script>
+
+<span>{user} seni izliyor!</span>
+
+<style>
   h1 {
     color: rebeccapurple;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Bu tanımlama ile birlikte _user_ değerine tanımlanan her değeri dinamik olarak
 _html_ içerisinde çağırabilirsin. biraz daha biraz daha karıştıralım..
@@ -223,17 +212,13 @@ yerine 'bir kedi gördüm sanki!' değerini ekrana getirelim.
 
 _app.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
+```js
+<script>
   const user = "sabuha";
-</>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\<span>{user === "sabuha" ? "bir kedi gördüm sanki!" : "seni izliyor!"}</span>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style></style>`}</pre>
-</div>
+</script>
+
+<span>{user === "sabuha" ? "bir kedi gördüm sanki!" : "seni izliyor!"}</span>
+```
 
 _html_ içerisinde kullandığımız &lcub; &rcub; tagları arasında condition
 yapıları gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu
@@ -246,59 +231,52 @@ yer alan referansı benzer olarak güncellenir.
 
 _app.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
+```js
+<script>
   let number = 0;
-  
-  const randomNumber = () => {
-    number = Math.round(Math.random() \* 15);
-  };
-</script>`}
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+  const randomNumber = () => {
+    number = Math.round(Math.random() * 15);
+  };
+</script>
+
 <main>
   <h3>{number}</h3>
   <button on:click={randomNumber}>Update Number</button>
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   main {
     border-radius: 5px;
     background-color: yellowgreen;
     padding: 5px;
     margin: 10px 50px;
   }
-  
+
   h3 {
     background-color: orangered;
     width: 100px;
     color: white;
   }
-  
+
   button {
     border: 1px solid black;
     cursor: pointer;
   }
-  
+
   h3,button {
     display: block;
     text-align: center;
     margin: 25px auto;
     padding: 5px;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Tanımladığımız _numb_ değeri her güncellendiğinde, DOM üzerinde bu değer
 yeniden ve sıkılmadan güncellenmeye devam edecektir.
 
-<p align="center">
-  <img src="./assets/gif/reactive.gif" alt="Svelte definition variable" 
-  style="width: 800px"/>
-</p>
+![Svelte definition variable](public/assets/documentation/reactive.gif)
 
 ### 🎈 Component kullanımı
 
@@ -306,10 +284,7 @@ Uygulamalarımızda yer alan bileşenleri parçalayarak istediğimiz gibi bir b�
 haline getirebilmek üzerinde çalışırken kolaylık sağlar, tekrar eden bileşen
 parçalarında yeniden çağırabilmek daha az efor sarfettirir.
 
-<p align="center">
-  <img src="./assets/components/component-with-sabuha.png"
-  alt="use of components" style="width: 900px;"/>
-</p>
+![use of components](public/assets/components/component-with-sabuha.png)
 
 Bir önceki örnekte yaptığımız random sayı üreten basit yapıyı bir component
 haline getirelim. `components/Content/` dizininde `RandomNumber.svelte` dosyasını oluşturalım.
@@ -317,43 +292,39 @@ Bu yeni componentimizi `App.svelte` dosyasında kullanalım.
 
 _Components > Content > RandomNumber.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
+```js
+<script>
   let number = 0;
-  
+
   const randomNumber = () => {
     number = Math.round(Math.random() \* 15);
   };
-</script>`}
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <div class="random-number-capsule">
   <h3>{number}</h3>
   <button on:click={randomNumber}>Update Number</button>
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   .random-number-capsule {
     border-radius: 5px;
     background-color: yellowgreen;
     padding: 5px;
     margin: 10px 50px;
   }
-  
+
   h3 {
     background-color: orangered;
     width: 100px;
     color: white;
-  } 
-  
+  }
+
   button {
     border: 1px solid black;
     cursor: pointer;
-  } 
-  
+  }
+
   h3,
   button {
     display: block;
@@ -361,45 +332,32 @@ _Components > Content > RandomNumber.svelte_
     margin: 25px auto;
     padding: 5px;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 `RandomNumber` componentini istediğimiz gibi çağırarak kullanmaya
 başlayabiliriz.
 
 _App.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";
-</script>`}
+```js
+<script>
+  import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main>
   <RandomNumber />
   <RandomNumber />
   <RandomNumber />
   <RandomNumber />
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-</style>`}</pre>
-</div>
+```
 
-<p align="center">
-<img src="./assets/components/random-number-component.gif"
-  alt="Random Number Component" style="width: 900px;"/>
-</p>
+![random number Component](public/assets/components/random-number-component.gif)
 
 ### 🎈 Componentler Arası İletişim
 
-<p align="center">
-<img src="./assets/communication-is-key.jpg"
-  alt="SpongeBob 'communication is key' meme" style="width: 500px;"/>
-</p>
+![SpongeBob communication is key meme](public/assets/documentation/communication-is-key.jpg)
 
 Küçük yapılı projelerden, komplex yapılılara kadar birçok component üzerinden
 alıp farklı bir yerde kullanma, güncelleme gibi ihtiyaçlarımız olacak.
@@ -453,10 +411,7 @@ veya pratik yapabilmek için şuana kadarki kodları kaldırabilirsin.
 _src > components > User_ ve _src > components > Playground_ klasörlerini
 oluşturalım.
 
-<p align="center">
-<img src="./assets/start-folder.png" alt="Start folder" 
-  style="width: 900px;"/>
-</p>
+![start folder](public/assets/documentation/start-folder.png)
 
 ### 🎈 User Component
 
@@ -477,58 +432,47 @@ için User Component'ini _Playground > Wrapper > Playground.svelte_ dosyasında
 
 _User > UserGround.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
+```js
+<script>
   const componentDetail = "User";
-</script>`}
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main>
   <h2>{componentDetail} Component</h2>
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   h2 {
     color: white;
     background-color: orangered;
     text-align: center;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 _Playground > Wrapper > Playground.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import Userground from "../../User/Userground.svelte";
-</script>`}
+```js
+<script>
+  import Userground from "../../User/Userground.svelte";
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main>
    <UserGround />
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-  h2 {
+
+<style>
+ h2 {
     color: white;
     background-color: orangered;
     text-align: center;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 _User Component_ çağırdıktan sonra üzerinde geliştirme yapmaya başlayalım.
 
-<p align="center">
-<img src="./assets/components/User/call-user-component.png" 
-  alt="Call User Component" style="width: 800px;"/>
-</p>
+![call user Component](public/assets/Components/User/call-user-component.png)
 
 Component üzerinde 4 farklı bölüm yer alıyor.
 
@@ -538,10 +482,7 @@ Component üzerinde 4 farklı bölüm yer alıyor.
 - Ve bütün bunlar tamamlandığında oyuna start veren bir button elementi
   bulunuyor.
 
-<p align="center"> 
-  <img src="./assets/components/User/components-section.png" 
-    alt="Call User Component" style="width: 900px"/>
-</p>
+![view components on dom](public/assets/Components/User/components-section.png)
 
 ### 🎈 Header Component
 
@@ -553,80 +494,63 @@ barındırıyor.
 
 _User > Header.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script></script>`}
-
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
 <div class="header">
   <h2>select your best pokemon and start catching!</h2>
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   .header {
     padding: 5px 0;
     margin-bottom: 15px;
     border-bottom: 3px solid white;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 _User > UserGround.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import Header from "./Header.svelte";
-</script>`}
+```js
+<script>
+  import Header from "./Header.svelte";
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main>
   <Header />
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   main {
     background-color: #f5f5f5;
     border-radius: 5px;
     padding-bottom: 15px;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
-<p align="center">
-  <img src="./assets/components/User/header-component.png" 
-    alt="Call Header Component" style="width: 900px"/>
-</p>
+![call header Component](public/assets/Components/User/header-component.png)
 
 Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..
 
 _Playground > Wrapper > Playground.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import Userground from "../../User/Userground.svelte";
-</script>`}
+```js
+<script>
+  import Userground from "../../User/Userground.svelte";
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main class="playground">
    <Userground />
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   .playground {
     width: 900px;
     margin: 0 auto;
     text-align: center;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Ehh... şimdi biraz daha az kötü gözüktüğü söylenebilir💩💩💩
 
@@ -646,71 +570,60 @@ _ImageAvatar.svelte_ componentine data gönderecek.
 
 _User > Avatar > Avatars.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
+```js
+<script>
   // avatar list
   let sabuha = "/asset/images/sabuha.jpg";
   let pasa = "/asset/images/pasa.jpg";
-</script>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+</script>
+
 <div class="avatars">
   <img src={sabuha} alt="" />
   <img src={pasa} alt="" />
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
- img {
+
+<style>
+  img {
     width: 100px;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 _Avatars_, _Userground_ üzerinde çağırdığımda karşıma bu iki güzellik gelecek.
 
-<p align="center"> 
-  <img src="./assets/components/User/avatars-component.png" 
-    alt="call Avatar Component" style="width: 900px"/>
-</p>
+![call avatar Component](public/assets/Components/User/avatars-component.png)
 
 _Avatars_ biraz daha işlevli bir yapıya dönüştürelim.
 
 _User > Avatar > Avatars.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import ImageAvatar from "./ImageAvatar.svelte";
+```js
+<script>
+  import ImageAvatar from "./ImageAvatar.svelte";
 
-// avatar list
-let sabuha = "/asset/images/sabuha.jpg";
-let mohito = "/asset/images/mohito.jpg";
-let pasa = "/asset/images/pasa.jpg";
-let susi = "/asset/images/susi.jpg";
-let limon = "/asset/images/limon.jpg";
+  // avatar list
+  let sabuha = "/asset/images/sabuha.jpg";
+  let mohito = "/asset/images/mohito.jpg";
+  let pasa = "/asset/images/pasa.jpg";
+  let susi = "/asset/images/susi.jpg";
+  let limon = "/asset/images/limon.jpg";
 
-const avatars = [pasa, mohito, sabuha, limon, susi];
-</script>`}
+  const avatars = [pasa, mohito, sabuha, limon, susi];
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <div class="avatars">
- { #each avatars as userAvatar}
+ {#each avatars as userAvatar}
     <ImageAvatar {userAvatar} />
-{ /each}
-
+  {/each}
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
- .avatars {
+
+<style>
+  .avatars {
     display: flex;
     justify-content: center;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Oluşturduğumuz `avatars` dizisine ait her elemana _html_ üzerinde #each
 döngüsünde erişiyoruz. Erişilen her elemanının bilgisini _ImageAvatar_
@@ -719,17 +632,14 @@ dizi içerisinde bulunan her elamanın görüntüsünü elde edeceğiz.
 
 _User > Avatar > ImageAvatar.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \export let userAvatar;
-</script>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
+<script>
+  export let userAvatar;
+</script>
+
 <img src={avatar} class="avatar unpicked" alt="avatar" />
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   .avatar {
     width: 100px;
     border-radius: 100px;
@@ -739,29 +649,26 @@ _User > Avatar > ImageAvatar.svelte_
     box-shadow: 0px 0px 3px black;
     border: 2px solid whitesmoke;
   }
-  
+
   .avatar:hover {
     opacity: 1;
     cursor: pointer;
   }
-  
+
   .unpicked {
     opacity: 0.8;
   }
-  
+
   .picked {
     opacity: 1;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Daha güzel bir görüntüyü hak ettik. Avatarlar üzerinde CSS ile biraz
 düzenlemeler yapmamız gerekti.
 
-<p align="center"> 
-  <img src="./assets/components/User/user-component-end.png" 
-    alt="Call User Component" style="width: 900px"/>
-</p>
+![call user Component](public/assets/Components/User/user-component-end.png)
 
 ### 🎈 Name Component
 
@@ -772,26 +679,21 @@ oluşturalım.
 
 _User > Avatar > Name > UserName.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script></script>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
 <div class="user">
   <input type="text" class="name" name="name" placeholder="pika pika" />
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-   .name {
+
+<style>
+  .name {
     width: 40%;
     border-radius: 20px;
     text-align: center;
     margin-bottom: 30px;
     padding: 8px 0;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 Diğer componentlerde yaptığımız gibi, _UserName_ componentinin _Userground_
 componentinde kullanalım.
@@ -805,10 +707,7 @@ gerçekleştirmedi. Arayüzü oluşturmak için yeteri kadar malzememiz ortaya �
 ve bunları istediğin gibi stillendirebilirsin. Bundan sonraki aşamalarda bu
 componentlara dinamik özellikler kazandıracağız.
 
-<p align="center"> 
-  <img src="./assets/components/User/end-interface.png" 
-    alt="Call User Component" style="width: 900px"/>
-</p>
+![user component](public/assets/Components/User/end-interface.png)
 
 ## 🪁 Oyun Gereksinimleri
 
@@ -823,15 +722,11 @@ değerler dinamik olarak güncellenecek.
 
 _Store > Level.ts_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { Writable, writable } from "svelte/store";
-  
-  export const level:Writable<number> = writable(1);
-</script>`}
-</pre>
-</div>
+```ts
+import { Writable, writable } from "svelte/store";
+
+export const level: Writable<number> = writable(1);
+```
 
 _level_ isminde bir değer oluşturduk ve gezegenin iyiliği için uygulamamız
 içerisinde kullanacağız. Bu değeri kullanıcı arayüz üzerindeki bütün kartları
@@ -843,15 +738,11 @@ tanımlayalım.
 
 _Store > Score.ts_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { Writable, writable } from "svelte/store";
-  
-  export const score:Writable<number> = writable(0);
-</script>`}
-</pre>
-</div>
+```ts
+import { Writable, writable } from "svelte/store";
+
+export const score: Writable<number> = writable(0);
+```
 
 Bu değerleri farklı dosyalarda tanımlayabildiğin gibi tek bir tek bir dosya
 içerisinde de _score&level_ değerlerini tanımlayabilirsin. Bir kullanıcı
@@ -864,24 +755,21 @@ Kullanıcıya ait statik bilgileri tutacağımız yeni bir class oluşturalım.
 
 _Store > User.ts_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { Writable, writable } from "svelte/store";
-  
-  export class UserInfo {
-    constructor (
-      public name: Writable<string> = writable(''),
-      public avatar: Writable<string> = writable(''),
-      public isStart: Writable<boolean> = writable(false)
-    ) // ---> burada süslüüüüüü parantezler var
-  }
-  
-  export const userInfo = new UserInfo();
-</script>`}
+```ts
+import { Writable, writable } from "svelte/store";
 
-</pre>
-</div>
+export const score: Writable<number> = writable(0);
+
+export class UserInfo {
+  constructor(
+    public name: Writable<string> = writable(""),
+    public avatar: Writable<string> = writable(""),
+    public isStart: Writable<boolean> = writable(false)
+  ) {}
+}
+
+export const userInfo = new UserInfo();
+```
 
 Oluşturduğumuz UserInfo class'ını kullanıcının isim, avatar değerlerini set
 edeceğiz. Bu değerlere default olarak boş String atadım, farklı içerikle
@@ -901,35 +789,30 @@ güncelleyelim.
 
 _componenets > User > Avatars > ImageAvatar.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { userInfo } from "../../../Store/User";
+```js
+<script>
+  import { userInfo } from "../../../Store/User";
 
-const { avatar } = userInfo;
+  const { avatar } = userInfo;
 
-export let userAvatar;
+  export let userAvatar;
 
-const setAvatar = () => {
-console.log("focus on avatar => ", userAvatar);
+  const setAvatar = () => {
+    console.log("focus on avatar => ", userAvatar);
 
-$avatar = userAvatar;
+    $avatar = userAvatar;
 
-console.log($avatar);
-};
-</script>`}
+    console.log($avatar);
+  };
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <img
   src={userAvatar}
   class="avatar unpicked"
   alt="avatar"
   on:click={setAvatar}
 />
-`}</pre>
-</div>
+```
 
 `on:click` metoduna bağladığımız fonksiyon ile kullanıcının tıkladığı avatar
 üzerinde bilgiyi kolay bir şekilde elde edebiliyoruz. Konsolu açarak, logları
@@ -939,38 +822,33 @@ hale getirelim.
 
 _componenets > User > Avatars > ImageAvatar.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { userInfo } from "../../../Store/User";
-  
-  const { avatar } = userInfo;
-  
-  export let userAvatar;
-  
-  const avatarName = userAvatar.match(/\w*(?=.\w+$)/)[0];
-</script>`}
+```js
+<script>
+  import { userInfo } from "../../../Store/User";
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+  const { avatar } = userInfo;
+
+  export let userAvatar;
+
+  const avatarName = userAvatar.match(/\w\*(?=.\w+$)/)[0];
+</script>
+
 <img
   src={userAvatar}
   class="avatar unpicked"
   alt="avatar"
   on:click={() => ($avatar = avatarName)}
 />
-`}</pre>
-</div>
+```
 
 Kullanıcı avatarlar üzerine her click işlemi gerçekleştirdiğinde, `$avatar`
 değerini güncelliyoruz. `ImageAvatar.svelte` componentini geçmeden önce
 _class directives_ kullanarak yıllaar yılllaarr önce tanımladığımız `.picked` ve
 `.unpicked` classlarını anlamlı bir hale getirelim.
 
-<div class="code-wrapper">
-<pre 
-  class="prettyprint lang-html">{`\
+_no title_
+
+```js
 <img
   src={userAvatar}
   class="avatar unpicked"
@@ -978,32 +856,24 @@ _class directives_ kullanarak yıllaar yılllaarr önce tanımladığımız `.pi
   class:picked={avatarName === $avatar}
   on:click={() => ($avatar = avatarName)}
 />
-`}</pre>
-</div>
+```
 
 Bu güncelleme ile birlikte kullanıcının her avatar seçiminden sonra, seçilen
 avatarın `opacity` değeri güncellenerek kullanıcının seçimi vurgulanacak.
 
-<p align="center"> 
-  <img src="./assets/components/User/class-directive.gif" 
-    alt="Class Directives" style="width: 900px"/>
-</p>
+![class directives](public/assets/Components/User/class-directive.gif)
 
 Kullanıcıdan almamız gereken diğer bir değer, username.
 
 _componenets > User > Avatars > ImageAvatar.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { userInfo } from "../../../Store/User";
+```js
+<script>
+  import { userInfo } from "../../../Store/User";
 
-const { name } = userInfo;
-</script>`}
+  const { name } = userInfo;
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <div class="user">
   <input
     type="text"
@@ -1013,8 +883,7 @@ const { name } = userInfo;
     bind:value={$name}
   />
 </div>
-`}</pre>
-</div>
+```
 
 Import ettiğimiz UserInfo class'inda yer alan $name store değerini, `bind:value`
 metodu ile güncelleyebiliriz.
@@ -1027,27 +896,22 @@ ise basit bir head etiketini gösterelim.
 
 _componenets > Playground > Wrapper > Playground.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import UserGround from "../../User/UserGround.svelte";
-  \import { userInfo } from "../../../Store/User";
-  
-  const { isStart } = userInfo;
-</script>`}
+```js
+<script>
+  import UserGround from "../../User/UserGround.svelte";
+  import { userInfo } from "../../../Store/User";
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+  const { isStart } = userInfo;
+</script>
+
 <main class="playground">
-  #if $isStart
+  {#if $isStart}
     <h3>Start Game....</h3>
-  else
+  {:else}
     <UserGround />
-  /if
+  {/if}
 </main>
-`}</pre>
-</div>
+```
 
 Döngüler gibi if/else Logic'leri kullanabilirsiniz. `else if` ihtiyacında bir
 şart ifadesi olarak `else if isStart === undefined` tanımlaman yeterli
@@ -1055,17 +919,16 @@ olacaktır.
 
 _componenets > Playground > Wrapper > Playground.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { userInfo } from "../../Store/User";
+```js
+<script>
+  import { userInfo } from "../../Store/User";
 
-const { name, avatar, isStart } = userInfo;
+  const { name, avatar, isStart } = userInfo;
 
-const startGame = () => {
-if ($avatar === "") {
-return;
-}
+  const startGame = () => {
+    if ($avatar === "") {
+      return;
+    }
 
     if ($name === "") {
       return;
@@ -1075,23 +938,15 @@ return;
 
     console.log("::::: start game :::::");
     console.log(":: enjoy {$name} ::");
+  };
+</script>
 
-};
-</script>`}
-
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <div class="start">
   <button on:click={startGame}>Start</button>
 </div>
-`}</pre>
-</div>
+```
 
-<p align="center"> 
-  <img src="./assets/components/User/start-game.gif" 
-    alt="Class Directives" style="width: 900px"/>
-</p>
+![start game component](public/assets/Components/User/start-game.gif)
 
 StartGame fonksiyonu ile birlikte _name_ ve _avatar_ store değerleri kontrol
 edilecek. Bu değerlerin boş olmaması durumunda _isStart_ store değerine true
@@ -1100,37 +955,34 @@ herhangi biri bulunmuyorsa _User_ componenti bulunduğu yerde kalmaya devam
 edicektir. Böyle bir ihtimal için, class directives kullanarak kullanıcıyı
 bilgilendirelim.
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import { userInfo } from "../../Store/User";
+_no title_
 
-const { name, avatar, isStart } = userInfo;
+```js
+<script>
+  import { userInfo } from "../../Store/User";
 
-let isAvatarEmpty = false;
-let isNameEmpty = false;
+  const { name, avatar, isStart } = userInfo;
 
-const startGame = () => {
-if ($avatar === "") {
-isAvatarEmpty = true;
-return;
-}
+  let isAvatarEmpty = false;
+  let isNameEmpty = false;
 
-    if ($name === "") {
-      return;
-    }
+  const startGame = () => {
+    if ($avatar === "") {
+    isAvatarEmpty = true;
+    return;
+  }
 
-    $isStart = true;
+  if ($name === "") {
+    return;
+  }
 
-    console.log("::::: start game :::::");
-    console.log(":: enjoy {$name} ::");
+  $isStart = true;
 
+  console.log("::::: start game :::::");
+  console.log(":: enjoy {$name} ::");
 };
-</script>`}
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <div class="start">
   <button on:click={startGame}>Start</button>
    <div class="avatarError visible">
@@ -1139,9 +991,9 @@ return;
     </span>
   </div>
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-   .name {
+
+<style>
+  .name {
     width: 40%;
     border-radius: 20px;
     text-align: center;
@@ -1149,25 +1001,24 @@ return;
     padding: 8px 0;
   }
 
-.avatarError {
-color: red;
-font-size: 18px;
-}
+  .avatarError {
+    color: red;
+    font-size: 18px;
+  }
 
-.unvisible {
-display: none;
-}
+  .unvisible {
+    display: none;
+  }
 
-.visible {
-display: block;
-}
+  .visible {
+    display: block;
+  }
 
-.start button:active {
-border: 2px solid white;
-}
-</style>`}</pre>
-
-</div>
+  .start button:active {
+    border: 2px solid white;
+  }
+</style>
+```
 
 Class Directive'lerde yardımına başvurabilmek için _isAvatarEmpty_ ve
 _isNameEmpty_ isminde iki farklı değer oluşturdum. Button'ın altında bir `div`
@@ -1197,12 +1048,7 @@ ve avatar seçimi yapmamak için `Playground` componentinde yer alan _isStart_
 
 _componenets > Playground > Cards > CardFront.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script></script>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
 <div class="front">
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
@@ -1210,23 +1056,22 @@ _componenets > Playground > Cards > CardFront.svelte_
     class="single-poke"
   />
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-  .front {
+
+<style>
+ .front {
     width: 100px;
     height: 100px;
     top: 0;
     left: 0;
   }
 
-.single-poke {
-border-radius: 11px;
-background-color: #fff;
-box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
-}
-</style>`}</pre>
-
-</div>
+  .single-poke {
+    border-radius: 11px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
+  }
+</style>
+```
 
 `CardFront` componentinde `img src` özelliği olarak bir API adresi verilmiş.
 Bu API'da dosya isimlerinde yer alan numaraları güncelleyerek, farklı pokemon
@@ -1239,12 +1084,7 @@ güncellemeyi inceleyebileceğiz.
 
 _componenets > Playground > Cards > CardBack.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script></script>`}
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
 <div class="back">
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png"
@@ -1252,9 +1092,9 @@ _componenets > Playground > Cards > CardBack.svelte_
     alt="card back on the playing field"
   />
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-  .back {
+
+<style>
+ .back {
     width: 100px;
     height: 100px;
     top: 0;
@@ -1262,28 +1102,24 @@ _componenets > Playground > Cards > CardBack.svelte_
     border-radius: 11px;
   }
 
-.back:hover {
-cursor: pointer;
-}
+  .back:hover {
+    cursor: pointer;
+  }
 
-.single-poke {
-border-radius: 11px;
-background: #fff;
-box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
-}
-</style>`}</pre>
-
-</div>
+  .single-poke {
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
+  }
+</style>
+```
 
 `img` kapsayıcısı olan `back ve front` classlarına sahip kapsayıcılara
 belirli özellikler katarak basit şekilde bir kart görünümü vermeye çaba
 sarfettik. `CardBack` componentinde `Card` componentinde çağırarak arayüz
 üzerinde nasıl göründüğünü inceleyelim.
 
-<p align="center"> 
-  <img src="./assets/components/Card/card-views.png" 
-    alt="Class Directives" style="width: 900px"/>
-</p>
+![display of card component](public/assets/Components/Card/card-views.png)
 
 `Card` componentleri birer block-element olduğu için alt alta durmaktadır.
 Componentleri bir kapsayıcı içerisine alarak, inline-block seviyesine alalım.
@@ -1293,44 +1129,36 @@ duracaktır.
 
 _componenets > Playground > Cards > CardBack.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import FrontCardFace from "./CardFront.svelte";
-  \import BackCardFace from "./CardBack.svelte";
-</script>`}
-
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
+<script>
+  import FrontCardFace from "./CardFront.svelte";
+  import BackCardFace from "./CardBack.svelte";
+</script>
 <main class="flip-container">
   <div class="flipper">
     <FrontCardFace />
     <BackCardFace />
   </div>
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-   .flip-container {
+
+<style>
+  .flip-container {
     display: inline-block;
     margin: 5px;
     width: 100px;
     height: 100px;
   }
-  
+
   .flipper {
     position: relative;
   }
-</style>`}</pre>
-</div>
+</style>
+```
 
 `CardBack` Componentinin kapsayıcı class'ına _.back_, `position: absolute`
 değerini verdiğimizde her iki kart üst üste görüntülenecektir.
 
-<p align="center"> 
-  <img src="./assets/components/Card/card-position.gif" 
-    alt="Card position" style="width: 900px"/>
-</p>
+![card position](public/assets/Components/Card/card-position.gif)
 
 CSS kullanarak Card'ın arka yüzülen her tıklama ile birlikte `transform`
 özelliğini kullanarak `CardBack` Componentinin altında yer alan `CardFront`
@@ -1339,41 +1167,33 @@ dosyamıza aşağıdaki özellikleri ekleyelim.
 
 _public > global.css_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-css">{`\<style>
-  .flipper.hover .front {
-    transform: rotateY(0deg);
-  }
+```css
+.flipper.hover .front {
+  transform: rotateY(0deg);
+}
 
 .flipper.hover .back {
-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-</style>`}</pre>
-
-</div>
+```
 
 `Card` componentlerinde `transform` stillendirmesi sağlayarak, `hover` class'i
 eklendiğinde dönme efekti vermesini sağlayalım.
 
 _componenets > Playground > Cards > CardBack.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>
-  \import FrontCardFace from "./CardFront.svelte";
-  \import BackCardFace from "./CardBack.svelte";
-</script>`}
+```js
+<script>
+  import FrontCardFace from "./CardFront.svelte";
+  import BackCardFace from "./CardBack.svelte";
+</script>
 
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
 <main class="flip-container">
-  <div class="flipper">
-  </div>
+  <div class="flipper"></div>
 </main>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
-  .back {
+
+<style>
+ .back {
     width: 100px;
     height: 100px;
     backface-visibility: hidden;
@@ -1387,18 +1207,17 @@ _componenets > Playground > Cards > CardBack.svelte_
     border-radius: 11px;
   }
 
-.back:hover {
-cursor: pointer;
-}
+  .back:hover {
+    cursor: pointer;
+  }
 
-.single-poke {
-border-radius: 11px;
-background: #fff;
-box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
-}
-</style>`}</pre>
-
-</div>
+  .single-poke {
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
+  }
+</style>
+```
 
 `Card` componentlerinin bir bütün gibi birlikte aynı hızda, ve aynı perspektif
 üzerinden dönüş sağlaması gerekiyor. Svelte'de her component içerisinde
@@ -1408,14 +1227,7 @@ için aynı tanımlamaları gerçekleştirelim.
 
 _componenets > Playground > Cards > CardFront.svelte_
 
-<div class="code-wrapper">
-<pre class="prettyprint lang-js">
-{`\<script>"
-</script>`}
-
-</pre>
-<pre 
-  class="prettyprint lang-html">{`\
+```js
 <div class="front">
   <img
     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
@@ -1423,8 +1235,8 @@ _componenets > Playground > Cards > CardFront.svelte_
     class="single-poke"
   />
 </div>
-`}</pre>
-<pre class="prettyprint lang-css">{`\<style>
+
+<style>
   .front {
     width: 100px;
     height: 100px;
@@ -1437,14 +1249,13 @@ _componenets > Playground > Cards > CardFront.svelte_
     transform: rotateY(-180deg);
   }
 
-.single-poke {
-border-radius: 11px;
-background-color: #fff;
-box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
-}
-</style>`}</pre>
-
-</div>
+  .single-poke {
+    border-radius: 11px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
+  }
+</style>
+```
 
 Birazdan geçeceğimiz bölüm içerisinde, kartları EventDispatcher kullanarak
 kartın açılma efektini yapacağız. Eventi kullanmadan önce CSS üzerinde nasıl
@@ -1452,15 +1263,9 @@ güncellemeler yapmamız gerektiğini göstermek istedim. Konsol üzerinde
 `CardBack` componentine ait `flipper` bulunan element `hover` class eklediğinde
 efekt gerçekleştiğini inceleyebilirsin.
 
-<p align="center"> 
-  <img src="./assets/components/Card/card-turn-effect-back.png" 
-    alt="Card turn effect back" style="width: 900px"/>
-</p>
+![Card turn effect back](public/assets/Components/Card/card-turn-effect-back.png)
 
-<p align="center"> 
-  <img src="./assets/components/Card/card-turn-effect-front.png"
-    alt="Card turn effect front" style="width: 900px"/>
-</p>
+![Card turn effect front](public/assets/Components/Card/card-turn-effect-front.png)
 
 <span id="component-ve-dizin-yapisi"></span>
 
@@ -1502,8 +1307,10 @@ efekt gerçekleştiğini inceleyebilirsin.
 - https://betterprogramming.pub/6-ways-to-do-component-communications-in-svelte-b3f2a483913c
 - https://livebook.manning.com/book/svelte-and-sapper-in-action/chapter-5/v-3/
 
-```
+````
 
 ```
 
 :check en file:
+```
+````

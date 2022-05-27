@@ -1,0 +1,1473 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\k84238047\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><span id="selam-sana"></span></p>
+<h2 class="mume-header" id="selamlaaaaar">Selamlaaaaar &#x1F44B;</h2>
+
+<p>Her&#x15F;eyden &#xF6;nce umuyorum ki bu basit d&#xF6;k&#xFC;man Svelte yolculu&#x11F;unda rehber<br>
+olabilir. Son zamanlarda Svelte ile uygulama geli&#x15F;tirmeye ba&#x15F;lad&#x131;m. Svelte&apos;in<br>
+yap&#x131;s&#x131;na daha &#xE7;ok hakim olabilmek ve &#xF6;&#x11F;rendiklerimi payla&#x15F;abilmek i&#xE7;in bu<br>
+d&#xF6;k&#xFC;man&#x131; olu&#x15F;turdum. D&#xF6;k&#xFC;man i&#xE7;erisinde ad&#x131;m ad&#x131;m <em>Game</em> ba&#x11F;lant&#x131;s&#x131;nda<br>
+g&#xF6;rebile&#x11F;in oyunu nas&#x131;l geli&#x15F;tirdi&#x11F;imi anlatt&#x131;m, ilgi duyuyorsan ayn&#x131;<br>
+ad&#x131;mlar&#x131; takip ederek benzer bir uygulama olu&#x15F;turabilir, veya k&#xFC;&#xE7;&#xFC;k bir kaynak<br>
+modelinde kullanabilirsin. Svelte i&#xE7;eri&#x11F;i iyi ayr&#x131;nt&#x131;lanm&#x131;&#x15F; d&#xF6;k&#xFC;mantasyonlara<br>
+(<a href="https://svelte.dev/docs" title="Svelte Documentation">docs</a>,<br>
+<a href="https://svelte.dev/examples/hello-world" title="Svelte Examples">examples</a>) sahip,<br>
+d&#xF6;k&#xFC;mantasyonlar&#x131; inceledikten sonra uygulamay&#x131; takip etmen daha faydal&#x131;<br>
+olabilir.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kahilkubilay/remember-em-all/master/public/assets/squirtle-squad.webp" alt="Hello team" style="width: 900px">
+</p>
+<p>&#x130;&#xE7;eri&#x11F;in detaylar&#x131;n&#x131; sol tarafta yer alan haritaland&#x131;rma ile takip<br>
+edebilirsin. &#x130;lk b&#xF6;l&#xFC;mlerde Svelte&apos;i nas&#x131;l kullanabilece&#x11F;ine dair<br>
+bilgilendirmeler yer al&#x131;yor. Bu k&#x131;s&#x131;mlara hakimsen, atlayarak<br>
+<a href="#start-game" title="Access Start Game section">Start Game</a> b&#xF6;l&#xFC;m&#xFC;nden devam<br>
+edebilirsin.</p>
+<p><span id="proje-hakkinda"></span></p>
+<h2 class="mume-header" id="oyun-hakk%C4%B1nda">&#x1FA81; Oyun hakk&#x131;nda</h2>
+
+<p>Projemizde bir haf&#x131;za oyunu geli&#x15F;tirece&#x11F;iz. Kullan&#x131;c&#x131;lar&#x131;n seviyelerine g&#xF6;re<br>
+aray&#xFC;z &#xFC;zerinde kartlar bulunacak. Kartlara click eventi ger&#xE7;ekle&#x15F;ti&#x11F;inde<br>
+kartlar a&#xE7;&#x131;lacak, kullan&#x131;c&#x131;lar a&#xE7;&#x131;lan kartlar&#x131; e&#x15F;le&#x15F;tirmeye &#xE7;al&#x131;&#x15F;acaklar.<br>
+E&#x15F;le&#x15F;en kartlar a&#xE7;&#x131;k bir &#x15F;ekilde aray&#xFC;z &#xFC;zerinde dururken ba&#x15F;ar&#x131;l&#x131; e&#x15F;le&#x15F;me<br>
+sonucunda kullan&#x131;c&#x131;ya puan kazand&#x131;racak, ba&#x15F;ar&#x131;s&#x131;z her e&#x15F;le&#x15F;mede kartlar<br>
+bulunduklar&#x131; yerde yeniden kapat&#x131;lacaklar. B&#xFC;t&#xFC;n kartlar e&#x15F;le&#x15F;tiklerinde, bir<br>
+sonraki seviyede yer alan kartlar aray&#xFC;ze kapal&#x131; olarak yeniden gelecektir.</p>
+<p align="center">
+  <img src="./assets/playground.png" alt="view of cards on the playground" title="view of cards on the playground" style="width: 900px;">
+</p>
+<p>Oyun ba&#x15F;lang&#x131;c&#x131;nda kullan&#x131;c&#x131;dan bir kullan&#x131;c&#x131; ad&#x131; girmesi, avatar listesinde<br>
+yer alan g&#xF6;rsellerden birini se&#xE7;mesi beklenecektir (Avatarlar ne kadar evcil<br>
+g&#xF6;z&#xFC;kseler de, g&#xFC;&#xE7; i&#xE7;lerinde gizli &#x1F431;&#x200D;&#x1F464;). Bu se&#xE7;ilen de&#x11F;erler oyunun aray&#xFC;z&#xFC;nde<br>
+kartlar&#x131;n yer ald&#x131;&#x11F;&#x131; b&#xF6;l&#xFC;m&#xFC;n alt&#x131;nda <em>score &amp; level</em> de&#x11F;erleri ile<br>
+birlikte g&#xF6;sterilecektir. Kullan&#x131;c&#x131; ad&#x131; ve se&#xE7;ilen avatar stabil de&#x11F;erler olarak<br>
+tutulurken, <em>score &amp; level</em> de&#x11F;erleri dinamik olarak kullan&#x131;c&#x131; davran&#x131;&#x15F;&#x131;na g&#xF6;re<br>
+g&#xFC;ncellenecektir.</p>
+<p><span id="svelte-nedir"></span></p>
+<h2 class="mume-header" id="svelte-nedir">&#x1FA81; Svelte nedir?</h2>
+
+<p>Svelte g&#xFC;n&#xFC;m&#xFC;z modern library ve framework habitat&#x131;n&#x131;n komplex yap&#x131;lar&#x131;n&#x131;<br>
+azaltarak daha basit &#x15F;ekilde y&#xFC;ksek verimlili&#x11F;e sahip uygulamalar<br>
+geli&#x15F;tirilmesini sa&#x11F;lamay&#x131; ama&#xE7;layan bir derleyicidir. Modern framework/library<br>
+ile birlikte geride b&#x131;rakt&#x131;&#x11F;&#x131;m&#x131;z her s&#xFC;re&#xE7;te farkl&#x131; ihtiya&#xE7;lar i&#xE7;in yeni bir<br>
+&#xF6;&#x11F;renme s&#xFC;reci ortaya &#xE7;&#x131;kt&#x131;. &#xD6;&#x11F;renme d&#xF6;ng&#xFC;s&#xFC;n&#xFC;n s&#xFC;rekli olarak geli&#x15F;tiricilerin<br>
+kar&#x15F;&#x131;s&#x131;na &#xE7;&#x131;kmas&#x131; bir s&#xFC;re sonras&#x131;nda illallah dedirtmeye ba&#x15F;lad&#x131;&#x11F;&#x131; gayet<br>
+a&#x15F;ikar. Svelte al&#x131;&#x15F;&#x131;k oldu&#x11F;umuz <em>html &amp; css &amp; js</em> kod yap&#x131;lar&#x131;na benzer bir<br>
+s&#xF6;zdizimine sahip olmas&#x131;, props ve state/stores g&#xFC;ncellemeleri i&#xE7;in 40 takla<br>
+at&#x131;lmas&#x131;na gerek kal&#x131;nmamas&#x131; gibi &#xF6;zellikleri ile bu d&#xF6;ng&#xFC;n&#xFC;n d&#x131;&#x15F;&#x131;na &#xE7;&#x131;kmay&#x131;<br>
+ba&#x15F;arabilmi&#x15F;.. ve umuyorum ki bu &#x15F;ekilde sadeli&#x11F;ini korumaya devam edebilir.</p>
+<p><a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks" title="Stack Overflow Developer Survey 2021">Stack Overflow Developer Survey 2021</a> anketinde geli&#x15F;tiriciler taraf&#x131;ndan %71.47 oran&#x131;yla en &#xE7;ok sevilen<br>
+web framework Svelte olarak se&#xE7;ildi.</p>
+<h2 class="mume-header" id="basit-ifadeler">&#x1FA81; Basit ifadeler</h2>
+
+<p>Baz&#x131; b&#xF6;l&#xFC;mlerde ayn&#x131; kelimeleri tekrar etmemek i&#xE7;in, baz&#x131; k&#x131;sayol ifadeleri<br>
+kulland&#x131;m(tamamen sallad&#x131;m). Say&#x131;s&#x131; &#xE7;ok fazla de&#x11F;il, sorun ya&#x15F;ayaca&#x11F;&#x131;n&#x131;<br>
+d&#xFC;&#x15F;&#xFC;nm&#xFC;yorum.</p>
+<ul>
+<li><code>_Playground_</code>
+<ul>
+<li>Playground.svelte Component</li>
+</ul>
+</li>
+<li><code>+ User.svelte</code>
+<ul>
+<li><em>User.svelte</em> dosyas&#x131; olu&#x15F;turuldu.</li>
+</ul>
+</li>
+<li><code>Avatar/</code>
+<ul>
+<li><em>Avatar</em> klas&#xF6;r&#xFC; olu&#x15F;turuldu.</li>
+</ul>
+</li>
+<li><code>+ User.svelte + Header.svelte + Avatars.svelte</code>
+<ul>
+<li><em>User.svelte, Header.svelte, Avatars.svelte</em> dosyalar&#x131; olu&#x15F;turuldu.</li>
+</ul>
+</li>
+<li><code>+ User &gt; Avatar.svelte</code>
+<ul>
+<li><em>User</em> klas&#xF6;r&#xFC; i&#xE7;erisinde <em>Avatar.svelte</em> dosyas&#x131; olu&#x15F;turuldu.</li>
+</ul>
+</li>
+<li><code>+ public &gt; assets &gt; images &gt; pasa.jpg, sabuha.jpg</code>
+<ul>
+<li><em>public &gt; assets &gt; images</em> klas&#xF6;r&#xFC; i&#xE7;erisinde <em>pasa.jpg</em>, <em>sabuha.jpg</em><br>
+dosyalar&#x131; olu&#x15F;turuldu.</li>
+</ul>
+</li>
+</ul>
+<p><span id="create-a-svelte-project"></span></p>
+<h2 class="mume-header" id="svelte-projesi-olu%C5%9Fturma">&#x1FA81; Svelte projesi olu&#x15F;turma</h2>
+
+<p>Npx ile yeni bir proje olu&#x15F;turma:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">npx degit sveltejs<span class="token operator">/</span>template remember<span class="token operator">-</span>em<span class="token operator">-</span>all
+</pre><p>Svelte Typescript notasyonunu desteklemektedir. Typescript &#xFC;zerinde<br>
+yapabilece&#x11F;iniz b&#xFC;t&#xFC;n i&#x15F;lemleri Svelte projelerinde kullanabilirsin.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">cd remember<span class="token operator">-</span>em<span class="token operator">-</span>all
+node scripts<span class="token operator">/</span>setupTypeScript<span class="token punctuation">.</span><span class="token property-access">js</span>
+</pre><p>Gerekli olan ba&#x11F;&#x131;ml&#x131;l&#x131;klar&#x131; projemize ekleyerek aya&#x11F;a kald&#x131;rabiliriz.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">npm install
+npm run dev
+</pre><p>Bu komutlar sonras&#x131;nda konsol &#xFC;zerinde projenin hangi port &#xFC;zerinde &#xE7;al&#x131;&#x15F;t&#x131;&#x11F;&#x131;n&#x131;<br>
+g&#xF6;rebilirsin. Windows i&#x15F;letim sistemlerinde varsay&#x131;lan 8080 portu i&#x15F;aretli<br>
+iken, bu port &#xFC;zerinde &#xE7;al&#x131;&#x15F;an proje bulunuyorsa veya farkl&#x131; i&#x15F;letim sistemi<br>
+kullan&#x131;yorsan port numaras&#x131; de&#x11F;i&#x15F;kenlik g&#xF6;sterebilir.</p>
+<p align="center">
+  <img src="./assets/console-logs.png" alt="Port where Svelte is running on the console" title="Port where Svelte is running on the console">
+</p>
+<p><span id="svelte-nasil-calisir"></span></p>
+<h2 class="mume-header" id="svelte-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r">&#x1FA81; Svelte nas&#x131;l &#xE7;al&#x131;&#x15F;&#x131;r?</h2>
+
+<p>Svelte bile&#x15F;enleri <em>.svelte</em> uzant&#x131;l&#x131; dosyalar ile olu&#x15F;turulur. HTML&apos;e benzer<br>
+olarak <em>script, style, html</em> kod yap&#x131;lar&#x131;n&#x131; olu&#x15F;turabilirdi&#x11F;iniz &#xFC;&#xE7; farkl&#x131; b&#xF6;l&#xFC;m<br>
+bulunuyor.</p>
+<p>Uygulama olu&#x15F;turdu&#x11F;umuzda bu bile&#x15F;enler derlenerek, pure <em>Javascript</em><br>
+kodlar&#x131;na d&#xF6;n&#xFC;&#x15F;t&#xFC;r&#xFC;l&#xFC;r. Svelte derleme i&#x15F;lemini runtime &#xFC;zerinde<br>
+ger&#xE7;ekle&#x15F;tiriyor. Bu derleme i&#x15F;lemiyle birlikte Virtual DOM ba&#x11F;&#x131;ml&#x131;l&#x131;&#x11F;&#x131;n&#x131;<br>
+ortadan kalk&#x131;yor.</p>
+<p align="center">
+  <img src="./assets/build-map.png" alt="Svelte Build map" style="width: 800px">
+</p>
+<p><span id="bagimliliklar"></span></p>
+<h2 class="mume-header" id="proje-ba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1">&#x1FA81; Proje ba&#x11F;&#x131;ml&#x131;l&#x131;klar&#x131;</h2>
+
+<ul>
+<li>
+<h4>Typescript</h4>
+Typescript, Javascript kodunuzu daha verimli k&#x131;lman&#x131;z&#x131; ve kod kaynakl&#x131;<br>
+hatalar&#x131;n &#xF6;n&#xFC;ne ge&#xE7;ilmesini sa&#x11F;layan bir Javascript uzant&#x131;s&#x131;d&#x131;r. Projenizde<br>
+yer alan <em>.svelte</em> uzant&#x131;l&#x131; dosyalarda kullanabilece&#x11F;iniz gibi, <em>.ts</em><br>
+dosyalar&#x131;n&#x131; da destekler.</li>
+<li>
+<h4>Rollup</h4>
+Svelte kurulumunuzla birlikte root folder &#xFC;zerinde rollup.config.js dosyas&#x131;<br>
+olu&#x15F;turulacakt&#x131;r. Rollup Javascript uygulamalar i&#xE7;in kullan&#x131;lan bir mod&#xFC;l<br>
+paketleyicidir, uygulamam&#x131;zda yer alan kodlar&#x131; taray&#x131;c&#x131;n&#x131;n anlayabilece&#x11F;i<br>
+&#x15F;ekilde ayr&#x131;&#x15F;t&#x131;r&#x131;r. Svelte kurulumunda default olarak projenize eklenir.</li>
+</ul>
+<p><span id="svelte-projesini-inceleme"></span></p>
+<h2 class="mume-header" id="svelte-yap%C4%B1s%C4%B1n%C4%B1-inceleme">&#x1FA81; Svelte yap&#x131;s&#x131;n&#x131; inceleme</h2>
+
+<p>Varsay&#x131;lan <em>src/App.svelte</em> dosyas&#x131;n&#x131; kontrol etti&#x11F;imizde daha &#xF6;nce<br>
+de&#x11F;indi&#x11F;imiz gibi <em>Javascript</em> kodlar&#x131; i&#xE7;in <em>script</em>, <em>html</em> kodlar&#x131; i&#xE7;in <em>main</em><br>
+ve stillendirme i&#xE7;in <em>style</em> taglar&#x131; bulunuyor.</p>
+<p>&#x1F388; <em>script</em> etiketinde <em>lang</em> &#xF6;zelli&#x11F;i Typescript ba&#x11F;&#x131;ml&#x131;l&#x131;&#x11F;&#x131;n&#x131; ekledi&#x11F;imiz<br>
+i&#xE7;in <em>ts</em> de&#x11F;erinde bulunmaktad&#x131;r. Typescript kullanmak istedi&#x11F;in <em>svelte</em><br>
+dosyalar&#x131;nda <em>lang</em> &#xF6;zelli&#x11F;ine <em>ts</em> de&#x11F;erini vermen yeterli olacakt&#x131;r.</p>
+<p>&#x1F388; <em>main</em> etiketinde <em>html</em> kodlar&#x131;n&#x131; tan&#x131;mlayabilece&#x11F;in gibi, bu etiketin<br>
+d&#x131;&#x15F;&#x131;nda da diledi&#x11F;in gibi <em>html</em> kodlar&#x131;n&#x131; tan&#x131;mlayabilirsin. Svelte<br>
+tan&#x131;mlad&#x131;&#x11F;&#x131;n kodlar&#x131; <em>html</em> kodu olarak derlemesine ra&#x11F;men, proje yap&#x131;s&#x131;n&#x131;n<br>
+daha okunabilir olabilmesi i&#xE7;in kapsay&#x131;c&#x131; bir etiketin alt&#x131;nda toplanmas&#x131; daha<br>
+iyi olabilir.</p>
+<p>&#x1F388; <em>style</em> etiketi alt&#x131;nda tan&#x131;mlad&#x131;&#x11F;&#x131;n stil &#xF6;zelliklerinden, ayn&#x131; dosyada<br>
+bulunan <em>html</em> alan&#x131;nda se&#xE7;iciler etkilenir. Global se&#xE7;icileri<br>
+tan&#x131;mlayabilir veya global olarak tan&#x131;mlamak istedi&#x11F;in se&#xE7;icileri<br>
+<code>public/global.css</code> dosyas&#x131;nda d&#xFC;zenleyebilirsin.</p>
+<p>&#x1F388; Proje i&#xE7;erisinde compile edilen b&#xFC;t&#xFC;n yap&#x131;lar <code>/public/build/bundle.js</code><br>
+dosyas&#x131;nda yer almaktadir. <em>index.html</em> dosyas&#x131; buradaki yap&#x131;y&#x131; referans alarak<br>
+Svelte projesini kullan&#x131;c&#x131; kar&#x15F;&#x131;s&#x131;na getirmektedir.</p>
+<h2 class="mume-header" id="biraz-pratik">&#x1FA81; Biraz pratik</h2>
+
+<p>Birka&#xE7; &#xF6;rnek yaparak Svelte&apos;i anlamaya, yorumlamaya &#xE7;al&#x131;&#x15F;al&#x131;m. Kod &#xF6;rnekleri<br>
+oyun &#xFC;zerinde s&#x131;k&#xE7;a kullanaca&#x11F;&#x131;m&#x131;z yap&#x131;lar i&#xE7;in bir temel olu&#x15F;turacak.</p>
+<p><em>App.svelte</em> dosyas&#x131;nda <em>name</em> isminde bir de&#x11F;i&#x15F;ken tan&#x131;mlanm&#x131;&#x15F;. Typescript<br>
+notasyonu baz al&#x131;nd&#x131;&#x11F;&#x131; i&#xE7;in de&#x11F;er tipi olarak <em>string</em> verilmi&#x15F;. Bu notasyon ile<br>
+anlat&#x131;m biraz daha uzun olabilece&#x11F;i i&#xE7;in kullanmamay&#x131; tercih edicem. Github<br>
+&#xFC;zerinde bulunan kodlar ile, burada birlikte olu&#x15F;turacaklar&#x131;m&#x131;z farkl&#x131;l&#x131;k<br>
+g&#xF6;sterebilir.. panik yok, Typescript&apos;e <a href="https://youtube.com/shorts/oyIO1_8uNPc" title="senin kocaman kalbin &lt;33">hakim olabilece&#x11F;ine</a><br>
+eminim.</p>
+<h3 class="mume-header" id="variable-eri%C5%9Fimi">&#x1F388; Variable eri&#x15F;imi</h3>
+
+<p>Script &#xFC;zerinde tan&#x131;mlanan de&#x11F;erleri html i&#xE7;erisinde &#xE7;a&#x11F;&#x131;rabilmek i&#xE7;in<br>
+{ } kullan&#x131;lmal&#x131;d&#x131;r. Bu template ile de&#x11F;er tipi farketmeksizin<br>
+de&#x11F;i&#x15F;kenleri &#xE7;a&#x11F;&#x131;rarak i&#x15F;lemler ger&#xE7;ekle&#x15F;tirilebilir.</p>
+<p><em>app.svelte</em></p>
+<div class="code-wrapper" style>
+<pre class="prettyprint lang-js">  const user = &quot;sabuha&quot;;
+</pre>
+<pre class="prettyprint lang-html">{`\<span>{user} seni izliyor!</span>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  h1 {
+    color: rebeccapurple;
+  }
+</style>`}</pre>
+</div>
+<p>Bu tan&#x131;mlama ile birlikte <em>user</em> de&#x11F;erine tan&#x131;mlanan her de&#x11F;eri dinamik olarak<br>
+<em>html</em> i&#xE7;erisinde &#xE7;a&#x11F;&#x131;rabilirsin. biraz daha biraz daha kar&#x131;&#x15F;t&#x131;ral&#x131;m..<br>
+<em>user</em> tan&#x131;mlamas&#x131; <em>sabuha</em> de&#x11F;erine e&#x15F;it oldu&#x11F;u durumlarda &apos;seni izliyor!&apos;<br>
+yerine &apos;bir kedi g&#xF6;rd&#xFC;m sanki!&apos; de&#x11F;erini ekrana getirelim.</p>
+<p><em>app.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  const user = "sabuha";
+</>`}
+</pre>
+<pre 
+  class="prettyprint lang-html">{`\<span>{user === "sabuha" ? "bir kedi gördüm sanki!" : "seni izliyor!"}</span>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style></style>`}</pre>
+</div>
+<p><em>html</em> içerisinde kullandığımız { } tagları arasında condition<br>
+yapıları gibi döngü, fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu<br>
+yapılara sahip birçok işlemi birlikte gerçekleştireceğiz.</p>
+<h3>🎈 Reaktif değişkenler</h3>
+<p class="mume-header " id="reaktif-değişkenler"></p>
+<p>Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde, DOM üzerinde<br>
+yer alan referansı benzer olarak güncellenir.</p>
+<p><em>app.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">
+{`\<script>
+  let number = 0;
+<p>const randomNumber = () =&gt; {<br>
+number = Math.round(Math.random() * 15);<br>
+};<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main>
+  <h3>{number}</h3>
+  <button on:click="{randomNumber}">Update Number</button>
+</main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  main {
+    border-radius: 5px;
+    background-color: yellowgreen;
+    padding: 5px;
+    margin: 10px 50px;
+  }
+<p>h3 {<br>
+background-color: orangered;<br>
+width: 100px;<br>
+color: white;<br>
+}</p>
+<p>button {<br>
+border: 1px solid black;<br>
+cursor: pointer;<br>
+}</p>
+<p>h3,button {<br>
+display: block;<br>
+text-align: center;<br>
+margin: 25px auto;<br>
+padding: 5px;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p>Tan&#x131;mlad&#x131;&#x11F;&#x131;m&#x131;z <em>numb</em> de&#x11F;eri her g&#xFC;ncellendi&#x11F;inde, DOM &#xFC;zerinde bu de&#x11F;er<br>
+yeniden ve s&#x131;k&#x131;lmadan g&#xFC;ncellenmeye devam edecektir.</p>
+<p align="center">
+  <img src="./assets/gif/reactive.gif" alt="Svelte definition variable" style="width: 800px">
+</p>
+<h3 class="mume-header" id="component-kullan%C4%B1m%C4%B1">&#x1F388; Component kullan&#x131;m&#x131;</h3>
+
+<p>Uygulamalar&#x131;m&#x131;zda yer alan bile&#x15F;enleri par&#xE7;alayarak istedi&#x11F;imiz gibi bir b&#xFC;t&#xFC;n<br>
+haline getirebilmek &#xFC;zerinde &#xE7;al&#x131;&#x15F;&#x131;rken kolayl&#x131;k sa&#x11F;lar, tekrar eden bile&#x15F;en<br>
+par&#xE7;alar&#x131;nda yeniden &#xE7;a&#x11F;&#x131;rabilmek daha az efor sarfettirir.</p>
+<p align="center">
+  <img src="./assets/components/component-with-sabuha.png" alt="use of components" style="width: 900px;">
+</p>
+<p>Bir &#xF6;nceki &#xF6;rnekte yapt&#x131;&#x11F;&#x131;m&#x131;z random say&#x131; &#xFC;reten basit yap&#x131;y&#x131; bir component<br>
+haline getirelim. <code>components/Content/</code> dizininde <code>RandomNumber.svelte</code> dosyas&#x131;n&#x131; olu&#x15F;tural&#x131;m.<br>
+Bu yeni componentimizi <code>App.svelte</code> dosyas&#x131;nda kullanal&#x131;m.</p>
+<p><em>Components &gt; Content &gt; RandomNumber.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  let number = 0;
+<p>const randomNumber = () =&gt; {<br>
+number = Math.round(Math.random() * 15);<br>
+};<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="random-number-capsule">
+  <h3>{number}</h3>
+  <button on:click="{randomNumber}">Update Number</button>
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .random-number-capsule {
+    border-radius: 5px;
+    background-color: yellowgreen;
+    padding: 5px;
+    margin: 10px 50px;
+  }
+<p>h3 {<br>
+background-color: orangered;<br>
+width: 100px;<br>
+color: white;<br>
+}</p>
+<p>button {<br>
+border: 1px solid black;<br>
+cursor: pointer;<br>
+}</p>
+<p>h3,<br>
+button {<br>
+display: block;<br>
+text-align: center;<br>
+margin: 25px auto;<br>
+padding: 5px;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>RandomNumber</code> componentini istedi&#x11F;imiz gibi &#xE7;a&#x11F;&#x131;rarak kullanmaya<br>
+ba&#x15F;layabiliriz.</p>
+<p><em>App.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import RandomNumber from "./components/Content/RandomNumber/RandomNumber.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main>
+  <randomnumber>
+  <randomnumber>
+  <randomnumber>
+  <randomnumber>
+</randomnumber></randomnumber></randomnumber></randomnumber></main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+</style>`}</pre>
+</div>
+<p align="center">
+<img src="./assets/components/random-number-component.gif" alt="Random Number Component" style="width: 900px;">
+</p>
+<h3 class="mume-header" id="componentler-aras%C4%B1-i%CC%87leti%C5%9Fim">&#x1F388; Componentler Aras&#x131; &#x130;leti&#x15F;im</h3>
+
+<p align="center">
+<img src="./assets/communication-is-key.jpg" alt="SpongeBob &apos;communication is key&apos; meme" style="width: 500px;">
+</p>
+<p>K&#xFC;&#xE7;&#xFC;k yap&#x131;l&#x131; projelerden, komplex yap&#x131;l&#x131;lara kadar bir&#xE7;ok component &#xFC;zerinden<br>
+al&#x131;p farkl&#x131; bir yerde kullanma, g&#xFC;ncelleme gibi ihtiya&#xE7;lar&#x131;m&#x131;z olacak.<br>
+Kullan&#x131;lan framework, library veya compiler&apos;in bu ihtiyac&#x131;n&#x131;za esnek &#xE7;&#xF6;z&#xFC;mler<br>
+sa&#x11F;layabilmesi gerekiyor. Svelte bu ihtiya&#xE7;lar&#x131;n&#x131;z i&#xE7;in birden fazla ve basit<br>
+yap&#x131;lara sahip &#xE7;&#xF6;z&#xFC;mler bar&#x131;nd&#x131;r&#x131;yor.</p>
+<h4 class="mume-header" id="props">&#x1F388;&#x1F388; Props</h4>
+
+<p>Props kullanarak datalar&#x131; bir component &#xFC;zerinden farkl&#x131; componentlere<br>
+aktarabilirsiniz. Componentler aras&#x131; bu ili&#x15F;ki parent-child ile ifade edilir.<br>
+Parent &#xFC;zerinden child componentlere veri aktarabiliyorken, ayn&#x131; zamanda child<br>
+component &#xFC;zerinden parent componente veri iletebilirsiniz.</p>
+<h4 class="mume-header" id="slots">&#x1F388;&#x1F388; Slots</h4>
+
+<p>Parent-child ili&#x15F;kisinde oldu&#x11F;u gibi verilerin alt componente<br>
+aktar&#x131;lmas&#x131;nda kullanabilirsin. Bir template dahilinde (html i&#xE7;eririkleri gibi)<br>
+verilerin aktar&#x131;lmas&#x131;na izin verir.</p>
+<h4 class="mume-header" id="context">&#x1F388;&#x1F388; Context</h4>
+
+<p>Bir veriyi iletmeniz gereken component say&#x131;s&#x131; artt&#x131;k&#xE7;a, yap&#x131;s&#x131;n&#x131; kurgulamak ve<br>
+takibini sa&#x11F;lamak zor ve bir yerden sonra da olduk&#xE7;a s&#x131;k&#x131;c&#x131; bir duruma<br>
+d&#xF6;n&#xFC;&#x15F;ebilir. Context ile datalar&#x131;n parent &#xFC;zerinden child componentler<br>
+&#xFC;zerinde eri&#x15F;ilmesini sa&#x11F;lar.</p>
+<h4 class="mume-header" id="module-context">&#x1F388;&#x1F388; Module Context</h4>
+
+<p>Component &#xFC;zerinde kulland&#x131;&#x11F;&#x131;n&#x131;z veri farkl&#x131; bir Component&apos;da yer al&#x131;yorsa ve<br>
+&#xE7;al&#x131;&#x15F;malar&#x131; birbirlerine ba&#x11F;&#x131;ml&#x131; oldu&#x11F;u senaryolarda Module Context Componentlar<br>
+aras&#x131;nda bu senaryonun uygulanmas&#x131;n&#x131; sa&#x11F;l&#x131;yor. Verileri birden &#xE7;ok component ile<br>
+payla&#x15F;&#x131;lmas&#x131;n&#x131; olanak tan&#x131;r.</p>
+<h4 class="mume-header" id="store">&#x1F388;&#x1F388; Store</h4>
+
+<p>Veri ta&#x15F;&#x131;mac&#x131;l&#x131;k ltd. &#x15F;ti.&apos;nin joker kart&#x131;.. Verilerinizi her yerde<br>
+g&#xFC;ncellenmesini, &#xE7;a&#x11F;&#x131;r&#x131;lmas&#x131;n&#x131; sa&#x11F;lar. Kullan&#x131;m&#x131; i&#xE7;in bir hiyerar&#x15F;i i&#xE7;erisinde<br>
+olmas&#x131;na gereksinimi bulunmuyor.</p>
+<p><span id="start-game"></span></p>
+<h2 class="mume-header" id="start-game">&#x1FA81; Start Game</h2>
+
+<p>Svelte&apos;i biraz daha yak&#x131;ndan tan&#x131;yoruz, birlikte uygulamam&#x131;z&#x131; olu&#x15F;turabilmek<br>
+i&#xE7;in yeteri kadar bilgi sahibi olduk. Kullan&#x131;c&#x131;n&#x131;n aray&#xFC;z olarak g&#xF6;rebilece&#x11F;i<br>
+iki Component bulunuyor. Kullan&#x131;c&#x131; ad&#x131; ve avatar se&#xE7;ti&#x11F;i User Component, bu<br>
+se&#xE7;imler sonras&#x131;nda eri&#x15F;ilen Playground Component. User Componenti ile oyunumuzu<br>
+olu&#x15F;turmaya ba&#x15F;layal&#x131;m. <a href="#svelte-projesi-olusturma" title="Yeni bir Svelte Projesi olu&#x15F;tur">Yeni bir proje olu&#x15F;turabilir</a><br>
+veya pratik yapabilmek i&#xE7;in &#x15F;uana kadarki kodlar&#x131; kald&#x131;rabilirsin.<br>
+<em>src &gt; components &gt; User</em> ve <em>src &gt; components &gt; Playground</em> klas&#xF6;rlerini<br>
+olu&#x15F;tural&#x131;m.</p>
+<p align="center">
+<img src="./assets/start-folder.png" alt="Start folder" style="width: 900px;">
+</p>
+<h3 class="mume-header" id="user-component">&#x1F388; User Component</h3>
+
+<p><em>User</em> klas&#xF6;r&#xFC; alt&#x131;nda Kullan&#x131;c&#x131;dan alaca&#x11F;&#x131;m&#x131;z her de&#x11F;er i&#xE7;in <em>Avatar</em> ve<br>
+<em>Name</em> klas&#xF6;rlerini olu&#x15F;tural&#x131;m. Root klas&#xF6;rde <em>User</em> Component alt&#x131;nda<br>
+tan&#x131;mlanan b&#xFC;t&#xFC;n yap&#x131;lar&#x131;n yer alaca&#x11F;&#x131; bir kapsay&#x131;c&#x131; dahil edece&#x11F;iz.<br>
+<em>UserGround.svelte</em> isminde bir dosya olu&#x15F;turuyorum, par&#xE7;alad&#x131;&#x11F;&#x131;m&#x131;z b&#xFC;t&#xFC;n<br>
+componentler burada yer alacak.</p>
+<p><em>Playground</em> klas&#xF6;r&#xFC; i&#xE7;erisinde buna benzer bir yap&#x131;y&#x131; olu&#x15F;turarak, oyun<br>
+i&#xE7;erisindeki b&#xFC;t&#xFC;n componentleri ayn&#x131; dosya &#xFC;zerinde &#xE7;a&#x11F;&#x131;raca&#x11F;&#x131;z.<br>
+<em>Playground</em> alt&#x131;nda <em>Wrapper &gt; Playground.svelte</em> dizin ve dosyas&#x131;n&#x131;<br>
+olu&#x15F;tural&#x131;m.</p>
+<p>User Componenti &#xFC;zerinde &#xE7;al&#x131;&#x15F;&#x131;rken, yapaca&#x11F;&#x131;m&#x131;z de&#x11F;i&#x15F;iklikleri inceleyebilmek<br>
+i&#xE7;in User Component&apos;ini <em>Playground &gt; Wrapper &gt; Playground.svelte</em> dosyas&#x131;nda<br>
+&#xE7;a&#x11F;&#x131;ral&#x131;m.</p>
+<p><em>User &gt; UserGround.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  const componentDetail = "User";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main>
+  <h2>{componentDetail} Component</h2>
+</main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  h2 {
+    color: white;
+    background-color: orangered;
+    text-align: center;
+  }
+</style>`}</pre>
+</div>
+<p><em>Playground &gt; Wrapper &gt; Playground.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import Userground from "../../User/Userground.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main>
+   <userground>
+</userground></main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  h2 {
+    color: white;
+    background-color: orangered;
+    text-align: center;
+  }
+</style>`}</pre>
+</div>
+<p><em>User Component</em> &#xE7;a&#x11F;&#x131;rd&#x131;ktan sonra &#xFC;zerinde geli&#x15F;tirme yapmaya ba&#x15F;layal&#x131;m.</p>
+<p align="center">
+<img src="./assets/components/User/call-user-component.png" alt="Call User Component" style="width: 800px;">
+</p>
+<p>Component &#xFC;zerinde 4 farkl&#x131; b&#xF6;l&#xFC;m yer al&#x131;yor.</p>
+<ul>
+<li>Kullan&#x131;c&#x131;y&#x131; bilgilendiren bir header yaz&#x131;s&#x131;</li>
+<li>Kullan&#x131;c&#x131;n&#x131;n g&#xF6;rseller &#xFC;zerinden avatar se&#xE7;imi yapabildi&#x11F;i bir b&#xF6;l&#xFC;m</li>
+<li>Kullan&#x131;c&#x131; ad&#x131;n&#x131;n girilebilmesi i&#xE7;in alan</li>
+<li>Ve b&#xFC;t&#xFC;n bunlar tamamland&#x131;&#x11F;&#x131;nda oyuna start veren bir button elementi<br>
+bulunuyor.</li>
+</ul>
+<p align="center"> 
+  <img src="./assets/components/User/components-section.png" alt="Call User Component" style="width: 900px">
+</p>
+<h3 class="mume-header" id="header-component">&#x1F388; Header Component</h3>
+
+<p>Root folder &#xFC;zerinde <em>Header.svelte</em> isminde bir Component olu&#x15F;turuyorum.<br>
+&#xD6;nceki &#xF6;rneklerde ger&#xE7;ekle&#x15F;tirdi&#x11F;imiz gibi, <em>Header.svelte</em> Componentini<br>
+<em>Userground.svelte</em> componenti &#xFC;zerinde &#xE7;a&#x11F;&#x131;ral&#x131;m. Olu&#x15F;turdu&#x11F;umuz<br>
+<em>Header.svelte</em> componentinin basit bir g&#xF6;revi bulunuyor, statik bir metin<br>
+bar&#x131;nd&#x131;r&#x131;yor.</p>
+<p><em>User &gt; Header.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script></script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="header">
+  <h2>select your best pokemon and start catching!</h2>
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .header {
+    padding: 5px 0;
+    margin-bottom: 15px;
+    border-bottom: 3px solid white;
+  }
+</style>`}</pre>
+</div>
+<p><em>User &gt; UserGround.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import Header from "./Header.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main>
+  <header>
+</header></main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  main {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding-bottom: 15px;
+  }
+</style>`}</pre>
+</div>
+<p align="center">
+  <img src="./assets/components/User/header-component.png" alt="Call Header Component" style="width: 900px">
+</p>
+<p>S&#xFC;per i&#x11F;ren&#xE7; g&#xF6;z&#xFC;k&#xFC;yor, &#xF6;yle de&#x11F;il mi? &#x130;yi ki CSS var..</p>
+<p><em>Playground &gt; Wrapper &gt; Playground.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import Userground from "../../User/Userground.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main class="playground">
+   <userground>
+</userground></main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .playground {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>`}</pre>
+</div>
+<p>Ehh... &#x15F;imdi biraz daha az k&#xF6;t&#xFC; g&#xF6;z&#xFC;kt&#xFC;&#x11F;&#xFC; s&#xF6;ylenebilir&#x1F4A9;&#x1F4A9;&#x1F4A9;</p>
+<h3 class="mume-header" id="avatar-component">&#x1F388; Avatar Component</h3>
+
+<p>Bu Component i&#xE7;erisinde birden fazla bile&#x15F;ene ihtiya&#xE7; duydu&#x11F;u i&#xE7;in, bir klas&#xF6;r<br>
+olu&#x15F;turarak b&#xFC;t&#xFC;n gereksinim duydu&#x11F;u yap&#x131;lar&#x131; klas&#xF6;r i&#xE7;erisinde tan&#x131;mlayal&#x131;m.</p>
+<ul>
+<li><code>Avatar/</code></li>
+<li><code>+ User &gt; Avatar &gt; Avatars.svelte, ImageAvatar.svelte</code></li>
+<li><code>+ public &gt; assets &gt; images &gt; pasa.jpg, sabuha.jpg, mohito.jpg, limon.jpg, susi.jpg</code></li>
+<li><a href="https://github.com/kahilkubilay/remember-em-all/tree/master/public/images" title="Images link">images</a></li>
+</ul>
+<p><em>Avatars.svelte</em> <em>Userground.svelte</em> i&#xE7;erisinde &#xE7;a&#x11F;&#x131;ral&#x131;m. <em>Avatars.svelte</em>,<br>
+<em>ImageAvatar.svelte</em> bir kapsay&#x131;c&#x131; g&#xF6;revi g&#xF6;recek. Bununla birlikte<br>
+<em>ImageAvatar.svelte</em> componentine data g&#xF6;nderecek.</p>
+<p><em>User &gt; Avatar &gt; Avatars.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  // avatar list
+  let sabuha = "/asset/images/sabuha.jpg";
+  let pasa = "/asset/images/pasa.jpg";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="avatars">
+  <img src="{sabuha}" alt>
+  <img src="{pasa}" alt>
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+ img {
+    width: 100px;
+  }
+</style>`}</pre>
+</div>
+<p><em>Avatars</em>, <em>Userground</em> &#xFC;zerinde &#xE7;a&#x11F;&#x131;rd&#x131;&#x11F;&#x131;mda kar&#x15F;&#x131;ma bu iki g&#xFC;zellik gelecek.</p>
+<p align="center"> 
+  <img src="./assets/components/User/avatars-component.png" alt="call Avatar Component" style="width: 900px">
+</p>
+<p><em>Avatars</em> biraz daha i&#x15F;levli bir yap&#x131;ya d&#xF6;n&#xFC;&#x15F;t&#xFC;relim.</p>
+<p><em>User &gt; Avatar &gt; Avatars.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import ImageAvatar from "./ImageAvatar.svelte";
+<p>// avatar list<br>
+let sabuha = &quot;/asset/images/sabuha.jpg&quot;;<br>
+let mohito = &quot;/asset/images/mohito.jpg&quot;;<br>
+let pasa = &quot;/asset/images/pasa.jpg&quot;;<br>
+let susi = &quot;/asset/images/susi.jpg&quot;;<br>
+let limon = &quot;/asset/images/limon.jpg&quot;;</p>
+<p>const avatars = [pasa, mohito, sabuha, limon, susi];<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="avatars">
+ { #each avatars as userAvatar}
+    <imageavatar {useravatar}>
+{ /each}
+</imageavatar></div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+ .avatars {
+    display: flex;
+    justify-content: center;
+  }
+</style>`}</pre>
+</div>
+<p>Olu&#x15F;turdu&#x11F;umuz <code>avatars</code> dizisine ait her elemana <em>html</em> &#xFC;zerinde #each<br>
+d&#xF6;ng&#xFC;s&#xFC;nde eri&#x15F;iyoruz. Eri&#x15F;ilen her eleman&#x131;n&#x131;n bilgisini <em>ImageAvatar</em><br>
+componentine aktar&#x131;yoruz. Componente aktar&#x131;lan bu de&#x11F;erlerle birlikte,<br>
+dizi i&#xE7;erisinde bulunan her elaman&#x131;n g&#xF6;r&#xFC;nt&#xFC;s&#xFC;n&#xFC; elde edece&#x11F;iz.</p>
+<p><em>User &gt; Avatar &gt; ImageAvatar.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \export let userAvatar;
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<img src="{avatar}" class="avatar unpicked" alt="avatar">
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .avatar {
+    width: 100px;
+    border-radius: 100px;
+    justify-content: space-around;
+    margin: 0 25px 15px 0;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 3px black;
+    border: 2px solid whitesmoke;
+  }
+<p>.avatar:hover {<br>
+opacity: 1;<br>
+cursor: pointer;<br>
+}</p>
+<p>.unpicked {<br>
+opacity: 0.8;<br>
+}</p>
+<p>.picked {<br>
+opacity: 1;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p>Daha g&#xFC;zel bir g&#xF6;r&#xFC;nt&#xFC;y&#xFC; hak ettik. Avatarlar &#xFC;zerinde CSS ile biraz<br>
+d&#xFC;zenlemeler yapmam&#x131;z gerekti.</p>
+<p align="center"> 
+  <img src="./assets/components/User/user-component-end.png" alt="Call User Component" style="width: 900px">
+</p>
+<h3 class="mume-header" id="name-component">&#x1F388; Name Component</h3>
+
+<p>Pokemon e&#x11F;itmenimizin bir isim girebilmesi i&#xE7;in gerekli olan componenti<br>
+olu&#x15F;tural&#x131;m.</p>
+<p><code>+ /components/User/Avatar/Name, /components/User/Avatar/Name/UserName.svelte</code></p>
+<p><em>User &gt; Avatar &gt; Name &gt; UserName.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script></script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="user">
+  <input type="text" class="name" name="name" placeholder="pika pika">
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+   .name {
+    width: 40%;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 8px 0;
+  }
+</style>`}</pre>
+</div>
+<p>Di&#x11F;er componentlerde yapt&#x131;&#x11F;&#x131;m&#x131;z gibi, <em>UserName</em> componentinin <em>Userground</em><br>
+componentinde kullanal&#x131;m.</p>
+<p>Geriye son bir componentimiz kald&#x131;. &quot;Start&quot; yaz&#x131;s&#x131;na sahip bir buton<br>
+componentini olu&#x15F;turarak, <em>User</em> klas&#xF6;r&#xFC;nde <em>Start.svelte</em> ismiyle kaydedererek<br>
+<em>UserGround</em> componentinde &#xE7;a&#x11F;&#x131;ral&#x131;m.</p>
+<p>Ta daaaa... &#x15E;uana kadar yapt&#x131;&#x11F;&#x131;m&#x131;z componentler dinamik i&#x15F;lemler<br>
+ger&#xE7;ekle&#x15F;tirmedi. Aray&#xFC;z&#xFC; olu&#x15F;turmak i&#xE7;in yeteri kadar malzememiz ortaya &#xE7;&#x131;kt&#x131;,<br>
+ve bunlar&#x131; istedi&#x11F;in gibi stillendirebilirsin. Bundan sonraki a&#x15F;amalarda bu<br>
+componentlara dinamik &#xF6;zellikler kazand&#x131;raca&#x11F;&#x131;z.</p>
+<p align="center"> 
+  <img src="./assets/components/User/end-interface.png" alt="Call User Component" style="width: 900px">
+</p>
+<h2 class="mume-header" id="oyun-gereksinimleri">&#x1FA81; Oyun Gereksinimleri</h2>
+
+<p>Kullan&#x131;c&#x131;n&#x131;n isim, avatar gibi ald&#x131;&#x11F;&#x131;m&#x131;z de&#x11F;erlerin yan&#x131; s&#x131;ra oyunda kullan&#x131;lan<br>
+standart de&#x11F;erler bulunabilir. Geli&#x15F;tirece&#x11F;imiz oyun i&#xE7;in bu de&#x11F;erlerden <em>level</em><br>
+ve <em>score</em> gibi iki de&#x11F;er tan&#x131;mlayaca&#x11F;&#x131;z. Kullan&#x131;c&#x131;, isim ve avatar se&#xE7;iminin<br>
+ard&#x131;ndan <em>start</em> butonuna t&#x131;klad&#x131;&#x11F;&#x131;nda bu de&#x11F;erlerden <em>level 1</em>,<br>
+<em>score 0</em> de&#x11F;erlerini olu&#x15F;turaca&#x11F;&#x131;z. Kullan&#x131;c&#x131; seviye atlad&#x131;k&#xE7;a burada yer alan<br>
+de&#x11F;erler dinamik olarak g&#xFC;ncellenecek.</p>
+<p><code>+ /Store/Level.ts, Score.ts</code></p>
+<p><em>Store &gt; Level.ts</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { Writable, writable } from "svelte/store";
+<p>export const level:Writable<number> = writable(1);<br>
+</script>`}<br>
+</pre><p></p>
+</div>
+<p><em>level</em> isminde bir de&#x11F;er olu&#x15F;turduk ve gezegenin iyili&#x11F;i i&#xE7;in uygulamam&#x131;z<br>
+i&#xE7;erisinde kullanaca&#x11F;&#x131;z. Bu de&#x11F;eri kullan&#x131;c&#x131; aray&#xFC;z &#xFC;zerindeki b&#xFC;t&#xFC;n kartlar&#x131;<br>
+e&#x15F;le&#x15F;tirebildi&#x11F;inde g&#xFC;ncelleyece&#x11F;iz. Bir store de&#x11F;eri olu&#x15F;turmak i&#xE7;in<br>
+<em>writable</em> interface ile Store de&#x11F;erlerini olu&#x15F;turabilir ve g&#xFC;ncelleyebilirsin.</p>
+<p>Her e&#x15F;le&#x15F;me sonras&#x131;nda kullan&#x131;c&#x131;n&#x131;n puan kazanabildi&#x11F;i <em>score</em> de&#x11F;eri<br>
+tan&#x131;mlayal&#x131;m.</p>
+<p><em>Store &gt; Score.ts</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { Writable, writable } from "svelte/store";
+<p>export const score:Writable<number> = writable(0);<br>
+</script>`}<br>
+</pre><p></p>
+</div>
+<p>Bu de&#x11F;erleri farkl&#x131; dosyalarda tan&#x131;mlayabildi&#x11F;in gibi tek bir tek bir dosya<br>
+i&#xE7;erisinde de <em>score&amp;level</em> de&#x11F;erlerini tan&#x131;mlayabilirsin. Bir kullan&#x131;c&#x131;<br>
+olu&#x15F;turarak <em>name &amp; avatar &amp; score &amp; level</em> de&#x11F;erlerini birlikte<br>
+kullanabilirsin.</p>
+<p>Kullan&#x131;c&#x131;ya ait statik bilgileri tutaca&#x11F;&#x131;m&#x131;z yeni bir class olu&#x15F;tural&#x131;m.</p>
+<p><code>+ /Store/User.ts</code></p>
+<p><em>Store &gt; User.ts</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { Writable, writable } from "svelte/store";
+<p>export class UserInfo {<br>
+constructor (<br>
+public name: Writable<string> = writable(''),<br>
+public avatar: Writable<string> = writable(''),<br>
+public isStart: Writable<boolean> = writable(false)<br>
+) // ---&gt; burada süslüüüüüü parantezler var<br>
+}</p>
+<p>export const userInfo = new UserInfo();<br>
+</script>`}<p></p>
+</pre>
+</div>
+<p>Olu&#x15F;turdu&#x11F;umuz UserInfo class&apos;&#x131;n&#x131; kullan&#x131;c&#x131;n&#x131;n isim, avatar de&#x11F;erlerini set<br>
+edece&#x11F;iz. Bu de&#x11F;erlere default olarak bo&#x15F; String atad&#x131;m, farkl&#x131; i&#xE7;erikle<br>
+doldurabilirsin. &#x130;ki de&#x11F;erde bir hata yoksa <em>isStart</em> de&#x11F;erine <em>true</em> olarak<br>
+g&#xFC;ncelleyerek oyunu ba&#x15F;lataca&#x11F;&#x131;z.</p>
+<h2 class="mume-header" id="user-component-1">&#x1FA81; User Component</h2>
+
+<p>Yar&#x131;m kalm&#x131;&#x15F; bir User Component&apos;imiz bulunuyordu.<br>
+Tan&#x131;mlad&#x131;&#x11F;&#x131;m&#x131;z <em>Store</em> de&#x11F;erlerini User componenti de&#x11F;erlerinde kullanal&#x131;m.<br>
+Burada yapaca&#x11F;&#x131;m&#x131;z son r&#xF6;t&#xFC;&#x15F;lar ile birlikte kullan&#x131;c&#x131;n&#x131;n oyun aray&#xFC;z&#xFC;ne<br>
+eri&#x15F;mesini sa&#x11F;layal&#x131;m.</p>
+<p><em>ImageAvatar.svelte</em> componenti &#xFC;zerinde, kullan&#x131;c&#x131; avatar&apos;a click eventini<br>
+ger&#xE7;ekle&#x15F;tirdi&#x11F;inde, <code>userInfo</code> classinda olu&#x15F;turdu&#x11F;umuz avatar de&#x11F;erini<br>
+g&#xFC;ncelleyelim.</p>
+<p><em>componenets &gt; User &gt; Avatars &gt; ImageAvatar.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { userInfo } from "../../../Store/User";
+<p>const { avatar } = userInfo;</p>
+<p>export let userAvatar;</p>
+<p>const setAvatar = () =&gt; {<br>
+console.log(&quot;focus on avatar =&gt; &quot;, userAvatar);</p>
+<p>$avatar = userAvatar;</p>
+<p>console.log($avatar);<br>
+};<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<img src="{userAvatar}" class="avatar unpicked" alt="avatar" on:click="{setAvatar}">
+`}</pre>
+</div>
+<p><code>on:click</code> metoduna ba&#x11F;lad&#x131;&#x11F;&#x131;m&#x131;z fonksiyon ile kullan&#x131;c&#x131;n&#x131;n t&#x131;klad&#x131;&#x11F;&#x131; avatar<br>
+&#xFC;zerinde bilgiyi kolay bir &#x15F;ekilde elde edebiliyoruz. Konsolu a&#xE7;arak, loglar&#x131;<br>
+inceleyebilirsin.<code>ImageAvatar</code> componentine parametre olarak g&#xF6;nderdi&#x11F;imiz<br>
+avatar bilgisine eri&#x15F;ebiliyoruz, bunu kullanarak fonksiyonu biraz daha basit<br>
+hale getirelim.</p>
+<p><em>componenets &gt; User &gt; Avatars &gt; ImageAvatar.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { userInfo } from "../../../Store/User";
+<p>const { avatar } = userInfo;</p>
+<p>export let userAvatar;</p>
+<p>const avatarName = userAvatar.match(/\w*(?=.\w+$)/)[0];<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<img src="{userAvatar}" class="avatar unpicked" alt="avatar" on:click="{()" => ($avatar = avatarName)}
+/&gt;
+`}</pre>
+</div>
+<p>Kullan&#x131;c&#x131; avatarlar &#xFC;zerine her click i&#x15F;lemi ger&#xE7;ekle&#x15F;tirdi&#x11F;inde, <code>$avatar</code><br>
+de&#x11F;erini g&#xFC;ncelliyoruz. <code>ImageAvatar.svelte</code> componentini ge&#xE7;meden &#xF6;nce<br>
+<em>class directives</em> kullanarak y&#x131;llaar y&#x131;lllaarr &#xF6;nce tan&#x131;mlad&#x131;&#x11F;&#x131;m&#x131;z <code>.picked</code> ve<br>
+<code>.unpicked</code> classlar&#x131;n&#x131; anlaml&#x131; bir hale getirelim.</p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-html">{`\
+<img src="{userAvatar}" class="avatar unpicked" alt="avatar" class:picked="{avatarName" =="=" $avatar} on:click="{()"> ($avatar = avatarName)}
+/&gt;
+`}</pre>
+</div>
+<p>Bu g&#xFC;ncelleme ile birlikte kullan&#x131;c&#x131;n&#x131;n her avatar se&#xE7;iminden sonra, se&#xE7;ilen<br>
+avatar&#x131;n <code>opacity</code> de&#x11F;eri g&#xFC;ncellenerek kullan&#x131;c&#x131;n&#x131;n se&#xE7;imi vurgulanacak.</p>
+<p align="center"> 
+  <img src="./assets/components/User/class-directive.gif" alt="Class Directives" style="width: 900px">
+</p>
+<p>Kullan&#x131;c&#x131;dan almam&#x131;z gereken di&#x11F;er bir de&#x11F;er, username.</p>
+<p><em>componenets &gt; User &gt; Avatars &gt; ImageAvatar.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { userInfo } from "../../../Store/User";
+<p>const { name } = userInfo;<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="user">
+  <input type="text" class="name" name="name" placeholder="pika pika" bind:value="{$name}">
+</div>
+`}</pre>
+</div>
+<p>Import etti&#x11F;imiz UserInfo class&apos;inda yer alan $name store de&#x11F;erini, <code>bind:value</code><br>
+metodu ile g&#xFC;ncelleyebiliriz.</p>
+<p>&#x15E;imdi en g&#xFC;zel taraf&#x131;na gelelim.. Son r&#xF6;t&#xFC;&#x15F;lar&#x131; yap&#x131;p oyunumuza ba&#x15F;layal&#x131;m.<br>
+<code>components &gt; Playground &gt; Wrapper &gt; Playground.svelte</code> componenti<br>
+&#xFC;zerinde bir if/else yap&#x131;s&#x131; tan&#x131;mlayal&#x131;m. <code>isStart</code> store de&#x11F;erimiz false ise<br>
+kullan&#x131;c&#x131;y&#x131; <em>name&amp;avatar</em> se&#xE7;imi yapabildi&#x11F;i Componente y&#xF6;nlendirsin. Bunun aksi<br>
+ise basit bir head etiketini g&#xF6;sterelim.</p>
+<p><em>componenets &gt; Playground &gt; Wrapper &gt; Playground.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import UserGround from "../../User/UserGround.svelte";
+  \import { userInfo } from "../../../Store/User";
+<p>const { isStart } = userInfo;<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main class="playground">
+  #if $isStart
+    <h3>Start Game....</h3>
+  else
+    <userground>
+  /if
+</userground></main>
+`}</pre>
+</div>
+<p>D&#xF6;ng&#xFC;ler gibi if/else Logic&apos;leri kullanabilirsiniz. <code>else if</code> ihtiyac&#x131;nda bir<br>
+&#x15F;art ifadesi olarak <code>else if isStart === undefined</code> tan&#x131;mlaman yeterli<br>
+olacakt&#x131;r.</p>
+<p><em>componenets &gt; Playground &gt; Wrapper &gt; Playground.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { userInfo } from "../../Store/User";
+<p>const { name, avatar, isStart } = userInfo;</p>
+<p>const startGame = () =&gt; {<br>
+if ($avatar === &quot;&quot;) {<br>
+return;<br>
+}</p>
+<pre><code>if ($name === &quot;&quot;) {
+  return;
+}
+
+$isStart = true;
+
+console.log(&quot;::::: start game :::::&quot;);
+console.log(&quot;:: enjoy {$name} ::&quot;);
+</code></pre>
+<p>};<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="start">
+  <button on:click="{startGame}">Start</button>
+</div>
+`}</pre>
+</div>
+<p align="center"> 
+  <img src="./assets/components/User/start-game.gif" alt="Class Directives" style="width: 900px">
+</p>
+<p>StartGame fonksiyonu ile birlikte <em>name</em> ve <em>avatar</em> store de&#x11F;erleri kontrol<br>
+edilecek. Bu de&#x11F;erlerin bo&#x15F; olmamas&#x131; durumunda <em>isStart</em> store de&#x11F;erine true<br>
+atanarak, oyun ba&#x15F;lat&#x131;lacak konsola bir bilgi yaz&#x131;lacak. Bu de&#x11F;erlerden<br>
+herhangi biri bulunmuyorsa <em>User</em> componenti bulundu&#x11F;u yerde kalmaya devam<br>
+edicektir. B&#xF6;yle bir ihtimal i&#xE7;in, class directives kullanarak kullan&#x131;c&#x131;y&#x131;<br>
+bilgilendirelim.</p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import { userInfo } from "../../Store/User";
+<p>const { name, avatar, isStart } = userInfo;</p>
+<p>let isAvatarEmpty = false;<br>
+let isNameEmpty = false;</p>
+<p>const startGame = () =&gt; {<br>
+if ($avatar === &quot;&quot;) {<br>
+isAvatarEmpty = true;<br>
+return;<br>
+}</p>
+<pre><code>if ($name === &quot;&quot;) {
+  return;
+}
+
+$isStart = true;
+
+console.log(&quot;::::: start game :::::&quot;);
+console.log(&quot;:: enjoy {$name} ::&quot;);
+</code></pre>
+<p>};<br>
+</script>`}<p></p>
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="start">
+  <button on:click="{startGame}">Start</button>
+   <div class="avatarError visible">
+    <span class="unvisible" class:visible="{$avatar" =="=" "" && isavatarempty}>
+      please, select a avatar..
+    </span>
+  </div>
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+   .name {
+    width: 40%;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 8px 0;
+  }
+<p>.avatarError {<br>
+color: red;<br>
+font-size: 18px;<br>
+}</p>
+<p>.unvisible {<br>
+display: none;<br>
+}</p>
+<p>.visible {<br>
+display: block;<br>
+}</p>
+<p>.start button:active {<br>
+border: 2px solid white;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p>Class Directive&apos;lerde yard&#x131;m&#x131;na ba&#x15F;vurabilmek i&#xE7;in <em>isAvatarEmpty</em> ve<br>
+<em>isNameEmpty</em> isminde iki farkl&#x131; de&#x11F;er olu&#x15F;turdum. Button&apos;&#x131;n alt&#x131;nda bir <code>div</code><br>
+etiketi daha olu&#x15F;turarak, hata mesaj&#x131;n&#x131; burada g&#xF6;steriyorum. Name i&#xE7;in olan<br>
+hata mesaj&#x131;n&#x131; sen d&#xFC;zenle.. Ve olu&#x15F;turdu&#x11F;um <code>div</code> etiketini bir component olarak<br>
+yeniden olu&#x15F;turup, hem name hemde avatar i&#xE7;in kullanabilirsin. Bunu yap, hemen<br>
+ard&#x131;ndan bir sonraki ba&#x15F;l&#x131;kta seni bekliyorum.</p>
+<h3 class="mume-header" id="oyun-aray%C3%BCz%C3%BC">&#x1F388; Oyun Aray&#xFC;z&#xFC;</h3>
+
+<p>Oyun i&#xE7;erisinde kartlar&#x131;n kullan&#x131;labilmesi i&#xE7;in bir Component&apos;a ihtiyac&#x131;m&#x131;z<br>
+bulunuyor. Bu component&apos;i olu&#x15F;turarak, oyun alan&#x131;nda istedi&#x11F;imiz say&#x131;da kart<br>
+olu&#x15F;turaca&#x11F;&#x131;z.</p>
+<h3 class="mume-header" id="card-component">&#x1F388; Card Component</h3>
+
+<p>Oyun alan&#x131;nda kullanaca&#x11F;&#x131;m&#x131;z kartlar i&#xE7;in componentlere ihtiyac&#x131;m&#x131;z olacak.<br>
+<code>CardFront</code> componentinde kart&#x131;n pokemon resmini tutarken, <code>CardBack</code><br>
+componentinde <code>?</code> resmini tutaca&#x11F;&#x131;z. Componentleri <code>Card</code> componentinde<br>
+&#xE7;a&#x11F;&#x131;raca&#x11F;&#x131;z.</p>
+<p><code>Card</code> componentini test ederken, s&#xFC;rekli olarak <code>User</code> componenti &#xFC;zerinde isim<br>
+ve avatar se&#xE7;imi yapmamak i&#xE7;in <code>Playground</code> componentinde yer alan <em>isStart</em><br>
+&#x15F;art&#x131;n&#x131; true ifadesine &#xE7;evirelim.</p>
+<p><code>+ /Components/Playground/Cards/Card.svelte, CardBack.svelte, CardFront.svelte</code></p>
+<p><em>componenets &gt; Playground &gt; Cards &gt; CardFront.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script></script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="front">
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="card on the playing field" class="single-poke">
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .front {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+  }
+<p>.single-poke {<br>
+border-radius: 11px;<br>
+background-color: #fff;<br>
+box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>CardFront</code> componentinde <code>img src</code> &#xF6;zelli&#x11F;i olarak bir API adresi verilmi&#x15F;.<br>
+Bu API&apos;da dosya isimlerinde yer alan numaralar&#x131; g&#xFC;ncelleyerek, farkl&#x131; pokemon<br>
+resimlerine eri&#x15F;ilebilir.</p>
+<p><code>CardFront</code> componentini &#xF6;ncelikle <code>Card</code> componentinde, <code>Card</code> componentini de<br>
+<code>Playground</code> i&#xE7;erisinde true d&#xF6;nen blokta &#xE7;a&#x11F;&#x131;ral&#x131;m. Ayn&#x131; i&#x15F;lemi <code>CardBack</code><br>
+componentinde tekrarlayarak Card componentleri &#xFC;zerinde yapt&#x131;&#x11F;&#x131;m&#x131;z her<br>
+g&#xFC;ncellemeyi inceleyebilece&#x11F;iz.</p>
+<p><em>componenets &gt; Playground &gt; Cards &gt; CardBack.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script></script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="back">
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" class="single-poke" alt="card back on the playing field">
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .back {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    border-radius: 11px;
+  }
+<p>.back:hover {<br>
+cursor: pointer;<br>
+}</p>
+<p>.single-poke {<br>
+border-radius: 11px;<br>
+background: #fff;<br>
+box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>img</code> kapsay&#x131;c&#x131;s&#x131; olan <code>back ve front</code> classlar&#x131;na sahip kapsay&#x131;c&#x131;lara<br>
+belirli &#xF6;zellikler katarak basit &#x15F;ekilde bir kart g&#xF6;r&#xFC;n&#xFC;m&#xFC; vermeye &#xE7;aba<br>
+sarfettik. <code>CardBack</code> componentinde <code>Card</code> componentinde &#xE7;a&#x11F;&#x131;rarak aray&#xFC;z<br>
+&#xFC;zerinde nas&#x131;l g&#xF6;r&#xFC;nd&#xFC;&#x11F;&#xFC;n&#xFC; inceleyelim.</p>
+<p align="center"> 
+  <img src="./assets/components/Card/card-views.png" alt="Class Directives" style="width: 900px">
+</p>
+<p><code>Card</code> componentleri birer block-element oldu&#x11F;u i&#xE7;in alt alta durmaktad&#x131;r.<br>
+Componentleri bir kapsay&#x131;c&#x131; i&#xE7;erisine alarak, inline-block seviyesine alal&#x131;m.<br>
+Ayn&#x131; Component i&#xE7;erisinde &#xE7;a&#x11F;&#x131;rd&#x131;&#x11F;&#x131;m&#x131;zdan dolay&#x131;, <code>position: absolute</code> stilini<br>
+verdi&#x11F;imizde <code>Card</code> Componentinde yer alan <code>child componentler</code> &#xFC;st &#xFC;ste<br>
+duracakt&#x131;r.</p>
+<p><em>componenets &gt; Playground &gt; Cards &gt; CardBack.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import FrontCardFace from "./CardFront.svelte";
+  \import BackCardFace from "./CardBack.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main class="flip-container">
+  <div class="flipper">
+    <frontcardface>
+    <backcardface>
+  </backcardface></frontcardface></div>
+</main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+   .flip-container {
+    display: inline-block;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+  }
+<p>.flipper {<br>
+position: relative;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>CardBack</code> Componentinin kapsay&#x131;c&#x131; class&apos;&#x131;na <em>.back</em>, <code>position: absolute</code><br>
+de&#x11F;erini verdi&#x11F;imizde her iki kart &#xFC;st &#xFC;ste g&#xF6;r&#xFC;nt&#xFC;lenecektir.</p>
+<p align="center"> 
+  <img src="./assets/components/Card/card-position.gif" alt="Card position" style="width: 900px">
+</p>
+<p>CSS kullanarak Card&apos;&#x131;n arka y&#xFC;z&#xFC;len her t&#x131;klama ile birlikte <code>transform</code><br>
+&#xF6;zelli&#x11F;ini kullanarak <code>CardBack</code> Componentinin alt&#x131;nda yer alan <code>CardFront</code><br>
+i&#xE7;erisinde yer alan kart&#x131;n g&#xF6;r&#xFC;nt&#xFC;lenmesini sa&#x11F;layaca&#x11F;&#x131;z. <code>Global.css</code><br>
+dosyam&#x131;za a&#x15F;a&#x11F;&#x131;daki &#xF6;zellikleri ekleyelim.</p>
+<p><em>public &gt; global.css</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-css">{`\<style>
+  .flipper.hover .front {
+    transform: rotateY(0deg);
+  }
+<p>.flipper.hover .back {<br>
+transform: rotateY(180deg);<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>Card</code> componentlerinde <code>transform</code> stillendirmesi sa&#x11F;layarak, <code>hover</code> class&apos;i<br>
+eklendi&#x11F;inde d&#xF6;nme efekti vermesini sa&#x11F;layal&#x131;m.</p>
+<p><em>componenets &gt; Playground &gt; Cards &gt; CardBack.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>
+  \import FrontCardFace from "./CardFront.svelte";
+  \import BackCardFace from "./CardBack.svelte";
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<main class="flip-container">
+  <div class="flipper">
+  </div>
+</main>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .back {
+    width: 100px;
+    height: 100px;
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotateY(0deg);
+    border-radius: 11px;
+  }
+<p>.back:hover {<br>
+cursor: pointer;<br>
+}</p>
+<p>.single-poke {<br>
+border-radius: 11px;<br>
+background: #fff;<br>
+box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p><code>Card</code> componentlerinin bir b&#xFC;t&#xFC;n gibi birlikte ayn&#x131; h&#x131;zda, ve ayn&#x131; perspektif<br>
+&#xFC;zerinden d&#xF6;n&#xFC;&#x15F; sa&#x11F;lamas&#x131; gerekiyor. Svelte&apos;de her component i&#xE7;erisinde<br>
+tan&#x131;mlanan <em>style</em> &#xF6;zellikleri, Component&apos;e ait scope kadard&#x131;r, di&#x11F;er<br>
+componentler bu stillendirmelerden etkilenmezler. Bundan dolay&#x131; her iki class<br>
+i&#xE7;in ayn&#x131; tan&#x131;mlamalar&#x131; ger&#xE7;ekle&#x15F;tirelim.</p>
+<p><em>componenets &gt; Playground &gt; Cards &gt; CardFront.svelte</em></p>
+<div class="code-wrapper">
+<pre class="prettyprint lang-js">{`\<script>"
+</script>`}
+</pre>
+<pre class="prettyprint lang-html">{`\
+<div class="front">
+  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="card on the playing field" class="single-poke">
+</div>
+`}</pre>
+<pre class="prettyprint lang-css">{`\<style>
+  .front {
+    width: 100px;
+    height: 100px;
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(-180deg);
+  }
+<p>.single-poke {<br>
+border-radius: 11px;<br>
+background-color: #fff;<br>
+box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;<br>
+}<br>
+</style>`}</pre><p></p>
+</div>
+<p>Birazdan ge&#xE7;ece&#x11F;imiz b&#xF6;l&#xFC;m i&#xE7;erisinde, kartlar&#x131; EventDispatcher kullanarak<br>
+kart&#x131;n a&#xE7;&#x131;lma efektini yapaca&#x11F;&#x131;z. Eventi kullanmadan &#xF6;nce CSS &#xFC;zerinde nas&#x131;l<br>
+g&#xFC;ncellemeler yapmam&#x131;z gerekti&#x11F;ini g&#xF6;stermek istedim. Konsol &#xFC;zerinde<br>
+<code>CardBack</code> componentine ait <code>flipper</code> bulunan element <code>hover</code> class ekledi&#x11F;inde<br>
+efekt ger&#xE7;ekle&#x15F;ti&#x11F;ini inceleyebilirsin.</p>
+<p align="center"> 
+  <img src="./assets/components/Card/card-turn-effect-back.png" alt="Card turn effect back" style="width: 900px">
+</p>
+<p align="center"> 
+  <img src="./assets/components/Card/card-turn-effect-front.png" alt="Card turn effect front" style="width: 900px">
+</p>
+<p><span id="component-ve-dizin-yapisi"></span></p>
+<p><span id="github-page-ile-deploy"></span></p>
+<h2 class="mume-header" id="github-pages-ile-deploy">GitHub Pages ile Deploy</h2>
+
+<h2 class="mume-header" id="kaynak">Kaynak</h2>
+
+<ul>
+<li>
+<p>Svelte nedir?</p>
+</li>
+<li>
+<p><a href="https://svelte.dev/blog/svelte-3-rethinking-reactivity">https://svelte.dev/blog/svelte-3-rethinking-reactivity</a></p>
+</li>
+<li>
+<p>Svelte Documentation:</p>
+</li>
+<li>
+<p><a href="https://svelte.dev/examples/hello-world">https://svelte.dev/examples/hello-world</a></p>
+</li>
+<li>
+<p><a href="https://svelte.dev/tutorial/basics">https://svelte.dev/tutorial/basics</a></p>
+</li>
+<li>
+<p><a href="https://svelte.dev/docs">https://svelte.dev/docs</a></p>
+</li>
+<li>
+<p><a href="https://svelte.dev/blog">https://svelte.dev/blog</a></p>
+</li>
+<li>
+<p><a href="https://svelte.dev/blog/svelte-3-rethinking-reactivity">https://svelte.dev/blog/svelte-3-rethinking-reactivity</a></p>
+</li>
+</ul>
+<ul>
+<li>Svelte Projesi Olu&#x15F;turma</li>
+</ul>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript</a></p>
+</li>
+<li>
+<p>Ba&#x11F;&#x131;ml&#x131;l&#x131;klar</p>
+</li>
+<li>
+<p><a href="https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/">https://typeofnan.dev/how-to-set-up-a-svelte-app-with-rollup/</a></p>
+</li>
+</ul>
+<ul>
+<li>Deploy:</li>
+</ul>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next</a></li>
+</ul>
+<ul>
+<li>md files importing</li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project">https://stackoverflow.com/questions/56678488/how-to-import-a-markdown-file-in-a-typescript-react-native-project</a></li>
+</ul>
+<ul>
+<li>Component Communications</li>
+</ul>
+<ul>
+<li><a href="https://betterprogramming.pub/6-ways-to-do-component-communications-in-svelte-b3f2a483913c">https://betterprogramming.pub/6-ways-to-do-component-communications-in-svelte-b3f2a483913c</a></li>
+<li><a href="https://livebook.manning.com/book/svelte-and-sapper-in-action/chapter-5/v-3/">https://livebook.manning.com/book/svelte-and-sapper-in-action/chapter-5/v-3/</a></li>
+</ul>
+<pre data-role="codeBlock" data-info class="language-"><code></code></pre><p>:check en file:</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
