@@ -8,7 +8,7 @@
     head: `Start Game`,
     description: `Svelte'i biraz daha yakından tanıyoruz, birlikte uygulamamızı
       oluşturabilmek için yeteri kadar bilgi sahibi olduk. Kullanıcının arayüz 
-      olarak görebileceği iki Component bulunuyor. Kullanıcı adı ve avatar 
+      üzerinde görebileceği iki Component bulunuyor. Kullanıcı adı ve avatar 
       seçtiği User Component, bu seçimler sonrasında erişilen Playground 
       Component. User Componenti ile oyunumuzu oluşturmaya başlayalım. 
       [Yeni bir proje oluşturabilir]

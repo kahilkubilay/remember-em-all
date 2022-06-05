@@ -20,6 +20,3 @@
     <Playground />
   {/if}
 </main>
-
-<style>
-</style>

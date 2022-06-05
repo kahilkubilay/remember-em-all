@@ -14,17 +14,17 @@
     otherDescription: `_ImageAvatar.svelte_ componenti üzerinde, kullanıcı 
       avatar'a click eventini gerçekleştirdiğinde, 'userInfo' classinda 
       oluşturduğumuz avatar değerini güncelleyelim.`,
-    anotherDescription: `Bu güncelleme ile birlikte kullanıcının her avatar 
-      seçiminden sonra, seçilen avatarın 'opacity' değeri güncellenerek 
-      kullanıcının seçimi vurgulanacak.`,
+    anotherDescription: `Bu güncelleme ile birlikte kullanıcının seçtiği ve 
+      mouse ile üzerinde gezindiği avatarların 'opacity' değeri değişerek avatar
+      resmi vurgulanacak.`,
     anAnotherDescription: `Import ettiğimiz UserInfo class'inda yer alan $name 
       store değerini, 'bind:value' metodu ile güncelleyebiliriz.`, // 💩
     moreAnotherDescription: `Şimdi en güzel tarafına gelelim.. Son rötüşları 
-      yapıp oyunumuza başlayalım. 
+      yapıp oyunu başlatalım. 
       'components > Playground > Wrapper > Playground.svelte' componenti 
       üzerinde bir if/else yapısı tanımlayalım. 'isStart' store değerimiz false
       ise kullanıcıyı _name&avatar_ seçimi yapabildiği Componente yönlendirsin.
-      Bunun aksi ise basit bir head etiketini gösterelim.`, // 💩
+      Bunun aksi ise basit bir hata bilgisi gösterelim.`, // 💩
     moreDescription: `Döngüler gibi if/else Logic'leri kullanabilirsiniz. 'else
     if' ihtiyacında bir şart ifadesi olarak 'else if isStart === undefined' 
     tanımlaman yeterli olacaktır.`,

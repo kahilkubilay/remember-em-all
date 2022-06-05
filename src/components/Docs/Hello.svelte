@@ -18,8 +18,7 @@
     [examples](https://svelte.dev/examples/hello-world "Svelte Examples")) 
     sahip, dökümantasyonları inceledikten sonra uygulamayı takip etmen daha 
     faydalı olabilir.`,
-    otherDescription: `İçeriğin detaylarını sol tarafta yer alan 
-    haritalandırma ile takip edebilirsin. İlk bölümlerde Svelte'i nasıl 
+    otherDescription: `İlk bölümlerde Svelte'i nasıl 
     kullanabileceğine dair bilgilendirmeler yer alıyor. Bu kısımlara hakimsen, 
     atlayarak [Start Game](#start-game "Access Start Game section") bölümünden 
     devam edebilirsin.`,

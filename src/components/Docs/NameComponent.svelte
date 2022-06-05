@@ -15,10 +15,12 @@
       componentinin _Userground_ componentinde kullanalım.`,
     moreDescription: `Geriye son bir componentimiz kaldı. "Start" yazısına sahip
       bir buton componentini oluşturarak, _User_ klasöründe _Start.svelte_ 
-      ismiyle kaydedererek _UserGround_ componentinde çağıralım.`, //💩
+      ismiyle kaydedelim. Ve son olarak _UserGround_ componentinde çağıralım.`, //💩
     oneMoreDescription: `Ta daaaa... Şuana kadar yaptığımız componentler dinamik
       işlemler gerçekleştirmedi. Arayüzü oluşturmak için yeteri kadar malzememiz
-      ortaya çıktı, ve bunları istediğin gibi stillendirebilirsin. Bundan 
+      ortaya çıktı, ve bunları istediğin gibi stillendirebilirsin. Svelte 
+      dosyana ait her stillendirme, svelte dosyasının kapsamı kadardır. 
+      Child-Parent componentler bu stil özelliklerine sahip olmazlar. Bundan 
       sonraki aşamalarda bu componentlara dinamik özellikler kazandıracağız.`, //💩
     image: `assets/components/User/end-interface.png`,
     alternativeText: `call Avatar Component`,

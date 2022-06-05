@@ -22,4 +22,10 @@
     padding: 8px 0;
     width: 40%;
   }
+
+  @media screen and (max-width: 800px) {
+    .name {
+      width: 75%;
+    }
+  }
 </style>

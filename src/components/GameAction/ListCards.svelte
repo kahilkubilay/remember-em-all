@@ -1,14 +1,16 @@
 <script context="module">
   export const list = (level) => {
-    let getLevel = level;
-
     const list = [];
     const range = 5;
-    const levelRange = getLevel * range;
-    let levelCounter = levelRange - 5 + 1;
+    const maxNumberReachedOnRange = level * range;
+    let minNumberReachedOnRange = maxNumberReachedOnRange - 4;
 
-    for (levelCounter; levelCounter <= levelRange; levelCounter++) {
-      list.push(levelCounter);
+    for (
+      minNumberReachedOnRange;
+      minNumberReachedOnRange <= maxNumberReachedOnRange;
+      minNumberReachedOnRange++
+    ) {
+      list.push(minNumberReachedOnRange);
     }
 
     return list;

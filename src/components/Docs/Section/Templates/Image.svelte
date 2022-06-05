@@ -8,7 +8,14 @@
 <style>
   img {
     display: flex;
-    max-width: 900px;
+    width: 90%;
     margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: 800px) {
+    img {
+      width: 100%;
+    }
   }
 </style>

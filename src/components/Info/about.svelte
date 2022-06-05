@@ -4,7 +4,7 @@
 
   let { English } = ContentMap.Headers;
 
-  let svelteLogo = "/assets/svelte-logo.png";
+  let svelteLogo = "assets/svelte-logo.png";
 </script>
 
 <main class="container">
@@ -26,18 +26,25 @@
 
 <style>
   main {
-    width: 900px;
+    width: 100%;
     margin: auto;
     background-color: #f5f5f5;
-    padding: 10px 50px;
-    border-radius: 5px;
+    padding: 5px;
+  }
+
+  @media screen and (min-width: 800px) {
+    main {
+      width: 50%;
+      padding: 10px 50px;
+    }
   }
 
   .content-map {
     position: fixed;
-    width: 250px;
+    width: 18%;
     top: 50%;
-    left: 110px;
+    right: 2%;
+    margin-left: 40px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -70,5 +77,11 @@
   .logo {
     width: 50px;
     margin: 10px auto;
+  }
+
+  @media screen and (max-width: 800px) {
+    .content-map {
+      display: none;
+    }
   }
 </style>

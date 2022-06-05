@@ -7,11 +7,11 @@
   const article = {
     head: `Componentler Arası İletişim`,
     description: `Küçük yapılı projelerden, komplex yapılılara kadar birçok 
-      component üzerinden alıp farklı bir yerde kullanma, güncelleme gibi 
+      veriyi component üzerinden alıp farklı bir yerde kullanma, güncelleme gibi 
       ihtiyaçlarımız olacak. Kullanılan framework, library veya compiler'in bu 
       ihtiyacınıza esnek çözümler sağlayabilmesi gerekiyor. Svelte bu 
-      ihtiyaçlarınız için birden fazla ve basit yapılara sahip çözümler 
-      barındırıyor.`,
+      ihtiyaçlarınız için birden fazla ve basit yapılara sahip çözümlere 
+      sahip.`,
     image: `assets/documentation/communication-is-key.jpg`,
     alternativeText: `SpongeBob 'communication is key' meme`,
     id: "communication-between-component",

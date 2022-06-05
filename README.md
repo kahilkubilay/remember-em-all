@@ -26,9 +26,9 @@ edebilirsin.
 
 ## 🪁 Oyun hakkında
 
-Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların seviyelerine göre
-arayüz üzerinde kartlar bulunacak. Kartlara click eventi gerçekleştiğinde
-kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye çalışacaklar.
+Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcının seviyesine göre arayüz 
+üzerinde farklı kartlar bulunacak. Kartlara click eventi gerçekleştiğinde
+kartlar açılacak, kullanıcı açılan kartları eşleştirmeye çalışacak.
 Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken başarılı eşleşme
 sonucunda kullanıcıya puan kazandıracak, başarısız her eşleşmede kartlar
 bulundukları yerde yeniden kapatılacaklar. Bütün kartlar eşleştiklerinde, bir
@@ -407,7 +407,8 @@ için yeteri kadar bilgi sahibi olduk. Kullanıcının arayüz olarak görebilec
 iki Component bulunuyor. Kullanıcı adı ve avatar seçtiği User Component, bu
 seçimler sonrasında erişilen Playground Component. User Componenti ile oyunumuzu
 oluşturmaya başlayalım. [Yeni bir proje oluşturabilir](#svelte-projesi-olusturma "Yeni bir Svelte Projesi oluştur")
-veya pratik yapabilmek için şuana kadarki kodları kaldırabilirsin.
+veya pratik yapabilmek için şuana kadar birlikte yazmış olduğumuz kodları 
+kaldırabilirsin. 
 _src > components > User_ ve _src > components > Playground_ klasörlerini
 oluşturalım.
 

@@ -3,5 +3,3 @@
 </script>
 
 <h3>🎈🎈 {head}</h3>
-
-<style></style>

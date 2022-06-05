@@ -6,14 +6,14 @@
 
   const article = {
     head: `Oyun hakkında`,
-    description: `Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcıların 
-    seviyelerine göre arayüz üzerinde kartlar bulunacak. Kartlara click eventi 
-    gerçekleştiğinde kartlar açılacak, kullanıcılar açılan kartları eşleştirmeye
-    çalışacaklar. Eşleşen kartlar açık bir şekilde arayüz üzerinde dururken 
-    başarılı eşleşme sonucunda kullanıcıya puan kazandıracak, başarısız her 
-    eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. Bütün kartlar 
-    eşleştiklerinde, bir sonraki seviyede yer alan kartlar arayüze kapalı olarak
-    yeniden gelecektir.`,
+    description: `Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcının 
+    seviyesine göre arayüz üzerinde farklı kartlar bulunacak. Kartlara click 
+    eventi gerçekleştiğinde kartlar açılacak, kullanıcı açılan kartları 
+    eşleştirmeye çalışacak. Eşleşen kartlar açık bir şekilde arayüz üzerinde 
+    dururken başarılı eşleşme sonucunda kullanıcıya puan kazandıracak, başarısız
+    her eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. Bütün 
+    kartlar eşleştiklerinde, bir sonraki seviyede yer alan kartlar arayüze 
+    kapalı olarak yeniden gelecektir.`,
     otherDescription: `Oyun başlangıcında kullanıcıdan bir kullanıcı adı 
       girmesi, avatar listesinde yer alan görsellerden birini seçmesi 
       beklenecektir (Avatarlar ne kadar evcil gözükseler de, güç içlerinde 

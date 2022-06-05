@@ -11,7 +11,7 @@
       oluşturuyorum. Önceki örneklerde gerçekleştirdiğimiz gibi, _Header.svelte_
       Componentini _Userground.svelte_ componenti üzerinde çağıralım. 
       Oluşturduğumuz _Header.svelte_ componentinin basit bir görevi bulunuyor, 
-      statik bir metin barındırıyor.`,
+      statik bir metin bardındırmak..`,
     otherDescription: `Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..`,
     anotherDescription: `Ehh... şimdi biraz daha az kötü gözüktüğü 
       söylenebilir💩💩💩`,

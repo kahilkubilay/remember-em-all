@@ -7,15 +7,16 @@
   const article = {
     head: `Game Requirements`,
     description: `Kullanıcının isim, avatar gibi aldığımız değerlerin yanı sıra
-      oyunda kullanılan standart değerler bulunabilir. Geliştireceğimiz oyun 
+      oyuna ait standart değerler bulunabilir. Geliştireceğimiz oyun 
       için bu değerlerden _level_ ve _score_ gibi iki değer tanımlayacağız. 
       Kullanıcı, isim ve avatar seçiminin ardından _start_ butonuna tıkladığında
       bu değerlerden _level 1_, _score 0_ değerlerini oluşturacağız. Kullanıcı 
-      seviye atladıkça burada yer alan değerler dinamik olarak güncellenecek.`,
+      doğru kartları eşleştirdikçe ve seviye atladığında burada yer alan 
+      değerler dinamik olarak güncellenecek.`,
     otherDescription: `+ /Store/Level.ts, Score.ts`,
     anotherDescription: `_level_ isminde bir değer oluşturduk ve gezegenin 
-      iyiliği için uygulamamız içerisinde kullanacağız. Bu değeri kullanıcı 
-      arayüz üzerindeki bütün kartları eşleştirebildiğinde güncelleyeceğiz. Bir
+      iyiliği için uygulamamız içerisinde kullanacağız. Bu değer kullanıcı 
+      arayüz üzerindeki bütün kartları eşleştirebildiğinde güncellenecek. Bir
       store değeri oluşturmak için _writable_ interface ile Store değerlerini
       oluşturabilir ve güncelleyebilirsin.`,
     moreDescription: `Her eşleşme sonrasında kullanıcının puan kazanabildiği 
@@ -28,8 +29,8 @@
     yeni bir class oluşturalım.`, //💩
     endStory: `Oluşturduğumuz UserInfo class'ını kullanıcının isim, avatar
       değerlerini set edeceğiz. Bu değerlere default olarak boş String atadım,
-      farklı içerikle doldurabilirsin. İki değerde bir hata yoksa _isStart_
-      değerine _true_ olarak güncelleyerek oyunu başlatacağız.`,
+      farklı içerikle doldurabilirsin. isim ve avatar değerleri hatalı değilse 
+      _isStart_ değerine _true_ olarak güncelleyerek oyunu başlatacağız.`,
     descriptionBored: `+ /Store/User.ts`, //💩
     id: "game-requirements",
   };

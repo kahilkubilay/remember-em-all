@@ -9,8 +9,8 @@
     head: `Component kullanımı`,
     description: `Uygulamalarımızda yer alan bileşenleri parçalayarak 
       istediğimiz gibi bir bütün haline getirebilmek üzerinde çalışırken 
-      kolaylık sağlar, tekrar eden bileşen parçalarında yeniden çağırabilmek 
-      daha az efor sarfettirir.`,
+      kolaylık sağlar, tekrar eden bileşen parçalarını yeniden çağırabilmek daha
+      az efor sarfettirir.`,
     otherDescription: `Bir önceki örnekte yaptığımız random sayı üreten basit 
       yapıyı bir component haline getirelim. 'components/Content/'' dizininde 
       'RandomNumber.svelte' dosyasını oluşturalım. Bu yeni componentimizi 

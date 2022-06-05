@@ -2,23 +2,18 @@
   export const shuffle = (pokemonList) => {
     let shakeList = [];
     const duplicateList = pokemonList.concat(pokemonList);
-    const levelLength = duplicateList.length - 1;
-    let pokemonNo;
+    const totalNumberRange = duplicateList.length - 1;
 
-    for (let counter = 0; counter < levelLength + 1; counter++) {
-      pokemonNo = counter;
-      const randomNumberForList = Math.trunc(
-        Math.random() * duplicateList.length
-      );
+    for (let counter = 0; counter <= totalNumberRange; counter++) {
+      let pokemonNo = counter;
+      const randomNumb = Math.trunc(Math.random() * duplicateList.length);
 
       shakeList = [
-        { no: pokemonNo, id: duplicateList[randomNumberForList] },
+        { no: pokemonNo, id: duplicateList[randomNumb] },
         ...shakeList,
       ];
-      duplicateList.splice(
-        duplicateList.indexOf(duplicateList[randomNumberForList]),
-        1
-      );
+
+      duplicateList.splice(duplicateList.indexOf(duplicateList[randomNumb]), 1);
     }
 
     return shakeList;

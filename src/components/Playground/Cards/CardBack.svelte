@@ -36,6 +36,6 @@
   .single-poke {
     border-radius: 11px;
     background: #fff;
-    box-shadow: 2px 2px 4px #8c8c8c, -12px -12px 22px #fff;
+    box-shadow: 2px 2px 4px #8c8c8c;
   }
 </style>

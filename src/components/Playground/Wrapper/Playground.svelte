@@ -26,8 +26,14 @@
 
 <style>
   .playground {
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
     text-align: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .playground {
+      width: 100%;
+    }
   }
 </style>

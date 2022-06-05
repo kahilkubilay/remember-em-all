@@ -17,5 +17,12 @@
     background-color: #f5f5f5;
     border-radius: 5px;
     padding-bottom: 15px;
+    width: 1000px;
+  }
+
+  @media screen and (max-width: 800px) {
+    main {
+      width: 100%;
+    }
   }
 </style>

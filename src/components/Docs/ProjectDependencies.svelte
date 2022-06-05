@@ -9,8 +9,8 @@
       {
         command: `Typescript`,
         description: `Typescript, Javascript kodunuzu daha verimli kılmanızı ve 
-          kod kaynaklı hataların önüne geçilmesini sağlayan bir Javascript 
-          uzantısıdır. Projenizde yer alan _.svelte_ uzantılı dosyalarda 
+          kod kaynaklı hataların önüne geçilmesini sağlayan Javascript temelli 
+          programlama dilidir. Projenizde yer alan _.svelte_ uzantılı dosyalarda 
           kullanabileceğiniz gibi, _.ts_ dosyalarını da destekler.`,
       },
       {
@@ -19,7 +19,7 @@
           rollup.config.js dosyası oluşturulacaktır. Rollup Javascript 
           uygulamalar için kullanılan bir modül paketleyicidir, uygulamamızda 
           yer alan kodları tarayıcının anlayabileceği şekilde ayrıştırır. Svelte
-          kurulumunda default olarak projenize eklenir.`,
+          kurulumuyla birlikte projenize eklenir.`,
       },
     ],
     id: "project-dependencies",
