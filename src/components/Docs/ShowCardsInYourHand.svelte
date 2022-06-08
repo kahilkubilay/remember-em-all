@@ -9,9 +9,8 @@
   const article = {
     head: `Elindeki Kartları Göster ♠️`,
     description: `Arayüz üzerindeki bu güncellemelerimizin ardından, oyun 
-      alınımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanına
-      random ekleyeceğiz. Kullanıcının her click eventi ile birlikte kartların
-      içeriği görüntülenecek.`,
+      alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanına 
+      ekleyeceğiz.`,
     otherDescription: `Oyun arayüzünde birtakım işlemleri gerçekleştirebilmek 
       için bazı fonksiyonlar tanımlayacağız. SRC klasörümün altında GameAction
       isminde yeni bir klasör oluşturuyorum. Bu klasör altında tanımlayacağımız
@@ -80,7 +79,8 @@
         command: `CloseOpenCards`,
         description: `Eşleşmeyen 2 kart açıldığında veya bütün kartlar doğru 
           eşleştiğinde bir sonraki erişilecek seviye için kartlar arayüzde 
-          kapalı olmalıdır. Her iki durum için fonksiyonları tanımlayacağız.`,
+          kapalı olmalıdır. Her iki durumda geçerli fonksiyonları 
+          tanımlayacağız.`,
       },
     ],
     id: "show-cards-in-your-hand",

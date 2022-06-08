@@ -28,6 +28,7 @@
   import WhatIsSvelte from "./WhatIsSvelte.svelte";
   import ShowCardsInYourHand from "./ShowCardsInYourHand.svelte";
   import CardSpinEffect from "./CardSpinEffect.svelte";
+  import CardMatching from "./CardMatching.svelte";
 </script>
 
 <Hello />
@@ -59,3 +60,4 @@
 <CardComponent />
 <ShowCardsInYourHand />
 <CardSpinEffect />
+<CardMatching />
