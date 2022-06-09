@@ -14,19 +14,19 @@
     requireDescription: `Etkileşim yapılan kartları tutabileceğimiz 
       cardFlipperCapsule ismiyle bir store değeri tanımlayalım.`,
     otherDescription: `Click eventi gerçekleştikten sonra, tıklanan kartın 
-      no değerini cardFlipperCapsule değerine ekleyelim. Class directives ile
-      cardFlipperCapsule içerisinde yer alan değerlere 'hover' sınıfını 
-      verelim. `,
+      no değerini <code><i>cardFlipperCapsule</i></code> değerine ekleyelim. 
+      <code><i>Class directives ile cardFlipperCapsule</i></code> içerisinde yer
+      alan değerlere 'hover' sınıfını verelim. `,
     codeExplanation: `Kartın arka yüzüne her tıklamada bir tepki alacağız. 
-      BackCardFace bileşenine Card bileşeninde yeni oluşturduğumuz fonksiyonu
-      bağlayalım. Fonksiyon şuan için sadece kartın üstüne tıklandığında 
-      bir konsol çıktısı yansıtacak.`,
-    descriptionCode: `CardBack bileşenimizde createEventDispatcher fonksiyonunu
-      çağırdık. CardBack bileşenemize DOM üzerinde tıklama işlemi 
-      gerçekleştirildiğinde bu event ile atadığımız openCards fonksiyonu 
-      çalışmasını başlatacak.`,
-    endStory: `Playground üzerinde bulunan kartlara etkileşim gerçekleştiğinde,
-      kartın ön yüzündeki değer görüntülenecektir.`,
+      <code><i>BackCardFace bileşenine Card bileşeninde</i></code> yeni 
+      oluşturduğumuz fonksiyonu bağlayalım. Fonksiyon şuan için sadece kartın
+      üstüne tıklandığında bir konsol çıktısı yansıtacak.`,
+    descriptionCode: `<code><i>CardBack bileşenimizde 
+      createEventDispatcher</i></code> fonksiyonunu çağırdık. <code><i>CardBack
+      bileşenemize</i></code> DOM üzerinde tıklama işlemi gerçekleştirildiğinde
+      bu event ile atadığımız openCards fonksiyonu çalışmasını başlatacak.`,
+    endStory: `<code><i>Playground</i></code> üzerinde bulunan kartlara 
+      etkileşim gerçekleştiğinde, kartın ön yüzündeki değer görüntülenecektir.`,
     image: `assets/components/Card/click-on-card.png`,
     alternativeText: `user clicked on card`,
     moreImage: `assets/components/Card/open-cards.gif`,

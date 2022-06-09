@@ -8,51 +8,62 @@
   const article = {
     head: `User Component`,
     description: `Yarım kalmış bir User Component'imiz bulunuyordu. 
-      Tanımladığımız _Store_ değerlerini User componenti değerlerinde 
-      kullanalım. Burada yapacağımız son rötüşlar ile birlikte kullanıcının oyun
-      arayüzüne erişmesini sağlayalım.`,
-    otherDescription: `_ImageAvatar.svelte_ componenti üzerinde, kullanıcı 
-      avatar'a click eventini gerçekleştirdiğinde, 'userInfo' classinda 
-      oluşturduğumuz avatar değerini güncelleyelim.`,
+      Tanımladığımız <code><i>Store</i></code> değerlerini <code><i>User 
+      componenti</code></i> değerlerinde kullanalım. Burada yapacağımız son
+      rötüşlar ile birlikte kullanıcının oyun arayüzüne erişmesini sağlayalım.`,
+    otherDescription: `<code><i>ImageAvatar.svelte component</i></code> 
+      üzerinde, kullanıcı avatar'a click eventini gerçekleştirdiğinde, 
+      <code><i>userInfo classinda</i></code> oluşturduğumuz avatar değerini 
+      güncelleyelim.`,
     anotherDescription: `Bu güncelleme ile birlikte kullanıcının seçtiği ve 
       mouse ile üzerinde gezindiği avatarların 'opacity' değeri değişerek avatar
       resmi vurgulanacak.`,
-    anAnotherDescription: `Import ettiğimiz UserInfo class'inda yer alan $name 
-      store değerini, 'bind:value' metodu ile güncelleyebiliriz.`, // 💩
+    anAnotherDescription: `Import ettiğimiz <code><i>UserInfo 
+      class'inda</i></code> yer alan <code><i>$name store</i></code> değerini, 
+      'bind:value' metodu ile güncelleyebiliriz.`, // 💩
     moreAnotherDescription: `Şimdi en güzel tarafına gelelim.. Son rötüşları 
       yapıp oyunu başlatalım. 
-      'components > Playground > Wrapper > Playground.svelte' componenti 
-      üzerinde bir if/else yapısı tanımlayalım. 'isStart' store değerimiz false
-      ise kullanıcıyı _name&avatar_ seçimi yapabildiği Componente yönlendirsin.
-      Bunun aksi ise basit bir hata bilgisi gösterelim.`, // 💩
-    moreDescription: `Döngüler gibi if/else Logic'leri kullanabilirsiniz. 'else
-    if' ihtiyacında bir şart ifadesi olarak 'else if isStart === undefined' 
-    tanımlaman yeterli olacaktır.`,
-    descriptionCode: `StartGame fonksiyonu ile birlikte _name_ ve _avatar_ store
-      değerleri kontrol edilecek. Bu değerlerin boş olmaması durumunda _isStart_
-      store değerine true atanarak, oyun başlatılacak konsola bir bilgi 
-      yazılacak. Bu değerlerden herhangi biri bulunmuyorsa _User_ componenti 
-      bulunduğu yerde kalmaya devam edicektir. Böyle bir ihtimal için, class 
-      directives kullanarak kullanıcıyı bilgilendirelim.`,
+      <code><i>components > Playground > Wrapper > Playground.svelte</i></code>
+      componenti üzerinde bir <code><i>if/else</i></code> yapısı tanımlayalım.
+      <code><i>isStart store</i></code> değerimiz false ise kullanıcıyı 
+      <code><i>name&avatar</i></code> seçimi yapabildiği 
+      <code><i>Componente</i></code> yönlendirsin. Bunun aksi ise basit bir hata
+      bilgisi gösterelim.`, // 💩
+    moreDescription: `Döngüler gibi <code><i>if/else Logic'leri</i></code> 
+      kullanabilirsiniz. <code><i>else if</i></code> ihtiyacında bir şart 
+      ifadesi olarak <code><i>else if isStart === undefined</i></code>
+      tanımlaman yeterli olacaktır.`,
+    descriptionCode: `<code><i>StartGame fonksiyonu</i></code> ile birlikte 
+      <code><i>name ve avatar store</i></code> değerleri kontrol edilecek. Bu
+      değerlerin boş olmaması durumunda <code><i>isStart store</i></code>
+      değerine <code><i>true</i></code> atanarak, oyun başlatılacak konsola bir
+      bilgi yazılacak. Bu değerlerden herhangi biri bulunmuyorsa 
+      <code><i>User componenti</i></code> bulunduğu yerde kalmaya devam
+      edicektir. Böyle bir ihtimal için, <code><i>class directives</i></code>
+      kullanarak kullanıcıyı bilgilendirelim.`,
     codeExplanation: `on:click metoduna bağladığımız fonksiyon ile kullanıcının 
       tıkladığı avatar üzerinde bilgiyi kolay bir şekilde elde edebiliyoruz. 
-      Konsolu açarak, logları inceleyebilirsin.'ImageAvatar' componentine 
-      parametre olarak gönderdiğimiz avatar bilgisine erişebiliyoruz, bunu 
-      kullanarak fonksiyonu biraz daha basit hale getirelim.`,
+      Konsolu açarak, logları inceleyebilirsin.<code><i>ImageAvatar componentine
+      </i></code> parametre olarak gönderdiğimiz avatar bilgisine
+      erişebiliyoruz, bunu kullanarak fonksiyonu biraz daha basit hale 
+      getirelim.`,
     otherCodeExplanation: `Kullanıcı avatarlar üzerine her click işlemi 
-      gerçekleştirdiğinde, '$avatar' değerini güncelliyoruz. 
-      'ImageAvatar.svelte' componentini geçmeden önce _class directives_ 
-      kullanarak yıllaar yılllaarr önce tanımladığımız '.picked' ve ''.unpicked'
-      classlarını anlamlı bir hale getirelim.`,
+      gerçekleştirdiğinde, <code><i>$avatar</i></code> değerini güncelliyoruz. 
+      <code><i>ImageAvatar.svelte componentini</i></code> geçmeden önce 
+      <code><i>class directives</i></code> kullanarak yıllaar yılllaarr önce
+      tanımladığımız <code><i>.picked ve .unpicked</i></code> classlarını 
+      anlamlı bir hale getirelim.`,
     oneLineDescription: `Kullanıcıdan almamız gereken diğer bir değer, 
-      username.`,
-    endStory: `Class Directive'lerde yardımına başvurabilmek için
-      _isAvatarEmpty_ ve _isNameEmpty_ isminde iki farklı değer oluşturdum. 
-      Button'ın altında bir 'div' etiketi daha oluşturarak, hata mesajını burada
-      gösteriyorum. Name için olan hata mesajını sen düzenle.. Ve oluşturduğum 
-      'div' etiketini bir component olarak yeniden oluşturup, hem name hemde 
-      avatar için kullanabilirsin. Bunu yap, hemen ardından bir sonraki başlıkta
-      seni bekliyorum.`,
+      <code><i>username</i></code>.`,
+    endStory: `<code><i>Class Directive'lerde</i></code> yardımına başvurabilmek
+      için <code><i>isAvatarEmpty ve isNameEmpty</i></code> isminde iki farklı
+      değer oluşturdum. <code><i>Button'ın</i></code> altında bir 
+      <code><i>div etiketi</i></code> daha oluşturarak, hata mesajını burada
+      gösteriyorum. <code><i>Name</i></code> için olan hata mesajını sen
+      düzenle.. Ve oluşturduğum <code><i>div etiketini</i></code> bir component
+      olarak yeniden oluşturup, hem <code><i>name</i></code> hemde 
+      <code><i>avatar</i></code> için kullanabilirsin. Bunu gerçekleştir, hemen
+      ardından bir sonraki başlıkta seni bekliyorum.`,
     image: `assets/components/User/class-directive.gif`,
     anotherImage: `assets/components/User/start-game.gif`,
     alternativeText: `Class Directives`,
@@ -241,7 +252,6 @@
 
   const title = `componenets > User > Avatars > ImageAvatar.svelte`;
   const otherTitle = `componenets > User > Avatars > ImageAvatar.svelte`;
-  const oneMoreTitle = `_no title_`;
   const anotherOneMoreTitle = `componenets > User > Avatars > 
     ImageAvatar.svelte`; //💩
   const moreTitle = `componenets > Playground > Wrapper > Playground.svelte`; //💩
@@ -256,7 +266,7 @@
   <Paragraph text={article.codeExplanation} />
   <CodeSyntax code={otherCode} title={otherTitle} />
   <Paragraph text={article.otherCodeExplanation} />
-  <CodeSyntax code={oneMoreCode} title={oneMoreTitle} />
+  <CodeSyntax code={oneMoreCode} />
   <Paragraph text={article.anotherDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
   <Paragraph text={article.oneLineDescription} />
@@ -271,6 +281,6 @@
     alternativeText={article.alternativeText}
   />
   <Paragraph text={article.descriptionCode} />
-  <CodeSyntax code={endCode} title={oneMoreTitle} />
+  <CodeSyntax code={endCode} />
   <Paragraph text={article.endStory} />
 </article>

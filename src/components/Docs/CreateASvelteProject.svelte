@@ -7,10 +7,10 @@
 
   const article = {
     head: `Svelte projesi oluşturma`,
-    description: `Npx ile yeni bir proje oluşturma:`,
-    otherDescription: `Svelte Typescript notasyonunu desteklemektedir. 
-      Typescript üzerinde yapabileceğiniz bütün işlemleri Svelte projelerinde 
-      kullanabilirsin.`,
+    description: `npx ile yeni bir proje oluşturma:`,
+    otherDescription: `<code><i>Svelte Typescript</i></code> notasyonunu 
+      desteklemektedir. <code><i>Typescript</i></code> üzerinde yapabileceğiniz
+      bütün işlemleri <code><i>Svelte</i></code> projelerinde kullanabilirsin.`,
     anotherDescription: `Gerekli olan bağımlılıkları projemize ekleyerek ayağa 
       kaldırabiliriz.`,
     anotherAnDescription: `Bu komutlar sonrasında konsol üzerinde projenin hangi
@@ -30,17 +30,19 @@
   const dependenciesInstall = `
     npm install
     npm run dev`;
+
+  const title = ``;
 </script>
 
 <article>
   <AccessArticle link={article.id} />
   <Header head={article.head} />
   <Paragraph text={article.description} />
-  <CodeSyntax code={svelteInstall} title={""} />
+  <CodeSyntax code={svelteInstall} {title} />
   <Paragraph text={article.otherDescription} />
-  <CodeSyntax code={typescriptSet} title={""} />
+  <CodeSyntax code={typescriptSet} {title} />
   <Paragraph text={article.anotherDescription} />
-  <CodeSyntax code={dependenciesInstall} title={""} />
+  <CodeSyntax code={dependenciesInstall} {title} />
   <Paragraph text={article.anotherAnDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
 </article>

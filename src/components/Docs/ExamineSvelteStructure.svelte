@@ -6,25 +6,33 @@
 
   const article = {
     head: `Svelte yapısını inceleme`,
-    description: `Varsayılan _src/App.svelte_ dosyasını kontrol ettiğimizde daha
-      önce değindiğimiz gibi _Javascript_ kodları için _script_, _html_ kodları 
-      için _main_ ve stillendirme için _style_ tagları bulunuyor.`,
+    description: `Varsayılan <code><i>src/App.svelte</i></code> dosyasını 
+      kontrol ettiğimizde daha önce değindiğimiz gibi <code><i>Javascript</i>
+      </code> kodları için <code><i>script, html</i></code> kodları için <code>
+      <i>main</i></code> ve <code><i>stillendirme</i></code> için <code><i>style
+      </i></code> tagları bulunuyor.`,
     material: [
-      `_script_ etiketinde _lang_ özelliği Typescript bağımlılığını eklediğimiz
-      için _ts_ değerinde bulunmaktadır. Typescript kullanmak istediğin _svelte_
-      dosyalarında _lang_ özelliğine _ts_ değerini vermen yeterli olacaktır.`,
-      `_main_ etiketinde _html_ kodlarını tanımlayabileceğin gibi, bu etiketin
-      dışında da dilediğin gibi _html_ kodlarını tanımlayabilirsin. Svelte
-      tanımladığın kodları _html_ kodu olarak derlemesine rağmen, proje 
-      yapısının daha okunabilir olabilmesi için kapsayıcı bir etiketin altında
-      toplanması daha iyi olabilir.`,
-      `_style_ etiketi altında tanımladığın stil özelliklerinden, aynı dosyada
-      bulunan _html_ alanında seçiciler etkilenir. Global seçicileri 
-      tanımlayabilir veya global olarak tanımlamak istediğin seçicileri 
-      'public/global.css' dosyasında düzenleyebilirsin.`,
-      `Proje içerisinde compile edilen bütün yapılar '/public/build/bundle.js'
-      dosyasında yer almaktadir. _index.html_ dosyası buradaki yapıyı referans
-      alarak Svelte projesini kullanıcı karşısına getirmektedir.`,
+      `<code><i>script</i></code> etiketinde <code><i>lang</i></code> özelliği 
+      <code><i>Typescript</i></code> bağımlılığını eklediğimiz için <code><i>ts
+      </i></code> değerinde bulunmaktadır. <code><i>Typescript</i></code>
+      kullanmak istediğin <code><i>svelte</i></code> dosyalarında <code><i>lang
+      </i></code> özelliğine <code><i>ts</i></code> değerini vermen yeterli
+      olacaktır.`,
+      `<code><i>main</i></code> etiketinde <code><i>html</i></code> kodlarını 
+      tanımlayabileceğin gibi, bu etiketin dışında da dilediğin gibi <code><i>
+      html</i></code> kodlarını tanımlayabilirsin. <code><i>Svelte</i></code>
+      tanımladığın kodları <code><i>html</i></code> kodu olarak derlemesine 
+      rağmen, proje yapısının daha okunabilir olabilmesi için kapsayıcı bir
+      etiketin altında toplanması daha iyi olabilir.`,
+      `<code><i>style</i></code> etiketi altında tanımladığın stil
+      özelliklerinden, aynı dosyada bulunan <code><i>html</i></code> alanında
+      seçiciler etkilenir. Global seçicileri tanımlayabilir veya global olarak
+      tanımlamak istediğin seçicileri <code><i>public/global.css</i></code>
+      dosyasında düzenleyebilirsin.`,
+      `Proje içerisinde compile edilen bütün yapılar 
+      <code><i>/public/build/bundle.js</i></code> dosyasında yer almaktadir.
+      <code><i>index.html</i></code> dosyası buradaki yapıyı referans alarak
+      <code><i>Svelte</i></code> projesini kullanıcı karşısına getirmektedir.`,
     ],
     id: "examine-svelte-structure",
   };

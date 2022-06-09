@@ -8,17 +8,19 @@
     terms: [
       {
         command: `Typescript`,
-        description: `Typescript, Javascript kodunuzu daha verimli kılmanızı ve 
-          kod kaynaklı hataların önüne geçilmesini sağlayan Javascript temelli 
-          programlama dilidir. Projenizde yer alan _.svelte_ uzantılı dosyalarda 
-          kullanabileceğiniz gibi, _.ts_ dosyalarını da destekler.`,
+        description: `<code><i>Typescript, Javascript</i></code> kodunuzu daha
+          verimli kılmanızı ve kod kaynaklı hataların önüne geçilmesini sağlayan 
+          Javascript temelli programlama dilidir. Projenizde yer alan <code><i>
+          .svelte</i></code> uzantılı dosyalarda kullanabileceğiniz gibi, <code>
+          <i>.ts</i></code> dosyalarını da destekler.`,
       },
       {
         command: `Rollup`,
-        description: `Svelte kurulumunuzla birlikte root folder üzerinde 
-          rollup.config.js dosyası oluşturulacaktır. Rollup Javascript 
-          uygulamalar için kullanılan bir modül paketleyicidir, uygulamamızda 
-          yer alan kodları tarayıcının anlayabileceği şekilde ayrıştırır. Svelte
+        description: `<code><i>Svelte</i></code> kurulumunuzla birlikte root 
+          folder üzerinde rollup.config.js dosyası oluşturulacaktır. Rollup 
+          <code><i>Javascript</i></code> uygulamalar için kullanılan bir modül
+          paketleyicidir, uygulamamızda yer alan kodları tarayıcının 
+          anlayabileceği şekilde ayrıştırır. <code><i>Svelte</i></code> 
           kurulumuyla birlikte projenize eklenir.`,
       },
     ],

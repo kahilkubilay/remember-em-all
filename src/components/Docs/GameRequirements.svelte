@@ -7,31 +7,33 @@
   const article = {
     head: `Game Requirements`,
     description: `Kullanıcının isim, avatar gibi aldığımız değerlerin yanı sıra
-      oyuna ait standart değerler bulunabilir. Geliştireceğimiz oyun 
-      için bu değerlerden _level_ ve _score_ gibi iki değer tanımlayacağız. 
-      Kullanıcı, isim ve avatar seçiminin ardından _start_ butonuna tıkladığında
-      bu değerlerden _level 1_, _score 0_ değerlerini oluşturacağız. Kullanıcı 
+      oyuna ait standart değerler bulunabilir. Geliştireceğimiz oyun için bu 
+      değerlerden <code><i>level ve score</code></i> gibi iki değer 
+      tanımlayacağız. Kullanıcı, isim ve avatar seçiminin ardından 
+      <code><i>start</i></code> butonuna tıkladığında bu değerlerden 
+      <code><i>level 1, score 0</code></i> değerlerini oluşturacağız. Kullanıcı 
       doğru kartları eşleştirdikçe ve seviye atladığında burada yer alan 
       değerler dinamik olarak güncellenecek.`,
-    otherDescription: `+ /Store/Level.ts, Score.ts`,
-    anotherDescription: `_level_ isminde bir değer oluşturduk ve gezegenin 
-      iyiliği için uygulamamız içerisinde kullanacağız. Bu değer kullanıcı 
-      arayüz üzerindeki bütün kartları eşleştirebildiğinde güncellenecek. Bir
-      store değeri oluşturmak için _writable_ interface ile Store değerlerini
-      oluşturabilir ve güncelleyebilirsin.`,
+    anotherDescription: `<code><i>level</i></code> isminde bir değer oluşturduk
+      ve gezegenin iyiliği için uygulamamız içerisinde kullanacağız. Bu değer 
+      kullanıcı arayüz üzerindeki bütün kartları eşleştirebildiğinde 
+      güncellenecek. Bir store değeri oluşturmak için <code><i>writable</i>
+      </code> interface ile Store değerlerini oluşturabilir ve 
+      güncelleyebilirsin.`,
     moreDescription: `Her eşleşme sonrasında kullanıcının puan kazanabildiği 
-      _score_ değeri tanımlayalım.`, //💩
+      <code><i>score</i></code> değeri tanımlayalım.`, //💩
     anotherMoreDescription: `Bu değerleri farklı dosyalarda tanımlayabildiğin
-      gibi tek bir tek bir dosya içerisinde de _score&level_ değerlerini 
-      tanımlayabilirsin. Bir kullanıcı oluşturarak _name & avatar & score & 
-      level_ değerlerini birlikte kullanabilirsin.`, //💩
+      gibi tek bir tek bir dosya içerisinde de <code><i>score&level</i></code>
+      değerlerini tanımlayabilirsin. Bir kullanıcı oluşturarak 
+      <code><i>name & avatar & score & level</i></code> değerlerini birlikte
+      kullanabilirsin.`, //💩
     anotherOneMoreDescription: `Kullanıcıya ait statik bilgileri tutacağımız 
-    yeni bir class oluşturalım.`, //💩
-    endStory: `Oluşturduğumuz UserInfo class'ını kullanıcının isim, avatar
-      değerlerini set edeceğiz. Bu değerlere default olarak boş String atadım,
-      farklı içerikle doldurabilirsin. isim ve avatar değerleri hatalı değilse 
-      _isStart_ değerine _true_ olarak güncelleyerek oyunu başlatacağız.`,
-    descriptionBored: `+ /Store/User.ts`, //💩
+      yeni bir <code><i>class</i></code> oluşturalım.`, //💩
+    endStory: `Oluşturduğumuz <code><i>UserInfo class</i></code> kullanıcının
+      isim, avatar değerlerini set edeceğiz. Bu değerlere default olarak boş 
+      <code><i>String</i></code> atadım, farklı içerikle doldurabilirsin. isim
+      ve avatar değerleri hatalı değilse <code><i>isStart</i></code> değerine
+      <code><i>true</i></code> olarak güncelleyerek oyunu başlatacağız.`,
     id: "game-requirements",
   };
 
@@ -75,14 +77,13 @@
   <AccessArticle link={article.id} />
   <Header head={article.head} />
   <Paragraph text={article.description} />
-  <Paragraph text={article.otherDescription} />
+  <!-- <Paragraph text={article.otherDescription} /> -->
   <CodeSyntax {code} {title} />
   <Paragraph text={article.anotherDescription} />
   <Paragraph text={article.moreDescription} />
   <CodeSyntax code={moreCode} title={otherTitle} />
   <Paragraph text={article.anotherMoreDescription} />
   <Paragraph text={article.anotherOneMoreDescription} />
-  <Paragraph text={article.descriptionBored} />
   <CodeSyntax code={otherCode} title={moreTitle} />
   <Paragraph text={article.endStory} />
 </article>

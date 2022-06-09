@@ -6,18 +6,20 @@
 
   const article = {
     head: `Variable erişimi`,
-    description: `Script üzerinde tanımlanan değerleri html içerisinde 
-      çağırabilmek için {} kullanılmalıdır. Bu template ile değer tipi 
-      farketmeksizin değişkenleri çağırarak işlemler gerçekleştirilebilir.`,
-    otherDescription: `Bu tanımlama ile birlikte _user_ değerine tanımlanan her 
-      değeri dinamik olarak _html_ içerisinde çağırabilirsin. biraz daha biraz 
-      daha karıştıralım.. _user_ tanımlaması _sabuha_ değerine eşit olduğu 
-      durumlarda 'seni izliyor!' yerine 'bir kedi gördüm sanki!' değerini ekrana
-      getirelim.`,
-    anotherDescription: `_html_ içerisinde kullandığımız {} tagları arasında 
-      condition yapıları gibi döngü, fonksiyon çağırma işlemleri 
-      gerçekleştirebilirsin. Bu yapılara sahip birçok işlemi birlikte 
-      gerçekleştireceğiz.`,
+    description: `<code><i>Script</i></code> üzerinde tanımlanan değerleri 
+      <code><i>html</i></code> içerisinde çağırabilmek için <code><i>{}</i>
+      </code> kullanılmalıdır. Bu template ile değer tipi farketmeksizin 
+      değişkenleri çağırarak işlemler gerçekleştirilebilir.`,
+    otherDescription: `Bu tanımlama ile birlikte <code><i>user</i></code>
+      değerine tanımlanan her değeri dinamik olarak <code><i>html</i></code>
+      içerisinde çağırabilirsin. biraz daha biraz daha karıştıralım.. <code><i>
+      user</i></code> tanımlaması <code><i>sabuha</i></code> değerine eşit 
+      olduğu durumlarda 'seni izliyor!' yerine 'bir kedi gördüm sanki!' değerini
+      ekrana getirelim.`,
+    anotherDescription: `<code><i>html</i></code> içerisinde kullandığımız 
+      <code><i>{}</i></code> tagları arasında condition yapıları gibi döngü,
+      fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu yapılara sahip 
+      birçok işlemi birlikte gerçekleştireceğiz.`,
     id: "hello-team",
   };
 
@@ -44,7 +46,7 @@
     <style></style>
   `;
 
-  const title = "_app.svelte_";
+  const title = "app.svelte";
 </script>
 
 <article>

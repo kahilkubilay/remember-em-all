@@ -12,11 +12,12 @@
       kolaylık sağlar, tekrar eden bileşen parçalarını yeniden çağırabilmek daha
       az efor sarfettirir.`,
     otherDescription: `Bir önceki örnekte yaptığımız random sayı üreten basit 
-      yapıyı bir component haline getirelim. 'components/Content/'' dizininde 
-      'RandomNumber.svelte' dosyasını oluşturalım. Bu yeni componentimizi 
-      'App.svelte' dosyasında kullanalım.`,
-    anotherDescription: `'RandomNumber' componentini istediğimiz gibi çağırarak
-      kullanmaya başlayabiliriz..`,
+      yapıyı bir component haline getirelim. <code><i>components/Content/
+      </code></i> dizininde <code><i>RandomNumber.svelte</i></code> dosyasını
+      oluşturalım. Bu yeni componentimizi <code><i>App.svelte</i></code> 
+      dosyasında kullanalım.`,
+    anotherDescription: `<code><i>RandomNumber</i></code> componentini 
+      istediğimiz gibi çağırarak kullanmaya başlayabiliriz..`,
     image: `assets/components/component-with-sabuha.png`,
     anotherImage: `assets/components/random-number-component.gif`,
     alternativeText: `use of components`,
@@ -83,7 +84,7 @@
   `;
 
   const title = `Components > Content > RandomNumber.svelte`;
-  const otherTitle = `_App.svelte_`;
+  const otherTitle = `App.svelte`;
 </script>
 
 <article>

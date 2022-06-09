@@ -6,13 +6,14 @@
 
   const article = {
     head: `Svelte nasıl çalışır?`,
-    description: `Svelte bileşenleri _.svelte_ uzantılı dosyalar ile 
-      oluşturulur. HTML'e benzer olarak _script, style, html_ kod yapılarını 
-      oluşturabilirdiğiniz üç farklı bölüm bulunuyor.`,
+    description: `Svelte bileşenleri <code><i>.svelte</i></code> uzantılı 
+      dosyalar ile oluşturulur. HTML'e benzer olarak <code><i>script, style,
+      html</i></code> kod yapılarını oluşturabilirdiğiniz üç farklı bölüm 
+      bulunuyor.`,
     otherDescription: `Uygulama oluşturduğumuzda bu bileşenler derlenerek, 
-      pure _Javascript_ kodlarına dönüştürülür. Svelte derleme işlemini runtime
-      üzerinde gerçekleştiriyor. Bu derleme işlemiyle birlikte Virtual DOM 
-      bağımlılığını ortadan kalkıyor.`,
+      pure <code><i>Javascript</i></code> kodlarına dönüştürülür. Svelte derleme
+      işlemini runtime üzerinde gerçekleştiriyor. Bu derleme işlemiyle birlikte
+      Virtual DOM bağımlılığını ortadan kalkıyor.`,
     image: `assets/documentation/build-map.png`,
     alternativeText: `Svelte build file`,
     id: "svelte-run",

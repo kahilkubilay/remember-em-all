@@ -6,22 +6,23 @@
 
   const article = {
     head: `Selamlaaaaar 👋`,
-    description: `Herşeyden önce umuyorum ki bu basit döküman Svelte 
-    yolculuğunda rehber olabilir. Son zamanlarda Svelte ile uygulama 
-    geliştirmeye başladım. Svelte'in yapısına daha çok hakim olabilmek ve 
-    öğrendiklerimi paylaşabilmek için bu dökümanı oluşturdum. Döküman içerisinde
-    adım adım _Game_ bağlantısında görebileğin oyunu nasıl geliştirdiğimi 
-    anlattım, ilgi duyuyorsan aynı adımları takip ederek benzer bir uygulama 
-    oluşturabilir, veya küçük bir kaynak modelinde kullanabilirsin. Svelte 
-    içeriği iyi ayrıntılanmış dökümantasyonlara 
-    ([docs](https://svelte.dev/docs "Svelte Documentation"), 
-    [examples](https://svelte.dev/examples/hello-world "Svelte Examples")) 
-    sahip, dökümantasyonları inceledikten sonra uygulamayı takip etmen daha 
-    faydalı olabilir.`,
-    otherDescription: `İlk bölümlerde Svelte'i nasıl 
+    description: `Herşeyden önce umuyorum ki bu basit döküman 
+    <code><i>Svelte</i></code> yolculuğunda rehber olabilir. Son zamanlarda 
+    Svelte ile uygulama geliştirmeye başladım. Svelte yapısına daha çok hakim 
+    olabilmek ve öğrendiklerimi paylaşabilmek için bu dökümanı oluşturdum. 
+    Döküman içerisinde adım adım <code><i>Game</i></code> bağlantısında 
+    görebileceğin oyunu nasıl geliştirdiğimi  anlattım, ilgi duyuyorsan aynı 
+    adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir 
+    kaynak modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış 
+    dökümantasyonlara (<a href="https://svelte.dev/docs" 
+    title="Svelte Documentation">Svelte Documentation</a>, <a 
+    href="https://svelte.dev/examples/hello-world" title="Svelte Examples">
+    Svelte Examples</a>) sahip, dökümantasyonları inceledikten sonra uygulamayı
+    takip etmen daha faydalı olabilir.`,
+    otherDescription: `İlk bölümlerde <code><i>Svelte</i></code> nasıl 
     kullanabileceğine dair bilgilendirmeler yer alıyor. Bu kısımlara hakimsen, 
-    atlayarak [Start Game](#start-game "Access Start Game section") bölümünden 
-    devam edebilirsin.`,
+    atlayarak <a href="#start-game" title="Access Startm Game section">
+    Start Game</a> bölümünden devam edebilirsin.`,
     image: `assets/documentation/squirtle-squad.webp`,
     alternativeText: `hello team`,
     id: "hello-team",

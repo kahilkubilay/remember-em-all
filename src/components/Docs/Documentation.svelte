@@ -1,7 +1,6 @@
 <script>
   import AboutProject from "./AboutGame.svelte";
   import AvatarComponent from "./AvatarComponent.svelte";
-  import BasicTerms from "./BasicTerms.svelte";
   import CardComponent from "./CardComponent.svelte";
   import CommunicationBetweenComponent from "./CommunicationBetweenComponent.svelte";
   import Context from "./Context.svelte";
@@ -35,7 +34,6 @@
 <AboutProject />
 <WhatIsSvelte />
 <SvelteRun />
-<BasicTerms />
 <CreateASvelteProject />
 <ProjectDependencies />
 <ExamineSvelteStructure />

@@ -9,8 +9,9 @@
     head: `Reaktif değişkenler`,
     description: `Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde,
       DOM üzerinde yer alan referansı benzer olarak güncellenir.`,
-    otherDescription: `Tanımladığımız _numb_ değeri her güncellendiğinde, DOM 
-      üzerinde bu değer yeniden ve sıkılmadan güncellenmeye devam edecektir.`,
+    otherDescription: `Tanımladığımız <code><i>numb</i></code> değeri her 
+      güncellendiğinde, DOM üzerinde bu değer yeniden ve sıkılmadan 
+      güncellenmeye devam edecektir.`,
     image: `assets/documentation/reactive.gif`,
     alternativeText: `Svelte definition variable`,
     id: "reactive-variables",
@@ -58,7 +59,7 @@
     </style>
   `;
 
-  const title = `_app.svelte_`;
+  const title = `app.svelte`;
 </script>
 
 <article>

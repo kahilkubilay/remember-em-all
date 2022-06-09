@@ -4,6 +4,13 @@
 
 <ul>
   {#each matter as item}
-    <li>🎈 {item}</li>
+    <li>🎈 {@html item}</li>
   {/each}
 </ul>
+
+<style>
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+</style>

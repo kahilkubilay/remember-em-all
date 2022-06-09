@@ -60,3 +60,15 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+
+code > i {
+	font-size: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

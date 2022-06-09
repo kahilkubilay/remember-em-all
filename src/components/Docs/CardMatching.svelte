@@ -10,20 +10,22 @@
     description: `Bütün kartları açabildiğimize göre, açılan kartları 
       birbirleriyle eşleştirelim.`,
     otherDescription: `Bir önceki bölümde, kullanıcının üzerine tıkladığı 
-      kartları cardFlipperCapsule isminde bir store değerinde tuttuk. Bu 
-      değerlere istediğimiz gibi erişebilir, güncelleyebilir ve 
-      kurguladığımız yapı içerisinde kullanabiliriz. Kullanıcının etkileşime 
-      girdiği kartları tuttuğumuz gibi, açılan ve eşleşen kartları 
-      tutabileceğimiz 2 store değeri daha oluşturalım.`,
-    moreDescription: `Click eventi gerçekleştirelen 2 kartı OpenCardsCapsule
-      içerisinde saklayalım. OpenCardsCapsule içerisinde toplam data sayısı 
-      2'ye eşit olduğunda, kartların id değerlerini kontrol edelim. 
-      Eşitlik durumunda id değerini catchEmAll içerisinde tutalım. `,
-    requireDescription: `Class directives üzerinde kullandığımız .includes
-      metoduyla birlikte catchEmAll içerisinde yer alan id değerlerine "hover"
-      classini ekliyoruz. Hover içerisindeki stil tanımlaması catchEmAll 
-      içerisinde yer alan id değerleri ile arayüz üzerinde bu id sahip kartların
-      CardFront bileşenini göstermesini sağlayacak.`,
+      kartları <code><i>cardFlipperCapsule</i></code> isminde bir store 
+      değerinde tuttuk. Bu değerlere istediğimiz gibi erişebilir, 
+      güncelleyebilir ve kurguladığımız yapı içerisinde kullanabiliriz.
+      Kullanıcının etkileşime girdiği kartları tuttuğumuz gibi, açılan ve 
+      eşleşen kartları tutabileceğimiz 2 store değeri daha oluşturalım.`,
+    moreDescription: `Click eventi gerçekleştirelen 2 kartı 
+      <code><i>OpenCardsCapsule</i></code> içerisinde saklayalım. 
+      <code><i>OpenCardsCapsule</i></code> içerisinde toplam data sayısı 2'ye
+      eşit olduğunda, kartların id değerlerini kontrol edelim. Eşitlik durumunda
+      id değerini <code><i>catchEmAll</i></code> içerisinde tutalım. `,
+    requireDescription: `<code><i>Class directives</i></code> üzerinde 
+      kullandığımız .includes metoduyla birlikte catchEmAll içerisinde yer alan
+      id değerlerine "hover" classini ekliyoruz. Hover içerisindeki stil
+      tanımlaması catchEmAll içerisinde yer alan id değerleri ile arayüz 
+      üzerinde bu id sahip kartların <code><i>CardFront bileşenini</i></code>
+      göstermesini sağlayacak.`,
     codeExplanation: ``,
     descriptionCode: ``,
     endStory: ``,

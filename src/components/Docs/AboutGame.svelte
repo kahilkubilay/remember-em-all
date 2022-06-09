@@ -18,10 +18,10 @@
       girmesi, avatar listesinde yer alan görsellerden birini seçmesi 
       beklenecektir (Avatarlar ne kadar evcil gözükseler de, güç içlerinde 
       gizli 🐱‍👤). Bu seçilen değerler oyunun arayüzünde kartların yer aldığı 
-      bölümün altında _score & level_ değerleri ile birlikte gösterilecektir. 
-      Kullanıcı adı ve seçilen avatar stabil değerler olarak tutulurken, 
-      _score & level_ değerleri dinamik olarak kullanıcı davranışına göre 
-      güncellenecektir.`,
+      bölümün altında <code><i>score & level</i></code> değerleri ile birlikte 
+      gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak 
+      tutulurken, <code><i>score & level</i></code> değerleri dinamik olarak 
+      kullanıcı davranışına göre güncellenecektir.`,
     image: `assets/documentation/playground.png`,
     alternativeText: `view of cards on the playground`,
     id: "about-game",

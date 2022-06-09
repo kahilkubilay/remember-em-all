@@ -11,11 +11,11 @@
       üzerinde görebileceği iki Component bulunuyor. Kullanıcı adı ve avatar 
       seçtiği User Component, bu seçimler sonrasında erişilen Playground 
       Component. User Componenti ile oyunumuzu oluşturmaya başlayalım. 
-      [Yeni bir proje oluşturabilir]
-      (#svelte-projesi-olusturma "Yeni bir Svelte Projesi oluştur") veya pratik
-      yapabilmek için şuana kadarki kodları kaldırabilirsin. 
-      _src > components > User_ ve _src > components > Playground_ klasörlerini
-      oluşturalım.`,
+      <a href="#svelte-projesi-olusturma" title="Yeni bir Svelte Projesi 
+      oluştur">Yeni bir proje oluşturabilir</a> veya pratik yapabilmek için 
+      şuana kadarki kodları kaldırabilirsin. <code><i>src > components > User
+      </i></code> ve <code><i>src > components > Playground</i></code> 
+      klasörlerini oluşturalım.`,
     image: `assets/documentation/start-folder.png`,
     alternativeText: `start folder`,
     id: "start-game",

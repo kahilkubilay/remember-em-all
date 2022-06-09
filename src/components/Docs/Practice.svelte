@@ -5,16 +5,18 @@
 
   const article = {
     head: `Biraz pratik`,
-    description: `Birkaç örnek yaparak Svelte'i anlamaya, yorumlamaya çalışalım.
-      Kod örnekleri oyun üzerinde sıkça kullanacağımız yapılar için bir temel 
-      oluşturacak.`,
-    otherDescription: `_App.svelte_ dosyasında _name_ isminde bir değişken 
-      tanımlanmış. Typescript notasyonu baz alındığı için değer tipi olarak 
-      _string_ verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği 
+    description: `Birkaç örnek yaparak <code><i>Svelte'i</i></code> anlamaya,
+      yorumlamaya çalışalım. Kod örnekleri oyun üzerinde sıkça kullanacağımız
+      yapılar için bir temel oluşturacak.`,
+    otherDescription: `<code><i>App.svelte</i></code> dosyasında <code><i>name
+      </i></code> isminde bir değişken tanımlanmış. <code><i>Typescript</i>
+      </code> notasyonu baz alındığı için değer tipi olarak <code><i>string</i>
+      </code> verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği 
       için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar ile, 
       burada birlikte oluşturacaklarımız farklılık gösterebilir.. panik yok, 
-      Typescript'e [hakim olabileceğine](https://youtube.com/shorts/oyIO1_8uNPc
-      "senin kocaman kalbin <33") eminim.`,
+      <code><i>Typescript'e</i></code> <a 
+      href="https://youtube.com/shorts/oyIO1_8uNPc" title="senin kocaman kalbin
+      <33">hakim olabileceğine</a> eminim.`,
     id: "pratice",
   };
 </script>

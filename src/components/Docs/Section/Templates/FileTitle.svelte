@@ -2,6 +2,12 @@
   export let title;
 </script>
 
-<i>{title}</i>
+<code>
+  <i>{title !== "" ? title : ""}</i>
+</code>
 
-<style></style>
+<style>
+  i {
+    color: #905;
+  }
+</style>

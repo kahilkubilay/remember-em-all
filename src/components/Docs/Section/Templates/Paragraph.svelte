@@ -4,7 +4,7 @@
   const textData = text;
 </script>
 
-<p>{textData}</p>
+<p>{@html textData}</p>
 
 <style>
   p {
@@ -15,7 +15,6 @@
   @media screen and (max-width: 800px) {
     p {
       font-size: 18px;
-      /* text-indent: 2px; */
     }
   }
 </style>

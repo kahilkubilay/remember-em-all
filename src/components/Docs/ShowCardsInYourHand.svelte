@@ -12,9 +12,10 @@
       alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanına 
       ekleyeceğiz.`,
     otherDescription: `Oyun arayüzünde birtakım işlemleri gerçekleştirebilmek 
-      için bazı fonksiyonlar tanımlayacağız. SRC klasörümün altında GameAction
-      isminde yeni bir klasör oluşturuyorum. Bu klasör altında tanımlayacağımız
-      fonksiyonlar aşağıdaki işlemleri gerçekleştirecek:`,
+      için bazı fonksiyonlar tanımlayacağız. SRC klasörümün altında 
+      <code><i>GameAction</i></code> isminde yeni bir klasör oluşturuyorum.
+      Bu klasör altında tanımlayacağımız fonksiyonlar aşağıdaki işlemleri 
+      gerçekleştirecek:`,
     anotherDescription: `Adım adım ilerleyelim.. Seviyeye bağımlı 
       olarak Arayüz üzerinde yer alacak sayı aralığını oluşturalım.`,
     anAnotherDescription: `Parametre olarak verdiğimiz sayı değerleri 1, 5 ve 4
@@ -23,29 +24,32 @@
       içerisinde yer alan sayıları random olarak karıştırmamızın önüne 
       geçebilecek bir durum bulunmuyor.`, // 💩
     moreDescription: `Kartları oyun arayüzü üzerinde listeleyebilmemiz için 
-      gerekli fonksiyonlarımızı oluşturduk. Bunları kullanarak Playground 
-      alanını coşturalım.`,
-    descriptionCode: `Playground bileşeninde mixedListOfPokemon isminde store 
-      değeri oluşturduk. Bu değer random sayıları, id değerlerimiz ile birlikte
-      tutuyor. Bir döngü içerisinde bu değerleri props olarak Card ismindeki
+      gerekli fonksiyonlarımızı oluşturduk. Bunları kullanarak 
+      <code><i>Playground</i></code> alanını coşturalım.`,
+    descriptionCode: `<code><i>Playground bileşeninde 
+      mixedListOfPokemon</i></code> isminde store değeri oluşturduk. Bu değer
+      random sayıları, id değerlerimiz ile birlikte tutuyor. Bir döngü 
+      içerisinde bu değerleri props olarak <code><i>Card</i></code> ismindeki
       bileşene aktaralım. Aktarılan değerleri CardFront ve CardBack isimli 
       bileşenlerimizde kullancağız.`,
-    codeExplanation: `ListCards.svelte dosyasında yer alan list fonksiyonuna 
-      ihtiyacım olduğu için modülü dışarı aktardım. Fonksiyonun basit bir görevi
-      bulunuyor. Parametre olarak verilen değerle birlikte 5 sayı büyüklüğünde
-      bir aralığı array tipinde döndürmelidir. 'range' değerimiz erişmek 
-      istediğimiz toplam aralık uzunluğunu ifade ediyor. 
-      'maxNumberReachedOnRange' değeri erişilecek olan maximum sayı değerini
-      verirken, minNumberReachedOnRange değeri maximum değeri kullanarak minumum
-      sayıyı elde etmemize imkan sağlıyor. Playground bileşenimizde çağırarak
-      nasıl bir sonuç verdiğini kontol edelim.`,
-    otherCodeExplanation: `MixCards bileşeninde oluşturacağımız fonksiyonu 
-      kullanarak, list fonksiyonundan elde ettiğimiz array içerisinde yer alan
-      değerleri kopyalayacağız. Sayı aralığımız 5 olduğunda, yeni oluşacak olan
-      array değerimizde toplamda 10 değer yer alacak. Bu değerler belirli bir
-      sırayı takip etmek yerine array içerisinde random yer alacaklar. İlerde 
-      kartları eşleştirebilme işlemi için, her kartın sıra numarasına göre 
-      id değeri atayalım.`,
+    codeExplanation: `<code><i>ListCards.svelte</i></code> dosyasında yer alan
+      list fonksiyonuna ihtiyacım olduğu için modülü dışarı aktardım.
+      Fonksiyonun basit bir görevi bulunuyor. Parametre olarak verilen değerle
+      birlikte 5 sayı büyüklüğünde bir aralığı array tipinde döndürmelidir.
+      <code><i>range</i></code> değerimiz erişmek istediğimiz toplam aralık
+      uzunluğunu ifade ediyor. <code><i>maxNumberReachedOnRange</i></code> 
+      değeri erişilecek olan maximum sayı değerini verirken, 
+      <code><i>minNumberReachedOnRange</i></code> değeri maximum değeri 
+      kullanarak minumum sayıyı elde etmemize imkan sağlıyor. 
+      <code><i>Playground bileşenimizde</i></code> çağırarak nasıl bir sonuç
+      verdiğini kontol edelim.`,
+    otherCodeExplanation: `<code><i>MixCards bileşeninde</i></code> 
+      oluşturacağımız fonksiyonu kullanarak, list fonksiyonundan elde ettiğimiz
+      array içerisinde yer alan değerleri kopyalayacağız. Sayı aralığımız 5 
+      olduğunda, yeni oluşacak olan array değerimizde toplamda 10 değer yer 
+      alacak. Bu değerler belirli bir sırayı takip etmek yerine array içerisinde
+      random yer alacaklar. İlerde kartları eşleştirebilme işlemi için, her
+      kartın sıra numarasına göre id değeri atayalım.`,
     endStory: `Kartlarımızı arayüz üzerine başarılı bir şekilde sıraladık. 
       Bir önceki bölümde yaptığımız gibi, .flipper class değerinin bulunduğu 
       elemente .hover eklediğimizde kartın CardFront componentini 

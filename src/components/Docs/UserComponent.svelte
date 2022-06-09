@@ -8,20 +8,23 @@
 
   const article = {
     head: `User Component`,
-    description: `_User_ klasörü altında Kullanıcıdan alacağımız her değer için
-      _Avatar_ ve _Name_ klasörlerini oluşturalım. Root klasörde _User_ 
+    description: `<code><i>User</i></code> klasörü altında Kullanıcıdan 
+      alacağımız her değer için <code><i>Avatar</code></i> ve <code><i>Name</i>
+      </code> klasörlerini oluşturalım. Root klasörde <code><i>User</i></code>
       Component altında tanımlanan bütün yapıların yer alacağı bir kapsayıcı 
-      dahil edeceğiz. _UserGround.svelte_ isminde bir dosya oluşturuyorum, 
-      parçaladığımız bütün componentler burada yer alacak.`,
-    otherDescription: `_Playground_ klasörü içerisinde buna benzer bir yapıyı
-      oluşturarak, oyun içerisindeki bütün componentleri aynı dosya üzerinde
-      çağıracağız. _Playground_ altında _Wrapper > Playground.svelte_ dizin ve 
-      dosyasını oluşturalım.`,
+      dahil edeceğiz. <code><i>UserGround.svelte</i></code> isminde bir dosya 
+      oluşturuyorum, parçaladığımız bütün componentler burada yer alacak.`,
+    otherDescription: `<code><i>Playground</i></code> klasörü içerisinde buna
+      benzer bir yapıyı oluşturarak, oyun içerisindeki bütün componentleri aynı
+      dosya üzerinde çağıracağız. <code><i>Playground</i></code> altında 
+      <code><i>Wrapper > Playground.svelte</i></code> dizin ve dosyasını
+      oluşturalım.`,
     anotherDescription: `User Componenti üzerinde çalışırken, yapacağımız 
       değişiklikleri inceleyebilmek için User Component'ini 
-      _Playground > Wrapper > Playground.svelte_ dosyasında çağıralım.`,
-    anAnotherDescription: `_User Component_ çağırdıktan sonra üzerinde 
-      geliştirme yapmaya başlayalım.`, // 💩
+      <code><i>Playground > Wrapper > Playground.svelte</i></code> dosyasında
+      çağıralım.`,
+    anAnotherDescription: `<code><i>User Component</i></code> çağırdıktan sonra
+      üzerinde geliştirme yapmaya başlayalım.`, // 💩
     moreAnotherDescription: `Component üzerinde 4 farklı bölüm yer alıyor.`, // 💩
     material: [
       `Kullanıcıyı bilgilendiren bir header yazısı`,
@@ -74,7 +77,7 @@
   `;
 
   const title = `User > UserGround.svelte`;
-  const otherTitle = `_Playground > Wrapper > Playground.svelte_`;
+  const otherTitle = `Playground > Wrapper > Playground.svelte`;
 </script>
 
 <article>

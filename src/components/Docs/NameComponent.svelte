@@ -4,18 +4,18 @@
   import Image from "./Section/Templates/Image.svelte";
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
-  import Matter from "./Section/Templates/Matter.svelte";
 
   const article = {
     head: `Name Component`,
     description: `Pokemon eğitmenimizin bir isim girebilmesi için gerekli olan 
       componenti oluşturalım.`,
-    otherDescription: `+ /components/User/Avatar/Name, /components/User/Avatar/Name/UserName.svelte`,
-    anotherDescription: `Diğer componentlerde yaptığımız gibi, _UserName_ 
-      componentinin _Userground_ componentinde kullanalım.`,
+    anotherDescription: `Diğer componentlerde yaptığımız gibi, <code><i>UserName
+      </i></code> componentinin <code><i>Userground</i></code> componentinde 
+      kullanalım.`,
     moreDescription: `Geriye son bir componentimiz kaldı. "Start" yazısına sahip
-      bir buton componentini oluşturarak, _User_ klasöründe _Start.svelte_ 
-      ismiyle kaydedelim. Ve son olarak _UserGround_ componentinde çağıralım.`, //💩
+      bir buton componentini oluşturarak, <code><i>User</i></code> klasöründe
+      <code><i>Start.svelte</i></code> ismiyle kaydedelim. Ve son olarak 
+      <code><i>UserGround</i></code> componentinde çağıralım.`, //💩
     oneMoreDescription: `Ta daaaa... Şuana kadar yaptığımız componentler dinamik
       işlemler gerçekleştirmedi. Arayüzü oluşturmak için yeteri kadar malzememiz
       ortaya çıktı, ve bunları istediğin gibi stillendirebilirsin. Svelte 
@@ -52,7 +52,6 @@
   <AccessArticle link={article.id} />
   <SubHeader head={article.head} />
   <Paragraph text={article.description} />
-  <Paragraph text={article.otherDescription} />
   <CodeSyntax {code} {title} />
   <Paragraph text={article.anotherDescription} />
   <Paragraph text={article.moreDescription} />

@@ -7,11 +7,12 @@
 
   const article = {
     head: `Header Component`,
-    description: `Root folder üzerinde _Header.svelte_ isminde bir Component 
-      oluşturuyorum. Önceki örneklerde gerçekleştirdiğimiz gibi, _Header.svelte_
-      Componentini _Userground.svelte_ componenti üzerinde çağıralım. 
-      Oluşturduğumuz _Header.svelte_ componentinin basit bir görevi bulunuyor, 
-      statik bir metin bardındırmak..`,
+    description: `Root folder üzerinde <code><i>Header.svelte</i></code>
+      isminde bir Component oluşturuyorum. Önceki örneklerde gerçekleştirdiğimiz
+      gibi, <code><i>Header.svelte</i></code> Componentini <code><i>
+      Userground.svelte</i></code> componenti üzerinde çağıralım. Oluşturduğumuz
+      <code><i>Header.svelte</i></code> componentinin basit bir görevi 
+      bulunuyor, statik bir metin bardındırmak..`,
     otherDescription: `Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..`,
     anotherDescription: `Ehh... şimdi biraz daha az kötü gözüktüğü 
       söylenebilir💩💩💩`,
