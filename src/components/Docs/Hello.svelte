@@ -9,7 +9,7 @@
     description: `Herşeyden önce umuyorum ki bu basit döküman 
     <code><i>Svelte</i></code> yolculuğunda rehber olabilir. Son zamanlarda 
     Svelte ile uygulama geliştirmeye başladım. Svelte yapısına daha çok hakim 
-    olabilmek ve öğrendiklerimi paylaşabilmek için bu dökümanı oluşturdum. 
+    olabilmek ve öğrendiklerimi paylaşabilmek için bu yazıyı hazırladım. 
     Döküman içerisinde adım adım <code><i>Game</i></code> bağlantısında 
     görebileceğin oyunu nasıl geliştirdiğimi  anlattım, ilgi duyuyorsan aynı 
     adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir 

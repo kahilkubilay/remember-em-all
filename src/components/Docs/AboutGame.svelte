@@ -24,6 +24,8 @@
       kullanıcı davranışına göre güncellenecektir.`,
     image: `assets/documentation/playground.png`,
     alternativeText: `view of cards on the playground`,
+    otherImage: `assets/userground.png`,
+    otherImageAlternativeText: `view user component on the playground`,
     id: "about-game",
   };
 </script>
@@ -34,4 +36,8 @@
   <Paragraph text={article.description} />
   <Image image={article.image} alternativeText={article.alternativeText} />
   <Paragraph text={article.otherDescription} />
+  <Image
+    image={article.otherImage}
+    alternativeText={article.otherImageAlternativeText}
+  />
 </article>

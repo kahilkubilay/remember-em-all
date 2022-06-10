@@ -17,7 +17,7 @@
       catchEmAll.set([]);
       cardFlipperCapsule.set([]);
       openCardsCapsule.set([]);
-      
+
       callback();
     }, flipTime);
   };
