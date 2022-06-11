@@ -5,7 +5,7 @@
 
   const article = {
     head: `Context`,
-    description: `Bir veriyi iletmeniz gereken component sayısı arttıkça, 
+    description: `Bir veriyi iletmen gereken component sayısı arttıkça, 
       yapısını kurgulamak ve takibini sağlamak zor ve bir yerden sonra da 
       oldukça sıkıcı bir duruma dönüşebilir. Context ile dataların parent 
       üzerinden child componentler üzerinde erişilmesini sağlar.`,

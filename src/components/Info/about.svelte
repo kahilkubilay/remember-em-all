@@ -42,7 +42,7 @@
   .content-map {
     position: fixed;
     width: 18%;
-    top: 50%;
+    top: 11.3%;
     right: 2%;
     margin-left: 40px;
     border-radius: 5px;
@@ -51,11 +51,25 @@
     justify-content: center;
     padding: 4px;
     background-color: #f5f5f5;
+    border-width: 0 5px 3px 0;
+    border-style: solid;
+    border-color: #ff3e00;
+  }
+
+  .content-map:hover {
+    border-width: 0;
+  }
+
+  .content-map:hover > ul {
+    overflow: visible;
+    height: 100%;
   }
 
   .content-map ul {
     padding: 0;
     margin: 0 0 15px 0;
+    height: 0;
+    overflow: hidden;
   }
 
   .content-map li {
@@ -64,8 +78,7 @@
   }
 
   a {
-    font-size: 16px;
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 15px;
     text-decoration: none;
     color: #000;
   }

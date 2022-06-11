@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { score } from "../../store/Score";
 </script>
 

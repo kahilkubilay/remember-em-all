@@ -8,12 +8,13 @@
     head: `Svelte yapısını inceleme`,
     description: `Varsayılan <code><i>src/App.svelte</i></code> dosyasını 
       kontrol ettiğimizde daha önce değindiğimiz gibi <code><i>Javascript</i>
-      </code> kodları için <code><i>script, html</i></code> kodları için <code>
-      <i>main</i></code> ve <code><i>stillendirme</i></code> için <code><i>style
-      </i></code> tagları bulunuyor.`,
+      </code> kodlarını tanımlayabileceğin <code><i>script, html</i></code> 
+      kodları için <code> <i>main</i></code> ve <code><i>stillendirme</i>
+      </code> üzerinde geliştirme yapmanı sağlayan <code><i>style</i></code> 
+      tagları bulunuyor.`,
     material: [
       `<code><i>script</i></code> etiketinde <code><i>lang</i></code> özelliği 
-      <code><i>Typescript</i></code> bağımlılığını eklediğimiz için <code><i>ts
+      <code><i>Typescript</i></code> bağımlılığından kaynaklı <code><i>ts
       </i></code> değerinde bulunmaktadır. <code><i>Typescript</i></code>
       kullanmak istediğin <code><i>svelte</i></code> dosyalarında <code><i>lang
       </i></code> özelliğine <code><i>ts</i></code> değerini vermen yeterli

@@ -5,8 +5,8 @@
 
   const article = {
     head: `Props`,
-    description: `Props kullanarak dataları bir component üzerinden farklı 
-      componentlere aktarabilirsiniz. Componentler arası bu ilişki parent-child
+    description: `Props kullanarak verileri bir component üzerinden farklı 
+      componentlere aktarabiliriz. Componentler arası bu ilişki parent-child
       ile ifade edilir. Parent üzerinden child componentlere veri 
       aktarabiliyorken, aynı zamanda child component üzerinden parent 
       componente veri iletebilirsiniz.`,

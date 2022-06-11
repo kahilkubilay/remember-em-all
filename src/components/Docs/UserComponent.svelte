@@ -26,6 +26,10 @@
     anAnotherDescription: `<code><i>User Component</i></code> çağırdıktan sonra
       üzerinde geliştirme yapmaya başlayalım.`, // 💩
     moreAnotherDescription: `Component üzerinde 4 farklı bölüm yer alıyor.`, // 💩
+    codeExplanation: `Bileşenimizde basit bir header etiketi tanımladık. Header
+      içerisinde componentDetail değerini çağırıyoruz.`,
+    moreCodeExplanation: `Bileşenimizde yapacağımız geliştirmeleri tarayıcıda 
+      inceleyebilmek için Playground bileşenine import ederek kullanalım.`,
     material: [
       `Kullanıcıyı bilgilendiren bir header yazısı`,
       `Kullanıcının görseller üzerinden avatar seçimi yapabildiği bir bölüm`,
@@ -87,7 +91,9 @@
   <Paragraph text={article.otherDescription} />
   <Paragraph text={article.anotherDescription} />
   <CodeSyntax {code} {title} />
+  <Paragraph text={article.codeExplanation} />
   <CodeSyntax code={otherCode} title={otherTitle} />
+  <Paragraph text={article.moreCodeExplanation} />
   <Paragraph text={article.anAnotherDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
   <Paragraph text={article.moreAnotherDescription} />

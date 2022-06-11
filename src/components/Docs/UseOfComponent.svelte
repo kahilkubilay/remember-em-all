@@ -17,12 +17,15 @@
       oluşturalım. Bu yeni componentimizi <code><i>App.svelte</i></code> 
       dosyasında kullanalım.`,
     anotherDescription: `<code><i>RandomNumber</i></code> componentini 
-      istediğimiz gibi çağırarak kullanmaya başlayabiliriz..`,
+      istediğimiz gibi çağırarak kullanmaya başlayabiliriz. Bununla birlikte 
+      component içerisinde kullanılan <code><i>button & h3</i></code> 
+      elementlerine ait bileşenler de oluşturulmalıdır. Oyun için kullancağımız
+      bileşenlerde bu kullanımları görebilirsin.`,
     image: `assets/components/component-with-sabuha.png`,
     anotherImage: `assets/components/random-number-component.gif`,
-    alternativeText: `use of components`,
+    alternativeText: `simple component usage demonstration`,
     anotherAlternativeText: `Random Number Component`,
-    id: "use-of-component",
+    id: "use-of-components",
   };
 
   const code = `
@@ -79,8 +82,6 @@
       <RandomNumber />
       <RandomNumber />
     </main>
-
-    <style></style>
   `;
 
   const title = `Components > Content > RandomNumber.svelte`;

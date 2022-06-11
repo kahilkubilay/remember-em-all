@@ -13,7 +13,7 @@
       güncellendiğinde, DOM üzerinde bu değer yeniden ve sıkılmadan 
       güncellenmeye devam edecektir.`,
     image: `assets/documentation/reactive.gif`,
-    alternativeText: `Svelte definition variable`,
+    alternativeText: `definition of reactive variable in Svelte`,
     id: "reactive-variables",
   };
 

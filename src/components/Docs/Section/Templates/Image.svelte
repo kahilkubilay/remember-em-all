@@ -9,7 +9,7 @@
   img {
     display: flex;
     width: 90%;
-    margin: 0 auto;
+    margin: 10px auto;
     border-radius: 5px;
   }
 

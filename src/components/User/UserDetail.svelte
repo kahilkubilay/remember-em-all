@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Score from "../GameElements/Score.svelte";
   import Level from "../GameElements/Level.svelte";
   import Name from "./name/UserSelectName.svelte";

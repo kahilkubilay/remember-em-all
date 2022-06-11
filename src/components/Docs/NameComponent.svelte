@@ -9,9 +9,9 @@
     head: `Name Component`,
     description: `Pokemon eğitmenimizin bir isim girebilmesi için gerekli olan 
       componenti oluşturalım.`,
-    anotherDescription: `Diğer componentlerde yaptığımız gibi, <code><i>UserName
-      </i></code> componentinin <code><i>Userground</i></code> componentinde 
-      kullanalım.`,
+    anotherDescription: `Diğer componentlerde yaptığımız gibi, <code><i>
+      UserName</i></code> componentinin <code><i>Userground</i></code> 
+      componentinde kullanalım.`,
     moreDescription: `Geriye son bir componentimiz kaldı. "Start" yazısına sahip
       bir buton componentini oluşturarak, <code><i>User</i></code> klasöründe
       <code><i>Start.svelte</i></code> ismiyle kaydedelim. Ve son olarak 
@@ -55,6 +55,6 @@
   <CodeSyntax {code} {title} />
   <Paragraph text={article.anotherDescription} />
   <Paragraph text={article.moreDescription} />
-  <Paragraph text={article.oneMoreDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
+  <Paragraph text={article.oneMoreDescription} />
 </article>

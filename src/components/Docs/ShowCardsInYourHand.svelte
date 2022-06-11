@@ -9,11 +9,11 @@
   const article = {
     head: `Elindeki Kartları Göster ♠️`,
     description: `Arayüz üzerindeki bu güncellemelerimizin ardından, oyun 
-      alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanına 
-      ekleyeceğiz.`,
+      alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanında 
+      göstereceğiz.`,
     otherDescription: `Oyun arayüzünde birtakım işlemleri gerçekleştirebilmek 
-      için bazı fonksiyonlar tanımlayacağız. SRC klasörümün altında 
-      <code><i>GameAction</i></code> isminde yeni bir klasör oluşturuyorum.
+      için bazı fonksiyonlar tanımlayacağız. SRC klasörümüzün altında 
+      <code><i>GameAction</i></code> isminde yeni bir klasör oluşturalım.
       Bu klasör altında tanımlayacağımız fonksiyonlar aşağıdaki işlemleri 
       gerçekleştirecek:`,
     anotherDescription: `Adım adım ilerleyelim.. Seviyeye bağımlı 

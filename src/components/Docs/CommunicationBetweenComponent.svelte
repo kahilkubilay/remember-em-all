@@ -8,13 +8,15 @@
     head: `Componentler Arası İletişim`,
     description: `Küçük yapılı projelerden, komplex yapılılara kadar birçok 
       veriyi component üzerinden alıp farklı bir yerde kullanma, güncelleme gibi 
-      ihtiyaçlarımız olacak. Kullanılan framework, library veya compiler'in bu 
-      ihtiyacınıza esnek çözümler sağlayabilmesi gerekiyor. Svelte bu 
-      ihtiyaçlarınız için birden fazla ve basit yapılara sahip çözümlere 
-      sahip.`,
+      ihtiyaçlarımız olacaktır. Modern framework yapılarının çözüm olarak 
+      kullanılan yapılarından biri de buradaki dataları <code><i>DOM, 
+      storage</i></code> gibi yapılara ihtiyaç duymadan uygulaman üzerinde 
+      kullanabilmeni sağlamaktır. Kullanılan framework, library veya 
+      compiler'in bu ihtiyacımıza esnek çözümler sağlayabilmesi gerekiyor. 
+      Svelte bu ihtiyaçlarımız için birden fazla çözümlere sahip.`,
     image: `assets/documentation/communication-is-key.jpg`,
     alternativeText: `SpongeBob 'communication is key' meme`,
-    id: "communication-between-component",
+    id: "communication-between-components",
   };
 </script>
 

@@ -7,7 +7,7 @@
     head: `Slots`,
     description: `Parent-child ilişkisinde olduğu gibi verilerin alt componente
       aktarılmasında kullanabilirsin. Bir template dahilinde (html içerikleri
-      gibi) verilerin aktarılmasına izin verir.`,
+      gibi) verilerin aktarılmasına sağlayabilirsin.`,
     id: "slots",
   };
 </script>

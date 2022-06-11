@@ -8,6 +8,3 @@
 
 <FileTitle {title} />
 <Prism language="svelte" source={code} />
-
-<style>
-</style>

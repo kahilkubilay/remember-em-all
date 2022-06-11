@@ -7,10 +7,10 @@
 
   const article = {
     head: `Score & Level Updates`,
-    description: `Son bölümümüzde kullanıcının kart eşleştirmesi ile birlikte 
-      puan kazanmasını ve bütün kartları başarılı eşleştirildikten sonra level 
-      atlaması gibi kurgular oluşturalım. Bunlara ek olarak oyunu daha eğlenceli
-      bir hale getirebilmek için kullanıcı kart açtığında veya kartları başarılı
+    description: `Kullanıcının kart eşleştirmesi ile birlikte puan kazanmasını 
+      ve bütün kartları başarılı eşleştirildikten sonra level atlaması gibi 
+      kurgular oluşturalım. Bunlara ek olarak oyunu daha eğlenceli bir hale 
+      getirebilmek için kullanıcı kart açtığında veya kartları başarılı 
       eşleştirdiğinde ses veya bazı stillendirmeler kullanabilirsiniz. Bütün 
       kartlar eşleştirildiklerinde kullanıcıyı tebrik eden bir içerik yazısı 
       oluşturabilirsiniz. Kurguladığımız yapıda kullanıcı yanlış kartları 

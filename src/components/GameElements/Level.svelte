@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { level } from "../../store/Level";
 </script>
 

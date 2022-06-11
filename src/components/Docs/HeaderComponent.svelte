@@ -8,14 +8,17 @@
   const article = {
     head: `Header Component`,
     description: `Root folder üzerinde <code><i>Header.svelte</i></code>
-      isminde bir Component oluşturuyorum. Önceki örneklerde gerçekleştirdiğimiz
+      isminde bir bileşen oluşturalım. Önceki örneklerde gerçekleştirdiğimiz
       gibi, <code><i>Header.svelte</i></code> Componentini <code><i>
       Userground.svelte</i></code> componenti üzerinde çağıralım. Oluşturduğumuz
       <code><i>Header.svelte</i></code> componentinin basit bir görevi 
-      bulunuyor, statik bir metin bardındırmak..`,
+      bulunuyor, statik bir metin bardındırmak.`,
     otherDescription: `Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..`,
     anotherDescription: `Ehh... şimdi biraz daha az kötü gözüktüğü 
-      söylenebilir💩💩💩`,
+      söylenebilir💩`,
+    moreDescription: `Statik bir metin yerine, array içerisinde birden fazla 
+      metin tutarak kullancı her eriştiğinde random bir yazıyı karşısına 
+      getirmek arayüzü biraz daha keyifli hale getirebilir.`,
     image: `assets/components/User/header-component.png`,
     alternativeText: `call header component`,
     id: "header-component",

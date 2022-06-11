@@ -6,11 +6,11 @@
       "English": [
         {
           "title": "hi",
-          "target": "#hi-to-you"
+          "target": "#hello-team"
         },
         {
-          "title": "about the project",
-          "target": "#about-the-project"
+          "title": "about the game",
+          "target": "#about-the-game"
         },
         {
           "title": "what is svelte?",
@@ -18,7 +18,7 @@
         },
         {
           "title": "how does Svelte work?",
-          "target": "#how-does-svelte-work"
+          "target": "#how-svelte-works"
         },
         {
           "title": "create a Svelte project",
@@ -29,12 +29,88 @@
           "target": "#dependencies"
         },
         {
-          "title": "directory and component structure",
-          "target": "directory-and-component-structure"
+          "title": "examine Svelte structure",
+          "target": "#examine-svelte-structure"
         },
         {
-          "title": "deploy with github page",
-          "target": "deploy-with-github-pages"
+          "title": "practice",
+          "target": "#practice"
+        },
+        {
+          "title": "variable access",
+          "target": "#variable-access"
+        },
+        {
+          "title": "reactive variables",
+          "target": "#reactive-variables"
+        },
+        {
+          "title": "use of components",
+          "target": "#use-of-components"
+        },
+        {
+          "title": "communication between components",
+          "target": "#communication-between-components"
+        },
+        {
+          "title": "start game",
+          "target": "#start-game"
+        },
+        {
+          "title": "user component",
+          "target": "#user-component"
+        },
+        {
+          "title": "header component",
+          "target": "#header-component"
+        },
+        {
+          "title": "avatar component",
+          "target": "#avatar-component"
+        }, 
+        {
+          "title": "Name component",
+          "target": "#name-component"
+        },
+        {
+          "title": "game requirements",
+          "target": "#game-requirements"
+        },
+        {
+          "title": "reactive User component",
+          "target": "#reactive-user-component"
+        },
+        {
+          "title": "game interface",
+          "target": "#game-interface"
+        },
+        {
+          "title": "Card component",
+          "target": "#card-component"
+        },
+        {
+          "title": "show cards in your hand",
+          "target": "#show-cards-in-your-hand"
+        },
+        {
+          "title": "cards spin effect",
+          "target": "#cards-spin-effects"
+        },
+        {
+          "title": "card matching",
+          "target": "#card-matching"
+        },
+        {
+          "title": "score & Level updates",
+          "target": "#score-and-level-updates"
+        }, 
+        {
+          "title": "user detail component",
+          "target": "#user-detail-component"
+        },
+        {
+          "title": "references",
+          "target": "#references"
         }
       ]
     }

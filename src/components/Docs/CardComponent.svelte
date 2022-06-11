@@ -10,7 +10,7 @@
     description: `Oyun alanında kullanacağımız kartlar için componentlere 
       ihtiyacımız olacak. <code><i>CardFront componentinde</i></code> kartın
       pokemon resmini tutarken, <code><i>CardBack componentinde</i></code>
-      '?' resmini tutacağız. Her iki bileşenin kapsayıcısı <code><i>Card 
+      '?' resmini tutacağız. Her iki bileşenin ortak kapsayıcısı <code><i>Card 
       bileşeni</i></code> olacak.`,
     otherDescription: `<code><i>Card componentini</i></code> test ederken,
       sürekli olarak <code><i>User componenti</i></code> üzerinde isim ve 
@@ -33,7 +33,8 @@
       kapsayıcı içerisine alarak, inline-block seviyesine alalım. Aynı Component
       içerisinde çağırdığımızdan dolayı, 'position: absolute' stilini 
       verdiğimizde <code><i>Card Componentinde</i></code> yer alan 
-      <code><i>child componentler</i></code> üst üste duracaktır.`, // 💩
+      <code><i>child componentler</i></code> üst üste duracaktır. Bu şekilde 
+      aynı kartın farklı iki yüzü görünümüne sahip olacaklar.`, // 💩
     moreDescription: `CSS kullanarak Card'ın arka yüzülen her tıklama ile 
       birlikte <code><i>transform özelliği</i></code> ile <code><i>CardBack
       Componentinin</i></code> altında yer alan <code><i>CardFront</i></code>
@@ -57,10 +58,8 @@
       class'ına <code><i>.back</i></code>, 'position: absolute' değerini 
       verdiğimizde her iki kart üst üste görüntülenecektir.`,
     otherCodeExplanation: `<code><i>Card componentlerinde</i></code> transform
-      stillendirmesi sağlayarak, 'hover' class eklendiğinde dönme efekti
-      vermesini sağlayalım.`,
-    oneLineDescription: `+ /Components/Playground/Cards/Card.svelte, 
-      CardBack.svelte, CardFront.svelte.`,
+      stillendirmesi sağlayarak, <code><i>hover class</i></code> eklendiğinde
+      dönüş efekti vermesini sağlayalım.`,
     endStory: `Konsol üzerinde 'CardBack' componentine ait 'flipper' class 
       bulunan elemente 'hover' class eklediğinde efekt gerçekleştiğini 
       inceleyebilirsin.`,
@@ -248,7 +247,6 @@
   <SubHeader head={article.head} />
   <Paragraph text={article.description} />
   <Paragraph text={article.otherDescription} />
-  <Paragraph text={article.oneLineDescription} />
   <CodeSyntax {code} {title} />
   <Paragraph text={article.anotherDescription} />
   <Paragraph text={article.anAnotherDescription} />

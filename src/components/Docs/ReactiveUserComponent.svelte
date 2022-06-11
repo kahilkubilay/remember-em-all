@@ -7,10 +7,11 @@
 
   const article = {
     head: `User Component`,
-    description: `Yarım kalmış bir User Component'imiz bulunuyordu. 
-      Tanımladığımız <code><i>Store</i></code> değerlerini <code><i>User 
-      componenti</code></i> değerlerinde kullanalım. Burada yapacağımız son
-      rötüşlar ile birlikte kullanıcının oyun arayüzüne erişmesini sağlayalım.`,
+    description: `Yarım kalmış bir <code><i>User</i></code> bileşenimiz 
+      bulunuyordu. Tanımladığımız <code><i>Store</i></code> değerlerini 
+      <code><i>User componenti</code></i> değerlerinde kullanalım. Burada 
+      yapacağımız son rötüşlar ile birlikte kullanıcının oyun arayüzüne
+      erişmesini sağlayalım.`,
     otherDescription: `<code><i>ImageAvatar.svelte component</i></code> 
       üzerinde, kullanıcı avatar'a click eventini gerçekleştirdiğinde, 
       <code><i>userInfo classinda</i></code> oluşturduğumuz avatar değerini 
@@ -30,7 +31,7 @@
       <code><i>Componente</i></code> yönlendirsin. Bunun aksi ise basit bir hata
       bilgisi gösterelim.`, // 💩
     moreDescription: `Döngüler gibi <code><i>if/else Logic'leri</i></code> 
-      kullanabilirsiniz. <code><i>else if</i></code> ihtiyacında bir şart 
+      kullanabilirsin. <code><i>else if</i></code> ihtiyacında bir şart 
       ifadesi olarak <code><i>else if isStart === undefined</i></code>
       tanımlaman yeterli olacaktır.`,
     descriptionCode: `<code><i>StartGame fonksiyonu</i></code> ile birlikte 
@@ -41,12 +42,12 @@
       <code><i>User componenti</i></code> bulunduğu yerde kalmaya devam
       edicektir. Böyle bir ihtimal için, <code><i>class directives</i></code>
       kullanarak kullanıcıyı bilgilendirelim.`,
-    codeExplanation: `on:click metoduna bağladığımız fonksiyon ile kullanıcının 
-      tıkladığı avatar üzerinde bilgiyi kolay bir şekilde elde edebiliyoruz. 
-      Konsolu açarak, logları inceleyebilirsin.<code><i>ImageAvatar componentine
-      </i></code> parametre olarak gönderdiğimiz avatar bilgisine
-      erişebiliyoruz, bunu kullanarak fonksiyonu biraz daha basit hale 
-      getirelim.`,
+    codeExplanation: `<code><i>on:click</i></code> metoduna bağladığımız
+      fonksiyon ile kullanıcının tıkladığı avatar üzerinde bilgiyi kolay bir
+      şekilde elde edebiliyoruz. Konsolu açarak, logları inceleyebilirsin.
+      <code><i>ImageAvatar componentine</i></code> parametre olarak 
+      gönderdiğimiz avatar bilgisine erişebiliyoruz, bunu kullanarak fonksiyonu
+      biraz daha basit hale getirelim.`,
     otherCodeExplanation: `Kullanıcı avatarlar üzerine her click işlemi 
       gerçekleştirdiğinde, <code><i>$avatar</i></code> değerini güncelliyoruz. 
       <code><i>ImageAvatar.svelte componentini</i></code> geçmeden önce 
@@ -57,13 +58,13 @@
       <code><i>username</i></code>.`,
     endStory: `<code><i>Class Directive'lerde</i></code> yardımına başvurabilmek
       için <code><i>isAvatarEmpty ve isNameEmpty</i></code> isminde iki farklı
-      değer oluşturdum. <code><i>Button'ın</i></code> altında bir 
+      değer oluşturduk. <code><i>Button'ın</i></code> altında bir 
       <code><i>div etiketi</i></code> daha oluşturarak, hata mesajını burada
-      gösteriyorum. <code><i>Name</i></code> için olan hata mesajını sen
-      düzenle.. Ve oluşturduğum <code><i>div etiketini</i></code> bir component
-      olarak yeniden oluşturup, hem <code><i>name</i></code> hemde 
-      <code><i>avatar</i></code> için kullanabilirsin. Bunu gerçekleştir, hemen
-      ardından bir sonraki başlıkta seni bekliyorum.`,
+      gösteriyoruz. <code><i>Name</i></code> için olan hata mesajını düzenle.. 
+      Ve oluşturduğumuz div etiketini bir component olarak yeniden oluşturup, 
+      hem <code><i>name</i></code> hemde <code><i>avatar</i></code> için 
+      kullanabilirsin. Bunu gerçekleştir, hemen ardından bir sonraki başlıkta 
+      devam edelim.`,
     image: `assets/components/User/class-directive.gif`,
     anotherImage: `assets/components/User/start-game.gif`,
     alternativeText: `Class Directives`,
@@ -251,10 +252,8 @@
   `;
 
   const title = `componenets > User > Avatars > ImageAvatar.svelte`;
-  const otherTitle = `componenets > User > Avatars > ImageAvatar.svelte`;
-  const anotherOneMoreTitle = `componenets > User > Avatars > 
-    ImageAvatar.svelte`; //💩
-  const moreTitle = `componenets > Playground > Wrapper > Playground.svelte`; //💩
+  const moreTitle = `componenets > Playground > Wrapper > Playground.svelte`;
+  const otherTitle = `components > User > name > UserName.svelte`;
 </script>
 
 <article>
@@ -264,13 +263,13 @@
   <Paragraph text={article.otherDescription} />
   <CodeSyntax {code} {title} />
   <Paragraph text={article.codeExplanation} />
-  <CodeSyntax code={otherCode} title={otherTitle} />
+  <CodeSyntax code={otherCode} {title} />
   <Paragraph text={article.otherCodeExplanation} />
-  <CodeSyntax code={oneMoreCode} />
+  <CodeSyntax code={oneMoreCode} {title} />
   <Paragraph text={article.anotherDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
   <Paragraph text={article.oneLineDescription} />
-  <CodeSyntax code={anotherOneMoreCode} title={anotherOneMoreTitle} />
+  <CodeSyntax code={anotherOneMoreCode} title={otherTitle} />
   <Paragraph text={article.anAnotherDescription} />
   <Paragraph text={article.moreAnotherDescription} />
   <CodeSyntax code={moreCode} title={moreTitle} />
@@ -281,6 +280,6 @@
     alternativeText={article.alternativeText}
   />
   <Paragraph text={article.descriptionCode} />
-  <CodeSyntax code={endCode} />
+  <CodeSyntax code={endCode} title={moreTitle} />
   <Paragraph text={article.endStory} />
 </article>

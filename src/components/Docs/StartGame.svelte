@@ -7,15 +7,16 @@
   const article = {
     head: `Start Game`,
     description: `Svelte'i biraz daha yakından tanıyoruz, birlikte uygulamamızı
-      oluşturabilmek için yeteri kadar bilgi sahibi olduk. Kullanıcının arayüz 
-      üzerinde görebileceği iki Component bulunuyor. Kullanıcı adı ve avatar 
-      seçtiği User Component, bu seçimler sonrasında erişilen Playground 
+      oluşturabilmek için yeteri kadar bilgi sahibi olduk. Oyun için gerekli 
+      yapılarımızı basitten zora doğru kurgulayamaya başlayabiliriz. 
+      Kullanıcının arayüz üzerinde görebileceği iki Component bulunuyor. 
+      Kullanıcı adı ve avatar seçtiği User Component, bu seçimler sonrasında erişilen Playground 
       Component. User Componenti ile oyunumuzu oluşturmaya başlayalım. 
-      <a href="#svelte-projesi-olusturma" title="Yeni bir Svelte Projesi 
-      oluştur">Yeni bir proje oluşturabilir</a> veya pratik yapabilmek için 
-      şuana kadarki kodları kaldırabilirsin. <code><i>src > components > User
+      <a href="#create-a-svelte-project" title="Create a Svelte project">
+      Yeni bir proje oluşturabilir</a> veya pratik yaptığımız kodları
+      kaldırabilirsin. <code><i>src > components > User
       </i></code> ve <code><i>src > components > Playground</i></code> 
-      klasörlerini oluşturalım.`,
+      klasörlerini oluşturmakla başlayalım.`,
     image: `assets/documentation/start-folder.png`,
     alternativeText: `start folder`,
     id: "start-game",

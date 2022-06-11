@@ -5,9 +5,9 @@
 
   const article = {
     head: `Store`,
-    description: `Veri taşımacılık ltd. şti.'nin joker kartı.. Verilerinizi her 
-      yerde güncellenmesini, çağırılmasını sağlar. Kullanımı için bir hiyerarşi
-      içerisinde olmasına gereksinimi bulunmuyor.`,
+    description: `Veri taşımacılık ltd. şti.'nin joker kartı.. Verileri her 
+      yerde çağırabilmeyi, güncelleyebilmemizi sağlar. Kullanımı için bir 
+      hiyerarşi içerisinde olmasına gereksinimi bulunmuyor.`,
     id: "store",
   };
 </script>

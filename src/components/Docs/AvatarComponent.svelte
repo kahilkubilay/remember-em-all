@@ -4,34 +4,34 @@
   import Image from "./Section/Templates/Image.svelte";
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
-  import Matter from "./Section/Templates/Matter.svelte";
 
   const article = {
     head: `Avatar Component`,
-    description: `Bu Component içerisinde birden fazla bileşene ihtiyaç duyduğu
-      için, bir klasör oluşturarak bütün gereksinim duyduğu yapıları klasör 
-      içerisinde tanımlayalım.`,
-    otherDescription: `_Avatars.svelte_ _Userground.svelte_ içerisinde 
-      çağıralım. _Avatars.svelte_, _ImageAvatar.svelte_ bir kapsayıcı görevi 
-      görecek. Bununla birlikte _ImageAvatar.svelte_ componentine data 
-      gönderecek.`,
-    anotherDescription: `_Avatars_, _Userground_ üzerinde çağırdığımda karşıma 
-      bu iki güzellik gelecek.`,
-    moreDescription: `_Avatars_ biraz daha işlevli bir yapıya dönüştürelim.`, //💩
+    description: `Avatar bileşeni içerisinde birden fazla bileşene ihtiyaç 
+      duyacağımız için, bir klasör oluşturarak bütün gereksinim duyduğu 
+      bileşenleri klasör içerisinde tanımlayalım. 
+      <a href="https://github.com/kahilkubilay/remember-em-all/tree/master/public/images">
+      Bileşenlerde kullanacağımız görsellere buradan erişebilirsin.</a>`,
+    otherDescription: `<code><i>Avatars.svelte Userground.svelte</i></code>
+      içerisinde çağıralım. <code><i>Avatars.svelte, ImageAvatar.svelte</i>
+      </code> bileşenine bir kapsayıcı görevi görecek. Bununla birlikte 
+      <code><i>ImageAvatar.svelte</i></code> componentine data gönderecek.`,
+    anotherDescription: `<code><i>Avatars, Userground</i></code> üzerinde 
+      çağırdığımda karşıma bu iki güzellik gelecek.`,
+    moreDescription: `<code><i>Avatars</i></code> bileşenini daha işlevli bir 
+      yapıya dönüştürelim.`, //💩
     oneMoreDescription: `Oluşturduğumuz 'avatars' dizisine ait her elemana 
-      _html_ üzerinde #each döngüsünde erişiyoruz. Erişilen her elemanının 
-      bilgisini _ImageAvatar_ componentine aktarıyoruz. Componente aktarılan bu
-      değerlerle birlikte, dizi içerisinde bulunan her elamanın görüntüsünü elde
-      edeceğiz.`, //💩
+      <code><i>html</i></code> üzerinde #each döngüsünde erişiyoruz. Erişilen 
+      her elemanının bilgisini <code><i>ImageAvatar</i></code> componentine
+      aktarıyoruz. Componente aktarılan bu değerlerle birlikte, dizi içerisinde
+      bulunan her elamanın görüntüsünü elde edeceğiz.`, //💩
     oneAnotherMoreDescription: `Daha güzel bir görüntüyü hak ettik. Avatarlar 
       üzerinde CSS ile biraz düzenlemeler yapmamız gerekti.`, //💩
-    material: [
-      `Avatar/`,
-      `+ User > Avatar > Avatars.svelte, ImageAvatar.svelte`,
-      `+ public > assets > images > pasa.jpg, sabuha.jpg, mohito.jpg, limon.jpg,
-        susi.jpg`,
-      `[images](https://github.com/kahilkubilay/remember-em-all/tree/master/public/images "Images link")`,
-    ],
+    codeExplanation: `Kullanacağın görselleri uzak sunucu üzerinden almıyorsan
+      <code><i>public</i></code> klasörü altında barındırabilirsin. Kullanmak
+      istediğinde public klasörünü dahil etmeden 
+      <code><i>images/image-name.png</i></code> gibi bir yol ile 
+      kullanabilirsin.`,
     image: `assets/components/User/avatars-component.png`,
     anotherImage: `assets/components/User/user-component-end.png`,
     alternativeText: `call Avatar Component`,
@@ -42,8 +42,8 @@
   const code = `
     <script>
       // avatar list
-      let sabuha = "/asset/images/sabuha.jpg";
-      let pasa = "/asset/images/pasa.jpg";  
+      let sabuha = "images/sabuha.jpg";
+      let pasa = "images/pasa.jpg";  
     <\/script>
 
     <div class="avatars">
@@ -60,16 +60,15 @@
 
   const otherCode = `
     <script>
-      import ImageAvatar from "./ImageAvatar.svelte";
-
+      ...
       // avatar list
-        let sabuha = "/asset/images/sabuha.jpg";
-        let mohito = "/asset/images/mohito.jpg";
-        let pasa = "/asset/images/pasa.jpg";
-        let susi = "/asset/images/susi.jpg";
-        let limon = "/asset/images/limon.jpg";
+      let sabuha = "images/sabuha.jpg";
+      let mohito = "images/mohito.jpg";
+      let pasa = "images/pasa.jpg";
+      let susi = "images/susi.jpg";
+      let limon = "images/limon.jpg";
 
-        const avatars = [pasa, mohito, sabuha, limon, susi];
+      const avatars = [pasa, mohito, sabuha, limon, susi];
     <\/script>
 
     <div class="avatars">
@@ -128,9 +127,9 @@
   <AccessArticle link={article.id} />
   <SubHeader head={article.head} />
   <Paragraph text={article.description} />
-  <Matter matter={article.material} />
   <Paragraph text={article.otherDescription} />
   <CodeSyntax {code} {title} />
+  <Paragraph text={article.codeExplanation} />
   <Paragraph text={article.anotherDescription} />
   <Image image={article.image} alternativeText={article.alternativeText} />
   <Paragraph text={article.moreDescription} />

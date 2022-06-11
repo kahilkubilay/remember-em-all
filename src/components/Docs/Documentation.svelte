@@ -29,6 +29,8 @@
   import CardSpinEffect from "./CardSpinEffect.svelte";
   import CardMatching from "./CardMatching.svelte";
   import ScoreAndLevelUpdates from "./scoreAndLevelUpdates.svelte";
+  import UserDetailComponent from "./UserDetailComponent.svelte";
+  import References from "./References.svelte";
 </script>
 
 <Hello />
@@ -61,3 +63,5 @@
 <CardSpinEffect />
 <CardMatching />
 <ScoreAndLevelUpdates />
+<UserDetailComponent />
+<References />

@@ -12,12 +12,9 @@
       </i></code> isminde bir değişken tanımlanmış. <code><i>Typescript</i>
       </code> notasyonu baz alındığı için değer tipi olarak <code><i>string</i>
       </code> verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği 
-      için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar ile, 
-      burada birlikte oluşturacaklarımız farklılık gösterebilir.. panik yok, 
-      <code><i>Typescript'e</i></code> <a 
-      href="https://youtube.com/shorts/oyIO1_8uNPc" title="senin kocaman kalbin
-      <33">hakim olabileceğine</a> eminim.`,
-    id: "pratice",
+      için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar 
+      inceliyorsan, burada birlikte oluşturacaklarımız farklılık gösterebilir.`,
+    id: "practice",
   };
 </script>
 

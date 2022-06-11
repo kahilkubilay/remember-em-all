@@ -9,18 +9,17 @@
     description: `<code><i>Script</i></code> üzerinde tanımlanan değerleri 
       <code><i>html</i></code> içerisinde çağırabilmek için <code><i>{}</i>
       </code> kullanılmalıdır. Bu template ile değer tipi farketmeksizin 
-      değişkenleri çağırarak işlemler gerçekleştirilebilir.`,
+      değişkenleri çağırarak işlemler gerçekleştirebilirsin.`,
     otherDescription: `Bu tanımlama ile birlikte <code><i>user</i></code>
       değerine tanımlanan her değeri dinamik olarak <code><i>html</i></code>
-      içerisinde çağırabilirsin. biraz daha biraz daha karıştıralım.. <code><i>
-      user</i></code> tanımlaması <code><i>sabuha</i></code> değerine eşit 
-      olduğu durumlarda 'seni izliyor!' yerine 'bir kedi gördüm sanki!' değerini
-      ekrana getirelim.`,
+      içerisinde çağırabilirsin. <code><i>user</i></code> tanımlaması 
+      <code><i>sabuha</i></code> değerine eşit olduğu durumlarda 'seni izliyor!'
+      yerine 'bir kedi gördüm sanki!' değerini ekrana getirelim.`,
     anotherDescription: `<code><i>html</i></code> içerisinde kullandığımız 
       <code><i>{}</i></code> tagları arasında condition yapıları gibi döngü,
       fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu yapılara sahip 
       birçok işlemi birlikte gerçekleştireceğiz.`,
-    id: "hello-team",
+    id: "variable-access",
   };
 
   const code = `
