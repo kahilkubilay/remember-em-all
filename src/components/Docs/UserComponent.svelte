@@ -8,34 +8,35 @@
 
   const article = {
     head: `User Component`,
-    description: `<code><i>User</i></code> klasörü altında Kullanıcıdan 
-      alacağımız her değer için <code><i>Avatar</code></i> ve <code><i>Name</i>
-      </code> klasörlerini oluşturalım. Root klasörde <code><i>User</i></code>
-      Component altında tanımlanan bütün yapıların yer alacağı bir kapsayıcı 
-      dahil edeceğiz. <code><i>UserGround.svelte</i></code> isminde bir dosya 
-      oluşturuyorum, parçaladığımız bütün componentler burada yer alacak.`,
-    otherDescription: `<code><i>Playground</i></code> klasörü içerisinde buna
-      benzer bir yapıyı oluşturarak, oyun içerisindeki bütün componentleri aynı
-      dosya üzerinde çağıracağız. <code><i>Playground</i></code> altında 
-      <code><i>Wrapper > Playground.svelte</i></code> dizin ve dosyasını
-      oluşturalım.`,
-    anotherDescription: `User Componenti üzerinde çalışırken, yapacağımız 
-      değişiklikleri inceleyebilmek için User Component'ini 
-      <code><i>Playground > Wrapper > Playground.svelte</i></code> dosyasında
-      çağıralım.`,
-    anAnotherDescription: `<code><i>User Component</i></code> çağırdıktan sonra
-      üzerinde geliştirme yapmaya başlayalım.`, // 💩
-    moreAnotherDescription: `Component üzerinde 4 farklı bölüm yer alıyor.`, // 💩
-    codeExplanation: `Bileşenimizde basit bir header etiketi tanımladık. Header
-      içerisinde componentDetail değerini çağırıyoruz.`,
-    moreCodeExplanation: `Bileşenimizde yapacağımız geliştirmeleri tarayıcıda 
-      inceleyebilmek için Playground bileşenine import ederek kullanalım.`,
+    description: `Let's create the <b>Avatar and Name</b> folders for each value
+      we will receive from the User under the <code><i>User</i></code> folder.
+      We will include a container in the root folder that will contain all the
+      structures defined under <code><i>User Component</i></code>. I'm creating
+      a file called <code><i>UserGround.svelte</i></code>, all the components we
+      split will be located here.`,
+    otherDescription: `By creating a similar structure in the
+      <code><i>Playground</i></code> folder, we will call all the components in
+      the game on the same file. Let's create the <code><i>Wrapper >
+      Playground.svelte</code></i> directory and file under Playground.`,
+    anotherDescription: `While working on the <b>User Component</b>, let's call
+      the <b>User Component</b> in the <code><i>Playground > Wrapper >
+      Playground.svelte</i></code> file so that we can review the changes we
+      will make.`,
+    anAnotherDescription: `After calling the <code><i>User Component</i></code>,
+      let's start developing on it.`, // 💩
+    moreAnotherDescription: `There are 4 different sections on the component.`, // 💩
+    codeExplanation: `We have defined a simple header tag in our component. We
+      call <code><i>componentDetail</i></code> value in
+      <code><i>Header</i></code>.`,
+    moreCodeExplanation: `Let's use it by importing it to the
+      <code><i>Playground component</i></code> so that we can examine the
+      improvements we will make in our component in the browser.`,
     material: [
-      `Kullanıcıyı bilgilendiren bir header yazısı`,
-      `Kullanıcının görseller üzerinden avatar seçimi yapabildiği bir bölüm`,
-      `Kullanıcı adının girilebilmesi için alan`,
-      `Ve bütün bunlar tamamlandığında oyuna start veren bir button elementi 
-        bulunuyor.`,
+      `A header that informs the user`,
+      `A section where the user can choose avatars over images`,
+      `Space to the enter username`,
+      `And when all this is completed, there is a button element that starts the
+      game.`,
     ],
     image: `assets/components/User/call-user-component.png`,
     anotherImage: `assets/components/User/components-section.png`,

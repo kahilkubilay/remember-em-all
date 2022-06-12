@@ -7,53 +7,48 @@
   import List from "./Section/Templates/List.svelte";
 
   const article = {
-    head: `Elindeki Kartları Göster ♠️`,
-    description: `Arayüz üzerindeki bu güncellemelerimizin ardından, oyun 
-      alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanında 
-      göstereceğiz.`,
-    otherDescription: `Oyun arayüzünde birtakım işlemleri gerçekleştirebilmek 
-      için bazı fonksiyonlar tanımlayacağız. SRC klasörümüzün altında 
-      <code><i>GameAction</i></code> isminde yeni bir klasör oluşturalım.
-      Bu klasör altında tanımlayacağımız fonksiyonlar aşağıdaki işlemleri 
-      gerçekleştirecek:`,
-    anotherDescription: `Adım adım ilerleyelim.. Seviyeye bağımlı 
-      olarak Arayüz üzerinde yer alacak sayı aralığını oluşturalım.`,
-    anAnotherDescription: `Parametre olarak verdiğimiz sayı değerleri 1, 5 ve 4
-      değerleri konsol üzerinde görüntülenen array değerlerini oluşturmamızı 
-      sağlıyor. Belirli aralıkları kapsayan bir sayımız bulunuyorsa, array 
-      içerisinde yer alan sayıları random olarak karıştırmamızın önüne 
-      geçebilecek bir durum bulunmuyor.`, // 💩
-    moreDescription: `Kartları oyun arayüzü üzerinde listeleyebilmemiz için 
-      gerekli fonksiyonlarımızı oluşturduk. Bunları kullanarak 
-      <code><i>Playground</i></code> alanını coşturalım.`,
-    descriptionCode: `<code><i>Playground bileşeninde 
-      mixedListOfPokemon</i></code> isminde store değeri oluşturduk. Bu değer
-      random sayıları, id değerlerimiz ile birlikte tutuyor. Bir döngü 
-      içerisinde bu değerleri props olarak <code><i>Card</i></code> ismindeki
-      bileşene aktaralım. Aktarılan değerleri CardFront ve CardBack isimli 
-      bileşenlerimizde kullancağız.`,
-    codeExplanation: `<code><i>ListCards.svelte</i></code> dosyasında yer alan
-      list fonksiyonuna ihtiyacım olduğu için modülü dışarı aktardım.
-      Fonksiyonun basit bir görevi bulunuyor. Parametre olarak verilen değerle
-      birlikte 5 sayı büyüklüğünde bir aralığı array tipinde döndürmelidir.
-      <code><i>range</i></code> değerimiz erişmek istediğimiz toplam aralık
-      uzunluğunu ifade ediyor. <code><i>maxNumberReachedOnRange</i></code> 
-      değeri erişilecek olan maximum sayı değerini verirken, 
-      <code><i>minNumberReachedOnRange</i></code> değeri maximum değeri 
-      kullanarak minumum sayıyı elde etmemize imkan sağlıyor. 
-      <code><i>Playground bileşenimizde</i></code> çağırarak nasıl bir sonuç
-      verdiğini kontol edelim.`,
-    otherCodeExplanation: `<code><i>MixCards bileşeninde</i></code> 
-      oluşturacağımız fonksiyonu kullanarak, list fonksiyonundan elde ettiğimiz
-      array içerisinde yer alan değerleri kopyalayacağız. Sayı aralığımız 5 
-      olduğunda, yeni oluşacak olan array değerimizde toplamda 10 değer yer 
-      alacak. Bu değerler belirli bir sırayı takip etmek yerine array içerisinde
-      random yer alacaklar. İlerde kartları eşleştirebilme işlemi için, her
-      kartın sıra numarasına göre id değeri atayalım.`,
-    endStory: `Kartlarımızı arayüz üzerine başarılı bir şekilde sıraladık. 
-      Bir önceki bölümde yaptığımız gibi, .flipper class değerinin bulunduğu 
-      elemente .hover eklediğimizde kartın CardFront componentini 
-      gözlemleyebiliriz.`,
+    head: `Show Your Cards ♠️`,
+    description: `After these updates on the interface, we can show off cards
+      onto our playing field. In this section we will show the cards on the
+      playing field.`,
+    otherDescription: `We will define some functions in order to perform some
+      operations in the game interface. Let's create a new folder named
+      <b>GameAction</b> under our <b>SRC folder</b>. The functions that we will
+      define under this folder will perform the following operations:`,
+    anotherDescription: `Let's proceed step by step.. Let's create the range of
+      numbers that will take place on the Interface, depending on the level.`,
+    anAnotherDescription: `The number values 1, 5 and 4 that we give as
+      parameters allow us to create the array values displayed on the console.
+      If we have a number that covers certain intervals, there is no situation
+      that prevent us from randomly mixing the numbers in the array.`, // 💩
+    moreDescription: `We have created our necessary functions so that we can
+      list the cards on the game interface. Let's get the
+      <code><i>Playground</i></code> area excited by using them.`,
+    descriptionCode: `We created a store value called <b>mixedListOfPokemon</b>
+      in the <code><i>Playground component</i></code>. This value keeps the
+      random numbers together with our id values. Let's pass these values as
+      props to the component named Card in a loop. We will use the transferred
+      values in our components named CardFront and CardBack.`,
+    codeExplanation: `I exported the module because I needed the list function
+      in the <code><i>ListCards.svelte</i></code> file. The function has a
+      simple task. It should return a range of 5 numbers in array type with the
+      value given as a parameter. Our range value represents the total range
+      length we want to access. The <b>maxNumberReachedOnRange</b> value gives
+      the maximum number to be reached, while the <b>minNumberReachedOnRange</b>
+      value allows us to obtain the minimum number by using the maximum value.
+      Let's check how it works by calling it in our
+      <code><i>Playground component</i></code>.`,
+    otherCodeExplanation: `By using the function we will create in the
+      <code><i>MixCards component</i></code>, we will copy the values in the
+      array we obtained from the list function. When our number range is 5,
+      there will be 10 values in total in our new array value. These values will
+      be placed randomly in the array instead of following a specific order. In
+      order to match the cards in the future, let's assign an id value according
+      to the sequence number of each card.`,
+    endStory: `We have successfully sorted our cards on the interface. As we did
+      in the previous section, when we add <b>.hover</b> to the element with the
+      <b>.flipper</b> class value, we can inspect the <code><i>CardFront
+      component</i></code> of the card.`,
     image: `assets/components/GameAction/function-of-list-cards.png`,
     anotherImage: `assets/components/GameAction/shuffle-cards.png`,
     moreImage: `assets/components/GameAction/card-components.png`,
@@ -63,28 +58,29 @@
     terms: [
       {
         command: `LevelUpdate`,
-        description: `Arayüz üzerinde bütün kartlar doğru eşleştirildiğinde, 
-          bir sonraki seviye geçilmesi sağlanacak.`,
+        description: `When all the cards are matched correctly on the interface,
+          the next level will be passed.`,
       },
       {
         command: `ListCards`,
-        description: `Arayüz üzerindeki kartlar seviyeye göre getirilecek. 
-          1. seviyede 0-5 aralığında kartlar getirilirken, 2. seviyede 5-10 ve 
-          3. seviyede 10-15 sayılarına ait kartlar arayüze yansıtılacak. Aralık 
-          değerlerini buradaki fonksiyon ile kurgulayacağız.`,
+        description: `The cards on the interface will be brought according to
+          the level. While cards in the range of 0-5 at the 1st level are
+          brought, cards with the numbers 5-10 at the 2nd level and 10-15 at the
+          3rd level will be reflected on the interface. We will construct the
+          range values with the function here.`,
       },
       {
         command: `MixCards`,
-        description: `Arayüz üzerine gelen kartlar bir sıra halinde değil, 
-          random dağıtılmalıdır. MixCards fonksiyonu ile bunu 
-          gerçekleştireceğiz.`,
+        description: `The cards on the interface should be distributed randomly,
+          not in a row. We will do this with the MixCards function.`,
       },
       {
         command: `CloseOpenCards`,
-        description: `Eşleşmeyen 2 kart açıldığında veya bütün kartlar doğru 
-          eşleştiğinde bir sonraki erişilecek seviye için kartlar arayüzde 
-          kapalı olmalıdır. Her iki durumda geçerli fonksiyonları 
-          tanımlayacağız.`,
+        description: `When 2 unmatched cards are opened or all cards are matched
+          correctly, the cards must be closed in the interface for the next
+          level to be reached. In both cases we will define valid functions. 
+          Let's proceed step by step. Let's create the range of numbers that
+          will take place on the Interface, depending on the level.`,
       },
     ],
     id: "show-cards-in-your-hand",

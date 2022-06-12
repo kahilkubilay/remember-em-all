@@ -7,26 +7,27 @@
 
   const article = {
     head: `Cards Spin Effect`,
-    description: `Kartlara click eventi gerçekleştirildikten sonra, dönüş 
-      efektlerini bu bölümde düzenleyelim. Daha önce bu işlemi 
-      gerçekleştirecek stiller tanımlamıştık. Bunu kullanıcı etkileşimli hale 
-      getirelim. `,
-    requireDescription: `Etkileşim yapılan kartları tutabileceğimiz 
-      cardFlipperCapsule ismiyle bir store değeri tanımlayalım.`,
-    otherDescription: `Click eventi gerçekleştikten sonra, tıklanan kartın 
-      no değerini <code><i>cardFlipperCapsule</i></code> değerine ekleyelim. 
-      <code><i>Class directives ile cardFlipperCapsule</i></code> içerisinde yer
-      alan değerlere 'hover' sınıfını verelim. `,
-    codeExplanation: `Kartın arka yüzüne her tıklamada bir tepki alacağız. 
-      <code><i>BackCardFace bileşenine Card bileşeninde</i></code> yeni 
-      oluşturduğumuz fonksiyonu bağlayalım. Fonksiyon şuan için sadece kartın
-      üstüne tıklandığında bir konsol çıktısı yansıtacak.`,
-    descriptionCode: `<code><i>CardBack bileşenimizde 
-      createEventDispatcher</i></code> fonksiyonunu çağırdık. <code><i>CardBack
-      bileşenemize</i></code> DOM üzerinde tıklama işlemi gerçekleştirildiğinde
-      bu event ile atadığımız openCards fonksiyonu çalışmasını başlatacak.`,
-    endStory: `<code><i>Playground</i></code> üzerinde bulunan kartlara 
-      etkileşim gerçekleştiğinde, kartın ön yüzündeki değer görüntülenecektir.`,
+    description: `After the click events on the cards, let's arrange the
+      rotation effects in this section. At before, we defined styles to perform
+      this action. Let's make this user interactive. `,
+    requireDescription: `Let's define a store value with the name
+      <code><i>cardFlipperCapsule</i></code> where we can keep the interacted
+      cards.`,
+    otherDescription: `After the click event, let's add the number value of the
+      clicked card to the <code><i>cardFlipperCapsule</i></code> value. Here we
+      give the <b>hover</b> class to the values in the
+      <code><i>cardFlipperCapsule</code></i> with <b>class directives</b>.`,
+    codeExplanation: `We will get a reaction for every click on the back of the
+      card. We are going to connect the function which we had just created in
+      Card to the <code><i>BackCardFace component</i></code>. For now, the
+      function will only reflect a console output when clicking on the card.`,
+    descriptionCode: `We called the <code><i>createEventDispatcher</code></i>
+      function in our <code><i>CardBack component</i></code>. When clicking on
+      our <code><i>CardBack component<code></i> on the DOM, the
+      <code><i>openCards</i></code> function that we have assigned with this
+      event is going to start its operation.`,
+    endStory: `When interacting with the cards on the Playground, the value on
+      the front of the card will be displayed.`,
     image: `assets/components/Card/click-on-card.png`,
     alternativeText: `user clicked on card`,
     moreImage: `assets/components/Card/open-cards.gif`,

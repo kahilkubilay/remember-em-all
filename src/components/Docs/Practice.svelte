@@ -4,16 +4,17 @@
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
 
   const article = {
-    head: `Biraz pratik`,
-    description: `Birkaç örnek yaparak <code><i>Svelte'i</i></code> anlamaya,
-      yorumlamaya çalışalım. Kod örnekleri oyun üzerinde sıkça kullanacağımız
-      yapılar için bir temel oluşturacak.`,
-    otherDescription: `<code><i>App.svelte</i></code> dosyasında <code><i>name
-      </i></code> isminde bir değişken tanımlanmış. <code><i>Typescript</i>
-      </code> notasyonu baz alındığı için değer tipi olarak <code><i>string</i>
-      </code> verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği 
-      için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar 
-      inceliyorsan, burada birlikte oluşturacaklarımız farklılık gösterebilir.`,
+    head: `A little practice`,
+    description: `Let's try to understand and interpret
+      <code><i>Svelte</i></code> by making a few examples. The code samples will
+      form the basis for the structures that we will use frequently on the
+      game.`,
+    otherDescription: `A variable named <code><i>name</i></code> is defined in
+      the <code><i>app.svelte</i></code> file. Since it is based on 
+      <code><i>Typescript</i></code> notation, string is given as value type.
+      With this notation, I would prefer not to use it because the expression
+      may be a little longer. If you're reviewing the code available on Github,
+      what we're going to create here may be different.`,
     id: "practice",
   };
 </script>

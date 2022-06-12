@@ -7,21 +7,22 @@
 
   const article = {
     head: `Name Component`,
-    description: `Pokemon eğitmenimizin bir isim girebilmesi için gerekli olan 
-      componenti oluşturalım.`,
-    anotherDescription: `Diğer componentlerde yaptığımız gibi, <code><i>
-      UserName</i></code> componentinin <code><i>Userground</i></code> 
-      componentinde kullanalım.`,
-    moreDescription: `Geriye son bir componentimiz kaldı. "Start" yazısına sahip
-      bir buton componentini oluşturarak, <code><i>User</i></code> klasöründe
-      <code><i>Start.svelte</i></code> ismiyle kaydedelim. Ve son olarak 
-      <code><i>UserGround</i></code> componentinde çağıralım.`, //💩
-    oneMoreDescription: `Ta daaaa... Şuana kadar yaptığımız componentler dinamik
-      işlemler gerçekleştirmedi. Arayüzü oluşturmak için yeteri kadar malzememiz
-      ortaya çıktı, ve bunları istediğin gibi stillendirebilirsin. Svelte 
-      dosyana ait her stillendirme, svelte dosyasının kapsamı kadardır. 
-      Child-Parent componentler bu stil özelliklerine sahip olmazlar. Bundan 
-      sonraki aşamalarda bu componentlara dinamik özellikler kazandıracağız.`, //💩
+    description: `We are going to create the necessary component for our Pokemon
+      trainer to enter a name.`,
+    anotherDescription: `Let's use the <code><i>UserName component</i></code>
+      in the <code><i>Userground component</i></code>, as we did in the other
+      components.`,
+    moreDescription: `We have one last component left, create a button component
+      with the text <b>Start</b>, save it as <code><i>Start.svelte</i></code> in
+      the <b>User</b> folder and finally call it in the <code><i>UserGround
+      component</i></code>.`, //💩
+    oneMoreDescription: `Abracadabra... The components we have made so far have
+      not performed dynamic operations. We have enough material to create the
+      interface and you can style them how you want. Each styling of your
+      <code><i>Svelte</i></code> file is equal to the scope of the
+      <code><i>Svelte</i></code> file. Child-Parent components do not have these
+      style properties. In the next stages, we will add dynamic properties to
+      these components.`, //💩
     image: `assets/components/User/end-interface.png`,
     alternativeText: `call Avatar Component`,
     id: "name-component",

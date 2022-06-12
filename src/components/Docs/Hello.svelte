@@ -5,24 +5,24 @@
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
 
   const article = {
-    head: `Selamlaaaaar 👋`,
-    description: `Herşeyden önce umuyorum ki bu basit döküman 
-    <code><i>Svelte</i></code> yolculuğunda rehber olabilir. Son zamanlarda 
-    Svelte ile uygulama geliştirmeye başladım. Svelte yapısına daha çok hakim 
-    olabilmek ve öğrendiklerimi paylaşabilmek için bu yazıyı hazırladım. 
-    Döküman içerisinde adım adım <code><i>Game</i></code> bağlantısında 
-    görebileceğin oyunu nasıl geliştirdiğimi  anlattım, ilgi duyuyorsan aynı 
-    adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir 
-    kaynak modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış 
-    dökümantasyonlara (<a href="https://svelte.dev/docs" 
-    title="Svelte Documentation">Svelte Documentation</a>, <a 
-    href="https://svelte.dev/examples/hello-world" title="Svelte Examples">
-    Svelte Examples</a>) sahip, dökümantasyonları inceledikten sonra uygulamayı
-    takip etmen daha faydalı olabilir.`,
-    otherDescription: `İlk bölümlerde <code><i>Svelte</i></code> nasıl 
-    kullanabileceğine dair bilgilendirmeler yer alıyor. Bu kısımlara hakimsen, 
-    atlayarak <a href="#start-game" title="Access Startm Game section">
-    Start Game</a> bölümünden devam edebilirsin.`,
+    head: `Hiiiiiiiiii 👋`,
+    description: `First of all, I hope this simple document can be a guide on
+      your <code><i>Svelte</i></code> journey. I recently started developing
+      applications with Svelte. I have prepared this article in order to have a
+      better understanding of the Svelte structure and to share what I have
+      learned. In the document, I explained step by step how I developed the
+      game, which you can see in the <code><i>#Game</i></code> link, if you are
+      interested, you may createa similar application by following the same
+      steps or use it as a small resource. Svelte has well-detailed
+      documentation (<a href="https://svelte.dev/docs" title="Svelte
+      Documentation">Svelte Documentation</a>, <a 
+      href="https://svelte.dev/examples/hello-world" title="Svelte Examples">
+      Svelte Examples</a>), so it may be more helpful to follow the application
+      after reviewing the documentation.`,
+    otherDescription: `In the first few chapters, there is information about
+      how to use <code><i>Svelte</i></code>. If you have mastered these parts,
+      you can skip ahead and continue from the  <a href="#start-game" title="
+      Access Startm Game section">Start Game</a> section.`,
     image: `assets/documentation/squirtle-squad.webp`,
     alternativeText: `hello team`,
     id: "hello-team",

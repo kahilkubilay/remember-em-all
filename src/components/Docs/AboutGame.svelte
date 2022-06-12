@@ -5,23 +5,21 @@
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
 
   const article = {
-    head: `Oyun hakkında`,
-    description: `Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcının 
-    seviyesine göre arayüz üzerinde farklı kartlar bulunacak. Kartlara click 
-    eventi gerçekleştiğinde kartlar açılacak, kullanıcı açılan kartları 
-    eşleştirmeye çalışacak. Eşleşen kartlar açık bir şekilde arayüz üzerinde 
-    dururken başarılı eşleşme sonucunda kullanıcıya puan kazandırırlem, 
-    başarısız her eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. 
-    Bütün  kartlar eşleştiklerinde, bir sonraki seviyede yer alan kartlar 
-    arayüze kapalı olarak yeniden gelecektir.`,
-    otherDescription: `Oyun başlangıcında kullanıcıdan bir kullanıcı adı 
-      girmesi, avatar listesinde yer alan görsellerden birini seçmesi 
-      beklenecektir (Avatarlar ne kadar evcil gözükseler de, güç içlerinde 
-      gizli 🐱‍👤). Bu seçilen değerler oyunun arayüzünde kartların yer aldığı 
-      bölümün altında <code><i>score & level</i></code> değerleri ile birlikte 
-      gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak 
-      tutulurken, <code><i>score & level</i></code> değerleri dinamik olarak 
-      kullanıcının yaptığı doğru seçimlere göre güncellenecektir.`,
+    head: `About the game`,
+    description: `In our project we will develop a memory game. There will be
+      different cards on the interface according to the level of the user. When
+      the card click event occurs, the cards will be opened and the user will
+      try to match the opened cards. While the matching cards are open on the
+      interface, the user will gain points as a result of a successful match,
+      cards will be closed again in their place with each unsuccessful match.`,
+    otherDescription: `At the start of the game, the user will be expected to
+      enter a username and choose one of the images in the avatar list (No 
+      matter how tame the avatars look, the power is hidden in them 🐱‍👤). These
+      selected values will be displayed together with the <code><i>score &
+      level</i></code> values under the section where the cards are located in
+      the game interface. While the username and selected avatar will be kept as
+      stable values, the <code><i>score & level</i></code>values will be
+      dynamically updated according to the correct choices made by the user.`,
     image: `assets/documentation/playground.png`,
     alternativeText: `view of cards on the playground`,
     otherImage: `assets/userground.png`,

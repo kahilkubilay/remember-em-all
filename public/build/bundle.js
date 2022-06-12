@@ -3276,7 +3276,7 @@ var app = (function () {
     			create_component(paragraph1.$$.fragment);
     			t4 = space();
     			create_component(image1.$$.fragment);
-    			add_location(article_1, file$E, 32, 0, 1787);
+    			add_location(article_1, file$E, 30, 0, 1694);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3343,23 +3343,21 @@ var app = (function () {
     	validate_slots('AboutGame', slots, []);
 
     	const article = {
-    		head: `Oyun hakkında`,
-    		description: `Projemizde bir hafıza oyunu geliştireceğiz. Kullanıcının 
-    seviyesine göre arayüz üzerinde farklı kartlar bulunacak. Kartlara click 
-    eventi gerçekleştiğinde kartlar açılacak, kullanıcı açılan kartları 
-    eşleştirmeye çalışacak. Eşleşen kartlar açık bir şekilde arayüz üzerinde 
-    dururken başarılı eşleşme sonucunda kullanıcıya puan kazandırırlem, 
-    başarısız her eşleşmede kartlar bulundukları yerde yeniden kapatılacaklar. 
-    Bütün  kartlar eşleştiklerinde, bir sonraki seviyede yer alan kartlar 
-    arayüze kapalı olarak yeniden gelecektir.`,
-    		otherDescription: `Oyun başlangıcında kullanıcıdan bir kullanıcı adı 
-      girmesi, avatar listesinde yer alan görsellerden birini seçmesi 
-      beklenecektir (Avatarlar ne kadar evcil gözükseler de, güç içlerinde 
-      gizli 🐱‍👤). Bu seçilen değerler oyunun arayüzünde kartların yer aldığı 
-      bölümün altında <code><i>score & level</i></code> değerleri ile birlikte 
-      gösterilecektir. Kullanıcı adı ve seçilen avatar stabil değerler olarak 
-      tutulurken, <code><i>score & level</i></code> değerleri dinamik olarak 
-      kullanıcının yaptığı doğru seçimlere göre güncellenecektir.`,
+    		head: `About the game`,
+    		description: `In our project we will develop a memory game. There will be
+      different cards on the interface according to the level of the user. When
+      the card click event occurs, the cards will be opened and the user will
+      try to match the opened cards. While the matching cards are open on the
+      interface, the user will gain points as a result of a successful match,
+      cards will be closed again in their place with each unsuccessful match.`,
+    		otherDescription: `At the start of the game, the user will be expected to
+      enter a username and choose one of the images in the avatar list (No 
+      matter how tame the avatars look, the power is hidden in them 🐱‍👤). These
+      selected values will be displayed together with the <code><i>score &
+      level</i></code> values under the section where the cards are located in
+      the game interface. While the username and selected avatar will be kept as
+      stable values, the <code><i>score & level</i></code>values will be
+      dynamically updated according to the correct choices made by the user.`,
     		image: `assets/documentation/playground.png`,
     		alternativeText: `view of cards on the playground`,
     		otherImage: `assets/userground.png`,
@@ -6313,7 +6311,7 @@ var app = (function () {
     			create_component(paragraph6.$$.fragment);
     			t12 = space();
     			create_component(image1.$$.fragment);
-    			add_location(article_1, file$A, 125, 0, 4194);
+    			add_location(article_1, file$A, 124, 0, 4154);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6421,31 +6419,30 @@ var app = (function () {
 
     	const article = {
     		head: `Avatar Component`,
-    		description: `Avatar bileşeni içerisinde birden fazla bileşene ihtiyaç 
-      duyacağımız için, bir klasör oluşturarak bütün gereksinim duyduğu 
-      bileşenleri klasör içerisinde tanımlayalım. 
+    		description: `Since we will need more than one component in the
+      <code><i>Avatar component</i></code>, let's create a folder and define
+      all the components it needs in the folder. 
       <a href="https://github.com/kahilkubilay/remember-em-all/tree/master/public/images">
-      Bileşenlerde kullanacağımız görsellere buradan erişebilirsin.</a>`,
-    		otherDescription: `<code><i>Avatars.svelte Userground.svelte</i></code>
-      içerisinde çağıralım. <code><i>Avatars.svelte, ImageAvatar.svelte</i>
-      </code> bileşenine bir kapsayıcı görevi görecek. Bununla birlikte 
-      <code><i>ImageAvatar.svelte</i></code> componentine data gönderecek.`,
-    		anotherDescription: `<code><i>Avatars, Userground</i></code> üzerinde 
-      çağırdığımda karşıma bu iki güzellik gelecek.`,
-    		moreDescription: `<code><i>Avatars</i></code> bileşenini daha işlevli bir 
-      yapıya dönüştürelim.`, //💩
-    		oneMoreDescription: `Oluşturduğumuz 'avatars' dizisine ait her elemana 
-      <code><i>html</i></code> üzerinde #each döngüsünde erişiyoruz. Erişilen 
-      her elemanının bilgisini <code><i>ImageAvatar</i></code> componentine
-      aktarıyoruz. Componente aktarılan bu değerlerle birlikte, dizi içerisinde
-      bulunan her elamanın görüntüsünü elde edeceğiz.`, //💩
-    		oneAnotherMoreDescription: `Daha güzel bir görüntüyü hak ettik. Avatarlar 
-      üzerinde CSS ile biraz düzenlemeler yapmamız gerekti.`, //💩
-    		codeExplanation: `Kullanacağın görselleri uzak sunucu üzerinden almıyorsan
-      <code><i>public</i></code> klasörü altında barındırabilirsin. Kullanmak
-      istediğinde public klasörünü dahil etmeden 
-      <code><i>images/image-name.png</i></code> gibi bir yol ile 
-      kullanabilirsin.`,
+      You can access the images we will use in the components here. </a>`,
+    		otherDescription: `Let's call the <code><i>Avatars.svelte</i></code> file in
+      <code><i>Userground.svelte Avatars.svelte</code></i> will act as a
+      container to the <code><i>ImageAvatar.svelte</i></code> component. It will
+      also send data to the <code><i>ImageAvatar.svelte</i></code> component.`,
+    		anotherDescription: `These two beauties will come up when I call
+      <code><i>Avatars on Userground</i></code>.`,
+    		moreDescription: `Here we turn the <code>i>Avatars component</i></code> into
+      a more functional structure.`, //💩
+    		oneMoreDescription: `We access every element of the <b>avatars</b> array we
+      created in the <b>#each</b> loop on html. We pass the information of each
+      accessed element to the <code><i>ImageAvatar component</i></code>.
+      Together with these values transferred to the component, we will get the
+      image of each element in the array.`, //💩
+    		oneAnotherMoreDescription: `We deserve a better view. We should make some
+      adjustments with CSS on the avatars.`, //💩
+    		codeExplanation: `If you are not calling the images you will use from the
+      remote server, you can keep them under the public folder. When you want to
+      use it, you can use it with a path like <b>images/image-name.png<b>
+      without including the public folder.`,
     		image: `assets/components/User/avatars-component.png`,
     		anotherImage: `assets/components/User/user-component-end.png`,
     		alternativeText: `call Avatar Component`,
@@ -6830,7 +6827,7 @@ var app = (function () {
     			create_component(image2.$$.fragment);
     			t21 = space();
     			create_component(image3.$$.fragment);
-    			add_location(article_1, file$z, 244, 0, 8470);
+    			add_location(article_1, file$z, 240, 0, 8315);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6983,62 +6980,58 @@ var app = (function () {
 
     	const article = {
     		head: `Card Component`,
-    		description: `Oyun alanında kullanacağımız kartlar için componentlere 
-      ihtiyacımız olacak. <code><i>CardFront componentinde</i></code> kartın
-      pokemon resmini tutarken, <code><i>CardBack componentinde</i></code>
-      '?' resmini tutacağız. Her iki bileşenin ortak kapsayıcısı <code><i>Card 
-      bileşeni</i></code> olacak.`,
-    		otherDescription: `<code><i>Card componentini</i></code> test ederken,
-      sürekli olarak <code><i>User componenti</i></code> üzerinde isim ve 
-      avatar seçimi yapmamak için <code><i>Playground componentinde</i></code>
-      yer alan <code><i>isStart</i></code> şartını <code><i>true</i></code>
-      ifadesine çevirelim.`,
-    		anotherDescription: `<code><i>CardFront</i></code> componentinde yer alan 
-      resimlerde <code><i>img src özelliği</i></code> olarak bir API adresi
-      verilmiş. Bu API'da dosya isimlerinde yer alan numaraları güncelleyerek,
-      farklı pokemon resimlerine erişilebilir.`,
-    		anAnotherDescription: `<code><i>CardFront componentini</i></code> öncelikle
-      <code><i>Card componentinde</i></code>, 
-      <code><i>Card componentini</i></code> de <code><i>Playground</i></code>
-      içerisinde <code><i>true</i></code> dönen blokta çağıralım. Aynı işlemi
-      <code><i>CardBack componentinde</i></code> tekrarlayarak 
-      <code><i>Card componentleri</i></code> üzerinde yaptığımız her 
-      güncellemeyi inceleyebileceğiz.`, // 💩
-    		moreAnotherDescription: `<code><i>Card componentleri</i></code> birer 
-      block-element olduğu için alt alta durmaktadır. Componentleri bir 
-      kapsayıcı içerisine alarak, inline-block seviyesine alalım. Aynı Component
-      içerisinde çağırdığımızdan dolayı, 'position: absolute' stilini 
-      verdiğimizde <code><i>Card Componentinde</i></code> yer alan 
-      <code><i>child componentler</i></code> üst üste duracaktır. Bu şekilde 
-      aynı kartın farklı iki yüzü görünümüne sahip olacaklar.`, // 💩
-    		moreDescription: `CSS kullanarak Card'ın arka yüzülen her tıklama ile 
-      birlikte <code><i>transform özelliği</i></code> ile <code><i>CardBack
-      Componentinin</i></code> altında yer alan <code><i>CardFront</i></code>
-      içerisinde yer alan kartın görüntülenmesini sağlayacağız. 
-      <code><i>Global.css</i></code> dosyamıza aşağıdaki özellikleri 
-      ekleyelim.`,
-    		descriptionCode: `<code><i>img</i></code> kapsayıcısı olan 
-      <code><i>back ve front classlarına</i></code> sahip kapsayıcılara belirli
-      özellikler katarak basit şekilde bir kart görünümü vermeye çaba sarfettik.
-      <code><i>CardBack componentinde Card componentinde</i></code> 
-      çağırarak arayüz üzerinde nasıl göründüğünü inceleyelim.`,
-    		oneMoreDescription: `<code><i>Card componentlerinin</i></code> bir bütün
-      gibi birlikte aynı hızda, ve aynı perspektif üzerinden dönüş sağlaması
-      gerekiyor. <code><i>Svelte'de</i></code> her component içerisinde 
-      tanımlanan <code><i>style özellikleri</i></code>, Component'e ait 
-      kapsayıcısı kadardır, diğer componentler bu stillendirmelerden
-      etkilenmezler. Bundan dolayı her iki class için aynı tanımlamaları
-      gerçekleştirelim veya bu stillendirmeleri <code><i>Global</i></code> 
-      olarak tanımlayalım.`,
-    		codeExplanation: `<code><i>CardBack Componentinin</i></code> kapsayıcı 
-      class'ına <code><i>.back</i></code>, 'position: absolute' değerini 
-      verdiğimizde her iki kart üst üste görüntülenecektir.`,
-    		otherCodeExplanation: `<code><i>Card componentlerinde</i></code> transform
-      stillendirmesi sağlayarak, <code><i>hover class</i></code> eklendiğinde
-      dönüş efekti vermesini sağlayalım.`,
-    		endStory: `Konsol üzerinde 'CardBack' componentine ait 'flipper' class 
-      bulunan elemente 'hover' class eklediğinde efekt gerçekleştiğini 
-      inceleyebilirsin.`,
+    		description: `We will need components for the cards we will use in the
+      playground. While we will hold the pokemon image of the card in the
+      <code><i>CardFront component</i></code>, we will hold the question mark
+      ('?') image in the <code><i>CardBack component</i></code>. The common
+      container for both components will be the <code><i>Card
+      component</i></code>.`,
+    		otherDescription: `While testing the <code><i>Card component</i></code>,
+      let's change the <b>isStart</b> condition in the <code><i>Playground
+      component</i></code> to <b>true</b> in order not to constantly choose
+      names and avatars on the <code><i>User component</i></code>.`,
+    		anotherDescription: `An API address is given as the <b>img src attribute</b>
+      in the images in the <code><i>CardFront component</i></code>. By updating
+      the numbers in the filenames in this API, different pokemon images can be
+      accessed.`,
+    		anAnotherDescription: `Let's call the <code><i>CardFront
+      component</i></code> in the <code><i>Card component</i></code> first, and
+      the <code><i>Card component</i></code> in the block that returns
+      <b>true</b> in the Playground. By repeating the same process in the
+      <code><i>CardBack component</i></code>, we will be able to examine every
+      update we have made on the <code><i>Card components</i></code>.`, // 💩
+    		moreAnotherDescription: `<code><i>Card components</i></code> are
+      block-elements, so they stand one after the other. Take the components
+      into a container and take them to the inline-block level. Since we are
+      calling it in the same component, when we give the <b>position:
+      absolute</b> style, the child components in the <code><i>Card
+      Component</i></code> will stand on top of each other. This way they will
+      have the appearance of two different sides of the same card.`, // 💩
+    		moreDescription: `By using CSS, we will display the card in
+      <code><i>CardFront</i></code> under the <code><i>CardBack
+      Component</i></code> with the <b>transform</b> property with each click on
+      the back of the Card. Let's add the following properties to our
+      <code><i>Global.css</i></code> file.`,
+    		descriptionCode: `We tried to give a simple card look by adding certain
+      features to the containers with <code><i>back and front
+      classes</i></code>, which are <b>img</b> containers. Now, we have a chance
+      to examine how it looks on the interface by calling the <code><i>Card
+      component</code></i> in the <code><i>CardBack component</i></code>.`,
+    		oneMoreDescription: `<code><i>Card components</i></code> need to provide
+      rotation at the same speed and from the same perspective as a whole. The
+      style properties defined in each component in <code><i>Svelte</i></code>
+      are as much as the container of the component, other components are not
+      affected by these styling. Therefore, let's make the same definitions for
+      both classes or define these stylings as <code><i>Global</i></code>.`,
+    		codeExplanation: `When we give <b>.back</b>, <b>position: absolute</b> to
+      the container class of the <code><i>CardBack Component</i></code>, both
+      cards will be displayed one above the other.`,
+    		otherCodeExplanation: `Provide <b>transform</b> styling in <code><i>Card
+      components</i></code> so that when <b>hover class</b> is added, it gives a
+      rotation effect.`,
+    		endStory: `When you add the <b>hover</b> class to the element with the
+      <b>flipper</b> class of the <code><i>Card Back</i></code> component on the
+      console, you can see the effect.`,
     		image: `assets/components/Card/card-views.png`,
     		anotherImage: `assets/components/Card/card-position.gif`,
     		anotherOneImage: `assets/components/Card/card-turn-effect-back.png`,
@@ -7315,7 +7308,7 @@ var app = (function () {
     			create_component(image.$$.fragment);
     			t2 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$y, 22, 0, 1120);
+    			add_location(article_1, file$y, 21, 0, 1067);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7372,15 +7365,14 @@ var app = (function () {
     	validate_slots('CommunicationBetweenComponent', slots, []);
 
     	const article = {
-    		head: `Componentler Arası İletişim`,
-    		description: `Küçük yapılı projelerden, komplex yapılılara kadar birçok 
-      veriyi component üzerinden alıp farklı bir yerde kullanma, güncelleme gibi 
-      ihtiyaçlarımız olacaktır. Modern framework yapılarının çözüm olarak 
-      kullanılan yapılarından biri de buradaki dataları <code><i>DOM, 
-      storage</i></code> gibi yapılara ihtiyaç duymadan uygulaman üzerinde 
-      kullanabilmeni sağlamaktır. Kullanılan framework, library veya 
-      compiler'in bu ihtiyacımıza esnek çözümler sağlayabilmesi gerekiyor. 
-      Svelte bu ihtiyaçlarımız için birden fazla çözümlere sahip.`,
+    		head: `Communication Between Components`,
+    		description: `From small projects to complex structures, we will have needs
+      such as taking many data from the component and using it in a different
+      place, updating it. One of the structures used as a solution of modern
+      framework structures is to enable you to use the data here on your
+      application without the need for structures such as DOM and storage. The
+      framework, library or compiler should be able to provide flexible
+      solutions to this need. Svelte has multiple solutions for these needs.`,
     		image: `assets/documentation/communication-is-key.jpg`,
     		alternativeText: `SpongeBob 'communication is key' meme`,
     		id: "communication-between-components"
@@ -7553,7 +7545,7 @@ var app = (function () {
     			create_component(childtitle.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$w, 15, 0, 593);
+    			add_location(article_1, file$w, 15, 0, 600);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7606,10 +7598,10 @@ var app = (function () {
 
     	const article = {
     		head: `Context`,
-    		description: `Bir veriyi iletmen gereken component sayısı arttıkça, 
-      yapısını kurgulamak ve takibini sağlamak zor ve bir yerden sonra da 
-      oldukça sıkıcı bir duruma dönüşebilir. Context ile dataların parent 
-      üzerinden child componentler üzerinde erişilmesini sağlar.`,
+    		description: `As the number of components you need to transfer data,
+      increases, it can be difficult to edit and follow the structure, and it
+      can turn into a rather boring situation after a while. With Context, it
+      enables data to be accessed on child components via parent.`,
     		id: "context"
     	};
 
@@ -7759,7 +7751,7 @@ var app = (function () {
     			create_component(paragraph3.$$.fragment);
     			t8 = space();
     			create_component(image.$$.fragment);
-    			add_location(article_1, file$v, 36, 0, 1594);
+    			add_location(article_1, file$v, 36, 0, 1506);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7846,18 +7838,18 @@ var app = (function () {
     	validate_slots('CreateASvelteProject', slots, []);
 
     	const article = {
-    		head: `Svelte projesi oluşturma`,
-    		description: `npx ile yeni bir proje oluşturma:`,
-    		otherDescription: `<code><i>Svelte Typescript</i></code> notasyonunu 
-      desteklemektedir. <code><i>Typescript</i></code> üzerinde yapabileceğiniz
-      bütün işlemleri <code><i>Svelte</i></code> projelerinde kullanabilirsin.`,
-    		anotherDescription: `Gerekli olan bağımlılıkları projemize ekleyerek ayağa 
-      kaldırabiliriz.`,
-    		anotherAnDescription: `Bu komutlar sonrasında konsol üzerinde projenin hangi
-      port üzerinde çalıştığını görebilirsin. Windows işletim sistemlerinde 
-      varsayılan 8080 portu işaretli iken, bu port üzerinde çalışan proje 
-      bulunuyorsa veya farklı işletim sistemi kullanıyorsan port numarası 
-      değişkenlik gösterebilir.`, // 💩
+    		head: `Creating Svelte project`,
+    		description: `Creating a new project with npx:`,
+    		otherDescription: `Svelte supports Typescript. You can use all the
+      operations you can do on <code><i>Typescript in Svelte</i></code>
+      projects.`,
+    		anotherDescription: `We can start our project by adding the necessary
+      dependencies to our project.`,
+    		anotherAnDescription: `After these commands, you can see which port the
+      project is running on the console. While the default 8080 port is marked
+      in Windows operating systems, the port number may vary if there is a
+      project running on this port or if you are using a different operating
+      system.`, // 💩
     		image: `assets/documentation/console-logs.png`,
     		alternativeText: `port where Svelte is running on the console`,
     		id: "create-a-svelte-project"
@@ -8134,7 +8126,7 @@ var app = (function () {
     			create_component(paragraph.$$.fragment);
     			t2 = space();
     			create_component(matter.$$.fragment);
-    			add_location(article_1, file$t, 41, 0, 2318);
+    			add_location(article_1, file$t, 35, 0, 1809);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8191,35 +8183,29 @@ var app = (function () {
     	validate_slots('ExamineSvelteStructure', slots, []);
 
     	const article = {
-    		head: `Svelte yapısını inceleme`,
-    		description: `Varsayılan <code><i>src/App.svelte</i></code> dosyasını 
-      kontrol ettiğimizde daha önce değindiğimiz gibi <code><i>Javascript</i>
-      </code> kodlarını tanımlayabileceğin <code><i>script, html</i></code> 
-      kodları için <code> <i>main</i></code> ve <code><i>stillendirme</i>
-      </code> üzerinde geliştirme yapmanı sağlayan <code><i>style</i></code> 
-      tagları bulunuyor.`,
+    		head: `Examining the Svelte structure`,
+    		description: `When we check the default 'src/App.svelte' file, as we
+      mentioned before, there are script tags where you can define Javascript
+      codes, main for html codes and style tags that allow you to develop on
+      styling.`,
     		material: [
-    			`<code><i>script</i></code> etiketinde <code><i>lang</i></code> özelliği 
-      <code><i>Typescript</i></code> bağımlılığından kaynaklı <code><i>ts
-      </i></code> değerinde bulunmaktadır. <code><i>Typescript</i></code>
-      kullanmak istediğin <code><i>svelte</i></code> dosyalarında <code><i>lang
-      </i></code> özelliğine <code><i>ts</i></code> değerini vermen yeterli
-      olacaktır.`,
-    			`<code><i>main</i></code> etiketinde <code><i>html</i></code> kodlarını 
-      tanımlayabileceğin gibi, bu etiketin dışında da dilediğin gibi <code><i>
-      html</i></code> kodlarını tanımlayabilirsin. <code><i>Svelte</i></code>
-      tanımladığın kodları <code><i>html</i></code> kodu olarak derlemesine 
-      rağmen, proje yapısının daha okunabilir olabilmesi için kapsayıcı bir
-      etiketin altında toplanması daha iyi olabilir.`,
-    			`<code><i>style</i></code> etiketi altında tanımladığın stil
-      özelliklerinden, aynı dosyada bulunan <code><i>html</i></code> alanında
-      seçiciler etkilenir. Global seçicileri tanımlayabilir veya global olarak
-      tanımlamak istediğin seçicileri <code><i>public/global.css</i></code>
-      dosyasında düzenleyebilirsin.`,
-    			`Proje içerisinde compile edilen bütün yapılar 
-      <code><i>/public/build/bundle.js</i></code> dosyasında yer almaktadir.
-      <code><i>index.html</i></code> dosyası buradaki yapıyı referans alarak
-      <code><i>Svelte</i></code> projesini kullanıcı karşısına getirmektedir.`
+    			`In the script tag, the 'lang' attribute is available in the 'ts' value
+      because of the <code><i>Typescript</i></code> dependency. In the
+      <code><i>Svelte</i></code> files that you want to use
+      <code><i>Typescript</i></code>, it will be sufficient to give the ts value
+      to the lang property.`,
+    			`As you can define html codes in the 'main' tag, you can define HTML codes
+      outside of this tag as you wish. Although <code><i>Svelte</i></code>
+      compiles the codes you define as HTML code, it may be better to gather
+      them under a container tag, so that the project structure and code may be
+      more legible.`,
+    			`The style properties you define under the style tag are affected by the
+      selectors in the HTML field in the same file. You can define global
+      selectors or edit the selectors you want to define globally in 
+      'public/global.css' file.`,
+    			`All builds compiled in the project are in the '/public/build/bundle.js'
+      file. The 'index.html' file presents the <code><i>Svelte</i></code>
+      project to the user by referencing the structure here.`
     		],
     		id: "examine-svelte-structure"
     	};
@@ -8290,7 +8276,7 @@ var app = (function () {
     			create_component(subheader.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$s, 15, 0, 563);
+    			add_location(article_1, file$s, 14, 0, 484);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8343,10 +8329,9 @@ var app = (function () {
 
     	const article = {
     		head: `Game Interface`,
-    		description: `Oyun içerisinde kartların kullanılabilmesi için bir 
-      <code><i>Component'a</i></code> ihtiyacımız bulunuyor. Bu 
-      <code><i>component'i</i></code> oluşturarak, oyun alanında istediğimiz
-      sayıda kart oluşturacağız.`,
+    		description: `We need a component to use the cards in the game. By creating
+      this component, we will create as many cards as we want on the play
+      ground.`,
     		id: "game-interface"
     	};
 
@@ -8525,7 +8510,7 @@ var app = (function () {
     			create_component(codesyntax3.$$.fragment);
     			t11 = space();
     			create_component(paragraph6.$$.fragment);
-    			add_location(article_1, file$r, 99, 0, 4026);
+    			add_location(article_1, file$r, 97, 0, 3902);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8628,39 +8613,37 @@ var app = (function () {
 
     	const article = {
     		head: `Game Requirements`,
-    		description: `Kullanıcının isim, avatar gibi aldığımız değerlerin yanı sıra
-      oyuna ait standart değerler bulunabilir. Geliştirmekte olduğumuz oyun için
-      bu değerlerden <code><i>level ve score</code></i> isimlerinde iki değer 
-      tanımlayacağız. Kullanıcı, isim ve avatar seçiminin ardından 
-      <code><i>start</i></code> butonuna tıkladığında bu değerlerden 
-      <code><i>level 1, score ise 0</code></i> değerlerini barındıracaklar. 
-      Kullanıcı doğru kartları eşleştirdikçe score değeri ve bütün kartlar 
-      eşleştiğinde level değerini güncelleyeceğiz.`,
-    		anotherDescription: `<code><i>level</i></code> isminde bir değer oluşturduk
-      ve gezegenin iyiliği için uygulamamız içerisinde kullanacağız. Bu değer 
-      kullanıcı arayüz üzerindeki bütün kartları eşleştirebildiğinde 
-      güncellenecek. Bir store değeri oluşturmak için <code><i>writable</i>
-      </code> interface ile Store değerlerini oluşturabilir ve 
-      güncelleyebilirsin.`,
-    		moreDescription: `Her eşleşme sonrasında kullanıcının puan kazanabildiği 
-      <code><i>score</i></code> değeri tanımlayalım.`, //💩
-    		anotherMoreDescription: `Bu değerleri farklı dosyalarda tanımlayabildiğin
-      gibi tek bir tek bir dosya içerisinde de <code><i>score&level</i></code>
-      değerlerini tanımlayabilirsin. Bir kullanıcı oluşturarak 
-      <code><i>name & avatar & score & level</i></code> değerlerini birlikte
-      kullanabilirsin.`, //💩
-    		anotherOneMoreDescription: `Kullanıcıya ait statik bilgileri tutacağımız 
-      yeni bir <code><i>class</i></code> oluşturalım.`, //💩
-    		otherDescription: `Svelte üzerinde <code><i>store</i></code> değerlerini 
-      birden fazla yapı ile güncelleyebilirsin. <code><i>$level = 1</i></code>
-      gibi bir yolu izlemekle birlikte aşağıdaki örnekteki gösterimdeki benzer
-      şekilde <code><i>.set</i></code> metodu ile güncelleme işlemeni 
-      sağlayabilirsin.`,
-    		endStory: `Oluşturduğumuz <code><i>UserInfo class</i></code> kullanıcının
-      isim, avatar değerlerini set edeceğiz. Bu değerlere default olarak boş 
-      <code><i>String</i></code> atadım, farklı içerikle doldurabilirsin. isim
-      ve avatar değerleri hatalı değilse <code><i>isStart</i></code> değerine
-      <code><i>true</i></code> olarak güncelleyerek oyunu başlatacağız.`,
+    		description: `In addition to the user's values such as name and avatar,
+      there can be standard values for the game. For the game we are developing,
+      we will define two values named <code><i>level and score</i></code> from
+      these values. When the user clicks the <b>Start button</b> after selecting
+      the name and avatar, <b>level</b> will contain the value 1 and
+      <b>score</b> 0. We will update the <b>score</b> value as the user matches
+      the correct cards and the <b>level</b> value when all cards are matched.`,
+    		anotherDescription: `We have created a value called <b>level</b> and we will
+      use it in our app for the good of the planet. This value will be updated
+      when the user can match all the cards on the interface. You can create and
+      update <code><i>Store</i></code> values with the <code><i>writable
+      interface</i></code> to create a <code><i>Store</i></code> value.`,
+    		moreDescription: `Let's define the <code><i>score</i></code> value that the
+      user can earn points after each match.`, //💩
+    		anotherMoreDescription: `As you can define these values in different files,
+      you can also define the score&level values in a single file. You can use
+      <code><i>name & avatar & score & level</i></code> values together by
+      creating a user.`, //💩
+    		anotherOneMoreDescription: `Create a new class where we will keep the static
+      information of the user.`, //💩
+    		otherDescription: `You can update <b>Store</b> values with more than one
+      structure on <code><i>Svelte</i></code>. Although you follow a path such
+      as <code><i>$level = 1</i></code>, you can perform the update process with
+      the <code><i>set method</code></i>, similar to the illustration in the
+      example below.`,
+    		endStory: `We will set the user's name and avatar values to the
+      <code><i>UserInfo class</i></code> we have created. I have assigned
+      <b>empty String</b> to these values by default, you can fill them with
+      different content. If the name and avatar values are not incorrect, we
+      will start the game by updating the <code><i>isStart</i></code> value to
+      <b>true</b>.`,
     		id: "game-requirements"
     	};
 
@@ -8871,7 +8854,7 @@ var app = (function () {
     			create_component(codesyntax2.$$.fragment);
     			t7 = space();
     			create_component(paragraph2.$$.fragment);
-    			add_location(article_1, file$q, 83, 0, 2480);
+    			add_location(article_1, file$q, 81, 0, 2256);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8954,18 +8937,16 @@ var app = (function () {
 
     	const article = {
     		head: `Header Component`,
-    		description: `Root folder üzerinde <code><i>Header.svelte</i></code>
-      isminde bir bileşen oluşturalım. Önceki örneklerde gerçekleştirdiğimiz
-      gibi, <code><i>Header.svelte</i></code> Componentini <code><i>
-      Userground.svelte</i></code> componenti üzerinde çağıralım. Oluşturduğumuz
-      <code><i>Header.svelte</i></code> componentinin basit bir görevi 
-      bulunuyor, statik bir metin bardındırmak.`,
-    		otherDescription: `Süper iğrenç gözüküyor, öyle değil mi? İyi ki CSS var..`,
-    		anotherDescription: `Ehh... şimdi biraz daha az kötü gözüktüğü 
-      söylenebilir💩`,
-    		moreDescription: `Statik bir metin yerine, array içerisinde birden fazla 
-      metin tutarak kullancı her eriştiğinde random bir yazıyı karşısına 
-      getirmek arayüzü biraz daha keyifli hale getirebilir.`,
+    		description: `Let's create a component named <code><i>Header.svelte</code>
+      </i> on the <b>root</b> folder. Let's call the
+      <code><i>Header.svelte Component</i></code> on the
+      <code><i>Userground.svelte</i></code> component, as we did in the previous
+      examples. The <code><i>Header.svelte component</code></i> we created has a
+      simple task, it is to contain a static text.`,
+    		otherDescription: `It looks super gross, doesn't it? Thanks to God, we have
+      CSS.`,
+    		anotherDescription: `mehhh... you can say it looks a little less gross
+      now💩`,
     		image: `assets/components/User/header-component.png`,
     		alternativeText: `call header component`,
     		id: "header-component"
@@ -9122,7 +9103,7 @@ var app = (function () {
     			create_component(image.$$.fragment);
     			t3 = space();
     			create_component(paragraph1.$$.fragment);
-    			add_location(article_1, file$p, 31, 0, 1654);
+    			add_location(article_1, file$p, 31, 0, 1694);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9184,24 +9165,24 @@ var app = (function () {
     	validate_slots('Hello', slots, []);
 
     	const article = {
-    		head: `Selamlaaaaar 👋`,
-    		description: `Herşeyden önce umuyorum ki bu basit döküman 
-    <code><i>Svelte</i></code> yolculuğunda rehber olabilir. Son zamanlarda 
-    Svelte ile uygulama geliştirmeye başladım. Svelte yapısına daha çok hakim 
-    olabilmek ve öğrendiklerimi paylaşabilmek için bu yazıyı hazırladım. 
-    Döküman içerisinde adım adım <code><i>Game</i></code> bağlantısında 
-    görebileceğin oyunu nasıl geliştirdiğimi  anlattım, ilgi duyuyorsan aynı 
-    adımları takip ederek benzer bir uygulama oluşturabilir, veya küçük bir 
-    kaynak modelinde kullanabilirsin. Svelte içeriği iyi ayrıntılanmış 
-    dökümantasyonlara (<a href="https://svelte.dev/docs" 
-    title="Svelte Documentation">Svelte Documentation</a>, <a 
-    href="https://svelte.dev/examples/hello-world" title="Svelte Examples">
-    Svelte Examples</a>) sahip, dökümantasyonları inceledikten sonra uygulamayı
-    takip etmen daha faydalı olabilir.`,
-    		otherDescription: `İlk bölümlerde <code><i>Svelte</i></code> nasıl 
-    kullanabileceğine dair bilgilendirmeler yer alıyor. Bu kısımlara hakimsen, 
-    atlayarak <a href="#start-game" title="Access Startm Game section">
-    Start Game</a> bölümünden devam edebilirsin.`,
+    		head: `Hiiiiiiiiii 👋`,
+    		description: `First of all, I hope this simple document can be a guide on
+      your <code><i>Svelte</i></code> journey. I recently started developing
+      applications with Svelte. I have prepared this article in order to have a
+      better understanding of the Svelte structure and to share what I have
+      learned. In the document, I explained step by step how I developed the
+      game, which you can see in the <code><i>#Game</i></code> link, if you are
+      interested, you may createa similar application by following the same
+      steps or use it as a small resource. Svelte has well-detailed
+      documentation (<a href="https://svelte.dev/docs" title="Svelte
+      Documentation">Svelte Documentation</a>, <a 
+      href="https://svelte.dev/examples/hello-world" title="Svelte Examples">
+      Svelte Examples</a>), so it may be more helpful to follow the application
+      after reviewing the documentation.`,
+    		otherDescription: `In the first few chapters, there is information about
+      how to use <code><i>Svelte</i></code>. If you have mastered these parts,
+      you can skip ahead and continue from the  <a href="#start-game" title="
+      Access Startm Game section">Start Game</a> section.`,
     		image: `assets/documentation/squirtle-squad.webp`,
     		alternativeText: `hello team`,
     		id: "hello-team"
@@ -9273,7 +9254,7 @@ var app = (function () {
     			create_component(childtitle.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$o, 15, 0, 626);
+    			add_location(article_1, file$o, 15, 0, 599);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9326,10 +9307,10 @@ var app = (function () {
 
     	const article = {
     		head: `Module Context`,
-    		description: `Component üzerinde kullandığınız veri farklı bir Component'da 
-      yer alıyorsa ve çalışmaları birbirlerine bağımlı olduğu senaryolarda 
-      Module Context Componentlar arasında bu senaryonun uygulanmasını sağlıyor.
-      Verileri birden çok component ile paylaşılmasını olanak tanır.`,
+    		description: `If the data you use on the Component is located in a different
+      Component and its operations are dependent on each other, 'Module Context'
+      provides this scenario to be applied between Components. It allows sharing
+      data with multiple components.`,
     		id: "module-context"
     	};
 
@@ -9453,7 +9434,7 @@ var app = (function () {
     			create_component(image.$$.fragment);
     			t6 = space();
     			create_component(paragraph3.$$.fragment);
-    			add_location(article_1, file$n, 50, 0, 2049);
+    			add_location(article_1, file$n, 51, 0, 2037);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9531,21 +9512,22 @@ var app = (function () {
 
     	const article = {
     		head: `Name Component`,
-    		description: `Pokemon eğitmenimizin bir isim girebilmesi için gerekli olan 
-      componenti oluşturalım.`,
-    		anotherDescription: `Diğer componentlerde yaptığımız gibi, <code><i>
-      UserName</i></code> componentinin <code><i>Userground</i></code> 
-      componentinde kullanalım.`,
-    		moreDescription: `Geriye son bir componentimiz kaldı. "Start" yazısına sahip
-      bir buton componentini oluşturarak, <code><i>User</i></code> klasöründe
-      <code><i>Start.svelte</i></code> ismiyle kaydedelim. Ve son olarak 
-      <code><i>UserGround</i></code> componentinde çağıralım.`, //💩
-    		oneMoreDescription: `Ta daaaa... Şuana kadar yaptığımız componentler dinamik
-      işlemler gerçekleştirmedi. Arayüzü oluşturmak için yeteri kadar malzememiz
-      ortaya çıktı, ve bunları istediğin gibi stillendirebilirsin. Svelte 
-      dosyana ait her stillendirme, svelte dosyasının kapsamı kadardır. 
-      Child-Parent componentler bu stil özelliklerine sahip olmazlar. Bundan 
-      sonraki aşamalarda bu componentlara dinamik özellikler kazandıracağız.`, //💩
+    		description: `We are going to create the necessary component for our Pokemon
+      trainer to enter a name.`,
+    		anotherDescription: `Let's use the <code><i>UserName component</i></code>
+      in the <code><i>Userground component</i></code>, as we did in the other
+      components.`,
+    		moreDescription: `We have one last component left, create a button component
+      with the text <b>Start</b>, save it as <code><i>Start.svelte</i></code> in
+      the <b>User</b> folder and finally call it in the <code><i>UserGround
+      component</i></code>.`, //💩
+    		oneMoreDescription: `Abracadabra... The components we have made so far have
+      not performed dynamic operations. We have enough material to create the
+      interface and you can style them how you want. Each styling of your
+      <code><i>Svelte</i></code> file is equal to the scope of the
+      <code><i>Svelte</i></code> file. Child-Parent components do not have these
+      style properties. In the next stages, we will add dynamic properties to
+      these components.`, //💩
     		image: `assets/components/User/end-interface.png`,
     		alternativeText: `call Avatar Component`,
     		id: "name-component"
@@ -9650,7 +9632,7 @@ var app = (function () {
     			create_component(paragraph0.$$.fragment);
     			t2 = space();
     			create_component(paragraph1.$$.fragment);
-    			add_location(article_1, file$m, 20, 0, 970);
+    			add_location(article_1, file$m, 21, 0, 980);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9707,16 +9689,17 @@ var app = (function () {
     	validate_slots('Practice', slots, []);
 
     	const article = {
-    		head: `Biraz pratik`,
-    		description: `Birkaç örnek yaparak <code><i>Svelte'i</i></code> anlamaya,
-      yorumlamaya çalışalım. Kod örnekleri oyun üzerinde sıkça kullanacağımız
-      yapılar için bir temel oluşturacak.`,
-    		otherDescription: `<code><i>App.svelte</i></code> dosyasında <code><i>name
-      </i></code> isminde bir değişken tanımlanmış. <code><i>Typescript</i>
-      </code> notasyonu baz alındığı için değer tipi olarak <code><i>string</i>
-      </code> verilmiş. Bu notasyon ile anlatım biraz daha uzun olabileceği 
-      için kullanmamayı tercih edicem. Github üzerinde bulunan kodlar 
-      inceliyorsan, burada birlikte oluşturacaklarımız farklılık gösterebilir.`,
+    		head: `A little practice`,
+    		description: `Let's try to understand and interpret
+      <code><i>Svelte</i></code> by making a few examples. The code samples will
+      form the basis for the structures that we will use frequently on the
+      game.`,
+    		otherDescription: `A variable named <code><i>name</i></code> is defined in
+      the <code><i>app.svelte</i></code> file. Since it is based on 
+      <code><i>Typescript</i></code> notation, string is given as value type.
+      With this notation, I would prefer not to use it because the expression
+      may be a little longer. If you're reviewing the code available on Github,
+      what we're going to create here may be different.`,
     		id: "practice"
     	};
 
@@ -9983,7 +9966,7 @@ var app = (function () {
     			create_component(header.$$.fragment);
     			t1 = space();
     			create_component(list.$$.fragment);
-    			add_location(article_1, file$k, 35, 0, 1589);
+    			add_location(article_1, file$k, 35, 0, 1579);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10035,29 +10018,29 @@ var app = (function () {
     	validate_slots('ProjectDependencies', slots, []);
 
     	const article = {
-    		head: `Proje bağımlılıkları`,
+    		head: `Project dependencies`,
     		terms: [
     			{
     				command: `Typescript`,
-    				description: `<code><i>Typescript, Javascript</i></code> kodunuzu daha
-          verimli kılmanızı ve kod kaynaklı hataların önüne geçilmesini sağlayan 
-          <code><i>Javascript</i></code> temelli programlama dilidir. Projenizde
-          yer alan <code><i>.svelte</i></code> uzantılı dosyalarda 
-          kullanabileceğiniz gibi, <code><i>.ts</i></code> dosyalarını da 
-          destekler. Geliştireceğimiz oyunda <code><i>Typescript</i></code>
-          tiplendirmesi ile devam etmeyeceğiz. Tamamen üstüne hakim olmadığım ve
-          konunun özünden saptığımı farkettim. <code><i>Svelte</i></code> 
-          üzerinde <code><i>Typescript'i</i></code> kullanabileceğini hatırlasan 
-          yeterli.`
+    				description: `<code><i>Typescript</i></code> is a <code><i>Javascript
+          </i></code> based programming language that makes your <code><i>
+          Javascript</i></code> code more efficient and prevents code-based
+          errors. It supports <code><i>.ts</i></code> files as well as you can
+          use it in <code><i>.svelte</i></code> files in your project. We will
+          not continue with Typescript format in the game we will develop. I
+          realized that I did not have complete control over it and that I had
+          deviated from the essence of the subject. Just remember that you can
+          use <code><i>Typescript on Svelte</code></i>.`
     			},
     			{
     				command: `Rollup`,
-    				description: `<code><i>Svelte</i></code> kurulumunuzla birlikte root 
-          folder üzerinde rollup.config.js dosyası oluşturulacaktır. Rollup 
-          <code><i>Javascript</i></code> uygulamalar için kullanılan bir modül
-          paketleyicidir, uygulamamızda yer alan kodları tarayıcının 
-          anlayabileceği şekilde ayrıştırır. <code><i>Svelte</i></code> 
-          kurulumuyla birlikte projende yer alacaktır.`
+    				description: `With your <code><i>Svelte</i></code> installation, the
+          rollup.config.js file will be created on the root folder.
+          <code><i>Rollup</i></code> is a module wrapper for <code><i>
+          Javascript</i></code> applications, it parses the codes in our
+          application in a way that the browser can understand. It will be
+          included in your project with the installation of
+          <code><i>Svelte</i></code>.`
     			}
     		],
     		id: "dependencies"
@@ -10122,7 +10105,7 @@ var app = (function () {
     			create_component(childtitle.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$j, 16, 0, 632);
+    			add_location(article_1, file$j, 16, 0, 630);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10175,11 +10158,11 @@ var app = (function () {
 
     	const article = {
     		head: `Props`,
-    		description: `Props kullanarak verileri bir component üzerinden farklı 
-      componentlere aktarabiliriz. Componentler arası bu ilişki parent-child
-      ile ifade edilir. Parent üzerinden child componentlere veri 
-      aktarabiliyorken, aynı zamanda child component üzerinden parent 
-      componente veri iletebilirsiniz.`,
+    		description: `By using props, we can transfer data from a component to
+      different components. This relationship between components is expressed as
+      parent-child. While you can pass data to child components through the
+      parent, you can also pass data to the parent component through the child
+      component.`,
     		id: "props"
     	};
 
@@ -10458,7 +10441,7 @@ var app = (function () {
     			create_component(codesyntax6.$$.fragment);
     			t20 = space();
     			create_component(paragraph10.$$.fragment);
-    			add_location(article_1, file$i, 258, 0, 8488);
+    			add_location(article_1, file$i, 252, 0, 8224);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10606,64 +10589,58 @@ var app = (function () {
 
     	const article = {
     		head: `User Component`,
-    		description: `Yarım kalmış bir <code><i>User</i></code> bileşenimiz 
-      bulunuyordu. Tanımladığımız <code><i>Store</i></code> değerlerini 
-      <code><i>User componenti</code></i> değerlerinde kullanalım. Burada 
-      yapacağımız son rötüşlar ile birlikte kullanıcının oyun arayüzüne
-      erişmesini sağlayalım.`,
-    		otherDescription: `<code><i>ImageAvatar.svelte component</i></code> 
-      üzerinde, kullanıcı avatar'a click eventini gerçekleştirdiğinde, 
-      <code><i>userInfo classinda</i></code> oluşturduğumuz avatar değerini 
-      güncelleyelim.`,
-    		anotherDescription: `Bu güncelleme ile birlikte kullanıcının seçtiği ve 
-      mouse ile üzerinde gezindiği avatarların 'opacity' değeri değişerek avatar
-      resmi vurgulanacak.`,
-    		anAnotherDescription: `Import ettiğimiz <code><i>UserInfo 
-      class'inda</i></code> yer alan <code><i>$name store</i></code> değerini, 
-      'bind:value' metodu ile güncelleyebiliriz.`, // 💩
-    		moreAnotherDescription: `Şimdi en güzel tarafına gelelim.. Son rötüşları 
-      yapıp oyunu başlatalım. 
-      <code><i>components > Playground > Wrapper > Playground.svelte</i></code>
-      componenti üzerinde bir <code><i>if/else</i></code> yapısı tanımlayalım.
-      <code><i>isStart store</i></code> değerimiz false ise kullanıcıyı 
-      <code><i>name&avatar</i></code> seçimi yapabildiği 
-      <code><i>Componente</i></code> yönlendirsin. Bunun aksi ise basit bir hata
-      bilgisi gösterelim.`, // 💩
-    		moreDescription: `Döngüler gibi <code><i>if/else Logic'leri</i></code> 
-      kullanabilirsin. <code><i>else if</i></code> ihtiyacında bir şart 
-      ifadesi olarak <code><i>else if isStart === undefined</i></code>
-      tanımlaman yeterli olacaktır.`,
-    		descriptionCode: `<code><i>StartGame fonksiyonu</i></code> ile birlikte 
-      <code><i>name ve avatar store</i></code> değerleri kontrol edilecek. Bu
-      değerlerin boş olmaması durumunda <code><i>isStart store</i></code>
-      değerine <code><i>true</i></code> atanarak, oyun başlatılacak konsola bir
-      bilgi yazılacak. Bu değerlerden herhangi biri bulunmuyorsa 
-      <code><i>User componenti</i></code> bulunduğu yerde kalmaya devam
-      edicektir. Böyle bir ihtimal için, <code><i>class directives</i></code>
-      kullanarak kullanıcıyı bilgilendirelim.`,
-    		codeExplanation: `<code><i>on:click</i></code> metoduna bağladığımız
-      fonksiyon ile kullanıcının tıkladığı avatar üzerinde bilgiyi kolay bir
-      şekilde elde edebiliyoruz. Konsolu açarak, logları inceleyebilirsin.
-      <code><i>ImageAvatar componentine</i></code> parametre olarak 
-      gönderdiğimiz avatar bilgisine erişebiliyoruz, bunu kullanarak fonksiyonu
-      biraz daha basit hale getirelim.`,
-    		otherCodeExplanation: `Kullanıcı avatarlar üzerine her click işlemi 
-      gerçekleştirdiğinde, <code><i>$avatar</i></code> değerini güncelliyoruz. 
-      <code><i>ImageAvatar.svelte componentini</i></code> geçmeden önce 
-      <code><i>class directives</i></code> kullanarak yıllaar yılllaarr önce
-      tanımladığımız <code><i>.picked ve .unpicked</i></code> classlarını 
-      anlamlı bir hale getirelim.`,
-    		oneLineDescription: `Kullanıcıdan almamız gereken diğer bir değer, 
-      <code><i>username</i></code>.`,
-    		endStory: `<code><i>Class Directive'lerde</i></code> yardımına başvurabilmek
-      için <code><i>isAvatarEmpty ve isNameEmpty</i></code> isminde iki farklı
-      değer oluşturduk. <code><i>Button'ın</i></code> altında bir 
-      <code><i>div etiketi</i></code> daha oluşturarak, hata mesajını burada
-      gösteriyoruz. <code><i>Name</i></code> için olan hata mesajını düzenle.. 
-      Ve oluşturduğumuz div etiketini bir component olarak yeniden oluşturup, 
-      hem <code><i>name</i></code> hemde <code><i>avatar</i></code> için 
-      kullanabilirsin. Bunu gerçekleştir, hemen ardından bir sonraki başlıkta 
-      devam edelim.`,
+    		description: `We had an unfinished <code><i>User component</i></code>. We
+      are going to use the <code><i>Store</i></code> values we defined in the
+      <code><i>User component</i></code> values. Let's give the user access to
+      the game interface with the finishing touches we will do here. On the
+      <code><i>ImageAvatar.svelte component</i></code>, when the user clicks the
+      avatar, let's update the avatar value we created in the <code><i>userInfo
+      class</i></code>.`,
+    		otherDescription: `On the <code><i>ImageAvatar.svelte component</i></code>,
+      when the user clicks the avatar, let's update the avatar value we created
+      in the <code><i>userInfo class</i></code>.`,
+    		anotherDescription: `With this update, the <b>opacity</b> value of the
+      avatars selected by the user and hovered over with the mouse will be
+      changed and the avatar image will be highlighted.`,
+    		anAnotherDescription: `We can update the <b>$name</b> store value in the
+      <code><i>UserInfo class</i></code> we imported with the <b>bind:value
+      method</b>.`, // 💩
+    		moreAnotherDescription: `Now let's get to the best part. Let's put the
+      finishing touches and start the game. Let's define an <b>if/else
+      structure</b> on the <code><i>components > Playground > Wrapper >
+      Playground.svelte</i></code> component. If our <b>isStart store value is
+      false</b>, it will direct the user to the component where they can
+      choose <b>name&avatar</b>. Otherwise, let's show a simple error text.`, // 💩
+    		moreDescription: `You can use if/else logics like loops. When you need else
+      if, it will suffice to define else if, <code><i>isStart ===
+      undefined</i></code> as a condition statement..`,
+    		descriptionCode: `With the StartGame function, name and avatar store values
+      will be checked. If these values are not empty, the <b>isStart</b> store
+      value will be set to <b>true</b> and an information will be written to the
+      console where the game will be started. If any of these values are not
+      found, the <code><i>User component</i></code> will remain where it is. For
+      such a possibility, let's inform the user using <code><i>class
+      directives</i></code>.`,
+    		codeExplanation: `With the function we connect to the <code><i>on:click
+      method</i></code>, we can easily obtain information on the avatar that
+      the user clicks. By opening the console, you can examine the logs. We can
+      access the avatar information that we send as a parameter to the
+      <code><i>ImageAvatar component</i></code>, here we make the function a
+      little simpler by using it.`,
+    		otherCodeExplanation: `Every time the user clicks on the avatars, we update
+      the <code><i>$avatar</i></code> value. Before moving on to the
+      <code><i>ImageAvatar.svelte component</i></code>, let's make the
+      <b>.picked and .unpicked</b> classes that we defined many years ago
+      meaningful by using <code><i>class directives</i></code>.`,
+    		oneLineDescription: `Another value we need to get from the user is
+      <b>username</b>.`,
+    		endStory: `In order to get help from the <code><i>Class
+      Directive</i></code>, we created two different values named
+      <b>isAvatarEmpty and isNameEmpty</b>. By creating another <b>div</b> tag
+      below the <b>Button</b>, we show the error message here. Edit the error
+      message for <b>name</b>.. And you can recreate the <b>div</b> tag we
+      created as a component and use it for both <b>name and avatar</b>. Make it
+      happen, then let's continue in the next section.`,
     		image: `assets/components/User/class-directive.gif`,
     		anotherImage: `assets/components/User/start-game.gif`,
     		alternativeText: `Class Directives`,
@@ -10977,7 +10954,7 @@ var app = (function () {
     			create_component(paragraph1.$$.fragment);
     			t4 = space();
     			create_component(image.$$.fragment);
-    			add_location(article_1, file$h, 64, 0, 1758);
+    			add_location(article_1, file$h, 63, 0, 1703);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11044,12 +11021,11 @@ var app = (function () {
     	validate_slots('ReactiveVariables', slots, []);
 
     	const article = {
-    		head: `Reaktif değişkenler`,
-    		description: `Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde,
-      DOM üzerinde yer alan referansı benzer olarak güncellenir.`,
-    		otherDescription: `Tanımladığımız <code><i>numb</i></code> değeri her 
-      güncellendiğinde, DOM üzerinde bu değer yeniden ve sıkılmadan 
-      güncellenmeye devam edecektir.`,
+    		head: `Reactive variables`,
+    		description: `When dynamic data, which is changeable, is updated, its
+      reference on the DOM is also updated.`,
+    		otherDescription: `Each time the <b>numb</b> value we define is updated,
+      this value will continue to be updated on the DOM without getting bored.`,
     		image: `assets/documentation/reactive.gif`,
     		alternativeText: `definition of reactive variable in Svelte`,
     		id: "reactive-variables"
@@ -11167,7 +11143,7 @@ var app = (function () {
     			create_component(childtitle.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$g, 14, 0, 511);
+    			add_location(article_1, file$g, 14, 0, 483);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11220,9 +11196,9 @@ var app = (function () {
 
     	const article = {
     		head: `Slots`,
-    		description: `Parent-child ilişkisinde olduğu gibi verilerin alt componente
-      aktarılmasında kullanabilirsin. Bir template dahilinde (html içerikleri
-      gibi) verilerin aktarılmasına sağlayabilirsin.`,
+    		description: `You can use it to pass the data to the child component, as in
+      the parent-child relationship. You can pass data (such as html content)
+      within a template.`,
     		id: "slots"
     	};
 
@@ -11303,7 +11279,7 @@ var app = (function () {
     			create_component(paragraph.$$.fragment);
     			t2 = space();
     			create_component(image.$$.fragment);
-    			add_location(article_1, file$f, 25, 0, 1246);
+    			add_location(article_1, file$f, 24, 0, 1167);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11361,17 +11337,16 @@ var app = (function () {
 
     	const article = {
     		head: `Start Game`,
-    		description: `Svelte'i biraz daha yakından tanıyoruz, birlikte uygulamamızı
-      oluşturabilmek için yeteri kadar bilgi sahibi olduk. Oyun için gerekli 
-      yapılarımızı basitten zora doğru kurgulayamaya başlayabiliriz. 
-      Kullanıcının arayüz üzerinde görebileceği iki Component bulunuyor. 
-      Kullanıcı adı ve avatar seçtiği User Component, bu seçimler sonrasında erişilen Playground 
-      Component. User Componenti ile oyunumuzu oluşturmaya başlayalım. 
-      <a href="#create-a-svelte-project" title="Create a Svelte project">
-      Yeni bir proje oluşturabilir</a> veya pratik yaptığımız kodları
-      kaldırabilirsin. <code><i>src > components > User
-      </i></code> ve <code><i>src > components > Playground</i></code> 
-      klasörlerini oluşturmakla başlayalım.`,
+    		description: `We're getting to know <code><i>Svelte</i></code> a little
+      better, we've learned enough to create our app together. We can start to
+      construct the structures required for the game from simple to difficult.
+      There are two Components that the user can see on the interface,
+      <b>Username and User Component</b> with <b>avatar selected, Playground
+      Component</b> accessed after these selections. Let's start building our
+      game with the <b>User Component</b>. You can create a new project or
+      remove the code we have been practicing. Let's start by creating the
+      <code><i>src > components > User and src > components > Playground</i>
+      </code> folders.`,
     		image: `assets/documentation/start-folder.png`,
     		alternativeText: `start folder`,
     		id: "start-game"
@@ -11443,7 +11418,7 @@ var app = (function () {
     			create_component(childtitle.$$.fragment);
     			t1 = space();
     			create_component(paragraph.$$.fragment);
-    			add_location(article_1, file$e, 14, 0, 512);
+    			add_location(article_1, file$e, 14, 0, 472);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11496,9 +11471,9 @@ var app = (function () {
 
     	const article = {
     		head: `Store`,
-    		description: `Veri taşımacılık ltd. şti.'nin joker kartı.. Verileri her 
-      yerde çağırabilmeyi, güncelleyebilmemizi sağlar. Kullanımı için bir 
-      hiyerarşi içerisinde olmasına gereksinimi bulunmuyor.`,
+    		description: `Data transportation company's joker card.. It enables us to
+      call and update data anywhere. It does not need to be in a hierarchy for
+      its use.`,
     		id: "store"
     	};
 
@@ -11546,8 +11521,6 @@ var app = (function () {
     	let paragraph1;
     	let t3;
     	let image;
-    	let t4;
-    	let paragraph2;
     	let current;
 
     	accessarticle = new AccessArticle({
@@ -11580,13 +11553,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paragraph2 = new Paragraph({
-    			props: {
-    				text: /*article*/ ctx[0].anotherDescription
-    			},
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
     			article_1 = element("article");
@@ -11599,9 +11565,7 @@ var app = (function () {
     			create_component(paragraph1.$$.fragment);
     			t3 = space();
     			create_component(image.$$.fragment);
-    			t4 = space();
-    			create_component(paragraph2.$$.fragment);
-    			add_location(article_1, file$d, 24, 0, 1084);
+    			add_location(article_1, file$d, 22, 0, 997);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11617,8 +11581,6 @@ var app = (function () {
     			mount_component(paragraph1, article_1, null);
     			append_dev(article_1, t3);
     			mount_component(image, article_1, null);
-    			append_dev(article_1, t4);
-    			mount_component(paragraph2, article_1, null);
     			current = true;
     		},
     		p: noop,
@@ -11629,7 +11591,6 @@ var app = (function () {
     			transition_in(paragraph0.$$.fragment, local);
     			transition_in(paragraph1.$$.fragment, local);
     			transition_in(image.$$.fragment, local);
-    			transition_in(paragraph2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -11638,7 +11599,6 @@ var app = (function () {
     			transition_out(paragraph0.$$.fragment, local);
     			transition_out(paragraph1.$$.fragment, local);
     			transition_out(image.$$.fragment, local);
-    			transition_out(paragraph2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -11648,7 +11608,6 @@ var app = (function () {
     			destroy_component(paragraph0);
     			destroy_component(paragraph1);
     			destroy_component(image);
-    			destroy_component(paragraph2);
     		}
     	};
 
@@ -11668,17 +11627,15 @@ var app = (function () {
     	validate_slots('SvelteRun', slots, []);
 
     	const article = {
-    		head: `Svelte nasıl çalışır?`,
-    		description: `Svelte bileşenleri <code><i>.svelte</i></code> uzantılı 
-      dosyalar ile oluşturulur. HTML'e benzer olarak <code><i>script, style,
-      html</i></code> kod yapılarını oluşturabilirdiğiniz üç farklı bölüm 
-      bulunuyor.`,
-    		otherDescription: `Svelte dosyaları derlenerek, pure 
-      <code><i>Javascript</i></code> kodlarına dönüştürülür. Svelte derleme 
-      işlemini runtime üzerinde gerçekleştiriyor. Bu derleme işlemiyle birlikte 
-      Virtual DOM bağımlılığını ortadan kalkıyor.`,
-    		anotherDescription: `Virtual DOM nedir, bu bağımlılığın kalkması ne anlama
-      geliyor?`,
+    		head: `How Svelte Works?`,
+    		description: `<code><i>Svelte</i></code> components are created with files
+      with the <code><i>.svelte</i></code> extension. Similar to HTML, there are
+      three different sections where you can create <code><i>script, style and
+      html</i></code> code structures.`,
+    		otherDescription: `<code><i>Svelte</i></code> files are compiled and
+      converted to vanilla <code><i>Javascript</i></code> codes. Svelte compiles
+      on runtime. With this build process, it eliminates addiction of the
+      Virtual DOM.`,
     		image: `assets/documentation/build-map.png`,
     		alternativeText: `Svelte build file`,
     		id: "how-svelte-works"
@@ -11820,7 +11777,7 @@ var app = (function () {
     			create_component(codesyntax1.$$.fragment);
     			t7 = space();
     			create_component(image1.$$.fragment);
-    			add_location(article_1, file$c, 90, 0, 2898);
+    			add_location(article_1, file$c, 89, 0, 2852);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11902,21 +11859,20 @@ var app = (function () {
     	validate_slots('UseOfComponent', slots, []);
 
     	const article = {
-    		head: `Component kullanımı`,
-    		description: `Uygulamalarımızda yer alan bileşenleri parçalayarak 
-      istediğimiz gibi bir bütün haline getirebilmek üzerinde çalışırken 
-      kolaylık sağlar, tekrar eden bileşen parçalarını yeniden çağırabilmek daha
-      az efor sarfettirir.`,
-    		otherDescription: `Bir önceki örnekte yaptığımız random sayı üreten basit 
-      yapıyı bir component haline getirelim. <code><i>components/Content/
-      </code></i> dizininde <code><i>RandomNumber.svelte</i></code> dosyasını
-      oluşturalım. Bu yeni componentimizi <code><i>App.svelte</i></code> 
-      dosyasında kullanalım.`,
-    		anotherDescription: `<code><i>RandomNumber</i></code> componentini 
-      istediğimiz gibi çağırarak kullanmaya başlayabiliriz. Bununla birlikte 
-      component içerisinde kullanılan <code><i>button & h3</i></code> 
-      elementlerine ait bileşenler de oluşturulmalıdır. Oyun için kullancağımız
-      bileşenlerde bu kullanımları görebilirsin.`,
+    		head: `Usage of component`,
+    		description: `It provides convenience when working on breaking down the
+      components in our applications and bringing them into a whole as we want,
+      and it takes less effort to be able to recall the repetitive component
+      parts.`,
+    		otherDescription: `Let's turn the simple structure that produces random
+      numbers that we made in the previous example into a component. Let's
+      create the <code><i>RandomNumber.svelte</i></code> file in the 
+      <code><i>components/Content/</i></code> directory. We can use this new
+      component in the <code><i>App.svelte</i></code> file.`,
+    		anotherDescription: `We can start using the <b>RandomNumber component</b> by
+      calling it as we want. With this, components of <b>button & h3 elements
+      </b> used in the component should also be created. You can see these uses
+      in the components we will use for the game.`,
     		image: `assets/components/component-with-sabuha.png`,
     		anotherImage: `assets/components/random-number-component.gif`,
     		alternativeText: `simple component usage demonstration`,
@@ -12174,7 +12130,7 @@ var app = (function () {
     			create_component(matter.$$.fragment);
     			t12 = space();
     			create_component(image1.$$.fragment);
-    			add_location(article_1, file$b, 86, 0, 3348);
+    			add_location(article_1, file$b, 87, 0, 3326);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12282,34 +12238,35 @@ var app = (function () {
 
     	const article = {
     		head: `User Component`,
-    		description: `<code><i>User</i></code> klasörü altında Kullanıcıdan 
-      alacağımız her değer için <code><i>Avatar</code></i> ve <code><i>Name</i>
-      </code> klasörlerini oluşturalım. Root klasörde <code><i>User</i></code>
-      Component altında tanımlanan bütün yapıların yer alacağı bir kapsayıcı 
-      dahil edeceğiz. <code><i>UserGround.svelte</i></code> isminde bir dosya 
-      oluşturuyorum, parçaladığımız bütün componentler burada yer alacak.`,
-    		otherDescription: `<code><i>Playground</i></code> klasörü içerisinde buna
-      benzer bir yapıyı oluşturarak, oyun içerisindeki bütün componentleri aynı
-      dosya üzerinde çağıracağız. <code><i>Playground</i></code> altında 
-      <code><i>Wrapper > Playground.svelte</i></code> dizin ve dosyasını
-      oluşturalım.`,
-    		anotherDescription: `User Componenti üzerinde çalışırken, yapacağımız 
-      değişiklikleri inceleyebilmek için User Component'ini 
-      <code><i>Playground > Wrapper > Playground.svelte</i></code> dosyasında
-      çağıralım.`,
-    		anAnotherDescription: `<code><i>User Component</i></code> çağırdıktan sonra
-      üzerinde geliştirme yapmaya başlayalım.`, // 💩
-    		moreAnotherDescription: `Component üzerinde 4 farklı bölüm yer alıyor.`, // 💩
-    		codeExplanation: `Bileşenimizde basit bir header etiketi tanımladık. Header
-      içerisinde componentDetail değerini çağırıyoruz.`,
-    		moreCodeExplanation: `Bileşenimizde yapacağımız geliştirmeleri tarayıcıda 
-      inceleyebilmek için Playground bileşenine import ederek kullanalım.`,
+    		description: `Let's create the <b>Avatar and Name</b> folders for each value
+      we will receive from the User under the <code><i>User</i></code> folder.
+      We will include a container in the root folder that will contain all the
+      structures defined under <code><i>User Component</i></code>. I'm creating
+      a file called <code><i>UserGround.svelte</i></code>, all the components we
+      split will be located here.`,
+    		otherDescription: `By creating a similar structure in the
+      <code><i>Playground</i></code> folder, we will call all the components in
+      the game on the same file. Let's create the <code><i>Wrapper >
+      Playground.svelte</code></i> directory and file under Playground.`,
+    		anotherDescription: `While working on the <b>User Component</b>, let's call
+      the <b>User Component</b> in the <code><i>Playground > Wrapper >
+      Playground.svelte</i></code> file so that we can review the changes we
+      will make.`,
+    		anAnotherDescription: `After calling the <code><i>User Component</i></code>,
+      let's start developing on it.`, // 💩
+    		moreAnotherDescription: `There are 4 different sections on the component.`, // 💩
+    		codeExplanation: `We have defined a simple header tag in our component. We
+      call <code><i>componentDetail</i></code> value in
+      <code><i>Header</i></code>.`,
+    		moreCodeExplanation: `Let's use it by importing it to the
+      <code><i>Playground component</i></code> so that we can examine the
+      improvements we will make in our component in the browser.`,
     		material: [
-    			`Kullanıcıyı bilgilendiren bir header yazısı`,
-    			`Kullanıcının görseller üzerinden avatar seçimi yapabildiği bir bölüm`,
-    			`Kullanıcı adının girilebilmesi için alan`,
-    			`Ve bütün bunlar tamamlandığında oyuna start veren bir button elementi 
-        bulunuyor.`
+    			`A header that informs the user`,
+    			`A section where the user can choose avatars over images`,
+    			`Space to the enter username`,
+    			`And when all this is completed, there is a button element that starts the
+      game.`
     		],
     		image: `assets/components/User/call-user-component.png`,
     		anotherImage: `assets/components/User/components-section.png`,
@@ -12468,7 +12425,7 @@ var app = (function () {
     			create_component(codesyntax1.$$.fragment);
     			t5 = space();
     			create_component(paragraph2.$$.fragment);
-    			add_location(article_1, file$a, 50, 0, 1795);
+    			add_location(article_1, file$a, 48, 0, 1616);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12542,20 +12499,18 @@ var app = (function () {
     	validate_slots('VaribleAccess', slots, []);
 
     	const article = {
-    		head: `Variable erişimi`,
-    		description: `<code><i>Script</i></code> üzerinde tanımlanan değerleri 
-      <code><i>html</i></code> içerisinde çağırabilmek için <code><i>{}</i>
-      </code> kullanılmalıdır. Bu template ile değer tipi farketmeksizin 
-      değişkenleri çağırarak işlemler gerçekleştirebilirsin.`,
-    		otherDescription: `Bu tanımlama ile birlikte <code><i>user</i></code>
-      değerine tanımlanan her değeri dinamik olarak <code><i>html</i></code>
-      içerisinde çağırabilirsin. <code><i>user</i></code> tanımlaması 
-      <code><i>sabuha</i></code> değerine eşit olduğu durumlarda 'seni izliyor!'
-      yerine 'bir kedi gördüm sanki!' değerini ekrana getirelim.`,
-    		anotherDescription: `<code><i>html</i></code> içerisinde kullandığımız 
-      <code><i>{}</i></code> tagları arasında condition yapıları gibi döngü,
-      fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu yapılara sahip 
-      birçok işlemi birlikte gerçekleştireceğiz.`,
+    		head: `Variable access`,
+    		description: `<code><i>Curly braces {}</i></code> must be used to call the
+      values defined on the script in HTML. With this template, you can perform
+      operations by calling variables regardless of value type.`,
+    		otherDescription: `With this definition, you can dynamically call any value
+      defined to the <b>user</b> value in HTML. Where <b>user</b> is equal to 
+      <b>sabuha</b>, <b>he is watching you!</b> instead of <b>I saw a cat, as if!
+      </b> Let's display the value.`,
+    		anotherDescription: `You can perform loop and function calls as well as
+      condition structures between <code><i>curly braces {}</code></i> tags that
+      we use in <b>HTML</b>. We will perform together, many operations with
+      these structures.`,
     		id: "variable-access"
     	};
 
@@ -12662,7 +12617,7 @@ var app = (function () {
     			create_component(paragraph0.$$.fragment);
     			t2 = space();
     			create_component(paragraph1.$$.fragment);
-    			add_location(article_1, file$9, 29, 0, 1551);
+    			add_location(article_1, file$9, 27, 0, 1495);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12719,25 +12674,23 @@ var app = (function () {
     	validate_slots('WhatIsSvelte', slots, []);
 
     	const article = {
-    		head: `Svelte nedir?`,
-    		description: `Svelte günümüz modern library ve framework habitatının komplex
-      yapılarını azaltarak daha basit şekilde yüksek verimliliğe sahip 
-      uygulamalar geliştirilmesini sağlamayı amaçlayan bir derleyicidir. Modern
-      framework/library ile birlikte geride bıraktığımız her süreçte farklı 
-      ihtiyaçlar için yeni bir öğrenme süreci ortaya çıktı. Öğrenme döngüsünün 
-      sürekli olarak geliştiricilerin karşısına çıkması bir süre sonrasında 
-      illallah dedirtmeye başladığı gayet aşikar. Svelte alışık olduğumuz 
-      <code><i>html & css & js</i></code> kod yapılarına benzer bir sözdizimine
-      sahip olması, props ve state/stores güncellemeleri için 40 takla 
-      atılmasına gerek kalınmaması gibi özellikleri ile bu döngünün dışına 
-      çıkmayı başarabilmiş.. ve umuyorum ki bu şekilde sadeliğini korumaya
-      devam edebilir.`,
-    		otherDescription: `
-      <a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-
-      dreaded-and-wanted-web-frameworks" title="Stack Overflow Developer Survey 2021">
-      Stack Overflow Developer Survey 2021</a> anketinde geliştiriciler 
-      tarafından %71.47 oranıyla en çok sevilen web framework Svelte olarak 
-      seçildi.`,
+    		head: `What is Svelte?`,
+    		description: `<code><i>Svelte</i></code> is a compiler that aims to reduce
+      the complexity of today's modern library and framework habitat which is
+      enabling simpler, efficent applications to be developed. Along with modern
+      frameworks or libraries, a new learning process emerged for different
+      needs as time passed. It is quite obvious that the learning cycle
+      constantly confronts to the developers, after a while developers starts to
+      say for god's sake. Svelte has managed to break out of this loop with its
+      features such as having a syntax similar to the <code><i>html & css & js
+      </i></code> code structures we are used to, and not needing to spend
+      effort for props and state/stores updates.. and I hope it can continue to
+      maintain its simplicity in this way.`,
+    		otherDescription: `In the
+      <a href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks"
+      title="Stack Overflow Developer Survey 2021">Stack Overflow Developer
+      Survey 2021</a> , Svelte was chosen as the most popular web framework with
+      a rate of 71.47% by the developers.`,
     		id: "what-is-svelte"
     	};
 
@@ -13003,7 +12956,7 @@ var app = (function () {
     			create_component(paragraph8.$$.fragment);
     			t19 = space();
     			create_component(image2.$$.fragment);
-    			add_location(article_1, file$8, 281, 0, 10119);
+    			add_location(article_1, file$8, 277, 0, 10118);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13145,53 +13098,48 @@ var app = (function () {
     	validate_slots('ShowCardsInYourHand', slots, []);
 
     	const article = {
-    		head: `Elindeki Kartları Göster ♠️`,
-    		description: `Arayüz üzerindeki bu güncellemelerimizin ardından, oyun 
-      alanımıza kartları sereserpebiliriz. Bu bölümde kartları oyun alanında 
-      göstereceğiz.`,
-    		otherDescription: `Oyun arayüzünde birtakım işlemleri gerçekleştirebilmek 
-      için bazı fonksiyonlar tanımlayacağız. SRC klasörümüzün altında 
-      <code><i>GameAction</i></code> isminde yeni bir klasör oluşturalım.
-      Bu klasör altında tanımlayacağımız fonksiyonlar aşağıdaki işlemleri 
-      gerçekleştirecek:`,
-    		anotherDescription: `Adım adım ilerleyelim.. Seviyeye bağımlı 
-      olarak Arayüz üzerinde yer alacak sayı aralığını oluşturalım.`,
-    		anAnotherDescription: `Parametre olarak verdiğimiz sayı değerleri 1, 5 ve 4
-      değerleri konsol üzerinde görüntülenen array değerlerini oluşturmamızı 
-      sağlıyor. Belirli aralıkları kapsayan bir sayımız bulunuyorsa, array 
-      içerisinde yer alan sayıları random olarak karıştırmamızın önüne 
-      geçebilecek bir durum bulunmuyor.`, // 💩
-    		moreDescription: `Kartları oyun arayüzü üzerinde listeleyebilmemiz için 
-      gerekli fonksiyonlarımızı oluşturduk. Bunları kullanarak 
-      <code><i>Playground</i></code> alanını coşturalım.`,
-    		descriptionCode: `<code><i>Playground bileşeninde 
-      mixedListOfPokemon</i></code> isminde store değeri oluşturduk. Bu değer
-      random sayıları, id değerlerimiz ile birlikte tutuyor. Bir döngü 
-      içerisinde bu değerleri props olarak <code><i>Card</i></code> ismindeki
-      bileşene aktaralım. Aktarılan değerleri CardFront ve CardBack isimli 
-      bileşenlerimizde kullancağız.`,
-    		codeExplanation: `<code><i>ListCards.svelte</i></code> dosyasında yer alan
-      list fonksiyonuna ihtiyacım olduğu için modülü dışarı aktardım.
-      Fonksiyonun basit bir görevi bulunuyor. Parametre olarak verilen değerle
-      birlikte 5 sayı büyüklüğünde bir aralığı array tipinde döndürmelidir.
-      <code><i>range</i></code> değerimiz erişmek istediğimiz toplam aralık
-      uzunluğunu ifade ediyor. <code><i>maxNumberReachedOnRange</i></code> 
-      değeri erişilecek olan maximum sayı değerini verirken, 
-      <code><i>minNumberReachedOnRange</i></code> değeri maximum değeri 
-      kullanarak minumum sayıyı elde etmemize imkan sağlıyor. 
-      <code><i>Playground bileşenimizde</i></code> çağırarak nasıl bir sonuç
-      verdiğini kontol edelim.`,
-    		otherCodeExplanation: `<code><i>MixCards bileşeninde</i></code> 
-      oluşturacağımız fonksiyonu kullanarak, list fonksiyonundan elde ettiğimiz
-      array içerisinde yer alan değerleri kopyalayacağız. Sayı aralığımız 5 
-      olduğunda, yeni oluşacak olan array değerimizde toplamda 10 değer yer 
-      alacak. Bu değerler belirli bir sırayı takip etmek yerine array içerisinde
-      random yer alacaklar. İlerde kartları eşleştirebilme işlemi için, her
-      kartın sıra numarasına göre id değeri atayalım.`,
-    		endStory: `Kartlarımızı arayüz üzerine başarılı bir şekilde sıraladık. 
-      Bir önceki bölümde yaptığımız gibi, .flipper class değerinin bulunduğu 
-      elemente .hover eklediğimizde kartın CardFront componentini 
-      gözlemleyebiliriz.`,
+    		head: `Show Your Cards ♠️`,
+    		description: `After these updates on the interface, we can show off cards
+      onto our playing field. In this section we will show the cards on the
+      playing field.`,
+    		otherDescription: `We will define some functions in order to perform some
+      operations in the game interface. Let's create a new folder named
+      <b>GameAction</b> under our <b>SRC folder</b>. The functions that we will
+      define under this folder will perform the following operations:`,
+    		anotherDescription: `Let's proceed step by step.. Let's create the range of
+      numbers that will take place on the Interface, depending on the level.`,
+    		anAnotherDescription: `The number values 1, 5 and 4 that we give as
+      parameters allow us to create the array values displayed on the console.
+      If we have a number that covers certain intervals, there is no situation
+      that prevent us from randomly mixing the numbers in the array.`, // 💩
+    		moreDescription: `We have created our necessary functions so that we can
+      list the cards on the game interface. Let's get the
+      <code><i>Playground</i></code> area excited by using them.`,
+    		descriptionCode: `We created a store value called <b>mixedListOfPokemon</b>
+      in the <code><i>Playground component</i></code>. This value keeps the
+      random numbers together with our id values. Let's pass these values as
+      props to the component named Card in a loop. We will use the transferred
+      values in our components named CardFront and CardBack.`,
+    		codeExplanation: `I exported the module because I needed the list function
+      in the <code><i>ListCards.svelte</i></code> file. The function has a
+      simple task. It should return a range of 5 numbers in array type with the
+      value given as a parameter. Our range value represents the total range
+      length we want to access. The <b>maxNumberReachedOnRange</b> value gives
+      the maximum number to be reached, while the <b>minNumberReachedOnRange</b>
+      value allows us to obtain the minimum number by using the maximum value.
+      Let's check how it works by calling it in our
+      <code><i>Playground component</i></code>.`,
+    		otherCodeExplanation: `By using the function we will create in the
+      <code><i>MixCards component</i></code>, we will copy the values in the
+      array we obtained from the list function. When our number range is 5,
+      there will be 10 values in total in our new array value. These values will
+      be placed randomly in the array instead of following a specific order. In
+      order to match the cards in the future, let's assign an id value according
+      to the sequence number of each card.`,
+    		endStory: `We have successfully sorted our cards on the interface. As we did
+      in the previous section, when we add <b>.hover</b> to the element with the
+      <b>.flipper</b> class value, we can inspect the <code><i>CardFront
+      component</i></code> of the card.`,
     		image: `assets/components/GameAction/function-of-list-cards.png`,
     		anotherImage: `assets/components/GameAction/shuffle-cards.png`,
     		moreImage: `assets/components/GameAction/card-components.png`,
@@ -13201,28 +13149,29 @@ var app = (function () {
     		terms: [
     			{
     				command: `LevelUpdate`,
-    				description: `Arayüz üzerinde bütün kartlar doğru eşleştirildiğinde, 
-          bir sonraki seviye geçilmesi sağlanacak.`
+    				description: `When all the cards are matched correctly on the interface,
+          the next level will be passed.`
     			},
     			{
     				command: `ListCards`,
-    				description: `Arayüz üzerindeki kartlar seviyeye göre getirilecek. 
-          1. seviyede 0-5 aralığında kartlar getirilirken, 2. seviyede 5-10 ve 
-          3. seviyede 10-15 sayılarına ait kartlar arayüze yansıtılacak. Aralık 
-          değerlerini buradaki fonksiyon ile kurgulayacağız.`
+    				description: `The cards on the interface will be brought according to
+          the level. While cards in the range of 0-5 at the 1st level are
+          brought, cards with the numbers 5-10 at the 2nd level and 10-15 at the
+          3rd level will be reflected on the interface. We will construct the
+          range values with the function here.`
     			},
     			{
     				command: `MixCards`,
-    				description: `Arayüz üzerine gelen kartlar bir sıra halinde değil, 
-          random dağıtılmalıdır. MixCards fonksiyonu ile bunu 
-          gerçekleştireceğiz.`
+    				description: `The cards on the interface should be distributed randomly,
+          not in a row. We will do this with the MixCards function.`
     			},
     			{
     				command: `CloseOpenCards`,
-    				description: `Eşleşmeyen 2 kart açıldığında veya bütün kartlar doğru 
-          eşleştiğinde bir sonraki erişilecek seviye için kartlar arayüzde 
-          kapalı olmalıdır. Her iki durumda geçerli fonksiyonları 
-          tanımlayacağız.`
+    				description: `When 2 unmatched cards are opened or all cards are matched
+          correctly, the cards must be closed in the interface for the next
+          level to be reached. In both cases we will define valid functions. 
+          Let's proceed step by step. Let's create the range of numbers that
+          will take place on the Interface, depending on the level.`
     			}
     		],
     		id: "show-cards-in-your-hand"
@@ -13632,7 +13581,7 @@ var app = (function () {
     			create_component(paragraph5.$$.fragment);
     			t12 = space();
     			create_component(image1.$$.fragment);
-    			add_location(article_1, file$7, 167, 0, 5326);
+    			add_location(article_1, file$7, 168, 0, 5381);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13740,26 +13689,27 @@ var app = (function () {
 
     	const article = {
     		head: `Cards Spin Effect`,
-    		description: `Kartlara click eventi gerçekleştirildikten sonra, dönüş 
-      efektlerini bu bölümde düzenleyelim. Daha önce bu işlemi 
-      gerçekleştirecek stiller tanımlamıştık. Bunu kullanıcı etkileşimli hale 
-      getirelim. `,
-    		requireDescription: `Etkileşim yapılan kartları tutabileceğimiz 
-      cardFlipperCapsule ismiyle bir store değeri tanımlayalım.`,
-    		otherDescription: `Click eventi gerçekleştikten sonra, tıklanan kartın 
-      no değerini <code><i>cardFlipperCapsule</i></code> değerine ekleyelim. 
-      <code><i>Class directives ile cardFlipperCapsule</i></code> içerisinde yer
-      alan değerlere 'hover' sınıfını verelim. `,
-    		codeExplanation: `Kartın arka yüzüne her tıklamada bir tepki alacağız. 
-      <code><i>BackCardFace bileşenine Card bileşeninde</i></code> yeni 
-      oluşturduğumuz fonksiyonu bağlayalım. Fonksiyon şuan için sadece kartın
-      üstüne tıklandığında bir konsol çıktısı yansıtacak.`,
-    		descriptionCode: `<code><i>CardBack bileşenimizde 
-      createEventDispatcher</i></code> fonksiyonunu çağırdık. <code><i>CardBack
-      bileşenemize</i></code> DOM üzerinde tıklama işlemi gerçekleştirildiğinde
-      bu event ile atadığımız openCards fonksiyonu çalışmasını başlatacak.`,
-    		endStory: `<code><i>Playground</i></code> üzerinde bulunan kartlara 
-      etkileşim gerçekleştiğinde, kartın ön yüzündeki değer görüntülenecektir.`,
+    		description: `After the click events on the cards, let's arrange the
+      rotation effects in this section. At before, we defined styles to perform
+      this action. Let's make this user interactive. `,
+    		requireDescription: `Let's define a store value with the name
+      <code><i>cardFlipperCapsule</i></code> where we can keep the interacted
+      cards.`,
+    		otherDescription: `After the click event, let's add the number value of the
+      clicked card to the <code><i>cardFlipperCapsule</i></code> value. Here we
+      give the <b>hover</b> class to the values in the
+      <code><i>cardFlipperCapsule</code></i> with <b>class directives</b>.`,
+    		codeExplanation: `We will get a reaction for every click on the back of the
+      card. We are going to connect the function which we had just created in
+      Card to the <code><i>BackCardFace component</i></code>. For now, the
+      function will only reflect a console output when clicking on the card.`,
+    		descriptionCode: `We called the <code><i>createEventDispatcher</code></i>
+      function in our <code><i>CardBack component</i></code>. When clicking on
+      our <code><i>CardBack component<code></i> on the DOM, the
+      <code><i>openCards</i></code> function that we have assigned with this
+      event is going to start its operation.`,
+    		endStory: `When interacting with the cards on the Playground, the value on
+      the front of the card will be displayed.`,
     		image: `assets/components/Card/click-on-card.png`,
     		alternativeText: `user clicked on card`,
     		moreImage: `assets/components/Card/open-cards.gif`,
@@ -13963,8 +13913,6 @@ var app = (function () {
     	let t5;
     	let codesyntax1;
     	let t6;
-    	let paragraph3;
-    	let t7;
     	let image;
     	let current;
 
@@ -14011,11 +13959,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paragraph3 = new Paragraph({
-    			props: { text: /*article*/ ctx[0].codeExplanation },
-    			$$inline: true
-    		});
-
     	image = new Image({
     			props: {
     				image: /*article*/ ctx[0].image,
@@ -14041,10 +13984,8 @@ var app = (function () {
     			t5 = space();
     			create_component(codesyntax1.$$.fragment);
     			t6 = space();
-    			create_component(paragraph3.$$.fragment);
-    			t7 = space();
     			create_component(image.$$.fragment);
-    			add_location(article_1, file$6, 112, 0, 4014);
+    			add_location(article_1, file$6, 99, 0, 3463);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14065,8 +14006,6 @@ var app = (function () {
     			append_dev(article_1, t5);
     			mount_component(codesyntax1, article_1, null);
     			append_dev(article_1, t6);
-    			mount_component(paragraph3, article_1, null);
-    			append_dev(article_1, t7);
     			mount_component(image, article_1, null);
     			current = true;
     		},
@@ -14080,7 +14019,6 @@ var app = (function () {
     			transition_in(codesyntax0.$$.fragment, local);
     			transition_in(paragraph2.$$.fragment, local);
     			transition_in(codesyntax1.$$.fragment, local);
-    			transition_in(paragraph3.$$.fragment, local);
     			transition_in(image.$$.fragment, local);
     			current = true;
     		},
@@ -14092,7 +14030,6 @@ var app = (function () {
     			transition_out(codesyntax0.$$.fragment, local);
     			transition_out(paragraph2.$$.fragment, local);
     			transition_out(codesyntax1.$$.fragment, local);
-    			transition_out(paragraph3.$$.fragment, local);
     			transition_out(image.$$.fragment, local);
     			current = false;
     		},
@@ -14105,7 +14042,6 @@ var app = (function () {
     			destroy_component(codesyntax0);
     			destroy_component(paragraph2);
     			destroy_component(codesyntax1);
-    			destroy_component(paragraph3);
     			destroy_component(image);
     		}
     	};
@@ -14127,36 +14063,23 @@ var app = (function () {
 
     	const article = {
     		head: `Card Matching`,
-    		description: `Bütün kartları açabildiğimize göre, açılan kartları 
-      birbirleriyle eşleştirelim.`,
-    		otherDescription: `Bir önceki bölümde, kullanıcının üzerine tıkladığı 
-      kartları <code><i>cardFlipperCapsule</i></code> isminde bir store 
-      değerinde tuttuk. Bu değerlere istediğimiz gibi erişebilir, 
-      güncelleyebilir ve kurguladığımız yapı içerisinde kullanabiliriz.
-      Kullanıcının etkileşime girdiği kartları tuttuğumuz gibi, açılan ve 
-      eşleşen kartları tutabileceğimiz 2 store değeri daha oluşturalım.`,
-    		moreDescription: `Click eventi gerçekleştirelen 2 kartı 
-      <code><i>OpenCardsCapsule</i></code> içerisinde saklayalım. 
-      <code><i>OpenCardsCapsule</i></code> içerisinde toplam data sayısı 2'ye
-      eşit olduğunda, kartların id değerlerini kontrol edelim. Eşitlik durumunda
-      id değerini <code><i>catchEmAll</i></code> içerisinde tutalım. `,
-    		requireDescription: `<code><i>Class directives</i></code> üzerinde 
-      kullandığımız .includes metoduyla birlikte catchEmAll içerisinde yer alan
-      id değerlerine "hover" classini ekliyoruz. Hover içerisindeki stil
-      tanımlaması catchEmAll içerisinde yer alan id değerleri ile arayüz 
-      üzerinde bu id sahip kartların <code><i>CardFront bileşenini</i></code>
-      göstermesini sağlayacak.`,
-    		codeExplanation: ``,
-    		descriptionCode: ``,
-    		endStory: ``,
+    		description: `Now that we can open all the cards, let's match the opened
+      cards with each other.`,
+    		otherDescription: `In the previous section, we kept the cards that the user
+      clicked on a store value called <code><i>cardFlipperCapsule</i></code>.
+      We can access these values as we wish, update them and use them within the
+      structure we have constructed. Let's create 2 more store values, where we
+      can hold the cards that the user interacts with, as well as the cards that
+      are opened and matched.`,
+    		moreDescription: `Store the 2 cards that carried out the click event in
+      <code><i>OpenCardsCapsule</i></code>. When the total number of data in
+      <code><i>OpenCardsCapsule</i></code> is equal to 2, let's check the id
+      values of the cards. In case of equality, let's keep the id value in
+      <code><i>catchEmAll</i></code>.`,
     		image: `assets/components/Card/matching-cards.gif`,
-    		alternativeText: ``,
-    		moreImage: ``,
-    		moreAlternativeText: ``,
+    		alternativeText: `Matching cards on the playground`,
     		id: "card-matching"
     	};
-
-    	const requireCode = ``;
 
     	const code = `
     import { Writable, writable } from "svelte/store";
@@ -14241,7 +14164,6 @@ var app = (function () {
     		AccessArticle,
     		CodeSyntax,
     		article,
-    		requireCode,
     		code,
     		moreCode,
     		title,
@@ -14305,8 +14227,6 @@ var app = (function () {
     	let paragraph8;
     	let t16;
     	let codesyntax4;
-    	let t17;
-    	let paragraph9;
     	let current;
 
     	accessarticle = new AccessArticle({
@@ -14430,11 +14350,6 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	paragraph9 = new Paragraph({
-    			props: { text: /*article*/ ctx[0].endStory },
-    			$$inline: true
-    		});
-
     	const block = {
     		c: function create() {
     			article_1 = element("article");
@@ -14473,9 +14388,7 @@ var app = (function () {
     			create_component(paragraph8.$$.fragment);
     			t16 = space();
     			create_component(codesyntax4.$$.fragment);
-    			t17 = space();
-    			create_component(paragraph9.$$.fragment);
-    			add_location(article_1, file$5, 181, 0, 6531);
+    			add_location(article_1, file$5, 181, 0, 6520);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14517,8 +14430,6 @@ var app = (function () {
     			mount_component(paragraph8, article_1, null);
     			append_dev(article_1, t16);
     			mount_component(codesyntax4, article_1, null);
-    			append_dev(article_1, t17);
-    			mount_component(paragraph9, article_1, null);
     			current = true;
     		},
     		p: noop,
@@ -14542,7 +14453,6 @@ var app = (function () {
     			transition_in(image1.$$.fragment, local);
     			transition_in(paragraph8.$$.fragment, local);
     			transition_in(codesyntax4.$$.fragment, local);
-    			transition_in(paragraph9.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -14564,7 +14474,6 @@ var app = (function () {
     			transition_out(image1.$$.fragment, local);
     			transition_out(paragraph8.$$.fragment, local);
     			transition_out(codesyntax4.$$.fragment, local);
-    			transition_out(paragraph9.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -14587,7 +14496,6 @@ var app = (function () {
     			destroy_component(image1);
     			destroy_component(paragraph8);
     			destroy_component(codesyntax4);
-    			destroy_component(paragraph9);
     		}
     	};
 
@@ -14608,45 +14516,45 @@ var app = (function () {
 
     	const article = {
     		head: `Score & Level Updates`,
-    		description: `Kullanıcının kart eşleştirmesi ile birlikte puan kazanmasını 
-      ve bütün kartları başarılı eşleştirildikten sonra level atlaması gibi 
-      kurgular oluşturalım. Bunlara ek olarak oyunu daha eğlenceli bir hale 
-      getirebilmek için kullanıcı kart açtığında veya kartları başarılı 
-      eşleştirdiğinde ses veya bazı stillendirmeler kullanabilirsiniz. Bütün 
-      kartlar eşleştirildiklerinde kullanıcıyı tebrik eden bir içerik yazısı 
-      oluşturabilirsiniz. Kurguladığımız yapıda kullanıcı yanlış kartları 
-      eşleştirdiğinde, aldığı puanı azaltmak veya açabileceği kart sayısını 
-      sınırlandırmak gibi aksiyonlar almadık. Bunları yaparak oyun deneyimini 
-      arttırabilirsin. Biz seninle birlikte kaldığımız kısımdan devam edelim..`,
-    		otherDescription: `Kullanıcının eşleştirebildiği kartlarda puan kazanmasını 
-      istiyoruz. Bunun için hemen GameAction klasörüme gidip yeni bir component 
-      oluşturuyorum.`,
-    		anotherDescription: `<code><i>score</i></code> değerini henüz arayüz 
-      üzerinde görüntülememize rağmen, konsol üzerinde inceleyebiliriz. 
-      <code><i>Score</i></code>'da olduğu gibi level'i arttırmada da benzer bir
-      yolu takip edeceğiz.`,
+    		description: `Let's create setups such as the user to earn points with card
+      matching and to <code><i>level</i></code> up after all cards are
+      successfully matched. In addition to these, you can use sound or some
+      styling when the user opens cards or matches cards successfully to make
+      the game more fun. You can create a caption that congratulates the user
+      when all the cards are matched. In the structure we designed, we did not
+      take actions such as reducing the score or limiting the number of wrong
+      matches when the user matches the wrong cards. By doing these, you can
+      increase your gaming experience. We can continue from where we left off
+      with you..`,
+    		otherDescription: `We want the user to earn points on cards that they can
+      match. For this, I am going to go to my <code><i>GameAction</i></code>
+      folder and create a new component.`,
+    		anotherDescription: `Although we have not yet displayed the
+      <code><i>score</i></code> value on the interface, we can view it on the
+      console. We will follow a similar path in increasing the <b>level</b> as
+      we did in the <b>score</b>.`,
     		anAnotherDescription: ``, // 💩
-    		moreDescription: `Oyuna dönüş bütün kartları eşleştirmeye çalış.. Oluşan 
-      hataya farkettin mi? Bütün kartlar eşleştirildikten sonra yeniden 
-      kapatılmadan önceki 1-2 saniye içerisinde CardFront içerisindeki değerler
-      gözüküyor. Bunu engellemeye çalışalım..`,
-    		descriptionCode: `Yeni oluşturduğumuz <code><i>LevelUp</i></code> 
-      fonksiyonu <code><i>ScoreUp</i></code> fonksiyonuna oldukça benziyoruz. 
-      <code><i>level</i></code> store değerini set etmeden önce 
-      <code><i>setTimeOut</i></code> içerisinde tanımladım. Bunun birazdan bütün
-      kartlar üzerinde yapacağımız kartların kapanma işlemi sırasında en son 
-      eşleştirilen kart çiftinin, önceden açılan 4 kart çiftinden daha  geç 
-      kapanmasını engellemektir. Tekrardan main Card bileşenimize dönerek 
-      oluşturduğumuz fonksiyonu kullanalım.`,
-    		codeExplanation: `Export ettiğimiz <code><i>ScoreUp</i></code> fonksiyonunu 
-      istediğimiz yerde kullanabiliriz. Card bileşenlerinde kartların doğru 
-      eşleştirme yaptığımız şart ifadesinin içerisinde fonksiyonu çağıralım.`,
-    		otherCodeExplanation: `ScoreUp bileşeni kullanıcı doğru eşleştirmeleri 
-      gerçekleştirdiğinde +1 şeklinde sürekli güncellenecektir.`,
-    		anotherMoreDescription: `CloseOpenCards bileşenimizde closeAllCards isminde 
-      bir fonksiyon oluşturarak Card bileşenimizde kullandığımız store 
-      değerlerini sıfırlayalım.`,
-    		endStory: ``,
+    		moreDescription: `Go back to the game and try to match all the cards.. Did
+      you notice the error that occurred? After all the cards are matched, the
+      values in the <code><i>CardFront</i></code> appear within 1-2 seconds
+      before they are closed again. Let's try to prevent this.`,
+    		descriptionCode: `The <code><i>LevelUp</i></code> function we just created
+      is very similar to the <code><i>ScoreUp</i></code> function. I defined the
+      <b>level store</b> value in setTimeOut before I set it. What we will do on
+      all the cards soon is to prevent the last pair of cards from closing later
+      than the previously opened 4 pairs of cards during the closing process of
+      the cards. Let's go back to our main <code><i>Card component</i></code>
+      and use the function we created.`,
+    		codeExplanation: `We can use the <code><i>ScoreUp</i></code> function we
+      exported wherever we want. Let's call the function inside the condition
+      statement where we make the correct matching of the cards in the card
+      components.`,
+    		otherCodeExplanation: `The <code><i>ScoreUp</i></code> component will be
+      constantly updated as <b>+1</b> when the user does the correct matches.`,
+    		anotherMoreDescription: `Let's create a function called
+      <code><i>closeAllCards</i></code> in our <code><i>CloseOpenCards
+      component</i></code> and reset the store values we use in our
+      <code><i>Card component</i></code>.`,
     		image: `assets/components/Card/ScoreUp-Component.gif`,
     		anotherImage: `assets/components/Card/bug.png`,
     		moreImage: `<code><i>levelUp</i></code> fonksiyonumuzu closeAllCards 
@@ -15009,7 +14917,7 @@ var app = (function () {
     			create_component(image1.$$.fragment);
     			t14 = space();
     			create_component(paragraph6.$$.fragment);
-    			add_location(article_1, file$4, 167, 0, 5745);
+    			add_location(article_1, file$4, 165, 0, 5639);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15127,40 +15035,38 @@ var app = (function () {
 
     	const article = {
     		head: `User Detail Componenti`,
-    		description: `Son bölümümüzde <code><i>Score & Level</i></code> ile birlikte
-      oyun başlangıcında kullanıcının adını ve seçtiği avatarı oyun arayüzünde
-      gösteren bir bileşen oluşturalım.`,
+    		description: `In our last section, let's create a component with
+      <code><i>Score and Level<i></code> that displays the user's name and
+        selected avatar on the game interface at the start of the game.`,
     		requireDescription: `Components klasörümüzde GameElements isminde yeni bir 
       klasör oluşturalım. Daha önce <code><i>score ve level</i></code> 
       değerlerimizi kapsayan bir bileşen oluşturmadığımız için bu bileşenleri 
       burada oluşturacağız.`,
-    		otherDescription: `Bu bileşenleri oluştururken basit stil özellikleri de 
-      tanımlayalım.`,
-    		moreDescription: `Bileşenlerde aynı kod yapısını kullandık, değişen tek şey
-      import ettiğimiz store değerleriydi. Tek bir component içerisinde 
-      tanımlayıp kullanmak istediğin store değerini props içerisinde 
-      tanımlayarak kullanmış olduğumuz yapı ile aynı sonuca ulaşabilirsin. 
-      Kullanıcının isminin görüntüleneceği bileşeni oluşturalım.`,
-    		codeExplanation: `Kullanıcı oluşturulurken kullandığımız
-      <code><i>UserInfo sınıfına</i></code> erişerek, içerisinde tanımlanan 
-      <code><i>name</i></code> değerini rica ediyorum. Bu değeri 
-      <code><i>HTML</i></code> içerisinde görüntüleyelim. Bir de ... 
-      kullancıının seçmiş olduğu avatarı görüntülememiz için gerekli olan bir 
-      bileşene ihtiyacımız var.`,
-    		anotherDescription: `Oluşturduğumuz bu bileşenleri ortak bir kapsayayıcı 
-      olarak UserDetail isminde bir bileşen içerisinde tutalım.`,
-    		oneMoreDescription: `<code><i>UserDetail</i></code> bileşenimizi 
-      <code><i>Playground</i></code> üzerinde çağırdığımızda istediğimiz 
-      kullanıcının bilgilerini oyun alanına ekleyebiliyoruz. Hatırlarsan dostum,
-      <code><i>Card</i></code> componentinde yaptığımız geliştirmeyi 
-      inceleyebilmek için, <code><i>Playgorund</i></code> içerisinde yer alan 
-      <code><i>isStart</i></code> değerini <code><i>false</i></code> olarak 
-      vermiştik. Bunu düzellttiğimizde oyunumuzun sonuna geliyoruz.`,
-    		endStory: `Bu yapı ile birlikte geliştirmemizin sonuna geliyoruz. Svelte 
-      üzerinde araştırdığım kaynaklara aşağıdan erişebilirsin. Yanlış bir söz 
-      etmişsem, affola.. kahilkubilay@gmail.com hesabı üzerinden erişebilirsen
-      birlikte düzetebiliriz. Svelte üzerine daha iyi bir geliştirme 
-      yapabildiğim kaynakta umarım görüşürüz, kendine iyi davran 🍷`,
+    		otherDescription: `We may define simple style properties while creating
+      these components.`,
+    		moreDescription: `We used the same code structure in the components, the
+      only thing that changed was the store values we imported. By defining the
+      store value you want to use in a single component, you can reach the same
+      result as the structure we used by defining it in props. Let's create the
+      component to display the user's name.`,
+    		codeExplanation: `By accessing the <code><i>UserInfo class</i></code> that
+      we used when creating the user, we invite the <b>Mr. name</b> defined in
+      it to the stage. Let's display this value in HTML. We also need a
+      component that is necessary for us to display the avatar that the user has
+      selected.`,
+    		anotherDescription: `Let's keep these components inside a component called
+      <code><i>UserDetail</i></code> as a common component.`,
+    		oneMoreDescription: `When we call our <code><i>UserDetail
+      component</i></code> on <code><i>Playground</i></code>, we can add the
+      information of the user we want to the playground. If you remember, my
+      friend, we gave the <b>isStart</b> value in <code><i>Playground</i></code>
+      as false in order to examine the development we made in the <code><i>Card
+      component</i></code>. When we fix this, we are ready to play.`,
+    		endStory: `With this structure, we come to the end of our development. You
+      can access the resources, I researched about Svelte below. Forgive me if I
+      made any mistakes.. send me an e-mail to kahilkubilay@gmail.com, so we can
+      fix it together. Hope to see you on the resource where I can do better
+      development on <code><i>Svelte</i></code>, be nice to yourself 🍷`,
     		image: `assets/end-story-User-select.png`,
     		moreImage: `assets/end-story-playground.png`,
     		alternativeText: `user component at the end of the story`,

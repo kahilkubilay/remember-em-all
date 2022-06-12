@@ -6,18 +6,18 @@
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
 
   const article = {
-    head: `Svelte projesi oluşturma`,
-    description: `npx ile yeni bir proje oluşturma:`,
-    otherDescription: `<code><i>Svelte Typescript</i></code> notasyonunu 
-      desteklemektedir. <code><i>Typescript</i></code> üzerinde yapabileceğiniz
-      bütün işlemleri <code><i>Svelte</i></code> projelerinde kullanabilirsin.`,
-    anotherDescription: `Gerekli olan bağımlılıkları projemize ekleyerek ayağa 
-      kaldırabiliriz.`,
-    anotherAnDescription: `Bu komutlar sonrasında konsol üzerinde projenin hangi
-      port üzerinde çalıştığını görebilirsin. Windows işletim sistemlerinde 
-      varsayılan 8080 portu işaretli iken, bu port üzerinde çalışan proje 
-      bulunuyorsa veya farklı işletim sistemi kullanıyorsan port numarası 
-      değişkenlik gösterebilir.`, // 💩
+    head: `Creating Svelte project`,
+    description: `Creating a new project with npx:`,
+    otherDescription: `Svelte supports Typescript. You can use all the
+      operations you can do on <code><i>Typescript in Svelte</i></code>
+      projects.`,
+    anotherDescription: `We can start our project by adding the necessary
+      dependencies to our project.`,
+    anotherAnDescription: `After these commands, you can see which port the
+      project is running on the console. While the default 8080 port is marked
+      in Windows operating systems, the port number may vary if there is a
+      project running on this port or if you are using a different operating
+      system.`, // 💩
     image: `assets/documentation/console-logs.png`,
     alternativeText: `port where Svelte is running on the console`,
     id: "create-a-svelte-project",

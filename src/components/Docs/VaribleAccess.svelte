@@ -5,20 +5,18 @@
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
 
   const article = {
-    head: `Variable erişimi`,
-    description: `<code><i>Script</i></code> üzerinde tanımlanan değerleri 
-      <code><i>html</i></code> içerisinde çağırabilmek için <code><i>{}</i>
-      </code> kullanılmalıdır. Bu template ile değer tipi farketmeksizin 
-      değişkenleri çağırarak işlemler gerçekleştirebilirsin.`,
-    otherDescription: `Bu tanımlama ile birlikte <code><i>user</i></code>
-      değerine tanımlanan her değeri dinamik olarak <code><i>html</i></code>
-      içerisinde çağırabilirsin. <code><i>user</i></code> tanımlaması 
-      <code><i>sabuha</i></code> değerine eşit olduğu durumlarda 'seni izliyor!'
-      yerine 'bir kedi gördüm sanki!' değerini ekrana getirelim.`,
-    anotherDescription: `<code><i>html</i></code> içerisinde kullandığımız 
-      <code><i>{}</i></code> tagları arasında condition yapıları gibi döngü,
-      fonksiyon çağırma işlemleri gerçekleştirebilirsin. Bu yapılara sahip 
-      birçok işlemi birlikte gerçekleştireceğiz.`,
+    head: `Variable access`,
+    description: `<code><i>Curly braces {}</i></code> must be used to call the
+      values defined on the script in HTML. With this template, you can perform
+      operations by calling variables regardless of value type.`,
+    otherDescription: `With this definition, you can dynamically call any value
+      defined to the <b>user</b> value in HTML. Where <b>user</b> is equal to 
+      <b>sabuha</b>, <b>he is watching you!</b> instead of <b>I saw a cat, as if!
+      </b> Let's display the value.`,
+    anotherDescription: `You can perform loop and function calls as well as
+      condition structures between <code><i>curly braces {}</code></i> tags that
+      we use in <b>HTML</b>. We will perform together, many operations with
+      these structures.`,
     id: "variable-access",
   };
 

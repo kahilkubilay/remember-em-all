@@ -7,45 +7,45 @@
 
   const article = {
     head: `Score & Level Updates`,
-    description: `Kullanıcının kart eşleştirmesi ile birlikte puan kazanmasını 
-      ve bütün kartları başarılı eşleştirildikten sonra level atlaması gibi 
-      kurgular oluşturalım. Bunlara ek olarak oyunu daha eğlenceli bir hale 
-      getirebilmek için kullanıcı kart açtığında veya kartları başarılı 
-      eşleştirdiğinde ses veya bazı stillendirmeler kullanabilirsiniz. Bütün 
-      kartlar eşleştirildiklerinde kullanıcıyı tebrik eden bir içerik yazısı 
-      oluşturabilirsiniz. Kurguladığımız yapıda kullanıcı yanlış kartları 
-      eşleştirdiğinde, aldığı puanı azaltmak veya açabileceği kart sayısını 
-      sınırlandırmak gibi aksiyonlar almadık. Bunları yaparak oyun deneyimini 
-      arttırabilirsin. Biz seninle birlikte kaldığımız kısımdan devam edelim..`,
-    otherDescription: `Kullanıcının eşleştirebildiği kartlarda puan kazanmasını 
-      istiyoruz. Bunun için hemen GameAction klasörüme gidip yeni bir component 
-      oluşturuyorum.`,
-    anotherDescription: `<code><i>score</i></code> değerini henüz arayüz 
-      üzerinde görüntülememize rağmen, konsol üzerinde inceleyebiliriz. 
-      <code><i>Score</i></code>'da olduğu gibi level'i arttırmada da benzer bir
-      yolu takip edeceğiz.`,
+    description: `Let's create setups such as the user to earn points with card
+      matching and to <code><i>level</i></code> up after all cards are
+      successfully matched. In addition to these, you can use sound or some
+      styling when the user opens cards or matches cards successfully to make
+      the game more fun. You can create a caption that congratulates the user
+      when all the cards are matched. In the structure we designed, we did not
+      take actions such as reducing the score or limiting the number of wrong
+      matches when the user matches the wrong cards. By doing these, you can
+      increase your gaming experience. We can continue from where we left off
+      with you..`,
+    otherDescription: `We want the user to earn points on cards that they can
+      match. For this, I am going to go to my <code><i>GameAction</i></code>
+      folder and create a new component.`,
+    anotherDescription: `Although we have not yet displayed the
+      <code><i>score</i></code> value on the interface, we can view it on the
+      console. We will follow a similar path in increasing the <b>level</b> as
+      we did in the <b>score</b>.`,
     anAnotherDescription: ``, // 💩
-    moreDescription: `Oyuna dönüş bütün kartları eşleştirmeye çalış.. Oluşan 
-      hataya farkettin mi? Bütün kartlar eşleştirildikten sonra yeniden 
-      kapatılmadan önceki 1-2 saniye içerisinde CardFront içerisindeki değerler
-      gözüküyor. Bunu engellemeye çalışalım..`,
-    descriptionCode: `Yeni oluşturduğumuz <code><i>LevelUp</i></code> 
-      fonksiyonu <code><i>ScoreUp</i></code> fonksiyonuna oldukça benziyoruz. 
-      <code><i>level</i></code> store değerini set etmeden önce 
-      <code><i>setTimeOut</i></code> içerisinde tanımladım. Bunun birazdan bütün
-      kartlar üzerinde yapacağımız kartların kapanma işlemi sırasında en son 
-      eşleştirilen kart çiftinin, önceden açılan 4 kart çiftinden daha  geç 
-      kapanmasını engellemektir. Tekrardan main Card bileşenimize dönerek 
-      oluşturduğumuz fonksiyonu kullanalım.`,
-    codeExplanation: `Export ettiğimiz <code><i>ScoreUp</i></code> fonksiyonunu 
-      istediğimiz yerde kullanabiliriz. Card bileşenlerinde kartların doğru 
-      eşleştirme yaptığımız şart ifadesinin içerisinde fonksiyonu çağıralım.`,
-    otherCodeExplanation: `ScoreUp bileşeni kullanıcı doğru eşleştirmeleri 
-      gerçekleştirdiğinde +1 şeklinde sürekli güncellenecektir.`,
-    anotherMoreDescription: `CloseOpenCards bileşenimizde closeAllCards isminde 
-      bir fonksiyon oluşturarak Card bileşenimizde kullandığımız store 
-      değerlerini sıfırlayalım.`,
-    endStory: ``,
+    moreDescription: `Go back to the game and try to match all the cards.. Did
+      you notice the error that occurred? After all the cards are matched, the
+      values in the <code><i>CardFront</i></code> appear within 1-2 seconds
+      before they are closed again. Let's try to prevent this.`,
+    descriptionCode: `The <code><i>LevelUp</i></code> function we just created
+      is very similar to the <code><i>ScoreUp</i></code> function. I defined the
+      <b>level store</b> value in setTimeOut before I set it. What we will do on
+      all the cards soon is to prevent the last pair of cards from closing later
+      than the previously opened 4 pairs of cards during the closing process of
+      the cards. Let's go back to our main <code><i>Card component</i></code>
+      and use the function we created.`,
+    codeExplanation: `We can use the <code><i>ScoreUp</i></code> function we
+      exported wherever we want. Let's call the function inside the condition
+      statement where we make the correct matching of the cards in the card
+      components.`,
+    otherCodeExplanation: `The <code><i>ScoreUp</i></code> component will be
+      constantly updated as <b>+1</b> when the user does the correct matches.`,
+    anotherMoreDescription: `Let's create a function called
+      <code><i>closeAllCards</i></code> in our <code><i>CloseOpenCards
+      component</i></code> and reset the store values we use in our
+      <code><i>Card component</i></code>.`,
     image: `assets/components/Card/ScoreUp-Component.gif`,
     anotherImage: `assets/components/Card/bug.png`,
     moreImage: `<code><i>levelUp</i></code> fonksiyonumuzu closeAllCards 
@@ -201,5 +201,4 @@
   />
   <Paragraph text={article.anotherMoreDescription} />
   <CodeSyntax code={anotherAnOneMoreCode} title={moreTitle} />
-  <Paragraph text={article.endStory} />
 </article>

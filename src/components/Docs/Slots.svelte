@@ -5,9 +5,9 @@
 
   const article = {
     head: `Slots`,
-    description: `Parent-child ilişkisinde olduğu gibi verilerin alt componente
-      aktarılmasında kullanabilirsin. Bir template dahilinde (html içerikleri
-      gibi) verilerin aktarılmasına sağlayabilirsin.`,
+    description: `You can use it to pass the data to the child component, as in
+      the parent-child relationship. You can pass data (such as html content)
+      within a template.`,
     id: "slots",
   };
 </script>

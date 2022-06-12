@@ -7,31 +7,30 @@
 
   const article = {
     head: `Avatar Component`,
-    description: `Avatar bileşeni içerisinde birden fazla bileşene ihtiyaç 
-      duyacağımız için, bir klasör oluşturarak bütün gereksinim duyduğu 
-      bileşenleri klasör içerisinde tanımlayalım. 
+    description: `Since we will need more than one component in the
+      <code><i>Avatar component</i></code>, let's create a folder and define
+      all the components it needs in the folder. 
       <a href="https://github.com/kahilkubilay/remember-em-all/tree/master/public/images">
-      Bileşenlerde kullanacağımız görsellere buradan erişebilirsin.</a>`,
-    otherDescription: `<code><i>Avatars.svelte Userground.svelte</i></code>
-      içerisinde çağıralım. <code><i>Avatars.svelte, ImageAvatar.svelte</i>
-      </code> bileşenine bir kapsayıcı görevi görecek. Bununla birlikte 
-      <code><i>ImageAvatar.svelte</i></code> componentine data gönderecek.`,
-    anotherDescription: `<code><i>Avatars, Userground</i></code> üzerinde 
-      çağırdığımda karşıma bu iki güzellik gelecek.`,
-    moreDescription: `<code><i>Avatars</i></code> bileşenini daha işlevli bir 
-      yapıya dönüştürelim.`, //💩
-    oneMoreDescription: `Oluşturduğumuz 'avatars' dizisine ait her elemana 
-      <code><i>html</i></code> üzerinde #each döngüsünde erişiyoruz. Erişilen 
-      her elemanının bilgisini <code><i>ImageAvatar</i></code> componentine
-      aktarıyoruz. Componente aktarılan bu değerlerle birlikte, dizi içerisinde
-      bulunan her elamanın görüntüsünü elde edeceğiz.`, //💩
-    oneAnotherMoreDescription: `Daha güzel bir görüntüyü hak ettik. Avatarlar 
-      üzerinde CSS ile biraz düzenlemeler yapmamız gerekti.`, //💩
-    codeExplanation: `Kullanacağın görselleri uzak sunucu üzerinden almıyorsan
-      <code><i>public</i></code> klasörü altında barındırabilirsin. Kullanmak
-      istediğinde public klasörünü dahil etmeden 
-      <code><i>images/image-name.png</i></code> gibi bir yol ile 
-      kullanabilirsin.`,
+      You can access the images we will use in the components here. </a>`,
+    otherDescription: `Let's call the <code><i>Avatars.svelte</i></code> file in
+      <code><i>Userground.svelte Avatars.svelte</code></i> will act as a
+      container to the <code><i>ImageAvatar.svelte</i></code> component. It will
+      also send data to the <code><i>ImageAvatar.svelte</i></code> component.`,
+    anotherDescription: `These two beauties will come up when I call
+      <code><i>Avatars on Userground</i></code>.`,
+    moreDescription: `Here we turn the <code>i>Avatars component</i></code> into
+      a more functional structure.`, //💩
+    oneMoreDescription: `We access every element of the <b>avatars</b> array we
+      created in the <b>#each</b> loop on html. We pass the information of each
+      accessed element to the <code><i>ImageAvatar component</i></code>.
+      Together with these values transferred to the component, we will get the
+      image of each element in the array.`, //💩
+    oneAnotherMoreDescription: `We deserve a better view. We should make some
+      adjustments with CSS on the avatars.`, //💩
+    codeExplanation: `If you are not calling the images you will use from the
+      remote server, you can keep them under the public folder. When you want to
+      use it, you can use it with a path like <b>images/image-name.png<b>
+      without including the public folder.`,
     image: `assets/components/User/avatars-component.png`,
     anotherImage: `assets/components/User/user-component-end.png`,
     alternativeText: `call Avatar Component`,

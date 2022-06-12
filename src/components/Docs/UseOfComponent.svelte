@@ -6,21 +6,20 @@
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
 
   const article = {
-    head: `Component kullanımı`,
-    description: `Uygulamalarımızda yer alan bileşenleri parçalayarak 
-      istediğimiz gibi bir bütün haline getirebilmek üzerinde çalışırken 
-      kolaylık sağlar, tekrar eden bileşen parçalarını yeniden çağırabilmek daha
-      az efor sarfettirir.`,
-    otherDescription: `Bir önceki örnekte yaptığımız random sayı üreten basit 
-      yapıyı bir component haline getirelim. <code><i>components/Content/
-      </code></i> dizininde <code><i>RandomNumber.svelte</i></code> dosyasını
-      oluşturalım. Bu yeni componentimizi <code><i>App.svelte</i></code> 
-      dosyasında kullanalım.`,
-    anotherDescription: `<code><i>RandomNumber</i></code> componentini 
-      istediğimiz gibi çağırarak kullanmaya başlayabiliriz. Bununla birlikte 
-      component içerisinde kullanılan <code><i>button & h3</i></code> 
-      elementlerine ait bileşenler de oluşturulmalıdır. Oyun için kullancağımız
-      bileşenlerde bu kullanımları görebilirsin.`,
+    head: `Usage of component`,
+    description: `It provides convenience when working on breaking down the
+      components in our applications and bringing them into a whole as we want,
+      and it takes less effort to be able to recall the repetitive component
+      parts.`,
+    otherDescription: `Let's turn the simple structure that produces random
+      numbers that we made in the previous example into a component. Let's
+      create the <code><i>RandomNumber.svelte</i></code> file in the 
+      <code><i>components/Content/</i></code> directory. We can use this new
+      component in the <code><i>App.svelte</i></code> file.`,
+    anotherDescription: `We can start using the <b>RandomNumber component</b> by
+      calling it as we want. With this, components of <b>button & h3 elements
+      </b> used in the component should also be created. You can see these uses
+      in the components we will use for the game.`,
     image: `assets/components/component-with-sabuha.png`,
     anotherImage: `assets/components/random-number-component.gif`,
     alternativeText: `simple component usage demonstration`,

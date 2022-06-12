@@ -4,29 +4,29 @@
   import List from "./Section/Templates/List.svelte";
 
   const article = {
-    head: `Proje bağımlılıkları`,
+    head: `Project dependencies`,
     terms: [
       {
         command: `Typescript`,
-        description: `<code><i>Typescript, Javascript</i></code> kodunuzu daha
-          verimli kılmanızı ve kod kaynaklı hataların önüne geçilmesini sağlayan 
-          <code><i>Javascript</i></code> temelli programlama dilidir. Projenizde
-          yer alan <code><i>.svelte</i></code> uzantılı dosyalarda 
-          kullanabileceğiniz gibi, <code><i>.ts</i></code> dosyalarını da 
-          destekler. Geliştireceğimiz oyunda <code><i>Typescript</i></code>
-          tiplendirmesi ile devam etmeyeceğiz. Tamamen üstüne hakim olmadığım ve
-          konunun özünden saptığımı farkettim. <code><i>Svelte</i></code> 
-          üzerinde <code><i>Typescript'i</i></code> kullanabileceğini hatırlasan 
-          yeterli.`,
+        description: `<code><i>Typescript</i></code> is a <code><i>Javascript
+          </i></code> based programming language that makes your <code><i>
+          Javascript</i></code> code more efficient and prevents code-based
+          errors. It supports <code><i>.ts</i></code> files as well as you can
+          use it in <code><i>.svelte</i></code> files in your project. We will
+          not continue with Typescript format in the game we will develop. I
+          realized that I did not have complete control over it and that I had
+          deviated from the essence of the subject. Just remember that you can
+          use <code><i>Typescript on Svelte</code></i>.`,
       },
       {
         command: `Rollup`,
-        description: `<code><i>Svelte</i></code> kurulumunuzla birlikte root 
-          folder üzerinde rollup.config.js dosyası oluşturulacaktır. Rollup 
-          <code><i>Javascript</i></code> uygulamalar için kullanılan bir modül
-          paketleyicidir, uygulamamızda yer alan kodları tarayıcının 
-          anlayabileceği şekilde ayrıştırır. <code><i>Svelte</i></code> 
-          kurulumuyla birlikte projende yer alacaktır.`,
+        description: `With your <code><i>Svelte</i></code> installation, the
+          rollup.config.js file will be created on the root folder.
+          <code><i>Rollup</i></code> is a module wrapper for <code><i>
+          Javascript</i></code> applications, it parses the codes in our
+          application in a way that the browser can understand. It will be
+          included in your project with the installation of
+          <code><i>Svelte</i></code>.`,
       },
     ],
     id: "dependencies",

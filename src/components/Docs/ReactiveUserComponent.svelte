@@ -7,64 +7,58 @@
 
   const article = {
     head: `User Component`,
-    description: `Yarım kalmış bir <code><i>User</i></code> bileşenimiz 
-      bulunuyordu. Tanımladığımız <code><i>Store</i></code> değerlerini 
-      <code><i>User componenti</code></i> değerlerinde kullanalım. Burada 
-      yapacağımız son rötüşlar ile birlikte kullanıcının oyun arayüzüne
-      erişmesini sağlayalım.`,
-    otherDescription: `<code><i>ImageAvatar.svelte component</i></code> 
-      üzerinde, kullanıcı avatar'a click eventini gerçekleştirdiğinde, 
-      <code><i>userInfo classinda</i></code> oluşturduğumuz avatar değerini 
-      güncelleyelim.`,
-    anotherDescription: `Bu güncelleme ile birlikte kullanıcının seçtiği ve 
-      mouse ile üzerinde gezindiği avatarların 'opacity' değeri değişerek avatar
-      resmi vurgulanacak.`,
-    anAnotherDescription: `Import ettiğimiz <code><i>UserInfo 
-      class'inda</i></code> yer alan <code><i>$name store</i></code> değerini, 
-      'bind:value' metodu ile güncelleyebiliriz.`, // 💩
-    moreAnotherDescription: `Şimdi en güzel tarafına gelelim.. Son rötüşları 
-      yapıp oyunu başlatalım. 
-      <code><i>components > Playground > Wrapper > Playground.svelte</i></code>
-      componenti üzerinde bir <code><i>if/else</i></code> yapısı tanımlayalım.
-      <code><i>isStart store</i></code> değerimiz false ise kullanıcıyı 
-      <code><i>name&avatar</i></code> seçimi yapabildiği 
-      <code><i>Componente</i></code> yönlendirsin. Bunun aksi ise basit bir hata
-      bilgisi gösterelim.`, // 💩
-    moreDescription: `Döngüler gibi <code><i>if/else Logic'leri</i></code> 
-      kullanabilirsin. <code><i>else if</i></code> ihtiyacında bir şart 
-      ifadesi olarak <code><i>else if isStart === undefined</i></code>
-      tanımlaman yeterli olacaktır.`,
-    descriptionCode: `<code><i>StartGame fonksiyonu</i></code> ile birlikte 
-      <code><i>name ve avatar store</i></code> değerleri kontrol edilecek. Bu
-      değerlerin boş olmaması durumunda <code><i>isStart store</i></code>
-      değerine <code><i>true</i></code> atanarak, oyun başlatılacak konsola bir
-      bilgi yazılacak. Bu değerlerden herhangi biri bulunmuyorsa 
-      <code><i>User componenti</i></code> bulunduğu yerde kalmaya devam
-      edicektir. Böyle bir ihtimal için, <code><i>class directives</i></code>
-      kullanarak kullanıcıyı bilgilendirelim.`,
-    codeExplanation: `<code><i>on:click</i></code> metoduna bağladığımız
-      fonksiyon ile kullanıcının tıkladığı avatar üzerinde bilgiyi kolay bir
-      şekilde elde edebiliyoruz. Konsolu açarak, logları inceleyebilirsin.
-      <code><i>ImageAvatar componentine</i></code> parametre olarak 
-      gönderdiğimiz avatar bilgisine erişebiliyoruz, bunu kullanarak fonksiyonu
-      biraz daha basit hale getirelim.`,
-    otherCodeExplanation: `Kullanıcı avatarlar üzerine her click işlemi 
-      gerçekleştirdiğinde, <code><i>$avatar</i></code> değerini güncelliyoruz. 
-      <code><i>ImageAvatar.svelte componentini</i></code> geçmeden önce 
-      <code><i>class directives</i></code> kullanarak yıllaar yılllaarr önce
-      tanımladığımız <code><i>.picked ve .unpicked</i></code> classlarını 
-      anlamlı bir hale getirelim.`,
-    oneLineDescription: `Kullanıcıdan almamız gereken diğer bir değer, 
-      <code><i>username</i></code>.`,
-    endStory: `<code><i>Class Directive'lerde</i></code> yardımına başvurabilmek
-      için <code><i>isAvatarEmpty ve isNameEmpty</i></code> isminde iki farklı
-      değer oluşturduk. <code><i>Button'ın</i></code> altında bir 
-      <code><i>div etiketi</i></code> daha oluşturarak, hata mesajını burada
-      gösteriyoruz. <code><i>Name</i></code> için olan hata mesajını düzenle.. 
-      Ve oluşturduğumuz div etiketini bir component olarak yeniden oluşturup, 
-      hem <code><i>name</i></code> hemde <code><i>avatar</i></code> için 
-      kullanabilirsin. Bunu gerçekleştir, hemen ardından bir sonraki başlıkta 
-      devam edelim.`,
+    description: `We had an unfinished <code><i>User component</i></code>. We
+      are going to use the <code><i>Store</i></code> values we defined in the
+      <code><i>User component</i></code> values. Let's give the user access to
+      the game interface with the finishing touches we will do here. On the
+      <code><i>ImageAvatar.svelte component</i></code>, when the user clicks the
+      avatar, let's update the avatar value we created in the <code><i>userInfo
+      class</i></code>.`,
+    otherDescription: `On the <code><i>ImageAvatar.svelte component</i></code>,
+      when the user clicks the avatar, let's update the avatar value we created
+      in the <code><i>userInfo class</i></code>.`,
+    anotherDescription: `With this update, the <b>opacity</b> value of the
+      avatars selected by the user and hovered over with the mouse will be
+      changed and the avatar image will be highlighted.`,
+    anAnotherDescription: `We can update the <b>$name</b> store value in the
+      <code><i>UserInfo class</i></code> we imported with the <b>bind:value
+      method</b>.`, // 💩
+    moreAnotherDescription: `Now let's get to the best part. Let's put the
+      finishing touches and start the game. Let's define an <b>if/else
+      structure</b> on the <code><i>components > Playground > Wrapper >
+      Playground.svelte</i></code> component. If our <b>isStart store value is
+      false</b>, it will direct the user to the component where they can
+      choose <b>name&avatar</b>. Otherwise, let's show a simple error text.`, // 💩
+    moreDescription: `You can use if/else logics like loops. When you need else
+      if, it will suffice to define else if, <code><i>isStart ===
+      undefined</i></code> as a condition statement..`,
+    descriptionCode: `With the StartGame function, name and avatar store values
+      will be checked. If these values are not empty, the <b>isStart</b> store
+      value will be set to <b>true</b> and an information will be written to the
+      console where the game will be started. If any of these values are not
+      found, the <code><i>User component</i></code> will remain where it is. For
+      such a possibility, let's inform the user using <code><i>class
+      directives</i></code>.`,
+    codeExplanation: `With the function we connect to the <code><i>on:click
+      method</i></code>, we can easily obtain information on the avatar that
+      the user clicks. By opening the console, you can examine the logs. We can
+      access the avatar information that we send as a parameter to the
+      <code><i>ImageAvatar component</i></code>, here we make the function a
+      little simpler by using it.`,
+    otherCodeExplanation: `Every time the user clicks on the avatars, we update
+      the <code><i>$avatar</i></code> value. Before moving on to the
+      <code><i>ImageAvatar.svelte component</i></code>, let's make the
+      <b>.picked and .unpicked</b> classes that we defined many years ago
+      meaningful by using <code><i>class directives</i></code>.`,
+    oneLineDescription: `Another value we need to get from the user is
+      <b>username</b>.`,
+    endStory: `In order to get help from the <code><i>Class
+      Directive</i></code>, we created two different values named
+      <b>isAvatarEmpty and isNameEmpty</b>. By creating another <b>div</b> tag
+      below the <b>Button</b>, we show the error message here. Edit the error
+      message for <b>name</b>.. And you can recreate the <b>div</b> tag we
+      created as a component and use it for both <b>name and avatar</b>. Make it
+      happen, then let's continue in the next section.`,
     image: `assets/components/User/class-directive.gif`,
     anotherImage: `assets/components/User/start-game.gif`,
     alternativeText: `Class Directives`,

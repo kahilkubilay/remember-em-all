@@ -6,12 +6,11 @@
   import CodeSyntax from "./Section/Templates/CodeDescription/CodeSyntax.svelte";
 
   const article = {
-    head: `Reaktif değişkenler`,
-    description: `Değişkenlik gösterebilecek dinamik verilerin güncellendiğinde,
-      DOM üzerinde yer alan referansı benzer olarak güncellenir.`,
-    otherDescription: `Tanımladığımız <code><i>numb</i></code> değeri her 
-      güncellendiğinde, DOM üzerinde bu değer yeniden ve sıkılmadan 
-      güncellenmeye devam edecektir.`,
+    head: `Reactive variables`,
+    description: `When dynamic data, which is changeable, is updated, its
+      reference on the DOM is also updated.`,
+    otherDescription: `Each time the <b>numb</b> value we define is updated,
+      this value will continue to be updated on the DOM without getting bored.`,
     image: `assets/documentation/reactive.gif`,
     alternativeText: `definition of reactive variable in Svelte`,
     id: "reactive-variables",

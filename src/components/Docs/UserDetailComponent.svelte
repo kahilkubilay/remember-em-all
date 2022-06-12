@@ -7,40 +7,38 @@
 
   const article = {
     head: `User Detail Componenti`,
-    description: `Son bölümümüzde <code><i>Score & Level</i></code> ile birlikte
-      oyun başlangıcında kullanıcının adını ve seçtiği avatarı oyun arayüzünde
-      gösteren bir bileşen oluşturalım.`,
+    description: `In our last section, let's create a component with
+      <code><i>Score and Level<i></code> that displays the user's name and
+        selected avatar on the game interface at the start of the game.`,
     requireDescription: `Components klasörümüzde GameElements isminde yeni bir 
       klasör oluşturalım. Daha önce <code><i>score ve level</i></code> 
       değerlerimizi kapsayan bir bileşen oluşturmadığımız için bu bileşenleri 
       burada oluşturacağız.`,
-    otherDescription: `Bu bileşenleri oluştururken basit stil özellikleri de 
-      tanımlayalım.`,
-    moreDescription: `Bileşenlerde aynı kod yapısını kullandık, değişen tek şey
-      import ettiğimiz store değerleriydi. Tek bir component içerisinde 
-      tanımlayıp kullanmak istediğin store değerini props içerisinde 
-      tanımlayarak kullanmış olduğumuz yapı ile aynı sonuca ulaşabilirsin. 
-      Kullanıcının isminin görüntüleneceği bileşeni oluşturalım.`,
-    codeExplanation: `Kullanıcı oluşturulurken kullandığımız
-      <code><i>UserInfo sınıfına</i></code> erişerek, içerisinde tanımlanan 
-      <code><i>name</i></code> değerini rica ediyorum. Bu değeri 
-      <code><i>HTML</i></code> içerisinde görüntüleyelim. Bir de ... 
-      kullancıının seçmiş olduğu avatarı görüntülememiz için gerekli olan bir 
-      bileşene ihtiyacımız var.`,
-    anotherDescription: `Oluşturduğumuz bu bileşenleri ortak bir kapsayayıcı 
-      olarak UserDetail isminde bir bileşen içerisinde tutalım.`,
-    oneMoreDescription: `<code><i>UserDetail</i></code> bileşenimizi 
-      <code><i>Playground</i></code> üzerinde çağırdığımızda istediğimiz 
-      kullanıcının bilgilerini oyun alanına ekleyebiliyoruz. Hatırlarsan dostum,
-      <code><i>Card</i></code> componentinde yaptığımız geliştirmeyi 
-      inceleyebilmek için, <code><i>Playgorund</i></code> içerisinde yer alan 
-      <code><i>isStart</i></code> değerini <code><i>false</i></code> olarak 
-      vermiştik. Bunu düzellttiğimizde oyunumuzun sonuna geliyoruz.`,
-    endStory: `Bu yapı ile birlikte geliştirmemizin sonuna geliyoruz. Svelte 
-      üzerinde araştırdığım kaynaklara aşağıdan erişebilirsin. Yanlış bir söz 
-      etmişsem, affola.. kahilkubilay@gmail.com hesabı üzerinden erişebilirsen
-      birlikte düzetebiliriz. Svelte üzerine daha iyi bir geliştirme 
-      yapabildiğim kaynakta umarım görüşürüz, kendine iyi davran 🍷`,
+    otherDescription: `We may define simple style properties while creating
+      these components.`,
+    moreDescription: `We used the same code structure in the components, the
+      only thing that changed was the store values we imported. By defining the
+      store value you want to use in a single component, you can reach the same
+      result as the structure we used by defining it in props. Let's create the
+      component to display the user's name.`,
+    codeExplanation: `By accessing the <code><i>UserInfo class</i></code> that
+      we used when creating the user, we invite the <b>Mr. name</b> defined in
+      it to the stage. Let's display this value in HTML. We also need a
+      component that is necessary for us to display the avatar that the user has
+      selected.`,
+    anotherDescription: `Let's keep these components inside a component called
+      <code><i>UserDetail</i></code> as a common component.`,
+    oneMoreDescription: `When we call our <code><i>UserDetail
+      component</i></code> on <code><i>Playground</i></code>, we can add the
+      information of the user we want to the playground. If you remember, my
+      friend, we gave the <b>isStart</b> value in <code><i>Playground</i></code>
+      as false in order to examine the development we made in the <code><i>Card
+      component</i></code>. When we fix this, we are ready to play.`,
+    endStory: `With this structure, we come to the end of our development. You
+      can access the resources, I researched about Svelte below. Forgive me if I
+      made any mistakes.. send me an e-mail to kahilkubilay@gmail.com, so we can
+      fix it together. Hope to see you on the resource where I can do better
+      development on <code><i>Svelte</i></code>, be nice to yourself 🍷`,
     image: `assets/end-story-User-select.png`,
     moreImage: `assets/end-story-playground.png`,
     alternativeText: `user component at the end of the story`,

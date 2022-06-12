@@ -5,10 +5,9 @@
 
   const article = {
     head: `Game Interface`,
-    description: `Oyun içerisinde kartların kullanılabilmesi için bir 
-      <code><i>Component'a</i></code> ihtiyacımız bulunuyor. Bu 
-      <code><i>component'i</i></code> oluşturarak, oyun alanında istediğimiz
-      sayıda kart oluşturacağız.`,
+    description: `We need a component to use the cards in the game. By creating
+      this component, we will create as many cards as we want on the play
+      ground.`,
     id: "game-interface",
   };
 </script>

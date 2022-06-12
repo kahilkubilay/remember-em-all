@@ -5,15 +5,14 @@
   import AccessArticle from "./Section/Templates/AccessArticle.svelte";
 
   const article = {
-    head: `Componentler Arası İletişim`,
-    description: `Küçük yapılı projelerden, komplex yapılılara kadar birçok 
-      veriyi component üzerinden alıp farklı bir yerde kullanma, güncelleme gibi 
-      ihtiyaçlarımız olacaktır. Modern framework yapılarının çözüm olarak 
-      kullanılan yapılarından biri de buradaki dataları <code><i>DOM, 
-      storage</i></code> gibi yapılara ihtiyaç duymadan uygulaman üzerinde 
-      kullanabilmeni sağlamaktır. Kullanılan framework, library veya 
-      compiler'in bu ihtiyacımıza esnek çözümler sağlayabilmesi gerekiyor. 
-      Svelte bu ihtiyaçlarımız için birden fazla çözümlere sahip.`,
+    head: `Communication Between Components`,
+    description: `From small projects to complex structures, we will have needs
+      such as taking many data from the component and using it in a different
+      place, updating it. One of the structures used as a solution of modern
+      framework structures is to enable you to use the data here on your
+      application without the need for structures such as DOM and storage. The
+      framework, library or compiler should be able to provide flexible
+      solutions to this need. Svelte has multiple solutions for these needs.`,
     image: `assets/documentation/communication-is-key.jpg`,
     alternativeText: `SpongeBob 'communication is key' meme`,
     id: "communication-between-components",

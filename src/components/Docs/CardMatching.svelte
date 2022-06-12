@@ -7,36 +7,23 @@
 
   const article = {
     head: `Card Matching`,
-    description: `Bütün kartları açabildiğimize göre, açılan kartları 
-      birbirleriyle eşleştirelim.`,
-    otherDescription: `Bir önceki bölümde, kullanıcının üzerine tıkladığı 
-      kartları <code><i>cardFlipperCapsule</i></code> isminde bir store 
-      değerinde tuttuk. Bu değerlere istediğimiz gibi erişebilir, 
-      güncelleyebilir ve kurguladığımız yapı içerisinde kullanabiliriz.
-      Kullanıcının etkileşime girdiği kartları tuttuğumuz gibi, açılan ve 
-      eşleşen kartları tutabileceğimiz 2 store değeri daha oluşturalım.`,
-    moreDescription: `Click eventi gerçekleştirelen 2 kartı 
-      <code><i>OpenCardsCapsule</i></code> içerisinde saklayalım. 
-      <code><i>OpenCardsCapsule</i></code> içerisinde toplam data sayısı 2'ye
-      eşit olduğunda, kartların id değerlerini kontrol edelim. Eşitlik durumunda
-      id değerini <code><i>catchEmAll</i></code> içerisinde tutalım. `,
-    requireDescription: `<code><i>Class directives</i></code> üzerinde 
-      kullandığımız .includes metoduyla birlikte catchEmAll içerisinde yer alan
-      id değerlerine "hover" classini ekliyoruz. Hover içerisindeki stil
-      tanımlaması catchEmAll içerisinde yer alan id değerleri ile arayüz 
-      üzerinde bu id sahip kartların <code><i>CardFront bileşenini</i></code>
-      göstermesini sağlayacak.`,
-    codeExplanation: ``,
-    descriptionCode: ``,
-    endStory: ``,
+    description: `Now that we can open all the cards, let's match the opened
+      cards with each other.`,
+    otherDescription: `In the previous section, we kept the cards that the user
+      clicked on a store value called <code><i>cardFlipperCapsule</i></code>.
+      We can access these values as we wish, update them and use them within the
+      structure we have constructed. Let's create 2 more store values, where we
+      can hold the cards that the user interacts with, as well as the cards that
+      are opened and matched.`,
+    moreDescription: `Store the 2 cards that carried out the click event in
+      <code><i>OpenCardsCapsule</i></code>. When the total number of data in
+      <code><i>OpenCardsCapsule</i></code> is equal to 2, let's check the id
+      values of the cards. In case of equality, let's keep the id value in
+      <code><i>catchEmAll</i></code>.`,
     image: `assets/components/Card/matching-cards.gif`,
-    alternativeText: ``,
-    moreImage: ``,
-    moreAlternativeText: ``,
+    alternativeText: `Matching cards on the playground`,
     id: "card-matching",
   };
-
-  const requireCode = ``;
 
   const code = `
     import { Writable, writable } from "svelte/store";
@@ -118,6 +105,5 @@
   <CodeSyntax {code} {title} />
   <Paragraph text={article.moreDescription} />
   <CodeSyntax code={moreCode} title={moreTitle} />
-  <Paragraph text={article.codeExplanation} />
   <Image image={article.image} alternativeText={article.alternativeText} />
 </article>

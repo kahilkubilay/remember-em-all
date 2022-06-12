@@ -7,62 +7,58 @@
 
   const article = {
     head: `Card Component`,
-    description: `Oyun alanında kullanacağımız kartlar için componentlere 
-      ihtiyacımız olacak. <code><i>CardFront componentinde</i></code> kartın
-      pokemon resmini tutarken, <code><i>CardBack componentinde</i></code>
-      '?' resmini tutacağız. Her iki bileşenin ortak kapsayıcısı <code><i>Card 
-      bileşeni</i></code> olacak.`,
-    otherDescription: `<code><i>Card componentini</i></code> test ederken,
-      sürekli olarak <code><i>User componenti</i></code> üzerinde isim ve 
-      avatar seçimi yapmamak için <code><i>Playground componentinde</i></code>
-      yer alan <code><i>isStart</i></code> şartını <code><i>true</i></code>
-      ifadesine çevirelim.`,
-    anotherDescription: `<code><i>CardFront</i></code> componentinde yer alan 
-      resimlerde <code><i>img src özelliği</i></code> olarak bir API adresi
-      verilmiş. Bu API'da dosya isimlerinde yer alan numaraları güncelleyerek,
-      farklı pokemon resimlerine erişilebilir.`,
-    anAnotherDescription: `<code><i>CardFront componentini</i></code> öncelikle
-      <code><i>Card componentinde</i></code>, 
-      <code><i>Card componentini</i></code> de <code><i>Playground</i></code>
-      içerisinde <code><i>true</i></code> dönen blokta çağıralım. Aynı işlemi
-      <code><i>CardBack componentinde</i></code> tekrarlayarak 
-      <code><i>Card componentleri</i></code> üzerinde yaptığımız her 
-      güncellemeyi inceleyebileceğiz.`, // 💩
-    moreAnotherDescription: `<code><i>Card componentleri</i></code> birer 
-      block-element olduğu için alt alta durmaktadır. Componentleri bir 
-      kapsayıcı içerisine alarak, inline-block seviyesine alalım. Aynı Component
-      içerisinde çağırdığımızdan dolayı, 'position: absolute' stilini 
-      verdiğimizde <code><i>Card Componentinde</i></code> yer alan 
-      <code><i>child componentler</i></code> üst üste duracaktır. Bu şekilde 
-      aynı kartın farklı iki yüzü görünümüne sahip olacaklar.`, // 💩
-    moreDescription: `CSS kullanarak Card'ın arka yüzülen her tıklama ile 
-      birlikte <code><i>transform özelliği</i></code> ile <code><i>CardBack
-      Componentinin</i></code> altında yer alan <code><i>CardFront</i></code>
-      içerisinde yer alan kartın görüntülenmesini sağlayacağız. 
-      <code><i>Global.css</i></code> dosyamıza aşağıdaki özellikleri 
-      ekleyelim.`,
-    descriptionCode: `<code><i>img</i></code> kapsayıcısı olan 
-      <code><i>back ve front classlarına</i></code> sahip kapsayıcılara belirli
-      özellikler katarak basit şekilde bir kart görünümü vermeye çaba sarfettik.
-      <code><i>CardBack componentinde Card componentinde</i></code> 
-      çağırarak arayüz üzerinde nasıl göründüğünü inceleyelim.`,
-    oneMoreDescription: `<code><i>Card componentlerinin</i></code> bir bütün
-      gibi birlikte aynı hızda, ve aynı perspektif üzerinden dönüş sağlaması
-      gerekiyor. <code><i>Svelte'de</i></code> her component içerisinde 
-      tanımlanan <code><i>style özellikleri</i></code>, Component'e ait 
-      kapsayıcısı kadardır, diğer componentler bu stillendirmelerden
-      etkilenmezler. Bundan dolayı her iki class için aynı tanımlamaları
-      gerçekleştirelim veya bu stillendirmeleri <code><i>Global</i></code> 
-      olarak tanımlayalım.`,
-    codeExplanation: `<code><i>CardBack Componentinin</i></code> kapsayıcı 
-      class'ına <code><i>.back</i></code>, 'position: absolute' değerini 
-      verdiğimizde her iki kart üst üste görüntülenecektir.`,
-    otherCodeExplanation: `<code><i>Card componentlerinde</i></code> transform
-      stillendirmesi sağlayarak, <code><i>hover class</i></code> eklendiğinde
-      dönüş efekti vermesini sağlayalım.`,
-    endStory: `Konsol üzerinde 'CardBack' componentine ait 'flipper' class 
-      bulunan elemente 'hover' class eklediğinde efekt gerçekleştiğini 
-      inceleyebilirsin.`,
+    description: `We will need components for the cards we will use in the
+      playground. While we will hold the pokemon image of the card in the
+      <code><i>CardFront component</i></code>, we will hold the question mark
+      ('?') image in the <code><i>CardBack component</i></code>. The common
+      container for both components will be the <code><i>Card
+      component</i></code>.`,
+    otherDescription: `While testing the <code><i>Card component</i></code>,
+      let's change the <b>isStart</b> condition in the <code><i>Playground
+      component</i></code> to <b>true</b> in order not to constantly choose
+      names and avatars on the <code><i>User component</i></code>.`,
+    anotherDescription: `An API address is given as the <b>img src attribute</b>
+      in the images in the <code><i>CardFront component</i></code>. By updating
+      the numbers in the filenames in this API, different pokemon images can be
+      accessed.`,
+    anAnotherDescription: `Let's call the <code><i>CardFront
+      component</i></code> in the <code><i>Card component</i></code> first, and
+      the <code><i>Card component</i></code> in the block that returns
+      <b>true</b> in the Playground. By repeating the same process in the
+      <code><i>CardBack component</i></code>, we will be able to examine every
+      update we have made on the <code><i>Card components</i></code>.`, // 💩
+    moreAnotherDescription: `<code><i>Card components</i></code> are
+      block-elements, so they stand one after the other. Take the components
+      into a container and take them to the inline-block level. Since we are
+      calling it in the same component, when we give the <b>position:
+      absolute</b> style, the child components in the <code><i>Card
+      Component</i></code> will stand on top of each other. This way they will
+      have the appearance of two different sides of the same card.`, // 💩
+    moreDescription: `By using CSS, we will display the card in
+      <code><i>CardFront</i></code> under the <code><i>CardBack
+      Component</i></code> with the <b>transform</b> property with each click on
+      the back of the Card. Let's add the following properties to our
+      <code><i>Global.css</i></code> file.`,
+    descriptionCode: `We tried to give a simple card look by adding certain
+      features to the containers with <code><i>back and front
+      classes</i></code>, which are <b>img</b> containers. Now, we have a chance
+      to examine how it looks on the interface by calling the <code><i>Card
+      component</code></i> in the <code><i>CardBack component</i></code>.`,
+    oneMoreDescription: `<code><i>Card components</i></code> need to provide
+      rotation at the same speed and from the same perspective as a whole. The
+      style properties defined in each component in <code><i>Svelte</i></code>
+      are as much as the container of the component, other components are not
+      affected by these styling. Therefore, let's make the same definitions for
+      both classes or define these stylings as <code><i>Global</i></code>.`,
+    codeExplanation: `When we give <b>.back</b>, <b>position: absolute</b> to
+      the container class of the <code><i>CardBack Component</i></code>, both
+      cards will be displayed one above the other.`,
+    otherCodeExplanation: `Provide <b>transform</b> styling in <code><i>Card
+      components</i></code> so that when <b>hover class</b> is added, it gives a
+      rotation effect.`,
+    endStory: `When you add the <b>hover</b> class to the element with the
+      <b>flipper</b> class of the <code><i>Card Back</i></code> component on the
+      console, you can see the effect.`,
     image: `assets/components/Card/card-views.png`,
     anotherImage: `assets/components/Card/card-position.gif`,
     anotherOneImage: `assets/components/Card/card-turn-effect-back.png`,

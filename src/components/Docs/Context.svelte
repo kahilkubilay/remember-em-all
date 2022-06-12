@@ -5,10 +5,10 @@
 
   const article = {
     head: `Context`,
-    description: `Bir veriyi iletmen gereken component sayısı arttıkça, 
-      yapısını kurgulamak ve takibini sağlamak zor ve bir yerden sonra da 
-      oldukça sıkıcı bir duruma dönüşebilir. Context ile dataların parent 
-      üzerinden child componentler üzerinde erişilmesini sağlar.`,
+    description: `As the number of components you need to transfer data,
+      increases, it can be difficult to edit and follow the structure, and it
+      can turn into a rather boring situation after a while. With Context, it
+      enables data to be accessed on child components via parent.`,
     id: "context",
   };
 </script>

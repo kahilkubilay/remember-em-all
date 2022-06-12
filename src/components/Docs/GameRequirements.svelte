@@ -6,39 +6,37 @@
 
   const article = {
     head: `Game Requirements`,
-    description: `Kullanıcının isim, avatar gibi aldığımız değerlerin yanı sıra
-      oyuna ait standart değerler bulunabilir. Geliştirmekte olduğumuz oyun için
-      bu değerlerden <code><i>level ve score</code></i> isimlerinde iki değer 
-      tanımlayacağız. Kullanıcı, isim ve avatar seçiminin ardından 
-      <code><i>start</i></code> butonuna tıkladığında bu değerlerden 
-      <code><i>level 1, score ise 0</code></i> değerlerini barındıracaklar. 
-      Kullanıcı doğru kartları eşleştirdikçe score değeri ve bütün kartlar 
-      eşleştiğinde level değerini güncelleyeceğiz.`,
-    anotherDescription: `<code><i>level</i></code> isminde bir değer oluşturduk
-      ve gezegenin iyiliği için uygulamamız içerisinde kullanacağız. Bu değer 
-      kullanıcı arayüz üzerindeki bütün kartları eşleştirebildiğinde 
-      güncellenecek. Bir store değeri oluşturmak için <code><i>writable</i>
-      </code> interface ile Store değerlerini oluşturabilir ve 
-      güncelleyebilirsin.`,
-    moreDescription: `Her eşleşme sonrasında kullanıcının puan kazanabildiği 
-      <code><i>score</i></code> değeri tanımlayalım.`, //💩
-    anotherMoreDescription: `Bu değerleri farklı dosyalarda tanımlayabildiğin
-      gibi tek bir tek bir dosya içerisinde de <code><i>score&level</i></code>
-      değerlerini tanımlayabilirsin. Bir kullanıcı oluşturarak 
-      <code><i>name & avatar & score & level</i></code> değerlerini birlikte
-      kullanabilirsin.`, //💩
-    anotherOneMoreDescription: `Kullanıcıya ait statik bilgileri tutacağımız 
-      yeni bir <code><i>class</i></code> oluşturalım.`, //💩
-    otherDescription: `Svelte üzerinde <code><i>store</i></code> değerlerini 
-      birden fazla yapı ile güncelleyebilirsin. <code><i>$level = 1</i></code>
-      gibi bir yolu izlemekle birlikte aşağıdaki örnekteki gösterimdeki benzer
-      şekilde <code><i>.set</i></code> metodu ile güncelleme işlemeni 
-      sağlayabilirsin.`,
-    endStory: `Oluşturduğumuz <code><i>UserInfo class</i></code> kullanıcının
-      isim, avatar değerlerini set edeceğiz. Bu değerlere default olarak boş 
-      <code><i>String</i></code> atadım, farklı içerikle doldurabilirsin. isim
-      ve avatar değerleri hatalı değilse <code><i>isStart</i></code> değerine
-      <code><i>true</i></code> olarak güncelleyerek oyunu başlatacağız.`,
+    description: `In addition to the user's values such as name and avatar,
+      there can be standard values for the game. For the game we are developing,
+      we will define two values named <code><i>level and score</i></code> from
+      these values. When the user clicks the <b>Start button</b> after selecting
+      the name and avatar, <b>level</b> will contain the value 1 and
+      <b>score</b> 0. We will update the <b>score</b> value as the user matches
+      the correct cards and the <b>level</b> value when all cards are matched.`,
+    anotherDescription: `We have created a value called <b>level</b> and we will
+      use it in our app for the good of the planet. This value will be updated
+      when the user can match all the cards on the interface. You can create and
+      update <code><i>Store</i></code> values with the <code><i>writable
+      interface</i></code> to create a <code><i>Store</i></code> value.`,
+    moreDescription: `Let's define the <code><i>score</i></code> value that the
+      user can earn points after each match.`, //💩
+    anotherMoreDescription: `As you can define these values in different files,
+      you can also define the score&level values in a single file. You can use
+      <code><i>name & avatar & score & level</i></code> values together by
+      creating a user.`, //💩
+    anotherOneMoreDescription: `Create a new class where we will keep the static
+      information of the user.`, //💩
+    otherDescription: `You can update <b>Store</b> values with more than one
+      structure on <code><i>Svelte</i></code>. Although you follow a path such
+      as <code><i>$level = 1</i></code>, you can perform the update process with
+      the <code><i>set method</code></i>, similar to the illustration in the
+      example below.`,
+    endStory: `We will set the user's name and avatar values to the
+      <code><i>UserInfo class</i></code> we have created. I have assigned
+      <b>empty String</b> to these values by default, you can fill them with
+      different content. If the name and avatar values are not incorrect, we
+      will start the game by updating the <code><i>isStart</i></code> value to
+      <b>true</b>.`,
     id: "game-requirements",
   };
 
